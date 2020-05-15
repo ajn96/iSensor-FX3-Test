@@ -1,30 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="14" errors="1" failures="2" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2020-05-15" time="14:38:09">
+<test-results name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="14" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2020-05-15" time="14:48:05">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.9043" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\anolan3\Documents\iSensor-FX3-Test" machine-name="ANOLAN3-L02" user="anolan3" user-domain="ANALOG" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Failure" success="False" time="75.869" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Success" success="True" time="114.105" asserts="0">
     <results>
-      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Failure" success="False" time="75.864" asserts="0">
+      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Success" success="True" time="114.099" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Failure" success="False" time="41.604" asserts="1">
+          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Success" success="True" time="16.363" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.BootStatusTest" executed="True" result="Success" success="True" time="0.005" asserts="0" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest" executed="True" result="Failure" success="False" time="32.419" asserts="21">
-                <failure>
-                  <message><![CDATA[  ERROR: No exception throw for connecting to invalid board
-  Expected: 1
-  But was:  0
-]]></message>
-                  <stack-trace><![CDATA[at iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest() in C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\FunctionalTests.cs:line 46
-]]></stack-trace>
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareVersionTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.BootStatusTest" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest" executed="True" result="Success" success="True" time="11.371" asserts="10" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareVersionTest" executed="True" result="Success" success="True" time="3.145" asserts="0" />
               <test-case name="iSensor_FX3_Test.FunctionalTests.ImagePathsTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Success" success="True" time="2.829" asserts="1">
+          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Success" success="True" time="2.868" asserts="1">
             <results>
               <test-case name="iSensor_FX3_Test.I2CTests.I2CModeSwitchingTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
               <test-case name="iSensor_FX3_Test.I2CTests.I2CReadTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
@@ -32,31 +23,15 @@
               <test-case name="iSensor_FX3_Test.I2CTests.I2CWriteTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="PinTests" executed="True" result="Failure" success="False" time="28.552" asserts="1">
+          <test-suite type="TestFixture" name="PinTests" executed="True" result="Success" success="True" time="91.600" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest" executed="True" result="Failure" success="False" time="25.681" asserts="359">
-                <failure>
-                  <message><![CDATA[  ERROR: Invalid freq read back on DIO2
-  Expected: 2983.7895080256681d +/- 59.675790160513365d
-  But was:  3043.9142253095742d
-]]></message>
-                  <stack-trace><![CDATA[at iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest() in C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\PinTests.cs:line 66
-]]></stack-trace>
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasureTimeoutTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest" executed="True" result="Success" success="True" time="88.546" asserts="908" />
+              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasureTimeoutTest" executed="True" result="Success" success="True" time="0.001" asserts="0" />
               <test-case name="iSensor_FX3_Test.PinTests.ResistorConfigurationTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-              <test-case name="iSensor_FX3_Test.PinTests.SetReadPinTest" executed="True" result="Error" success="False" time="0.044" asserts="0">
-                <failure>
-                  <message><![CDATA[FX3Api.FX3ConfigurationException : ERROR: The selected pin is currently configured to drive a PWM signal. Please call StopPWM(pin) before interfacing with the pin further]]></message>
-                  <stack-trace><![CDATA[at FX3Api.FX3Connection.SetPin(IPinObject pin, UInt32 value) in C:\Users\anolan3\Documents\iSensor-FX3-Test\iSensor-FX3-API\FX3IPinFcns.vb:line 340
-at iSensor_FX3_Test.PinTests.SetReadPinTest() in C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\PinTests.cs:line 25
-]]></stack-trace>
-                </failure>
-              </test-case>
+              <test-case name="iSensor_FX3_Test.PinTests.SetReadPinTest" executed="True" result="Success" success="True" time="0.193" asserts="400" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Success" success="True" time="2.871" asserts="1">
+          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Success" success="True" time="3.261" asserts="1">
             <results>
               <test-case name="iSensor_FX3_Test.SpiTests.SpiParametersTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
               <test-case name="iSensor_FX3_Test.SpiTests.SpiTransferTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />

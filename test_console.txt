@@ -4,7 +4,7 @@ FX3 Connected! FX3 API Info:
 Project Name: FX3Api
 Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
 Version Number: 2.8.0-PUB
-Build Date and Time: Fri 05/15/2020 14:36:48.64 
+Build Date and Time: Fri 05/15/2020 14:46:06.45 
 
 Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
 Current Branch: master
@@ -20,9 +20,11 @@ Board Type: CypressFX3Board
 Build Date and Time: May 15 2020 13:56:39
 Serial Number: 000907210503282A
 Debug Mode: False
-Uptime: 111ms
+Uptime: 146ms
 Bootloader Version: 1.0.0
 Test fixture setup complete
+Starting boot status retrieval test...
+Starting firmware load test...
 Disconnecting FX3...
 Connecting to FX3...
 Disconnecting FX3...
@@ -31,18 +33,8 @@ Disconnecting FX3...
 Connecting to FX3...
 Disconnecting FX3...
 Connecting to FX3...
-Disconnecting FX3...
-Connecting to FX3...
-Disconnecting FX3...
-Connecting to FX3...
-Disconnecting FX3...
-Connecting to FX3...
-Disconnecting FX3...
-Connecting to FX3...
-Disconnecting FX3...
-Connecting to FX3...
-Disconnecting FX3...
-Connecting to FX3...
+Starting firmware version test...
+Starting firmware image path validation test...
 Test fixture tear down complete
 Starting test fixture setup...
 Tests executing from C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\
@@ -50,7 +42,7 @@ FX3 Connected! FX3 API Info:
 Project Name: FX3Api
 Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
 Version Number: 2.8.0-PUB
-Build Date and Time: Fri 05/15/2020 14:36:48.64 
+Build Date and Time: Fri 05/15/2020 14:46:06.45 
 
 Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
 Current Branch: master
@@ -69,6 +61,10 @@ Debug Mode: False
 Uptime: 3ms
 Bootloader Version: 1.0.0
 Test fixture setup complete
+Starting I2C mode switching stress test...
+Starting I2C read test...
+Starting I2C data stream test...
+Starting I2C write test...
 Test fixture tear down complete
 Starting test fixture setup...
 Tests executing from C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\
@@ -76,7 +72,7 @@ FX3 Connected! FX3 API Info:
 Project Name: FX3Api
 Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
 Version Number: 2.8.0-PUB
-Build Date and Time: Fri 05/15/2020 14:36:48.64 
+Build Date and Time: Fri 05/15/2020 14:46:06.45 
 
 Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
 Current Branch: master
@@ -95,597 +91,1774 @@ Debug Mode: False
 Uptime: 3ms
 Bootloader Version: 1.0.0
 Test fixture setup complete
+Starting pin frequency measure test...
 Sweeping PWM duty cycle with fixed frequency...
 Testing duty cycle of 0.02
-Pin freq measured on DIO2: 3996.19349722442Hz
+Pin freq measured on DIO2: 3997.46152625734Hz
 Testing duty cycle of 0.03
-Pin freq measured on DIO2: 3995.876615653Hz
+Pin freq measured on DIO2: 3995.55978433238Hz
 Testing duty cycle of 0.04
-Pin freq measured on DIO2: 3996.19349722442Hz
+Pin freq measured on DIO2: 3998.41307625169Hz
 Testing duty cycle of 0.05
-Pin freq measured on DIO2: 4000Hz
+Pin freq measured on DIO2: 4006.99745547074Hz
 Testing duty cycle of 0.06
-Pin freq measured on DIO2: 3998.09584258965Hz
+Pin freq measured on DIO2: 3996.19349722442Hz
 Testing duty cycle of 0.07
-Pin freq measured on DIO2: 3997.7786592622Hz
+Pin freq measured on DIO2: 3999.04769462741Hz
 Testing duty cycle of 0.08
-Pin freq measured on DIO2: 3997.1444435631Hz
+Pin freq measured on DIO2: 3999.36507936508Hz
 Testing duty cycle of 0.09
-Pin freq measured on DIO2: 3997.1444435631Hz
+Pin freq measured on DIO2: 3996.51042905861Hz
 Testing duty cycle of 0.1
-Pin freq measured on DIO2: 3995.876615653Hz
+Pin freq measured on DIO2: 3999.36507936508Hz
 Testing duty cycle of 0.11
-Pin freq measured on DIO2: 3995.876615653Hz
+Pin freq measured on DIO2: 3998.73036026028Hz
 Testing duty cycle of 0.12
-Pin freq measured on DIO2: 3996.82741116751Hz
+Pin freq measured on DIO2: 3997.46152625734Hz
 Testing duty cycle of 0.13
 Pin freq measured on DIO2: 3998.73036026028Hz
 Testing duty cycle of 0.14
-Pin freq measured on DIO2: 3998.09584258965Hz
+Pin freq measured on DIO2: 3998.41307625169Hz
 Testing duty cycle of 0.15
-Pin freq measured on DIO2: 3997.46152625734Hz
+Pin freq measured on DIO2: 3997.1444435631Hz
 Testing duty cycle of 0.16
 Pin freq measured on DIO2: 3995.24300325061Hz
 Testing duty cycle of 0.17
-Pin freq measured on DIO2: 3998.73036026028Hz
-Testing duty cycle of 0.18
-Pin freq measured on DIO2: 3997.7786592622Hz
-Testing duty cycle of 0.19
-Pin freq measured on DIO2: 3994.29296131896Hz
-Testing duty cycle of 0.2
-Pin freq measured on DIO2: 3996.51042905861Hz
-Testing duty cycle of 0.21
-Pin freq measured on DIO2: 3995.55978433238Hz
-Testing duty cycle of 0.22
-Pin freq measured on DIO2: 3996.19349722442Hz
-Testing duty cycle of 0.23
-Pin freq measured on DIO2: 3996.82741116751Hz
-Testing duty cycle of 0.24
-Pin freq measured on DIO2: 3995.24300325061Hz
-Testing duty cycle of 0.25
-Pin freq measured on DIO2: 3997.1444435631Hz
-Testing duty cycle of 0.26
-Pin freq measured on DIO2: 3995.876615653Hz
-Testing duty cycle of 0.27
-Pin freq measured on DIO2: 3994.60959175585Hz
-Testing duty cycle of 0.28
-Pin freq measured on DIO2: 3996.82741116751Hz
-Testing duty cycle of 0.29
-Pin freq measured on DIO2: 3997.7786592622Hz
-Testing duty cycle of 0.3
-Pin freq measured on DIO2: 3996.51042905861Hz
-Testing duty cycle of 0.31
-Pin freq measured on DIO2: 3996.82741116751Hz
-Testing duty cycle of 0.32
-Pin freq measured on DIO2: 3998.09584258965Hz
-Testing duty cycle of 0.33
-Pin freq measured on DIO2: 3996.82741116751Hz
-Testing duty cycle of 0.34
-Pin freq measured on DIO2: 3995.876615653Hz
-Testing duty cycle of 0.35
-Pin freq measured on DIO2: 3996.82741116751Hz
-Testing duty cycle of 0.36
-Pin freq measured on DIO2: 3997.1444435631Hz
-Testing duty cycle of 0.37
-Pin freq measured on DIO2: 3996.19349722442Hz
-Testing duty cycle of 0.38
-Pin freq measured on DIO2: 3996.82741116751Hz
-Testing duty cycle of 0.39
-Pin freq measured on DIO2: 3995.24300325061Hz
-Testing duty cycle of 0.4
-Pin freq measured on DIO2: 3995.55978433238Hz
-Testing duty cycle of 0.41
-Pin freq measured on DIO2: 3998.73036026028Hz
-Testing duty cycle of 0.42
-Pin freq measured on DIO2: 3994.60959175585Hz
-Testing duty cycle of 0.43
-Pin freq measured on DIO2: 3998.73036026028Hz
-Testing duty cycle of 0.44
-Pin freq measured on DIO2: 3996.51042905861Hz
-Testing duty cycle of 0.45
-Pin freq measured on DIO2: 3995.876615653Hz
-Testing duty cycle of 0.46
-Pin freq measured on DIO2: 3994.92627239575Hz
-Testing duty cycle of 0.47
 Pin freq measured on DIO2: 3997.46152625734Hz
-Testing duty cycle of 0.48
-Pin freq measured on DIO2: 3996.19349722442Hz
-Testing duty cycle of 0.49
-Pin freq measured on DIO2: 3998.09584258965Hz
-Testing duty cycle of 0.5
-Pin freq measured on DIO2: 3997.1444435631Hz
-Testing duty cycle of 0.51
+Testing duty cycle of 0.18
+Pin freq measured on DIO2: 3994.60959175585Hz
+Testing duty cycle of 0.19
 Pin freq measured on DIO2: 3997.7786592622Hz
-Testing duty cycle of 0.52
+Testing duty cycle of 0.2
+Pin freq measured on DIO2: 3998.41307625169Hz
+Testing duty cycle of 0.21
 Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.22
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.23
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.24
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.25
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.26
+Pin freq measured on DIO2: 3996.19349722442Hz
+Testing duty cycle of 0.27
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.28
+Pin freq measured on DIO2: 3994.60959175585Hz
+Testing duty cycle of 0.29
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.3
+Pin freq measured on DIO2: 3999.04769462741Hz
+Testing duty cycle of 0.31
+Pin freq measured on DIO2: 3999.36507936508Hz
+Testing duty cycle of 0.32
+Pin freq measured on DIO2: 3995.24300325061Hz
+Testing duty cycle of 0.33
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.34
+Pin freq measured on DIO2: 3995.24300325061Hz
+Testing duty cycle of 0.35
+Pin freq measured on DIO2: 3999.68251448528Hz
+Testing duty cycle of 0.36
+Pin freq measured on DIO2: 3994.29296131896Hz
+Testing duty cycle of 0.37
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.38
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.39
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.4
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.41
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.42
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.43
+Pin freq measured on DIO2: 3995.24300325061Hz
+Testing duty cycle of 0.44
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.45
+Pin freq measured on DIO2: 3998.73036026028Hz
+Testing duty cycle of 0.46
+Pin freq measured on DIO2: 3999.04769462741Hz
+Testing duty cycle of 0.47
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.48
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.49
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.5
+Pin freq measured on DIO2: 3994.92627239575Hz
+Testing duty cycle of 0.51
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.52
+Pin freq measured on DIO2: 3997.1444435631Hz
 Testing duty cycle of 0.53
 Pin freq measured on DIO2: 3994.92627239575Hz
 Testing duty cycle of 0.54
-Pin freq measured on DIO2: 3998.09584258965Hz
-Testing duty cycle of 0.55
-Pin freq measured on DIO2: 3996.19349722442Hz
-Testing duty cycle of 0.56
 Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.55
+Pin freq measured on DIO2: 4011.46314281166Hz
+Testing duty cycle of 0.56
+Pin freq measured on DIO2: 4013.6997212266Hz
 Testing duty cycle of 0.57
-Pin freq measured on DIO2: 3998.41307625169Hz
+Pin freq measured on DIO2: 3995.55978433238Hz
 Testing duty cycle of 0.58
-Pin freq measured on DIO2: 3996.19349722442Hz
+Pin freq measured on DIO2: 3998.41307625169Hz
 Testing duty cycle of 0.59
 Pin freq measured on DIO2: 3998.73036026028Hz
 Testing duty cycle of 0.6
-Pin freq measured on DIO2: 3997.1444435631Hz
+Pin freq measured on DIO2: 3998.41307625169Hz
 Testing duty cycle of 0.61
-Pin freq measured on DIO2: 3995.876615653Hz
+Pin freq measured on DIO2: 3996.19349722442Hz
 Testing duty cycle of 0.62
-Pin freq measured on DIO2: 3994.60959175585Hz
+Pin freq measured on DIO2: 3995.55978433238Hz
 Testing duty cycle of 0.63
-Pin freq measured on DIO2: 3997.1444435631Hz
+Pin freq measured on DIO2: 3998.09584258965Hz
 Testing duty cycle of 0.64
-Pin freq measured on DIO2: 3995.24300325061Hz
+Pin freq measured on DIO2: 3996.51042905861Hz
 Testing duty cycle of 0.65
-Pin freq measured on DIO2: 3999.68251448528Hz
+Pin freq measured on DIO2: 3994.92627239575Hz
 Testing duty cycle of 0.66
 Pin freq measured on DIO2: 3996.82741116751Hz
 Testing duty cycle of 0.67
-Pin freq measured on DIO2: 3998.09584258965Hz
-Testing duty cycle of 0.68
-Pin freq measured on DIO2: 3997.1444435631Hz
-Testing duty cycle of 0.69
-Pin freq measured on DIO2: 3994.92627239575Hz
-Testing duty cycle of 0.7
-Pin freq measured on DIO2: 3998.41307625169Hz
-Testing duty cycle of 0.71
-Pin freq measured on DIO2: 3997.7786592622Hz
-Testing duty cycle of 0.72
-Pin freq measured on DIO2: 3996.19349722442Hz
-Testing duty cycle of 0.73
 Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.68
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.69
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.7
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.71
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.72
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.73
+Pin freq measured on DIO2: 3998.09584258965Hz
 Testing duty cycle of 0.74
-Pin freq measured on DIO2: 3998.73036026028Hz
+Pin freq measured on DIO2: 3995.876615653Hz
 Testing duty cycle of 0.75
-Pin freq measured on DIO2: 3997.7786592622Hz
+Pin freq measured on DIO2: 3997.46152625734Hz
 Testing duty cycle of 0.76
 Pin freq measured on DIO2: 3997.1444435631Hz
 Testing duty cycle of 0.77
-Pin freq measured on DIO2: 3999.68251448528Hz
+Pin freq measured on DIO2: 3996.19349722442Hz
 Testing duty cycle of 0.78
-Pin freq measured on DIO2: 3998.73036026028Hz
+Pin freq measured on DIO2: 3999.68251448528Hz
 Testing duty cycle of 0.79
-Pin freq measured on DIO2: 3997.46152625734Hz
+Pin freq measured on DIO2: 3995.876615653Hz
 Testing duty cycle of 0.8
-Pin freq measured on DIO2: 3996.82741116751Hz
+Pin freq measured on DIO2: 3994.29296131896Hz
 Testing duty cycle of 0.810000000000001
 Pin freq measured on DIO2: 3996.19349722442Hz
 Testing duty cycle of 0.820000000000001
-Pin freq measured on DIO2: 3997.46152625734Hz
+Pin freq measured on DIO2: 3995.24300325061Hz
 Testing duty cycle of 0.830000000000001
-Pin freq measured on DIO2: 3998.73036026028Hz
+Pin freq measured on DIO2: 4012.10191082803Hz
 Testing duty cycle of 0.840000000000001
-Pin freq measured on DIO2: 3997.1444435631Hz
-Testing duty cycle of 0.850000000000001
-Pin freq measured on DIO2: 3998.73036026028Hz
-Testing duty cycle of 0.860000000000001
-Pin freq measured on DIO2: 3995.55978433238Hz
-Testing duty cycle of 0.870000000000001
-Pin freq measured on DIO2: 3995.55978433238Hz
-Testing duty cycle of 0.880000000000001
-Pin freq measured on DIO2: 3996.51042905861Hz
-Testing duty cycle of 0.890000000000001
-Pin freq measured on DIO2: 4000Hz
-Testing duty cycle of 0.900000000000001
-Pin freq measured on DIO2: 3995.55978433238Hz
-Testing duty cycle of 0.910000000000001
-Pin freq measured on DIO2: 3996.51042905861Hz
-Testing duty cycle of 0.920000000000001
-Pin freq measured on DIO2: 3996.19349722442Hz
-Testing duty cycle of 0.930000000000001
-Pin freq measured on DIO2: 3996.82741116751Hz
-Testing duty cycle of 0.940000000000001
 Pin freq measured on DIO2: 3995.876615653Hz
-Testing duty cycle of 0.950000000000001
-Pin freq measured on DIO2: 3996.82741116751Hz
-Testing duty cycle of 0.960000000000001
+Testing duty cycle of 0.850000000000001
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.860000000000001
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.870000000000001
+Pin freq measured on DIO2: 3999.36507936508Hz
+Testing duty cycle of 0.880000000000001
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.890000000000001
 Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.900000000000001
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.910000000000001
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.920000000000001
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.930000000000001
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.940000000000001
+Pin freq measured on DIO2: 4006.67885823328Hz
+Testing duty cycle of 0.950000000000001
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.960000000000001
+Pin freq measured on DIO2: 3999.36507936508Hz
 Testing duty cycle of 0.970000000000001
-Pin freq measured on DIO2: 3995.55978433238Hz
+Pin freq measured on DIO2: 3998.09584258965Hz
 Sweeping freq range...
 Testing PWM freq of 5Hz
-Pin freq measured on DIO2: 4.99999131808143Hz
-Pin freq measured on DIO1: 5.00000496110986Hz
+Pin freq measured on DIO2: 4.99999503889998Hz
+Pin freq measured on DIO1: 5.0000024805537Hz
 Testing PWM freq of 5.25Hz
-Pin freq measured on DIO2: 5.24999654893365Hz
-Pin freq measured on DIO1: 5.2500006511451Hz
+Pin freq measured on DIO2: 5.24998834452996Hz
+Pin freq measured on DIO1: 5.2499924467286Hz
 Testing PWM freq of 5.5125Hz
-Pin freq measured on DIO2: 5.51249752499888Hz
-Pin freq measured on DIO1: 5.51249300231611Hz
+Pin freq measured on DIO2: 5.51249601743713Hz
+Pin freq measured on DIO1: 5.5124824494185Hz
 Testing PWM freq of 5.788125Hz
-Pin freq measured on DIO2: 5.78812058086809Hz
-Pin freq measured on DIO1: 5.78811227044883Hz
+Pin freq measured on DIO2: 5.78811725669752Hz
+Pin freq measured on DIO1: 5.78810894628781Hz
 Testing PWM freq of 6.07753125Hz
-Pin freq measured on DIO2: 6.07752914043884Hz
-Pin freq measured on DIO1: 6.07752730798779Hz
+Pin freq measured on DIO2: 6.07753097289099Hz
+Pin freq measured on DIO1: 6.07752914043884Hz
 Testing PWM freq of 6.3814078125Hz
-Pin freq measured on DIO2: 6.3813937644265Hz
+Pin freq measured on DIO2: 6.38140790635064Hz
 Pin freq measured on DIO1: 6.38139780496986Hz
 Testing PWM freq of 6.700478203125Hz
-Pin freq measured on DIO2: 6.70046907405493Hz
-Pin freq measured on DIO1: 6.70046461935419Hz
+Pin freq measured on DIO2: 6.70046239200604Hz
+Pin freq measured on DIO1: 6.7004802108327Hz
 Testing PWM freq of 7.03550211328125Hz
-Pin freq measured on DIO2: 7.03548562854208Hz
-Pin freq measured on DIO1: 7.03548562854208Hz
+Pin freq measured on DIO2: 7.03550036247654Hz
+Pin freq measured on DIO1: 7.03548808419354Hz
 Testing PWM freq of 7.38727721894532Hz
-Pin freq measured on DIO2: 7.38724779135335Hz
-Pin freq measured on DIO1: 7.38726132810768Hz
+Pin freq measured on DIO2: 7.38727486491162Hz
+Pin freq measured on DIO1: 7.3872667428233Hz
 Testing PWM freq of 7.75664107989258Hz
-Pin freq measured on DIO2: 7.75660406909245Hz
-Pin freq measured on DIO1: 7.75663391764887Hz
+Pin freq measured on DIO2: 7.75663988738773Hz
+Pin freq measured on DIO1: 7.75660705393776Hz
 Testing PWM freq of 8.14447313388721Hz
-Pin freq measured on DIO2: 8.14445119664861Hz
-Pin freq measured on DIO1: 8.14447423234427Hz
+Pin freq measured on DIO2: 8.14447094152263Hz
+Pin freq measured on DIO1: 8.14446435988732Hz
 Testing PWM freq of 8.55169679058157Hz
-Pin freq measured on DIO2: 8.5517029542424Hz
-Pin freq measured on DIO1: 8.55166667303052Hz
+Pin freq measured on DIO2: 8.55168118547833Hz
+Pin freq measured on DIO1: 8.55169932610736Hz
 Testing PWM freq of 8.97928163011065Hz
-Pin freq measured on DIO2: 8.97928600670613Hz
-Pin freq measured on DIO1: 8.97930200680949Hz
+Pin freq measured on DIO2: 8.97924600669719Hz
+Pin freq measured on DIO1: 8.97927400666603Hz
 Testing PWM freq of 9.42824571161618Hz
-Pin freq measured on DIO2: 9.42822048699625Hz
-Pin freq measured on DIO1: 9.42820284705832Hz
+Pin freq measured on DIO2: 9.42818079722872Hz
+Pin freq measured on DIO1: 9.42824694702692Hz
 Testing PWM freq of 9.89965799719699Hz
-Pin freq measured on DIO2: 9.89963729946491Hz
-Pin freq measured on DIO1: 9.89964702351982Hz
+Pin freq measured on DIO2: 9.89961298941123Hz
+Pin freq measured on DIO1: 9.89966647168693Hz
 Testing PWM freq of 10.3946408970568Hz
 Pin freq measured on DIO2: 10.3946413717742Hz
-Pin freq measured on DIO1: 10.3945609663526Hz
+Pin freq measured on DIO1: 10.394636011374Hz
 Testing PWM freq of 10.9143729419097Hz
-Pin freq measured on DIO2: 10.9143638720521Hz
-Pin freq measured on DIO1: 10.9143875114386Hz
+Pin freq measured on DIO2: 10.9143461425794Hz
+Pin freq measured on DIO1: 10.9143106838067Hz
 Testing PWM freq of 11.4600915890052Hz
-Pin freq measured on DIO2: 11.4600069817077Hz
-Pin freq measured on DIO1: 11.4600265282603Hz
+Pin freq measured on DIO2: 11.4600395593325Hz
+Pin freq measured on DIO1: 11.4600200127354Hz
 Testing PWM freq of 12.0330961684554Hz
-Pin freq measured on DIO2: 12.0330771122716Hz
-Pin freq measured on DIO1: 12.0330555620228Hz
+Pin freq measured on DIO2: 12.0330411952331Hz
+Pin freq measured on DIO1: 12.0330627454305Hz
 Testing PWM freq of 12.6347509768782Hz
-Pin freq measured on DIO2: 12.6347434131885Hz
+Pin freq measured on DIO2: 12.6347038145814Hz
 Pin freq measured on DIO1: 12.6347196539944Hz
 Testing PWM freq of 13.2664885257221Hz
-Pin freq measured on DIO2: 13.2664901469484Hz
+Pin freq measured on DIO2: 13.2664290265002Hz
 Pin freq measured on DIO1: 13.266359175249Hz
 Testing PWM freq of 13.9298129520082Hz
-Pin freq measured on DIO2: 13.92978302439Hz
-Pin freq measured on DIO1: 13.9297637714741Hz
+Pin freq measured on DIO2: 13.929802277359Hz
+Pin freq measured on DIO1: 13.9297541450362Hz
 Testing PWM freq of 14.6263035996086Hz
-Pin freq measured on DIO2: 14.6262388199628Hz
-Pin freq measured on DIO1: 14.6262175937213Hz
+Pin freq measured on DIO2: 14.6263343388116Hz
+Pin freq measured on DIO1: 14.6263343388116Hz
 Testing PWM freq of 15.3576187795891Hz
-Pin freq measured on DIO2: 15.3575385027985Hz
-Pin freq measured on DIO1: 15.3575970078408Hz
+Pin freq measured on DIO2: 15.3575268018435Hz
+Pin freq measured on DIO1: 15.3575619047619Hz
 Testing PWM freq of 16.1254997185685Hz
-Pin freq measured on DIO2: 16.12544Hz
-Pin freq measured on DIO1: 16.1253496980417Hz
+Pin freq measured on DIO2: 16.1254141993373Hz
+Pin freq measured on DIO1: 16.1254916015731Hz
 Testing PWM freq of 16.9317747044969Hz
-Pin freq measured on DIO2: 16.9316009286979Hz
-Pin freq measured on DIO1: 16.9317004864437Hz
+Pin freq measured on DIO2: 16.9315724838427Hz
+Pin freq measured on DIO1: 16.9317573771098Hz
 Testing PWM freq of 17.7783634397218Hz
-Pin freq measured on DIO2: 17.7783736203256Hz
-Pin freq measured on DIO1: 17.7782168157828Hz
+Pin freq measured on DIO2: 17.7782168157828Hz
+Pin freq measured on DIO1: 17.778279537268Hz
 Testing PWM freq of 18.6672816117079Hz
-Pin freq measured on DIO2: 18.6670395728125Hz
-Pin freq measured on DIO1: 18.6672124482657Hz
+Pin freq measured on DIO2: 18.6672643115261Hz
+Pin freq measured on DIO1: 18.6671260101389Hz
 Testing PWM freq of 19.6006456922933Hz
-Pin freq measured on DIO2: 19.6005177069588Hz
-Pin freq measured on DIO1: 19.6004986473898Hz
+Pin freq measured on DIO2: 19.6006511249798Hz
+Pin freq measured on DIO1: 19.600555826208Hz
 Testing PWM freq of 20.5806779769079Hz
 Pin freq measured on DIO2: 20.5804485330529Hz
-Pin freq measured on DIO1: 20.5804065071364Hz
+Pin freq measured on DIO1: 20.5806796786617Hz
 Testing PWM freq of 21.6097118757533Hz
-Pin freq measured on DIO2: 21.6094985393048Hz
+Pin freq measured on DIO2: 21.6095448731899Hz
 Pin freq measured on DIO1: 21.6093827054611Hz
 Testing PWM freq of 22.690197469541Hz
-Pin freq measured on DIO2: 22.6898749494856Hz
-Pin freq measured on DIO1: 22.6900537398379Hz
+Pin freq measured on DIO2: 22.6901048233133Hz
+Pin freq measured on DIO1: 22.6900026565926Hz
 Testing PWM freq of 23.8247073430181Hz
-Pin freq measured on DIO2: 23.8246529747721Hz
-Pin freq measured on DIO1: 23.8244840163867Hz
+Pin freq measured on DIO2: 23.8243150603976Hz
+Pin freq measured on DIO1: 23.8247092947665Hz
 Testing PWM freq of 25.015942710169Hz
-Pin freq measured on DIO2: 25.0156372553886Hz
-Pin freq measured on DIO1: 25.0157303928565Hz
+Pin freq measured on DIO2: 25.0158545772258Hz
+Pin freq measured on DIO1: 25.0157614388332Hz
 Testing PWM freq of 26.2667398456774Hz
-Pin freq measured on DIO2: 26.2666962040162Hz
-Pin freq measured on DIO1: 26.2664908339371Hz
+Pin freq measured on DIO2: 26.2662512395703Hz
+Pin freq measured on DIO1: 26.2665250620606Hz
 Testing PWM freq of 27.5800768379613Hz
-Pin freq measured on DIO2: 27.5796392732925Hz
+Pin freq measured on DIO2: 27.5798279544587Hz
 Pin freq measured on DIO1: 27.5800166382066Hz
 Testing PWM freq of 28.9590806798593Hz
-Pin freq measured on DIO2: 28.9585063313689Hz
-Pin freq measured on DIO1: 28.9584647278463Hz
+Pin freq measured on DIO2: 28.9587559550149Hz
+Pin freq measured on DIO1: 28.9585479350111Hz
 Testing PWM freq of 30.4070347138523Hz
-Pin freq measured on DIO2: 30.4067702008583Hz
+Pin freq measured on DIO2: 30.4065867260816Hz
 Pin freq measured on DIO1: 30.4067243319566Hz
 Testing PWM freq of 31.9273864495449Hz
-Pin freq measured on DIO2: 31.9269618161976Hz
-Pin freq measured on DIO1: 31.9270629566683Hz
+Pin freq measured on DIO2: 31.9271135271439Hz
+Pin freq measured on DIO1: 31.9268606763677Hz
 Testing PWM freq of 33.5237557720222Hz
-Pin freq measured on DIO2: 33.5235966417861Hz
-Pin freq measured on DIO1: 33.5234293792358Hz
+Pin freq measured on DIO2: 33.5231506120277Hz
+Pin freq measured on DIO1: 33.5230391064426Hz
 Testing PWM freq of 35.1999435606233Hz
-Pin freq measured on DIO2: 35.1991617916703Hz
-Pin freq measured on DIO1: 35.1992232589248Hz
+Pin freq measured on DIO2: 35.1991003246305Hz
+Pin freq measured on DIO1: 35.1996535357169Hz
 Testing PWM freq of 36.9599407386545Hz
-Pin freq measured on DIO2: 36.9592521897616Hz
-Pin freq measured on DIO1: 36.9593199579008Hz
+Pin freq measured on DIO2: 36.9589811196902Hz
+Pin freq measured on DIO1: 36.9591166542289Hz
 Testing PWM freq of 38.8079377755872Hz
-Pin freq measured on DIO2: 38.8069586378443Hz
-Pin freq measured on DIO1: 38.8076310687462Hz
+Pin freq measured on DIO2: 38.807257493146Hz
+Pin freq measured on DIO1: 38.8069586378443Hz
 Testing PWM freq of 40.7483346643665Hz
-Pin freq measured on DIO2: 40.7478086489634Hz
-Pin freq measured on DIO1: 40.7483028952869Hz
+Pin freq measured on DIO2: 40.7472320434059Hz
+Pin freq measured on DIO1: 40.747891022518Hz
 Testing PWM freq of 42.7857513975849Hz
-Pin freq measured on DIO2: 42.7854888317665Hz
-Pin freq measured on DIO1: 42.785125563289Hz
+Pin freq measured on DIO2: 42.7844898582963Hz
+Pin freq measured on DIO1: 42.7844898582963Hz
 Testing PWM freq of 44.9250389674641Hz
-Pin freq measured on DIO2: 44.9244676630665Hz
-Pin freq measured on DIO1: 44.9248681682632Hz
+Pin freq measured on DIO2: 44.9239670416125Hz
+Pin freq measured on DIO1: 44.9234664313159Hz
 Testing PWM freq of 47.1712909158373Hz
-Pin freq measured on DIO2: 47.1703809098121Hz
-Pin freq measured on DIO1: 47.1700497517095Hz
+Pin freq measured on DIO2: 47.1697185982566Hz
+Pin freq measured on DIO1: 47.1693874494533Hz
 Testing PWM freq of 49.5298554616292Hz
-Pin freq measured on DIO2: 49.5283494072117Hz
-Pin freq measured on DIO1: 49.5288362070025Hz
+Pin freq measured on DIO2: 49.5284711062623Hz
+Pin freq measured on DIO1: 49.5296881296626Hz
 Testing PWM freq of 52.0063482347107Hz
-Pin freq measured on DIO2: 52.0039937977456Hz
-Pin freq measured on DIO1: 52.0045304788221Hz
+Pin freq measured on DIO2: 52.0047988235142Hz
+Pin freq measured on DIO1: 52.0054696973606Hz
 Testing PWM freq of 54.6066656464462Hz
-Pin freq measured on DIO2: 54.6049049274122Hz
-Pin freq measured on DIO1: 54.6060883534572Hz
+Pin freq measured on DIO2: 54.6046090789156Hz
+Pin freq measured on DIO1: 54.6056445626791Hz
 Testing PWM freq of 57.3369989287685Hz
-Pin freq measured on DIO2: 57.334816234928Hz
-Pin freq measured on DIO1: 57.3354685842206Hz
+Pin freq measured on DIO2: 57.3343269827003Hz
+Pin freq measured on DIO1: 57.3357947644336Hz
 Testing PWM freq of 60.2038488752069Hz
-Pin freq measured on DIO2: 60.2029783700801Hz
-Pin freq measured on DIO1: 60.2017197248679Hz
+Pin freq measured on DIO2: 60.2024389442591Hz
+Pin freq measured on DIO1: 60.2024389442591Hz
 Testing PWM freq of 63.2140413189673Hz
-Pin freq measured on DIO2: 63.2110411093794Hz
-Pin freq measured on DIO1: 63.2132216890896Hz
+Pin freq measured on DIO2: 63.2128252088612Hz
+Pin freq measured on DIO1: 63.2140146644672Hz
 Testing PWM freq of 66.3747433849157Hz
-Pin freq measured on DIO2: 66.373383209083Hz
-Pin freq measured on DIO1: 66.3716347926874Hz
+Pin freq measured on DIO2: 66.3716347926874Hz
+Pin freq measured on DIO1: 66.373164651996Hz
 Testing PWM freq of 69.6934805541615Hz
-Pin freq measured on DIO2: 69.6924539718212Hz
-Pin freq measured on DIO1: 69.6926949354134Hz
+Pin freq measured on DIO2: 69.6914901341152Hz
+Pin freq measured on DIO1: 69.6914901341152Hz
 Testing PWM freq of 73.1781545818695Hz
-Pin freq measured on DIO2: 73.175849588139Hz
-Pin freq measured on DIO1: 73.1745213495872Hz
+Pin freq measured on DIO2: 73.1739900676676Hz
+Pin freq measured on DIO1: 73.1755839365711Hz
 Testing PWM freq of 76.837062310963Hz
-Pin freq measured on DIO2: 76.8361065050413Hz
-Pin freq measured on DIO1: 76.8349349505792Hz
+Pin freq measured on DIO2: 76.8343491867455Hz
+Pin freq measured on DIO1: 76.833470557741Hz
 Testing PWM freq of 80.6789154265112Hz
-Pin freq measured on DIO2: 80.6781886152048Hz
-Pin freq measured on DIO1: 80.6743137992588Hz
+Pin freq measured on DIO2: 80.6739909147305Hz
+Pin freq measured on DIO1: 80.6746366863716Hz
 Testing PWM freq of 84.7128611978367Hz
-Pin freq measured on DIO2: 84.7113012561621Hz
-Pin freq measured on DIO1: 84.7098772436342Hz
+Pin freq measured on DIO2: 84.7102332422778Hz
+Pin freq measured on DIO1: 84.7084532789813Hz
 Testing PWM freq of 88.9485042577286Hz
-Pin freq measured on DIO2: 88.9438011861056Hz
-Pin freq measured on DIO1: 88.9418388643995Hz
+Pin freq measured on DIO2: 88.9434087148373Hz
+Pin freq measured on DIO1: 88.9457635944029Hz
 Testing PWM freq of 93.395929470615Hz
-Pin freq measured on DIO2: 93.3933196495341Hz
-Pin freq measured on DIO1: 93.3911560843619Hz
+Pin freq measured on DIO2: 93.3946178367559Hz
+Pin freq measured on DIO1: 93.3894253043978Hz
 Testing PWM freq of 98.0657259441458Hz
 Pin freq measured on DIO2: 98.0622813802901Hz
-Pin freq measured on DIO1: 98.0637126121393Hz
+Pin freq measured on DIO1: 98.0570338875862Hz
 Testing PWM freq of 102.969012241353Hz
-Pin freq measured on DIO2: 102.969002227263Hz
-Pin freq measured on DIO1: 102.969528236827Hz
+Pin freq measured on DIO2: 102.965846282731Hz
+Pin freq measured on DIO1: 102.965846282731Hz
 Testing PWM freq of 108.117462853421Hz
-Pin freq measured on DIO2: 108.111819098496Hz
-Pin freq measured on DIO1: 108.112978835241Hz
+Pin freq measured on DIO2: 108.115298383377Hz
+Pin freq measured on DIO1: 108.108919865486Hz
 Testing PWM freq of 113.523335996092Hz
-Pin freq measured on DIO2: 113.512113259824Hz
-Pin freq measured on DIO1: 113.518506003469Hz
+Pin freq measured on DIO2: 113.518506003469Hz
+Pin freq measured on DIO1: 113.517227397137Hz
 Testing PWM freq of 119.199502795896Hz
-Pin freq measured on DIO2: 119.189195581731Hz
-Pin freq measured on DIO1: 119.198358396953Hz
+Pin freq measured on DIO2: 119.194834070535Hz
+Pin freq measured on DIO1: 119.193424398321Hz
 Testing PWM freq of 125.159477935691Hz
-Pin freq measured on DIO2: 125.151652500016Hz
-Pin freq measured on DIO1: 125.150098409919Hz
+Pin freq measured on DIO2: 125.146213353532Hz
+Pin freq measured on DIO1: 125.146213353532Hz
 Testing PWM freq of 131.417451832476Hz
-Pin freq measured on DIO2: 131.412254051869Hz
-Pin freq measured on DIO1: 131.406257130378Hz
+Pin freq measured on DIO2: 131.405400471987Hz
+Pin freq measured on DIO1: 131.403687188714Hz
 Testing PWM freq of 137.9883244241Hz
 Pin freq measured on DIO2: 137.980887708442Hz
-Pin freq measured on DIO1: 137.983721360067Hz
+Pin freq measured on DIO1: 137.980887708442Hz
 Testing PWM freq of 144.887740645304Hz
-Pin freq measured on DIO2: 144.873287622005Hz
-Pin freq measured on DIO1: 144.885783700637Hz
+Pin freq measured on DIO2: 144.881618101577Hz
+Pin freq measured on DIO1: 144.87745274204Hz
 Testing PWM freq of 152.13212767757Hz
-Pin freq measured on DIO2: 152.122200084526Hz
-Pin freq measured on DIO1: 152.121052035772Hz
+Pin freq measured on DIO2: 152.119904004347Hz
+Pin freq measured on DIO1: 152.119904004347Hz
 Testing PWM freq of 159.738734061448Hz
-Pin freq measured on DIO2: 159.726140289708Hz
-Pin freq measured on DIO1: 159.732469035034Hz
+Pin freq measured on DIO2: 159.722343283227Hz
+Pin freq measured on DIO1: 159.735000673593Hz
 Testing PWM freq of 167.725670764521Hz
 Pin freq measured on DIO2: 167.709191356946Hz
-Pin freq measured on DIO1: 167.723146306759Hz
+Pin freq measured on DIO1: 167.71756404816Hz
 Testing PWM freq of 176.111954302747Hz
-Pin freq measured on DIO2: 176.095749792513Hz
+Pin freq measured on DIO2: 176.1003651867Hz
 Pin freq measured on DIO1: 176.098826695089Hz
 Testing PWM freq of 184.917552017884Hz
-Pin freq measured on DIO2: 184.895933661722Hz
-Pin freq measured on DIO1: 184.904414192933Hz
+Pin freq measured on DIO2: 184.892541667049Hz
+Pin freq measured on DIO1: 184.899325780856Hz
 Testing PWM freq of 194.163429618778Hz
-Pin freq measured on DIO2: 194.143935891509Hz
+Pin freq measured on DIO2: 194.158896509209Hz
 Pin freq measured on DIO1: 194.145805842636Hz
 Testing PWM freq of 203.871601099717Hz
-Pin freq measured on DIO2: 203.86556491661Hz
-Pin freq measured on DIO1: 203.861441213654Hz
+Pin freq measured on DIO2: 203.847009566959Hz
+Pin freq measured on DIO1: 203.857317677519Hz
 Testing PWM freq of 214.065181154703Hz
-Pin freq measured on DIO2: 214.067395206083Hz
-Pin freq measured on DIO1: 214.049209400121Hz
+Pin freq measured on DIO2: 214.053755561927Hz
+Pin freq measured on DIO1: 214.024208961563Hz
 Testing PWM freq of 224.768440212438Hz
-Pin freq measured on DIO2: 224.751073200647Hz
-Pin freq measured on DIO1: 224.756085322748Hz
+Pin freq measured on DIO2: 224.728521417263Hz
+Pin freq measured on DIO1: 224.746061302084Hz
 Testing PWM freq of 236.00686222306Hz
-Pin freq measured on DIO2: 235.964552872177Hz
-Pin freq measured on DIO1: 235.981127878525Hz
+Pin freq measured on DIO2: 235.986653398115Hz
+Pin freq measured on DIO1: 236.00599475459Hz
 Testing PWM freq of 247.807205334213Hz
-Pin freq measured on DIO2: 247.787871710082Hz
-Pin freq measured on DIO1: 247.766551122256Hz
+Pin freq measured on DIO2: 247.781779739149Hz
+Pin freq measured on DIO1: 247.797010228167Hz
 Testing PWM freq of 260.197565600924Hz
-Pin freq measured on DIO2: 260.151521018056Hz
-Pin freq measured on DIO1: 260.148163444413Hz
+Pin freq measured on DIO2: 260.161594259015Hz
+Pin freq measured on DIO1: 260.144805957436Hz
 Testing PWM freq of 273.20744388097Hz
-Pin freq measured on DIO2: 273.153280121421Hz
-Pin freq measured on DIO1: 273.205112565906Hz
+Pin freq measured on DIO2: 273.205112565906Hz
+Pin freq measured on DIO1: 273.164385418078Hz
 Testing PWM freq of 286.867816075018Hz
-Pin freq measured on DIO2: 286.851954631488Hz
-Pin freq measured on DIO1: 286.84379046833Hz
+Pin freq measured on DIO2: 286.831545094914Hz
+Pin freq measured on DIO1: 286.847872491817Hz
 Testing PWM freq of 301.211206878769Hz
-Pin freq measured on DIO2: 301.175908078952Hz
-Pin freq measured on DIO1: 301.162408486478Hz
+Pin freq measured on DIO2: 301.180408212055Hz
+Pin freq measured on DIO1: 301.148910104134Hz
 Testing PWM freq of 316.271767222708Hz
-Pin freq measured on DIO2: 316.224781149007Hz
-Pin freq measured on DIO1: 316.22974223812Hz
+Pin freq measured on DIO2: 316.214859437751Hz
+Pin freq measured on DIO1: 316.224781149007Hz
 Testing PWM freq of 332.085355583843Hz
-Pin freq measured on DIO2: 332.050606220348Hz
-Pin freq measured on DIO1: 332.061546571777Hz
+Pin freq measured on DIO2: 332.045136314966Hz
+Pin freq measured on DIO1: 332.050606220348Hz
 Testing PWM freq of 348.689623363036Hz
-Pin freq measured on DIO2: 348.643085704402Hz
-Pin freq measured on DIO1: 348.655146766298Hz
+Pin freq measured on DIO2: 348.661177610185Hz
+Pin freq measured on DIO1: 348.637055486371Hz
 Testing PWM freq of 366.124104531187Hz
-Pin freq measured on DIO2: 366.048015109142Hz
-Pin freq measured on DIO1: 366.054662671388Hz
+Pin freq measured on DIO2: 366.034720708942Hz
+Pin freq measured on DIO1: 366.028073870962Hz
 Testing PWM freq of 384.430309757747Hz
-Pin freq measured on DIO2: 384.349019906948Hz
-Pin freq measured on DIO1: 384.349019906948Hz
+Pin freq measured on DIO2: 384.312379644988Hz
+Pin freq measured on DIO1: 384.327034911434Hz
 Testing PWM freq of 403.651825245634Hz
-Pin freq measured on DIO2: 403.588018580811Hz
-Pin freq measured on DIO1: 403.547618570942Hz
+Pin freq measured on DIO2: 403.531460831615Hz
+Pin freq measured on DIO1: 403.636509271497Hz
 Testing PWM freq of 423.834416507916Hz
-Pin freq measured on DIO2: 423.773783243982Hz
-Pin freq measured on DIO1: 423.75596527004Hz
+Pin freq measured on DIO2: 423.809423687475Hz
+Pin freq measured on DIO1: 423.693614158994Hz
 Testing PWM freq of 445.026137333312Hz
-Pin freq measured on DIO2: 444.982118415824Hz
-Pin freq measured on DIO1: 444.874086826017Hz
+Pin freq measured on DIO2: 444.864268373427Hz
+Pin freq measured on DIO1: 444.933006644152Hz
 Testing PWM freq of 467.277444199977Hz
-Pin freq measured on DIO2: 467.198219914704Hz
-Pin freq measured on DIO1: 467.13325608343Hz
+Pin freq measured on DIO2: 467.176563296713Hz
+Pin freq measured on DIO1: 467.176563296713Hz
 Testing PWM freq of 490.641316409976Hz
-Pin freq measured on DIO2: 490.492760676481Hz
-Pin freq measured on DIO1: 490.456956542898Hz
+Pin freq measured on DIO2: 490.588263927763Hz
+Pin freq measured on DIO1: 490.576323987539Hz
 Testing PWM freq of 515.173382230475Hz
 Pin freq measured on DIO2: 515.097618317489Hz
-Pin freq measured on DIO1: 515.005493242035Hz
+Pin freq measured on DIO1: 515.137110582944Hz
 Testing PWM freq of 540.932051341999Hz
-Pin freq measured on DIO2: 540.715703632169Hz
-Pin freq measured on DIO1: 540.744715098186Hz
+Pin freq measured on DIO2: 540.788238134843Hz
+Pin freq measured on DIO1: 540.788238134843Hz
 Testing PWM freq of 567.978653909099Hz
 Pin freq measured on DIO2: 567.861167455488Hz
-Pin freq measured on DIO1: 567.813177835995Hz
+Pin freq measured on DIO1: 567.877165798Hz
 Testing PWM freq of 596.377586604554Hz
-Pin freq measured on DIO2: 596.12575045101Hz
+Pin freq measured on DIO2: 596.266824434255Hz
 Pin freq measured on DIO1: 596.337386467856Hz
 Testing PWM freq of 626.196465934781Hz
-Pin freq measured on DIO2: 625.987577639752Hz
-Pin freq measured on DIO1: 626.162592028828Hz
+Pin freq measured on DIO2: 625.909824866476Hz
+Pin freq measured on DIO1: 625.929261248952Hz
 Testing PWM freq of 657.50628923152Hz
-Pin freq measured on DIO2: 657.472764042012Hz
-Pin freq measured on DIO1: 657.194092139154Hz
+Pin freq measured on DIO2: 657.301245679254Hz
+Pin freq measured on DIO1: 657.365554577178Hz
 Testing PWM freq of 690.381603693096Hz
-Pin freq measured on DIO2: 690.159556255564Hz
-Pin freq measured on DIO1: 690.230455775092Hz
+Pin freq measured on DIO2: 690.348654017399Hz
+Pin freq measured on DIO1: 689.946945062468Hz
 Testing PWM freq of 724.900683877751Hz
-Pin freq measured on DIO2: 724.699791471921Hz
-Pin freq measured on DIO1: 724.804027328299Hz
+Pin freq measured on DIO2: 724.647684785735Hz
+Pin freq measured on DIO1: 724.465370377026Hz
 Testing PWM freq of 761.145718071639Hz
-Pin freq measured on DIO2: 761.036019028921Hz
+Pin freq measured on DIO2: 760.777505189658Hz
 Pin freq measured on DIO1: 760.777505189658Hz
 Testing PWM freq of 799.203003975221Hz
-Pin freq measured on DIO2: 799.080277502478Hz
-Pin freq measured on DIO1: 798.890254052555Hz
+Pin freq measured on DIO2: 798.953585159935Hz
+Pin freq measured on DIO1: 799.016926309113Hz
 Testing PWM freq of 839.163154173982Hz
-Pin freq measured on DIO2: 838.922878428435Hz
-Pin freq measured on DIO1: 838.818143986683Hz
+Pin freq measured on DIO2: 838.992715920916Hz
+Pin freq measured on DIO1: 838.887964041951Hz
 Testing PWM freq of 881.121311882681Hz
-Pin freq measured on DIO2: 880.825030589058Hz
-Pin freq measured on DIO1: 880.709573120112Hz
+Pin freq measured on DIO2: 880.863523139449Hz
+Pin freq measured on DIO1: 880.517211252839Hz
 Testing PWM freq of 925.177377476815Hz
-Pin freq measured on DIO2: 925.133100789425Hz
-Pin freq measured on DIO1: 924.666269094913Hz
+Pin freq measured on DIO2: 924.793540099101Hz
+Pin freq measured on DIO1: 924.920846143257Hz
 Testing PWM freq of 971.436246350656Hz
-Pin freq measured on DIO2: 970.897355618708Hz
-Pin freq measured on DIO1: 970.663584705769Hz
+Pin freq measured on DIO2: 970.990895515198Hz
+Pin freq measured on DIO1: 971.224824130288Hz
 Testing PWM freq of 1020.00805866819Hz
-Pin freq measured on DIO2: 1019.97773504706Hz
-Pin freq measured on DIO1: 1019.61657139967Hz
+Pin freq measured on DIO2: 1019.87451932807Hz
+Pin freq measured on DIO1: 1019.66815054634Hz
 Testing PWM freq of 1071.0084616016Hz
-Pin freq measured on DIO2: 1070.86011794082Hz
-Pin freq measured on DIO1: 1070.6894720068Hz
+Pin freq measured on DIO2: 1070.6894720068Hz
+Pin freq measured on DIO1: 1070.23468195816Hz
 Testing PWM freq of 1124.55888468168Hz
-Pin freq measured on DIO2: 1123.88068023418Hz
-Pin freq measured on DIO1: 1124.19408812047Hz
+Pin freq measured on DIO2: 1123.94334783094Hz
+Pin freq measured on DIO1: 1124.00602241677Hz
 Testing PWM freq of 1180.78682891576Hz
-Pin freq measured on DIO2: 1179.86420042145Hz
-Pin freq measured on DIO1: 1180.62437767235Hz
+Pin freq measured on DIO2: 1180.34783627101Hz
+Pin freq measured on DIO1: 1180.14051522248Hz
 Testing PWM freq of 1239.82617036155Hz
-Pin freq measured on DIO2: 1239.35071323168Hz
-Pin freq measured on DIO1: 1239.27451583154Hz
+Pin freq measured on DIO2: 1239.12214913629Hz
+Pin freq measured on DIO1: 1239.42692000246Hz
 Testing PWM freq of 1301.81747887963Hz
-Pin freq measured on DIO2: 1301.11025045185Hz
-Pin freq measured on DIO1: 1301.53031574869Hz
+Pin freq measured on DIO2: 1300.69045621733Hz
+Pin freq measured on DIO1: 1300.60652987482Hz
 Testing PWM freq of 1366.90835282361Hz
-Pin freq measured on DIO2: 1366.37744034707Hz
-Pin freq measured on DIO1: 1365.82192709039Hz
+Pin freq measured on DIO2: 1366.47006982577Hz
+Pin freq measured on DIO1: 1366.19221905924Hz
 Testing PWM freq of 1435.25377046479Hz
-Pin freq measured on DIO2: 1434.95408272229Hz
+Pin freq measured on DIO2: 1434.13731768054Hz
 Pin freq measured on DIO1: 1434.64768683274Hz
 Testing PWM freq of 1507.01645898803Hz
-Pin freq measured on DIO2: 1505.13739545998Hz
-Pin freq measured on DIO1: 1505.81204243239Hz
+Pin freq measured on DIO2: 1505.69955927392Hz
+Pin freq measured on DIO1: 1505.13739545998Hz
 Testing PWM freq of 1582.36728193743Hz
-Pin freq measured on DIO2: 1581.91806623764Hz
-Pin freq measured on DIO1: 1581.1735174145Hz
+Pin freq measured on DIO2: 1581.66980539862Hz
+Pin freq measured on DIO1: 1580.18187519599Hz
 Testing PWM freq of 1661.4856460343Hz
-Pin freq measured on DIO2: 1661.32036594412Hz
-Pin freq measured on DIO1: 1661.18345145871Hz
+Pin freq measured on DIO2: 1660.77284337151Hz
+Pin freq measured on DIO1: 1660.49921739847Hz
 Testing PWM freq of 1744.55992833602Hz
-Pin freq measured on DIO2: 1742.76327165831Hz
-Pin freq measured on DIO1: 1743.36619961944Hz
+Pin freq measured on DIO2: 1742.61260482407Hz
+Pin freq measured on DIO1: 1743.96954490396Hz
 Testing PWM freq of 1831.78792475282Hz
-Pin freq measured on DIO2: 1829.44273007805Hz
+Pin freq measured on DIO2: 1830.60575787849Hz
 Pin freq measured on DIO1: 1830.10713637189Hz
 Testing PWM freq of 1923.37732099046Hz
-Pin freq measured on DIO2: 1923.35877862595Hz
-Pin freq measured on DIO1: 1920.24387920358Hz
+Pin freq measured on DIO2: 1921.52526215443Hz
+Pin freq measured on DIO1: 1923.17526953535Hz
 Testing PWM freq of 2019.54618703998Hz
-Pin freq measured on DIO2: 2017.6976976977Hz
+Pin freq measured on DIO2: 2018.50590827158Hz
 Pin freq measured on DIO1: 2018.10172206648Hz
 Testing PWM freq of 2120.52349639198Hz
-Pin freq measured on DIO2: 2119.09167367536Hz
-Pin freq measured on DIO1: 2120.42920260888Hz
+Pin freq measured on DIO2: 2117.75583105694Hz
+Pin freq measured on DIO1: 2118.2009247583Hz
 Testing PWM freq of 2226.54967121158Hz
 Pin freq measured on DIO2: 2224.56682485377Hz
-Pin freq measured on DIO1: 2224.56682485377Hz
+Pin freq measured on DIO1: 2224.32134186714Hz
 Testing PWM freq of 2337.87715477216Hz
-Pin freq measured on DIO2: 2337.02028985507Hz
-Pin freq measured on DIO1: 2334.04353867531Hz
+Pin freq measured on DIO2: 2335.66628041715Hz
+Pin freq measured on DIO1: 2335.12511584801Hz
 Testing PWM freq of 2454.77101251077Hz
-Pin freq measured on DIO2: 2451.56896132328Hz
-Pin freq measured on DIO1: 2453.35929892892Hz
+Pin freq measured on DIO2: 2452.76222925286Hz
+Pin freq measured on DIO1: 2451.86716944411Hz
 Testing PWM freq of 2577.50956313631Hz
-Pin freq measured on DIO2: 2573.97522666326Hz
-Pin freq measured on DIO1: 2574.63277557798Hz
+Pin freq measured on DIO2: 2575.94888178914Hz
+Pin freq measured on DIO1: 2575.29066053405Hz
 Testing PWM freq of 2706.38504129312Hz
-Pin freq measured on DIO2: 2702.34615900255Hz
-Pin freq measured on DIO1: 2702.70850093859Hz
+Pin freq measured on DIO2: 2705.61073825503Hz
+Pin freq measured on DIO1: 2703.07094005632Hz
 Testing PWM freq of 2841.70429335778Hz
-Pin freq measured on DIO2: 2838.58611463174Hz
-Pin freq measured on DIO1: 2837.7868506265Hz
+Pin freq measured on DIO2: 2837.7868506265Hz
+Pin freq measured on DIO1: 2838.18642635877Hz
 Testing PWM freq of 2983.78950802567Hz
-Pin freq measured on DIO2: 3043.91422530957Hz
+Pin freq measured on DIO2: 2980.01182732111Hz
+Pin freq measured on DIO1: 2980.89322685596Hz
+Testing PWM freq of 3132.97898342695Hz
+Pin freq measured on DIO2: 3132.36985236985Hz
+Pin freq measured on DIO1: 3128.96615957777Hz
+Testing PWM freq of 3289.6279325983Hz
+Pin freq measured on DIO2: 3283.93613554904Hz
+Pin freq measured on DIO1: 3282.33186777398Hz
+Testing PWM freq of 3454.10932922821Hz
+Pin freq measured on DIO2: 3450.91593905153Hz
+Pin freq measured on DIO1: 3451.50684931507Hz
+Testing PWM freq of 3626.81479568963Hz
+Pin freq measured on DIO2: 3624.0201366415Hz
+Pin freq measured on DIO1: 3620.11494252874Hz
+Testing PWM freq of 3808.15553547411Hz
+Pin freq measured on DIO2: 3798.86920467395Hz
+Pin freq measured on DIO1: 3803.16981132075Hz
+Testing PWM freq of 3998.56331224781Hz
+Pin freq measured on DIO2: 3992.23608635373Hz
+Pin freq measured on DIO1: 3986.70886075949Hz
+Testing PWM freq of 4198.4914778602Hz
+Pin freq measured on DIO2: 4188.86118038238Hz
+Pin freq measured on DIO1: 4189.73186447724Hz
+Testing PWM freq of 4408.41605175321Hz
+Pin freq measured on DIO2: 4402.97072957623Hz
+Pin freq measured on DIO1: 4394.33180728145Hz
+Testing PWM freq of 4628.83685434088Hz
+Pin freq measured on DIO2: 4614.65201465202Hz
+Pin freq measured on DIO1: 4622.05916074295Hz
+Testing PWM freq of 4860.27869705792Hz
+Pin freq measured on DIO2: 4845.38461538462Hz
+Pin freq measured on DIO1: 4851.21540312876Hz
+Testing PWM freq of 5103.29263191082Hz
+Pin freq measured on DIO2: 5091.38671381662Hz
+Pin freq measured on DIO1: 5090.10101010101Hz
+Testing PWM freq of 5358.45726350636Hz
+Pin freq measured on DIO2: 5346.63129973475Hz
+Pin freq measured on DIO1: 5353.73173970784Hz
+Testing PWM freq of 5626.38012668168Hz
+Pin freq measured on DIO2: 5614.70752089136Hz
+Pin freq measured on DIO1: 5614.70752089136Hz
+Testing PWM freq of 5907.69913301576Hz
+Pin freq measured on DIO2: 5885.19708029197Hz
+Pin freq measured on DIO1: 5878.33187518227Hz
+Testing PWM freq of 6203.08408966655Hz
+Pin freq measured on DIO2: 6186.86310620012Hz
+Pin freq measured on DIO1: 6181.17141980987Hz
+Testing PWM freq of 6513.23829414988Hz
+Pin freq measured on DIO2: 6487.54425490827Hz
+Pin freq measured on DIO1: 6487.54425490827Hz
+Testing PWM freq of 6838.90020885737Hz
+Pin freq measured on DIO2: 6825.87199458178Hz
+Pin freq measured on DIO1: 6825.87199458178Hz
+Testing PWM freq of 7180.84521930024Hz
+Pin freq measured on DIO2: 7150.33699893579Hz
+Pin freq measured on DIO1: 7175.79209683161Hz
+Testing PWM freq of 7539.88748026525Hz
+Pin freq measured on DIO2: 7532.43647234679Hz
+Pin freq measured on DIO1: 7535.2523364486Hz
+Testing PWM freq of 7916.88185427851Hz
+Pin freq measured on DIO2: 7895.33881707795Hz
+Pin freq measured on DIO1: 7898.43260188088Hz
+Testing PWM freq of 8312.72594699244Hz
+Pin freq measured on DIO2: 8260.98360655738Hz
+Pin freq measured on DIO1: 8298.39440098806Hz
+Testing PWM freq of 8728.36224434206Hz
+Pin freq measured on DIO2: 8856.23901581722Hz
+Pin freq measured on DIO1: 8703.28151986183Hz
+Testing PWM freq of 9164.78035655916Hz
+Pin freq measured on DIO2: 9323.21924144311Hz
+Pin freq measured on DIO1: 9108.35969272481Hz
+Testing PWM freq of 9623.01937438712Hz
+Pin freq measured on DIO2: 9593.90766301761Hz
+Pin freq measured on DIO1: 9548.4604452866Hz
+Testing averaging...
+Testing pin freq measure with 1 averages...
+Pin freq measured on DIO2: 4054.06275140788Hz
+Testing pin freq measure with 3 averages...
+Pin freq measured on DIO2: 3993.55435213314Hz
+Testing pin freq measure with 5 averages...
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing pin freq measure with 7 averages...
+Pin freq measured on DIO2: 3996.41987197643Hz
+Testing pin freq measure with 9 averages...
+Pin freq measured on DIO2: 3999.36507936508Hz
+Testing pin freq measure with 11 averages...
+Pin freq measured on DIO2: 3998.78805367191Hz
+Testing pin freq measure with 13 averages...
+Pin freq measured on DIO2: 3998.87681601758Hz
+Testing pin freq measure with 15 averages...
+Pin freq measured on DIO2: 3999.04769462741Hz
+Testing pin freq measure with 17 averages...
+Pin freq measured on DIO2: 3998.99169078517Hz
+Testing pin freq measure with 19 averages...
+Pin freq measured on DIO2: 3999.28155218145Hz
+Testing pin freq measure with 21 averages...
+Pin freq measured on DIO2: 3999.13837084066Hz
+Testing pin freq measure with 23 averages...
+Pin freq measured on DIO2: 3999.84815281349Hz
+Testing pin freq measure with 25 averages...
+Pin freq measured on DIO2: 3999.55553439053Hz
+Testing pin freq measure with 27 averages...
+Pin freq measured on DIO2: 3999.30630061287Hz
+Testing pin freq measure with 29 averages...
+Pin freq measured on DIO2: 3999.69346142267Hz
+Testing pin freq measure with 31 averages...
+Pin freq measured on DIO2: 3999.67227385616Hz
+Testing pin freq measure with 33 averages...
+Pin freq measured on DIO2: 3999.74985568597Hz
+Testing pin freq measure with 35 averages...
+Pin freq measured on DIO2: 3999.54646469228Hz
+Testing pin freq measure with 37 averages...
+Pin freq measured on DIO2: 3999.53665965936Hz
+Testing pin freq measure with 39 averages...
+Pin freq measured on DIO2: 3999.9755762479Hz
+Testing pin freq measure with 41 averages...
+Pin freq measured on DIO2: 3999.63605741775Hz
+Testing pin freq measure with 43 averages...
+Pin freq measured on DIO2: 3999.69728013586Hz
+Testing pin freq measure with 45 averages...
+Pin freq measured on DIO2: 3999.47088547316Hz
+Testing pin freq measure with 47 averages...
+Pin freq measured on DIO2: 3999.70277801233Hz
+Testing pin freq measure with 49 averages...
+Pin freq measured on DIO2: 3999.94816218756Hz
+Testing pin freq measure with 51 averages...
+Pin freq measured on DIO2: 3999.92529299155Hz
+Testing pin freq measure with 53 averages...
+Pin freq measured on DIO2: 3999.60464837666Hz
+Testing pin freq measure with 55 averages...
+Pin freq measured on DIO2: 3999.8268198349Hz
+Testing pin freq measure with 57 averages...
+Pin freq measured on DIO2: 3999.58783557982Hz
+Testing pin freq measure with 59 averages...
+Pin freq measured on DIO2: 3999.52648075656Hz
+Testing pin freq measure with 61 averages...
+Pin freq measured on DIO2: 3999.80742080506Hz
+Testing pin freq measure with 63 averages...
+Pin freq measured on DIO2: 3999.64220247057Hz
+Testing pin freq measure with 65 averages...
+Pin freq measured on DIO2: 3999.65809461011Hz
+Testing pin freq measure with 67 averages...
+Pin freq measured on DIO2: 3999.90996167448Hz
+Testing pin freq measure with 69 averages...
+Pin freq measured on DIO2: 3999.68711536471Hz
+Testing pin freq measure with 71 averages...
+Pin freq measured on DIO2: 3999.90161881764Hz
+Testing pin freq measure with 73 averages...
+Pin freq measured on DIO2: 3999.6694682135Hz
+Testing pin freq measure with 75 averages...
+Pin freq measured on DIO2: 3999.76717236124Hz
+Testing pin freq measure with 77 averages...
+Pin freq measured on DIO2: 3999.94227161207Hz
+Testing pin freq measure with 79 averages...
+Pin freq measured on DIO2: 3999.88746772233Hz
+Testing pin freq measure with 81 averages...
+Pin freq measured on DIO2: 3999.97256099055Hz
+Testing pin freq measure with 83 averages...
+Pin freq measured on DIO2: 3999.8240379466Hz
+Testing pin freq measure with 85 averages...
+Pin freq measured on DIO2: 3999.75721242512Hz
+Testing pin freq measure with 87 averages...
+Pin freq measured on DIO2: 3999.82118011997Hz
+Testing pin freq measure with 89 averages...
+Pin freq measured on DIO2: 3999.82876559615Hz
+Testing pin freq measure with 91 averages...
+Pin freq measured on DIO2: 3999.85346196117Hz
+Testing pin freq measure with 93 averages...
+Pin freq measured on DIO2: 3999.75761403449Hz
+Testing pin freq measure with 95 averages...
+Pin freq measured on DIO2: 3999.8663157455Hz
+Testing pin freq measure with 97 averages...
+Pin freq measured on DIO2: 3999.82324926763Hz
+Testing pin freq measure with 99 averages...
+Pin freq measured on DIO2: 3999.83002673872Hz
+Testing pin freq measure with 101 averages...
+Pin freq measured on DIO2: 3999.86797019899Hz
+Testing pin freq measure with 103 averages...
+Pin freq measured on DIO2: 3999.95067855519Hz
+Testing pin freq measure with 105 averages...
+Pin freq measured on DIO2: 3999.98488049925Hz
+Testing pin freq measure with 107 averages...
+Pin freq measured on DIO2: 3999.78042520363Hz
+Testing pin freq measure with 109 averages...
+Pin freq measured on DIO2: 3999.75824039788Hz
+Testing pin freq measure with 111 averages...
+Pin freq measured on DIO2: 3999.90846747377Hz
+Testing pin freq measure with 113 averages...
+Pin freq measured on DIO2: 3999.89884870154Hz
+Testing pin freq measure with 115 averages...
+Pin freq measured on DIO2: 3999.91717283269Hz
+Testing pin freq measure with 117 averages...
+Pin freq measured on DIO2: 3999.90773405699Hz
+Testing pin freq measure with 119 averages...
+Pin freq measured on DIO2: 3999.88527252777Hz
+Testing pin freq measure with 121 averages...
+Pin freq measured on DIO2: 3999.79795793195Hz
+Testing pin freq measure with 123 averages...
+Pin freq measured on DIO2: 3999.80382413867Hz
+Testing pin freq measure with 125 averages...
+Pin freq measured on DIO2: 3999.80950264315Hz
+Testing pin freq measure with 127 averages...
+Pin freq measured on DIO2: 3999.93999887498Hz
+Testing pin freq measure with 129 averages...
+Pin freq measured on DIO2: 3999.91877797776Hz
+Testing pin freq measure with 131 averages...
+Pin freq measured on DIO2: 3999.89820526182Hz
+Testing pin freq measure with 133 averages...
+Pin freq measured on DIO2: 3999.83050898034Hz
+Testing pin freq measure with 135 averages...
+Pin freq measured on DIO2: 3999.88240689566Hz
+Testing pin freq measure with 137 averages...
+Pin freq measured on DIO2: 3999.90961578016Hz
+Testing pin freq measure with 139 averages...
+Pin freq measured on DIO2: 3999.83325671898Hz
+Testing pin freq measure with 141 averages...
+Pin freq measured on DIO2: 3999.92794212852Hz
+Testing pin freq measure with 143 averages...
+Pin freq measured on DIO2: 3999.93117019003Hz
+Testing pin freq measure with 145 averages...
+Pin freq measured on DIO2: 3999.91241275489Hz
+Testing pin freq measure with 147 averages...
+Pin freq measured on DIO2: 3999.8509699105Hz
+Testing pin freq measure with 149 averages...
+Pin freq measured on DIO2: 3999.88706313544Hz
+Testing pin freq measure with 151 averages...
+Pin freq measured on DIO2: 3999.85912272356Hz
+Testing pin freq measure with 153 averages...
+Pin freq measured on DIO2: 3999.93566879807Hz
+Testing pin freq measure with 155 averages...
+Pin freq measured on DIO2: 3999.94878924984Hz
+Testing pin freq measure with 157 averages...
+Pin freq measured on DIO2: 3999.97168714293Hz
+Testing pin freq measure with 159 averages...
+Pin freq measured on DIO2: 3999.9440869448Hz
+Testing pin freq measure with 161 averages...
+Pin freq measured on DIO2: 3999.95661391313Hz
+Testing pin freq measure with 163 averages...
+Pin freq measured on DIO2: 3999.91039775605Hz
+Testing pin freq measure with 165 averages...
+Pin freq measured on DIO2: 3999.90378694581Hz
+Testing pin freq measure with 167 averages...
+Pin freq measured on DIO2: 3999.92585216538Hz
+Testing pin freq measure with 169 averages...
+Pin freq measured on DIO2: 3999.85346196117Hz
+Testing pin freq measure with 171 averages...
+Pin freq measured on DIO2: 3999.88488246871Hz
+Testing pin freq measure with 173 averages...
+Pin freq measured on DIO2: 3999.97063506265Hz
+Testing pin freq measure with 175 averages...
+Pin freq measured on DIO2: 4000.14515302304Hz
+Testing pin freq measure with 177 averages...
+Pin freq measured on DIO2: 3999.92107233989Hz
+Testing pin freq measure with 179 averages...
+Pin freq measured on DIO2: 3999.98580962728Hz
+Testing pin freq measure with 181 averages...
+Pin freq measured on DIO2: 3999.87370138271Hz
+Testing pin freq measure with 183 averages...
+Pin freq measured on DIO2: 3999.93753985088Hz
+Testing pin freq measure with 185 averages...
+Pin freq measured on DIO2: 3999.88844529207Hz
+Testing pin freq measure with 187 averages...
+Pin freq measured on DIO2: 4000.00169791899Hz
+Testing pin freq measure with 189 averages...
+Pin freq measured on DIO2: 3999.91936398342Hz
+Testing pin freq measure with 191 averages...
+Pin freq measured on DIO2: 3999.90524773769Hz
+Testing pin freq measure with 193 averages...
+Pin freq measured on DIO2: 3999.97367804132Hz
+Testing pin freq measure with 195 averages...
+Pin freq measured on DIO2: 3999.92672963847Hz
+Testing pin freq measure with 197 averages...
+Pin freq measured on DIO2: 3999.95326038999Hz
+Testing pin freq measure with 199 averages...
+Pin freq measured on DIO2: 3999.95532562434Hz
+Testing pin freq measure with 201 averages...
+Pin freq measured on DIO2: 3999.8783702402Hz
+Testing pin freq measure with 203 averages...
+Pin freq measured on DIO2: 3999.99061546884Hz
+Testing pin freq measure with 205 averages...
+Pin freq measured on DIO2: 3999.96902358467Hz
+Testing pin freq measure with 207 averages...
+Pin freq measured on DIO2: 3999.9018348448Hz
+Testing pin freq measure with 209 averages...
+Pin freq measured on DIO2: 3999.9878465167Hz
+Testing pin freq measure with 211 averages...
+Pin freq measured on DIO2: 3999.98194260004Hz
+Testing pin freq measure with 213 averages...
+Pin freq measured on DIO2: 3999.91652474631Hz
+Testing pin freq measure with 215 averages...
+Pin freq measured on DIO2: 3999.93354537282Hz
+Testing pin freq measure with 217 averages...
+Pin freq measured on DIO2: 4000.30875544849Hz
+Testing pin freq measure with 219 averages...
+Pin freq measured on DIO2: 3999.93040982091Hz
+Testing pin freq measure with 221 averages...
+Pin freq measured on DIO2: 3999.91092657908Hz
+Testing pin freq measure with 223 averages...
+Pin freq measured on DIO2: 3999.93450558838Hz
+Testing pin freq measure with 225 averages...
+Pin freq measured on DIO2: 3999.97177702438Hz
+Testing pin freq measure with 227 averages...
+Pin freq measured on DIO2: 3999.91048356359Hz
+Testing pin freq measure with 229 averages...
+Pin freq measured on DIO2: 3999.98890795334Hz
+Testing pin freq measure with 231 averages...
+Pin freq measured on DIO2: 3999.94914395182Hz
+Testing pin freq measure with 233 averages...
+Pin freq measured on DIO2: 3999.98501027988Hz
+Testing pin freq measure with 235 averages...
+Pin freq measured on DIO2: 3999.91893507713Hz
+Testing pin freq measure with 237 averages...
+Pin freq measured on DIO2: 3999.95445045818Hz
+Testing pin freq measure with 239 averages...
+Pin freq measured on DIO2: 3999.98272961721Hz
+Testing pin freq measure with 241 averages...
+Pin freq measured on DIO2: 3999.93149263711Hz
+Testing pin freq measure with 243 averages...
+Pin freq measured on DIO2: 3999.90069870222Hz
+Testing pin freq measure with 245 averages...
+Pin freq measured on DIO2: 3999.94816218756Hz
+Testing pin freq measure with 247 averages...
+Pin freq measured on DIO2: 3999.95629454903Hz
+Testing pin freq measure with 249 averages...
+Pin freq measured on DIO2: 3999.95792070923Hz
+Testing pin freq measure with 251 averages...
+Pin freq measured on DIO2: 3999.92789727259Hz
+Testing pin freq measure with 253 averages...
+Pin freq measured on DIO2: 3999.94227161207Hz
+Testing pin freq measure with 255 averages...
+Pin freq measured on DIO2: 3999.91906753347Hz
+Testing pin freq measure with 257 averages...
+Pin freq measured on DIO2: 3999.94564092744Hz
+Testing pin freq measure with 259 averages...
+Pin freq measured on DIO2: 3999.95341595871Hz
+Testing pin freq measure with 261 averages...
+Pin freq measured on DIO2: 3999.94282455807Hz
+Testing pin freq measure with 263 averages...
+Pin freq measured on DIO2: 3999.9142860161Hz
+Testing pin freq measure with 265 averages...
+Pin freq measured on DIO2: 3999.93410263515Hz
+Testing pin freq measure with 267 averages...
+Pin freq measured on DIO2: 3999.92983968666Hz
+Testing pin freq measure with 269 averages...
+Pin freq measured on DIO2: 3999.93154161208Hz
+Testing pin freq measure with 271 averages...
+Pin freq measured on DIO2: 3999.9683663412Hz
+Testing pin freq measure with 273 averages...
+Pin freq measured on DIO2: 3999.95813089329Hz
+Testing pin freq measure with 275 averages...
+Pin freq measured on DIO2: 3999.94227161207Hz
+Testing pin freq measure with 277 averages...
+Pin freq measured on DIO2: 3999.92664146878Hz
+Testing pin freq measure with 279 averages...
+Pin freq measured on DIO2: 3999.9908957708Hz
+Testing pin freq measure with 281 averages...
+Pin freq measured on DIO2: 3999.90734777352Hz
+Testing pin freq measure with 283 averages...
+Pin freq measured on DIO2: 3999.92595293524Hz
+Testing pin freq measure with 285 averages...
+Pin freq measured on DIO2: 3999.9832889795Hz
+Testing pin freq measure with 287 averages...
+Pin freq measured on DIO2: 3999.9623858438Hz
+Testing pin freq measure with 289 averages...
+Pin freq measured on DIO2: 3999.99670404373Hz
+Testing pin freq measure with 291 averages...
+Pin freq measured on DIO2: 3999.90507636852Hz
+Testing pin freq measure with 293 averages...
+Pin freq measured on DIO2: 3999.94473439322Hz
+Testing pin freq measure with 295 averages...
+Pin freq measured on DIO2: 3999.95156674842Hz
+Testing pin freq measure with 297 averages...
+Pin freq measured on DIO2: 3999.95830710824Hz
+Testing pin freq measure with 299 averages...
+Pin freq measured on DIO2: 3999.95433844504Hz
+Testing pin freq measure with 301 averages...
+Pin freq measured on DIO2: 3999.95569666987Hz
+Testing pin freq measure with 303 averages...
+Pin freq measured on DIO2: 3999.97275504163Hz
+Testing pin freq measure with 305 averages...
+Pin freq measured on DIO2: 3999.9063105078Hz
+Testing pin freq measure with 307 averages...
+Pin freq measured on DIO2: 3999.93380993627Hz
+Testing pin freq measure with 309 averages...
+Pin freq measured on DIO2: 3999.97122900938Hz
+Testing pin freq measure with 311 averages...
+Pin freq measured on DIO2: 3999.49265977198Hz
+Testing pin freq measure with 313 averages...
+Pin freq measured on DIO2: 3999.95840957189Hz
+Testing pin freq measure with 315 averages...
+Pin freq measured on DIO2: 3999.94960210865Hz
+Testing pin freq measure with 317 averages...
+Pin freq measured on DIO2: 3999.96594551282Hz
+Testing pin freq measure with 319 averages...
+Pin freq measured on DIO2: 3999.98208411508Hz
+Testing pin freq measure with 321 averages...
+Pin freq measured on DIO2: 3999.98813047575Hz
+Testing pin freq measure with 323 averages...
+Pin freq measured on DIO2: 3999.95478226679Hz
+Testing pin freq measure with 325 averages...
+Pin freq measured on DIO2: 3999.94626813908Hz
+Testing pin freq measure with 327 averages...
+Pin freq measured on DIO2: 3999.95727730187Hz
+Testing pin freq measure with 329 averages...
+Pin freq measured on DIO2: 3999.95850206947Hz
+Testing pin freq measure with 331 averages...
+Pin freq measured on DIO2: 3999.97889668006Hz
+Testing pin freq measure with 333 averages...
+Pin freq measured on DIO2: 3999.96090747108Hz
+Testing pin freq measure with 335 averages...
+Pin freq measured on DIO2: 3999.94787205433Hz
+Testing pin freq measure with 337 averages...
+Pin freq measured on DIO2: 3999.97267730603Hz
+Testing pin freq measure with 339 averages...
+Pin freq measured on DIO2: 3999.94099445418Hz
+Testing pin freq measure with 341 averages...
+Pin freq measured on DIO2: 3999.97486001334Hz
+Testing pin freq measure with 343 averages...
+Pin freq measured on DIO2: 3999.95741884124Hz
+Testing pin freq measure with 345 averages...
+Pin freq measured on DIO2: 4000.2024808506Hz
+Testing pin freq measure with 347 averages...
+Pin freq measured on DIO2: 3999.9917648687Hz
+Testing pin freq measure with 349 averages...
+Pin freq measured on DIO2: 3999.98362415619Hz
+Testing pin freq measure with 351 averages...
+Pin freq measured on DIO2: 3999.97105336358Hz
+Testing pin freq measure with 353 averages...
+Pin freq measured on DIO2: 3999.93613909086Hz
+Testing pin freq measure with 355 averages...
+Pin freq measured on DIO2: 3999.93292139617Hz
+Testing pin freq measure with 357 averages...
+Pin freq measured on DIO2: 3999.9430801214Hz
+Testing pin freq measure with 359 averages...
+Pin freq measured on DIO2: 3999.95754776429Hz
+Testing pin freq measure with 361 averages...
+Pin freq measured on DIO2: 3999.94986735738Hz
+Testing pin freq measure with 363 averages...
+Pin freq measured on DIO2: 3999.92040523357Hz
+Testing pin freq measure with 365 averages...
+Pin freq measured on DIO2: 3999.94780713868Hz
+Testing pin freq measure with 367 averages...
+Pin freq measured on DIO2: 3999.95760801036Hz
+Testing pin freq measure with 369 averages...
+Pin freq measured on DIO2: 3999.94148939603Hz
+Testing pin freq measure with 371 averages...
+Pin freq measured on DIO2: 3999.96405571364Hz
+Testing pin freq measure with 373 averages...
+Pin freq measured on DIO2: 3999.96509966281Hz
+Testing pin freq measure with 375 averages...
+Pin freq measured on DIO2: 3999.9534323038Hz
+Testing pin freq measure with 377 averages...
+Pin freq measured on DIO2: 3999.95031061132Hz
+Testing pin freq measure with 379 averages...
+Pin freq measured on DIO2: 3999.97235413929Hz
+Testing pin freq measure with 381 averages...
+Pin freq measured on DIO2: 3999.95666567359Hz
+Testing pin freq measure with 383 averages...
+Pin freq measured on DIO2: 3999.94943104747Hz
+Testing pin freq measure with 385 averages...
+Pin freq measured on DIO2: 3999.97113559775Hz
+Testing pin freq measure with 387 averages...
+Pin freq measured on DIO2: 3999.95569666987Hz
+Testing pin freq measure with 389 averages...
+Pin freq measured on DIO2: 3999.98122696094Hz
+Testing pin freq measure with 391 averages...
+Pin freq measured on DIO2: 3999.94153340818Hz
+Testing pin freq measure with 393 averages...
+Pin freq measured on DIO2: 3999.97495478227Hz
+Testing pin freq measure with 395 averages...
+Pin freq measured on DIO2: 3999.94373306968Hz
+Testing pin freq measure with 397 averages...
+Pin freq measured on DIO2: 3999.95681261072Hz
+Testing pin freq measure with 399 averages...
+Pin freq measured on DIO2: 3999.96578234588Hz
+Testing pin freq measure with 401 averages...
+Pin freq measured on DIO2: 3999.95090917009Hz
+Testing pin freq measure with 403 averages...
+Pin freq measured on DIO2: 4000.01890891614Hz
+Testing pin freq measure with 405 averages...
+Pin freq measured on DIO2: 3999.96864116279Hz
+Testing pin freq measure with 407 averages...
+Pin freq measured on DIO2: 3999.98517768735Hz
+Testing pin freq measure with 409 averages...
+Pin freq measured on DIO2: 3999.98602647207Hz
+Testing pin freq measure with 411 averages...
+Pin freq measured on DIO2: 3999.9752791238Hz
+Testing pin freq measure with 413 averages...
+Pin freq measured on DIO2: 3999.9569481629Hz
+Testing pin freq measure with 415 averages...
+Pin freq measured on DIO2: 3999.96174606271Hz
+Testing pin freq measure with 417 averages...
+Pin freq measured on DIO2: 3999.95507692601Hz
+Testing pin freq measure with 419 averages...
+Pin freq measured on DIO2: 3999.9560491189Hz
+Testing pin freq measure with 421 averages...
+Pin freq measured on DIO2: 3999.96455374962Hz
+Testing pin freq measure with 423 averages...
+Pin freq measured on DIO2: 3999.97297799395Hz
+Testing pin freq measure with 425 averages...
+Pin freq measured on DIO2: 3999.96264614695Hz
+Testing pin freq measure with 427 averages...
+Pin freq measured on DIO2: 3999.95984682307Hz
+Testing pin freq measure with 429 averages...
+Pin freq measured on DIO2: 3999.9829773534Hz
+Testing pin freq measure with 431 averages...
+Pin freq measured on DIO2: 3999.96169280948Hz
+Testing pin freq measure with 433 averages...
+Pin freq measured on DIO2: 3999.95527035313Hz
+Testing pin freq measure with 435 averages...
+Pin freq measured on DIO2: 3999.96715433357Hz
+Testing pin freq measure with 437 averages...
+Pin freq measured on DIO2: 3999.96439842881Hz
+Testing pin freq measure with 439 averages...
+Pin freq measured on DIO2: 3999.95443519989Hz
+Testing pin freq measure with 441 averages...
+Pin freq measured on DIO2: 3999.94456238936Hz
+Testing pin freq measure with 443 averages...
+Pin freq measured on DIO2: 3999.77710986387Hz
+Testing pin freq measure with 445 averages...
+Pin freq measured on DIO2: 3999.96432495683Hz
+Testing pin freq measure with 447 averages...
+Pin freq measured on DIO2: 3999.97229791462Hz
+Testing pin freq measure with 449 averages...
+Pin freq measured on DIO2: 3999.95191432264Hz
+Testing pin freq measure with 451 averages...
+Pin freq measured on DIO2: 3999.97747165036Hz
+Testing pin freq measure with 453 averages...
+Pin freq measured on DIO2: 3999.97827201163Hz
+Testing pin freq measure with 455 averages...
+Pin freq measured on DIO2: 3999.97208716481Hz
+Testing pin freq measure with 457 averages...
+Pin freq measured on DIO2: 3999.96595647118Hz
+Testing pin freq measure with 459 averages...
+Pin freq measured on DIO2: 3999.97371388253Hz
+Testing pin freq measure with 461 averages...
+Pin freq measured on DIO2: 3999.95729836391Hz
+Testing pin freq measure with 463 averages...
+Pin freq measured on DIO2: 3999.98217010406Hz
+Testing pin freq measure with 465 averages...
+Pin freq measured on DIO2: 3999.97610148674Hz
+Testing pin freq measure with 467 averages...
+Pin freq measured on DIO2: 3999.99728042398Hz
+Testing pin freq measure with 469 averages...
+Pin freq measured on DIO2: 3999.98104422619Hz
+Testing pin freq measure with 471 averages...
+Pin freq measured on DIO2: 3999.97505770013Hz
+Testing pin freq measure with 473 averages...
+Pin freq measured on DIO2: 3999.98590337941Hz
+Testing pin freq measure with 475 averages...
+Pin freq measured on DIO2: 3999.95655163713Hz
+Testing pin freq measure with 477 averages...
+Pin freq measured on DIO2: 3999.98402468187Hz
+Testing pin freq measure with 479 averages...
+Pin freq measured on DIO2: 3999.97149715344Hz
+Testing pin freq measure with 481 averages...
+Pin freq measured on DIO2: 3999.96897528502Hz
+Testing pin freq measure with 483 averages...
+Pin freq measured on DIO2: 3999.98290839888Hz
+Testing pin freq measure with 485 averages...
+Pin freq measured on DIO2: 3999.97054045981Hz
+Testing pin freq measure with 487 averages...
+Pin freq measured on DIO2: 3999.96805359173Hz
+Testing pin freq measure with 489 averages...
+Pin freq measured on DIO2: 3999.9850660139Hz
+Testing pin freq measure with 491 averages...
+Pin freq measured on DIO2: 3999.97607367369Hz
+Testing pin freq measure with 493 averages...
+Pin freq measured on DIO2: 3999.97359461781Hz
+Testing pin freq measure with 495 averages...
+Pin freq measured on DIO2: 3999.94868579511Hz
+Testing pin freq measure with 497 averages...
+Pin freq measured on DIO2: 3999.97827906293Hz
+Testing pin freq measure with 499 averages...
+Pin freq measured on DIO2: 3999.97263954429Hz
+Testing pin freq measure with 501 averages...
+Pin freq measured on DIO2: 3999.95753893782Hz
+Testing pin freq measure with 503 averages...
+Pin freq measured on DIO2: 3999.97411957231Hz
+Testing pin freq measure with 505 averages...
+Pin freq measured on DIO2: 3999.99371266897Hz
+Testing pin freq measure with 507 averages...
+Pin freq measured on DIO2: 3999.9724450192Hz
+Testing pin freq measure with 509 averages...
+Pin freq measured on DIO2: 4000.03243750711Hz
+Testing pin freq measure with 511 averages...
+Pin freq measured on DIO2: 3999.97390339908Hz
+Testing pin freq measure with 513 averages...
+Pin freq measured on DIO2: 3999.97771867036Hz
+Testing pin freq measure with 515 averages...
+Pin freq measured on DIO2: 3999.96609137604Hz
+Testing pin freq measure with 517 averages...
+Pin freq measured on DIO2: 3999.95762474408Hz
+Testing pin freq measure with 519 averages...
+Pin freq measured on DIO2: 3999.97063506265Hz
+Testing pin freq measure with 521 averages...
+Pin freq measured on DIO2: 3999.7336987612Hz
+Testing pin freq measure with 523 averages...
+Pin freq measured on DIO2: 3999.96600296563Hz
+Testing pin freq measure with 525 averages...
+Pin freq measured on DIO2: 3999.97278498094Hz
+Testing pin freq measure with 527 averages...
+Pin freq measured on DIO2: 3999.97349074209Hz
+Testing pin freq measure with 529 averages...
+Pin freq measured on DIO2: 3999.96518816398Hz
+Testing pin freq measure with 531 averages...
+Pin freq measured on DIO2: 3999.97189661242Hz
+Testing pin freq measure with 533 averages...
+Pin freq measured on DIO2: 3999.97259776195Hz
+Testing pin freq measure with 535 averages...
+Pin freq measured on DIO2: 4000.12166668521Hz
+Testing pin freq measure with 537 averages...
+Pin freq measured on DIO2: 3999.98876594663Hz
+Testing pin freq measure with 539 averages...
+Pin freq measured on DIO2: 3999.96583401813Hz
+Testing pin freq measure with 541 averages...
+Pin freq measured on DIO2: 3999.96654720988Hz
+Testing pin freq measure with 543 averages...
+Pin freq measured on DIO2: 3999.97017877387Hz
+Testing pin freq measure with 545 averages...
+Pin freq measured on DIO2: 3999.99126119205Hz
+Testing pin freq measure with 547 averages...
+Pin freq measured on DIO2: 3999.96575325072Hz
+Testing pin freq measure with 549 averages...
+Pin freq measured on DIO2: 3999.99248154545Hz
+Testing pin freq measure with 551 averages...
+Pin freq measured on DIO2: 3999.9700355108Hz
+Testing pin freq measure with 553 averages...
+Pin freq measured on DIO2: 3999.98220110597Hz
+Testing pin freq measure with 555 averages...
+Pin freq measured on DIO2: 3999.96281440598Hz
+Testing pin freq measure with 557 averages...
+Pin freq measured on DIO2: 3999.97776867307Hz
+Testing pin freq measure with 559 averages...
+Pin freq measured on DIO2: 3999.96421646483Hz
+Testing pin freq measure with 561 averages...
+Pin freq measured on DIO2: 3999.97339945738Hz
+Testing pin freq measure with 563 averages...
+Pin freq measured on DIO2: 3999.99097662523Hz
+Testing pin freq measure with 565 averages...
+Pin freq measured on DIO2: 3999.97190190393Hz
+Testing pin freq measure with 567 averages...
+Pin freq measured on DIO2: 3999.98376054077Hz
+Testing pin freq measure with 569 averages...
+Pin freq measured on DIO2: 4000.0094862829Hz
+Testing pin freq measure with 571 averages...
+Pin freq measured on DIO2: 3999.96830478563Hz
+Testing pin freq measure with 573 averages...
+Pin freq measured on DIO2: 3999.98282235615Hz
+Testing pin freq measure with 575 averages...
+Pin freq measured on DIO2: 3999.98343429212Hz
+Testing pin freq measure with 577 averages...
+Pin freq measured on DIO2: 3999.98404198608Hz
+Testing pin freq measure with 579 averages...
+Pin freq measured on DIO2: 3999.97093619054Hz
+Testing pin freq measure with 581 averages...
+Pin freq measured on DIO2: 3999.99344213021Hz
+Testing pin freq measure with 583 averages...
+Pin freq measured on DIO2: 3999.9858400525Hz
+Testing pin freq measure with 585 averages...
+Pin freq measured on DIO2: 3999.97828998341Hz
+Testing pin freq measure with 587 averages...
+Pin freq measured on DIO2: 3999.97620036051Hz
+Testing pin freq measure with 589 averages...
+Pin freq measured on DIO2: 3999.96603904028Hz
+Testing pin freq measure with 591 averages...
+Pin freq measured on DIO2: 3999.9854944869Hz
+Testing pin freq measure with 593 averages...
+Pin freq measured on DIO2: 3999.95663054107Hz
+Testing pin freq measure with 595 averages...
+Pin freq measured on DIO2: 3999.9706504853Hz
+Testing pin freq measure with 597 averages...
+Pin freq measured on DIO2: 3999.96862146518Hz
+Testing pin freq measure with 599 averages...
+Pin freq measured on DIO2: 3999.97985751845Hz
+Testing pin freq measure with 601 averages...
+Pin freq measured on DIO2: 3999.97252837964Hz
+Testing pin freq measure with 603 averages...
+Pin freq measured on DIO2: 3999.96788060008Hz
+Testing pin freq measure with 605 averages...
+Pin freq measured on DIO2: 3999.9737596171Hz
+Testing pin freq measure with 607 averages...
+Pin freq measured on DIO2: 3999.9952922684Hz
+Testing pin freq measure with 609 averages...
+Pin freq measured on DIO2: 3999.96976111279Hz
+Testing pin freq measure with 611 averages...
+Pin freq measured on DIO2: 3999.96518325236Hz
+Testing pin freq measure with 613 averages...
+Pin freq measured on DIO2: 3999.97099433742Hz
+Testing pin freq measure with 615 averages...
+Pin freq measured on DIO2: 3999.98709310197Hz
+Testing pin freq measure with 617 averages...
+Pin freq measured on DIO2: 3999.99536856866Hz
+Testing pin freq measure with 619 averages...
+Pin freq measured on DIO2: 3999.97794364216Hz
+Testing pin freq measure with 621 averages...
+Pin freq measured on DIO2: 3999.97852596058Hz
+Testing pin freq measure with 623 averages...
+Pin freq measured on DIO2: 3999.98165275546Hz
+Testing pin freq measure with 625 averages...
+Pin freq measured on DIO2: 3999.96951920354Hz
+Testing pin freq measure with 627 averages...
+Pin freq measured on DIO2: 3999.97518671679Hz
+Testing pin freq measure with 629 averages...
+Pin freq measured on DIO2: 3999.9757703942Hz
+Testing pin freq measure with 631 averages...
+Pin freq measured on DIO2: 3999.97383447032Hz
+Testing pin freq measure with 633 averages...
+Pin freq measured on DIO2: 3999.96187901352Hz
+Testing pin freq measure with 635 averages...
+Pin freq measured on DIO2: 3999.97249926092Hz
+Testing pin freq measure with 637 averages...
+Pin freq measured on DIO2: 3999.97308404507Hz
+Testing pin freq measure with 639 averages...
+Pin freq measured on DIO2: 3999.96621197761Hz
+Testing pin freq measure with 641 averages...
+Pin freq measured on DIO2: 3999.9866259584Hz
+Testing pin freq measure with 643 averages...
+Pin freq measured on DIO2: 3999.98963031454Hz
+Testing pin freq measure with 645 averages...
+Pin freq measured on DIO2: 4000.04676569097Hz
+Testing pin freq measure with 647 averages...
+Pin freq measured on DIO2: 3999.97350005398Hz
+Testing pin freq measure with 649 averages...
+Pin freq measured on DIO2: 3999.99608615833Hz
+Testing pin freq measure with 651 averages...
+Pin freq measured on DIO2: 3999.96976111279Hz
+Testing pin freq measure with 653 averages...
+Pin freq measured on DIO2: 3999.97277108873Hz
+Testing pin freq measure with 655 averages...
+Pin freq measured on DIO2: 3999.98545757733Hz
+Testing pin freq measure with 657 averages...
+Pin freq measured on DIO2: 3999.97873607727Hz
+Testing pin freq measure with 659 averages...
+Pin freq measured on DIO2: 3999.97446439982Hz
+Testing pin freq measure with 661 averages...
+Pin freq measured on DIO2: 3999.98703061795Hz
+Testing pin freq measure with 663 averages...
+Pin freq measured on DIO2: 3999.98515415435Hz
+Testing pin freq measure with 665 averages...
+Pin freq measured on DIO2: 3999.98806354254Hz
+Testing pin freq measure with 667 averages...
+Pin freq measured on DIO2: 3999.97191454166Hz
+Testing pin freq measure with 669 averages...
+Pin freq measured on DIO2: 3999.97484609548Hz
+Testing pin freq measure with 671 averages...
+Pin freq measured on DIO2: 3999.97066241429Hz
+Testing pin freq measure with 673 averages...
+Pin freq measured on DIO2: 3999.99481038136Hz
+Testing pin freq measure with 675 averages...
+Pin freq measured on DIO2: 3999.96472134271Hz
+Testing pin freq measure with 677 averages...
+Pin freq measured on DIO2: 3999.96763949459Hz
+Testing pin freq measure with 679 averages...
+Pin freq measured on DIO2: 3999.97989264778Hz
+Testing pin freq measure with 681 averages...
+Pin freq measured on DIO2: 3999.98041793717Hz
+Testing pin freq measure with 683 averages...
+Pin freq measured on DIO2: 3999.96699403394Hz
+Testing pin freq measure with 685 averages...
+Pin freq measured on DIO2: 3999.98609446954Hz
+Testing pin freq measure with 687 averages...
+Pin freq measured on DIO2: 3999.78787526927Hz
+Testing pin freq measure with 689 averages...
+Pin freq measured on DIO2: 3999.99170510735Hz
+Testing pin freq measure with 691 averages...
+Pin freq measured on DIO2: 3999.96461923462Hz
+Testing pin freq measure with 693 averages...
+Pin freq measured on DIO2: 3999.97434273298Hz
+Testing pin freq measure with 695 averages...
+Pin freq measured on DIO2: 3999.98857878383Hz
+Testing pin freq measure with 697 averages...
+Pin freq measured on DIO2: 3999.98223405606Hz
+Testing pin freq measure with 699 averages...
+Pin freq measured on DIO2: 3999.98501027988Hz
+Testing pin freq measure with 701 averages...
+Pin freq measured on DIO2: 3999.96512394869Hz
+Testing pin freq measure with 703 averages...
+Pin freq measured on DIO2: 3999.98825710614Hz
+Testing pin freq measure with 705 averages...
+Pin freq measured on DIO2: 3999.98648895134Hz
+Testing pin freq measure with 707 averages...
+Pin freq measured on DIO2: 3999.97125807665Hz
+Testing pin freq measure with 709 averages...
+Pin freq measured on DIO2: 3999.97402609034Hz
+Testing pin freq measure with 711 averages...
+Pin freq measured on DIO2: 3999.99464117653Hz
+Testing pin freq measure with 713 averages...
+Pin freq measured on DIO2: 3999.98174210388Hz
+Testing pin freq measure with 715 averages...
+Pin freq measured on DIO2: 3999.97335592159Hz
+Testing pin freq measure with 717 averages...
+Pin freq measured on DIO2: 3999.9738730685Hz
+Testing pin freq measure with 719 averages...
+Pin freq measured on DIO2: 3999.98542723859Hz
+Testing pin freq measure with 721 averages...
+Pin freq measured on DIO2: 3999.97269690704Hz
+Testing pin freq measure with 723 averages...
+Pin freq measured on DIO2: 3999.98199463242Hz
+Testing pin freq measure with 725 averages...
+Pin freq measured on DIO2: 3999.97372342371Hz
+Testing pin freq measure with 727 averages...
+Pin freq measured on DIO2: 3999.99825303671Hz
+Testing pin freq measure with 729 averages...
+Pin freq measured on DIO2: 3999.97691636374Hz
+Testing pin freq measure with 731 averages...
+Pin freq measured on DIO2: 3999.97958559851Hz
+Testing pin freq measure with 733 averages...
+Pin freq measured on DIO2: 3999.98440608293Hz
+Testing pin freq measure with 735 averages...
+Pin freq measured on DIO2: 4000.00215993801Hz
+Testing pin freq measure with 737 averages...
+Pin freq measured on DIO2: 3999.98104422619Hz
+Testing pin freq measure with 739 averages...
+Pin freq measured on DIO2: 3999.97937694751Hz
+Testing pin freq measure with 741 averages...
+Pin freq measured on DIO2: 3999.98843081709Hz
+Testing pin freq measure with 743 averages...
+Pin freq measured on DIO2: 3999.97179601683Hz
+Testing pin freq measure with 745 averages...
+Pin freq measured on DIO2: 3999.98082159233Hz
+Testing pin freq measure with 747 averages...
+Pin freq measured on DIO2: 3999.97704754983Hz
+Testing pin freq measure with 749 averages...
+Pin freq measured on DIO2: 3999.98601092526Hz
+Testing pin freq measure with 751 averages...
+Pin freq measured on DIO2: 3999.96955979017Hz
+Testing pin freq measure with 753 averages...
+Pin freq measured on DIO2: 3999.97217056911Hz
+Testing pin freq measure with 755 averages...
+Pin freq measured on DIO2: 3999.99369185003Hz
+Testing pin freq measure with 757 averages...
+Pin freq measured on DIO2: 3999.98783648248Hz
+Testing pin freq measure with 759 averages...
+Pin freq measured on DIO2: 3999.98201199026Hz
+Testing pin freq measure with 761 averages...
+Pin freq measured on DIO2: 3999.98039036729Hz
+Testing pin freq measure with 763 averages...
+Pin freq measured on DIO2: 3999.99958386542Hz
+Testing pin freq measure with 765 averages...
+Pin freq measured on DIO2: 3999.96679654061Hz
+Testing pin freq measure with 767 averages...
+Pin freq measured on DIO2: 3999.99213469134Hz
+Testing pin freq measure with 769 averages...
+Pin freq measured on DIO2: 3999.97605265114Hz
+Testing pin freq measure with 771 averages...
+Pin freq measured on DIO2: 3999.97446752434Hz
+Testing pin freq measure with 773 averages...
+Pin freq measured on DIO2: 3999.98521300968Hz
+Testing pin freq measure with 775 averages...
+Pin freq measured on DIO2: 3999.99180619186Hz
+Testing pin freq measure with 777 averages...
+Pin freq measured on DIO2: 3999.99427909438Hz
+Testing pin freq measure with 779 averages...
+Pin freq measured on DIO2: 3999.99266343722Hz
+Testing pin freq measure with 781 averages...
+Pin freq measured on DIO2: 3999.98699064038Hz
+Testing pin freq measure with 783 averages...
+Pin freq measured on DIO2: 3999.98337434834Hz
+Testing pin freq measure with 785 averages...
+Pin freq measured on DIO2: 3999.98584352136Hz
+Testing pin freq measure with 787 averages...
+Pin freq measured on DIO2: 3999.99435178685Hz
+Testing pin freq measure with 789 averages...
+Pin freq measured on DIO2: 3999.97665967798Hz
+Testing pin freq measure with 791 averages...
+Pin freq measured on DIO2: 3999.98514810004Hz
+Testing pin freq measure with 793 averages...
+Pin freq measured on DIO2: 3999.97958012125Hz
+Testing pin freq measure with 795 averages...
+Pin freq measured on DIO2: 3999.98003087227Hz
+Testing pin freq measure with 797 averages...
+Pin freq measured on DIO2: 3999.99043884696Hz
+Testing pin freq measure with 799 averages...
+Pin freq measured on DIO2: 3999.9848994222Hz
+Testing pin freq measure with 801 averages...
+Pin freq measured on DIO2: 3999.99326133199Hz
+Testing pin freq measure with 803 averages...
+Pin freq measured on DIO2: 3999.96994939835Hz
+Testing pin freq measure with 805 averages...
+Pin freq measured on DIO2: 3999.98225103252Hz
+Testing pin freq measure with 807 averages...
+Pin freq measured on DIO2: 3999.97678683577Hz
+Testing pin freq measure with 809 averages...
+Pin freq measured on DIO2: 3999.97723669131Hz
+Testing pin freq measure with 811 averages...
+Pin freq measured on DIO2: 3999.96789683138Hz
+Testing pin freq measure with 813 averages...
+Pin freq measured on DIO2: 3999.98789323197Hz
+Testing pin freq measure with 815 averages...
+Pin freq measured on DIO2: 3999.98246881031Hz
+Testing pin freq measure with 817 averages...
+Pin freq measured on DIO2: 3999.99261604349Hz
+Testing pin freq measure with 819 averages...
+Pin freq measured on DIO2: 3999.98720656885Hz
+Testing pin freq measure with 821 averages...
+Pin freq measured on DIO2: 3999.9721551615Hz
+Testing pin freq measure with 823 averages...
+Pin freq measured on DIO2: 3999.98418239626Hz
+Testing pin freq measure with 825 averages...
+Pin freq measured on DIO2: 3999.98460560029Hz
+Testing pin freq measure with 827 averages...
+Pin freq measured on DIO2: 3999.97350895488Hz
+Testing pin freq measure with 829 averages...
+Pin freq measured on DIO2: 3999.97778586338Hz
+Testing pin freq measure with 831 averages...
+Pin freq measured on DIO2: 3999.98204219416Hz
+Testing pin freq measure with 833 averages...
+Pin freq measured on DIO2: 4000.00914798873Hz
+Testing pin freq measure with 835 averages...
+Pin freq measured on DIO2: 3999.98669121187Hz
+Testing pin freq measure with 837 averages...
+Pin freq measured on DIO2: 3999.98141224279Hz
+Testing pin freq measure with 839 averages...
+Pin freq measured on DIO2: 3999.96669760384Hz
+Testing pin freq measure with 841 averages...
+Pin freq measured on DIO2: 3999.98414340403Hz
+Testing pin freq measure with 843 averages...
+Pin freq measured on DIO2: 3999.98079125889Hz
+Testing pin freq measure with 845 averages...
+Pin freq measured on DIO2: 3999.98684871181Hz
+Testing pin freq measure with 847 averages...
+Pin freq measured on DIO2: 3999.98912894246Hz
+Testing pin freq measure with 849 averages...
+Pin freq measured on DIO2: 3999.99700814626Hz
+Testing pin freq measure with 851 averages...
+Pin freq measured on DIO2: 3999.98432973228Hz
+Testing pin freq measure with 853 averages...
+Pin freq measured on DIO2: 3999.9865998271Hz
+Testing pin freq measure with 855 averages...
+Pin freq measured on DIO2: 3999.98514575266Hz
+Testing pin freq measure with 857 averages...
+Pin freq measured on DIO2: 3999.99481313389Hz
+Testing pin freq measure with 859 averages...
+Pin freq measured on DIO2: 3999.98595417364Hz
+Testing pin freq measure with 861 averages...
+Pin freq measured on DIO2: 3999.98451173236Hz
+Testing pin freq measure with 863 averages...
+Pin freq measured on DIO2: 3999.9867551009Hz
+Testing pin freq measure with 865 averages...
+Pin freq measured on DIO2: 3999.98715278686Hz
+Testing pin freq measure with 867 averages...
+Pin freq measured on DIO2: 3999.98754863813Hz
+Testing pin freq measure with 869 averages...
+Pin freq measured on DIO2: 3999.99342326411Hz
+Testing pin freq measure with 871 averages...
+Pin freq measured on DIO2: 3999.98468955335Hz
+Testing pin freq measure with 873 averages...
+Pin freq measured on DIO2: 3999.99599929624Hz
+Testing pin freq measure with 875 averages...
+Pin freq measured on DIO2: 3999.99092828583Hz
+Testing pin freq measure with 877 averages...
+Pin freq measured on DIO2: 3999.97682945483Hz
+Testing pin freq measure with 879 averages...
+Pin freq measured on DIO2: 3999.95015252245Hz
+Testing pin freq measure with 881 averages...
+Pin freq measured on DIO2: 4000.18309060913Hz
+Testing pin freq measure with 883 averages...
+Pin freq measured on DIO2: 3999.98705509764Hz
+Testing pin freq measure with 885 averages...
+Pin freq measured on DIO2: 3999.98923695384Hz
+Testing pin freq measure with 887 averages...
+Pin freq measured on DIO2: 3999.9842498123Hz
+Testing pin freq measure with 889 averages...
+Pin freq measured on DIO2: 3999.99357122193Hz
+Testing pin freq measure with 891 averages...
+Pin freq measured on DIO2: 3999.97256099055Hz
+Testing pin freq measure with 893 averages...
+Pin freq measured on DIO2: 3999.98897782187Hz
+Testing pin freq measure with 895 averages...
+Pin freq measured on DIO2: 3999.98758341836Hz
+Testing pin freq measure with 897 averages...
+Pin freq measured on DIO2: 3999.9755762479Hz
+Testing pin freq measure with 899 averages...
+Pin freq measured on DIO2: 4000.00070636434Hz
+Testing pin freq measure with 901 averages...
+Pin freq measured on DIO2: 3999.9799134074Hz
+Testing pin freq measure with 903 averages...
+Pin freq measured on DIO2: 3999.99085796263Hz
+Testing pin freq measure with 905 averages...
+Pin freq measured on DIO2: 3999.98947481059Hz
+Testing pin freq measure with 907 averages...
+Pin freq measured on DIO2: 3999.99334873917Hz
+Testing pin freq measure with 909 averages...
+Pin freq measured on DIO2: 3999.98498029756Hz
+Testing pin freq measure with 911 averages...
+Pin freq measured on DIO2: 3999.98187652862Hz
+Testing pin freq measure with 913 averages...
+Pin freq measured on DIO2: 3999.99095809424Hz
+Testing pin freq measure with 915 averages...
+Pin freq measured on DIO2: 3999.98091474748Hz
+Testing pin freq measure with 917 averages...
+Pin freq measured on DIO2: 3999.9830338505Hz
+Testing pin freq measure with 919 averages...
+Pin freq measured on DIO2: 3999.98514373223Hz
+Testing pin freq measure with 921 averages...
+Pin freq measured on DIO2: 3999.98724445274Hz
+Testing pin freq measure with 923 averages...
+Pin freq measured on DIO2: 3999.98417612659Hz
+Testing pin freq measure with 925 averages...
+Pin freq measured on DIO2: 3999.97768856063Hz
+Testing pin freq measure with 927 averages...
+Pin freq measured on DIO2: 3999.98150431566Hz
+Testing pin freq measure with 929 averages...
+Pin freq measured on DIO2: 3999.98188590771Hz
+Testing pin freq measure with 931 averages...
+Pin freq measured on DIO2: 3999.98908666467Hz
+Testing pin freq measure with 933 averages...
+Pin freq measured on DIO2: 3999.98604727337Hz
+Testing pin freq measure with 935 averages...
+Pin freq measured on DIO2: 3999.98811460744Hz
+Testing pin freq measure with 937 averages...
+Pin freq measured on DIO2: 3999.98678454961Hz
+Testing pin freq measure with 939 averages...
+Pin freq measured on DIO2: 4000.08690311697Hz
+Testing pin freq measure with 941 averages...
+Pin freq measured on DIO2: 3999.984141398Hz
+Testing pin freq measure with 943 averages...
+Pin freq measured on DIO2: 3999.97777774037Hz
+Testing pin freq measure with 945 averages...
+Pin freq measured on DIO2: 3999.99160026325Hz
+Testing pin freq measure with 947 averages...
+Pin freq measured on DIO2: 3999.99530607729Hz
+Testing pin freq measure with 949 averages...
+Pin freq measured on DIO2: 3999.97055770564Hz
+Testing pin freq measure with 951 averages...
+Pin freq measured on DIO2: 3999.97095348928Hz
+Testing pin freq measure with 953 averages...
+Pin freq measured on DIO2: 3999.98800592707Hz
+Testing pin freq measure with 955 averages...
+Pin freq measured on DIO2: 3999.98171412613Hz
+Testing pin freq measure with 957 averages...
+Pin freq measured on DIO2: 3999.98706073368Hz
+Testing pin freq measure with 959 averages...
+Pin freq measured on DIO2: 3999.98410797308Hz
+Testing pin freq measure with 961 averages...
+Pin freq measured on DIO2: 3999.98447144046Hz
+Testing pin freq measure with 963 averages...
+Pin freq measured on DIO2: 3999.99307610229Hz
+Testing pin freq measure with 965 averages...
+Pin freq measured on DIO2: 3999.98848410045Hz
+Testing pin freq measure with 967 averages...
+Pin freq measured on DIO2: 3999.98062767165Hz
+Testing pin freq measure with 969 averages...
+Pin freq measured on DIO2: 3999.99082530479Hz
+Testing pin freq measure with 971 averages...
+Pin freq measured on DIO2: 3999.99607608151Hz
+Testing pin freq measure with 973 averages...
+Pin freq measured on DIO2: 3999.98172608544Hz
+Testing pin freq measure with 975 averages...
+Pin freq measured on DIO2: 3999.99511522572Hz
+Testing pin freq measure with 977 averages...
+Pin freq measured on DIO2: 3999.97920104385Hz
+Testing pin freq measure with 979 averages...
+Pin freq measured on DIO2: 3999.99740542995Hz
+Testing pin freq measure with 981 averages...
+Pin freq measured on DIO2: 3999.99126119205Hz
+Testing pin freq measure with 983 averages...
+Pin freq measured on DIO2: 3999.97545201798Hz
+Testing pin freq measure with 985 averages...
+Pin freq measured on DIO2: 3999.97743591397Hz
+Testing pin freq measure with 987 averages...
+Pin freq measured on DIO2: 3999.9810202195Hz
+Testing pin freq measure with 989 averages...
+Pin freq measured on DIO2: 3999.97977444493Hz
+Testing pin freq measure with 991 averages...
+Pin freq measured on DIO2: 3999.99134937357Hz
+Testing pin freq measure with 993 averages...
+Pin freq measured on DIO2: 3999.99008780684Hz
+Testing pin freq measure with 995 averages...
+Pin freq measured on DIO2: 3999.98404475128Hz
+Testing pin freq measure with 997 averages...
+Pin freq measured on DIO2: 3999.98439522128Hz
+Testing pin freq measure with 999 averages...
+Pin freq measured on DIO2: 3999.99110082055Hz
+Starting pin frequency measure timeout functionality test...
+Starting GPIO resistor configuration test...
+Starting pin read/write test...
 Testing 100 pin set/read trials
 Starting trial 0
+Starting trial 1
+Starting trial 2
+Starting trial 3
+Starting trial 4
+Starting trial 5
+Starting trial 6
+Starting trial 7
+Starting trial 8
+Starting trial 9
+Starting trial 10
+Starting trial 11
+Starting trial 12
+Starting trial 13
+Starting trial 14
+Starting trial 15
+Starting trial 16
+Starting trial 17
+Starting trial 18
+Starting trial 19
+Starting trial 20
+Starting trial 21
+Starting trial 22
+Starting trial 23
+Starting trial 24
+Starting trial 25
+Starting trial 26
+Starting trial 27
+Starting trial 28
+Starting trial 29
+Starting trial 30
+Starting trial 31
+Starting trial 32
+Starting trial 33
+Starting trial 34
+Starting trial 35
+Starting trial 36
+Starting trial 37
+Starting trial 38
+Starting trial 39
+Starting trial 40
+Starting trial 41
+Starting trial 42
+Starting trial 43
+Starting trial 44
+Starting trial 45
+Starting trial 46
+Starting trial 47
+Starting trial 48
+Starting trial 49
+Starting trial 50
+Starting trial 51
+Starting trial 52
+Starting trial 53
+Starting trial 54
+Starting trial 55
+Starting trial 56
+Starting trial 57
+Starting trial 58
+Starting trial 59
+Starting trial 60
+Starting trial 61
+Starting trial 62
+Starting trial 63
+Starting trial 64
+Starting trial 65
+Starting trial 66
+Starting trial 67
+Starting trial 68
+Starting trial 69
+Starting trial 70
+Starting trial 71
+Starting trial 72
+Starting trial 73
+Starting trial 74
+Starting trial 75
+Starting trial 76
+Starting trial 77
+Starting trial 78
+Starting trial 79
+Starting trial 80
+Starting trial 81
+Starting trial 82
+Starting trial 83
+Starting trial 84
+Starting trial 85
+Starting trial 86
+Starting trial 87
+Starting trial 88
+Starting trial 89
+Starting trial 90
+Starting trial 91
+Starting trial 92
+Starting trial 93
+Starting trial 94
+Starting trial 95
+Starting trial 96
+Starting trial 97
+Starting trial 98
+Starting trial 99
 Test fixture tear down complete
 Starting test fixture setup...
 Tests executing from C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\
@@ -693,7 +1866,7 @@ FX3 Connected! FX3 API Info:
 Project Name: FX3Api
 Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
 Version Number: 2.8.0-PUB
-Build Date and Time: Fri 05/15/2020 14:36:48.64 
+Build Date and Time: Fri 05/15/2020 14:46:06.45 
 
 Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
 Current Branch: master
@@ -712,4 +1885,6 @@ Debug Mode: False
 Uptime: 3ms
 Bootloader Version: 1.0.0
 Test fixture setup complete
+Starting SPI configurable parameters test...
+Starting SPI transfer test...
 Test fixture tear down complete
