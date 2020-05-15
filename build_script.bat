@@ -12,6 +12,7 @@ rmdir /S /Q %CD%\Test\bin
 IF EXIST %CD%\iSensor-FX3-API (
 cd iSensor-FX3-API\
 git pull
+get reset --hard origin/master
 cd..
 ) ELSE (
 git clone https://github.com/juchong/iSensor-FX3-API.git
@@ -35,10 +36,9 @@ msbuild iSensor-FX3-Test.csproj /p:configuration=debug
 cd..
 
 @echo Running tests...
-NUnit-2.6.4\bin\nunit-console-x86.exe /xml:%CD%\test_result.xml /out:%CD%\test_console.txt %CD%\Test\bin\Debug\iSensor-FX3-Test.dll
+NUnit-2.6.4\bin\nunit-console-x86.exe /framework:net-4.5 /xml:%CD%\test_result.xml %CD%\Test\bin\Debug\iSensor-FX3-Test.dll
 
 @echo Pushing results...
-cd..
 git add -A
 git commit -m "Test run results, %DATE% %TIME%"
 git push
