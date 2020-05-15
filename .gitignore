@@ -6,3 +6,4 @@ Test/obj/
 *.pdb
 Resources/
 *.user
+*.sln
