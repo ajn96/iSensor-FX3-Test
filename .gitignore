@@ -1,0 +1,6 @@
+iSensor-FX3-API/
+iSensor-FX3-Test/
+Test/bin/
+Test/obj/
+.vs/
+*.pdb
