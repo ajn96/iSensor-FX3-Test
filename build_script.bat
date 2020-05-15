@@ -29,14 +29,13 @@ xcopy /s /Y /i %CD%\iSensor-FX3-API\Resources\USBFlashProg.img %CD%\Resources
 @echo Building tests...
 cd Test\
 msbuild iSensor-FX3-Test.csproj /p:configuration=debug
+cd..
 
 @echo Running tests...
-%CD%\NUnit-2.6.4\nunit-console-x86.exe /xml:%CD%\test_result.xml /out:%CD%\test_console.txt %CD%\Test\bin\Debug\iSensor-FX3-Test.dll
-
-pause
+NUnit-2.6.4\bin\nunit-console-x86.exe /xml:%CD%\test_result.xml /out:%CD%\test_console.txt %CD%\Test\bin\Debug\iSensor-FX3-Test.dll
 
 @echo Pushing results...
 cd..
 git add -A
-git commit -m "Test run results, %DATE%"
+git commit -m "Test run results, %DATE% %TIME%"
 git push
