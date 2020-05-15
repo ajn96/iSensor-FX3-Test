@@ -1,3 +1,6 @@
+@echo Updating test repository...
+git pull
+
 @echo Removing existing build artifacts
 
 rmdir /S /Q %CD%\iSensor-FX3-API\bin
