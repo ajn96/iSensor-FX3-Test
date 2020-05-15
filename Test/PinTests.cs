@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using FX3Api;
 using System.IO;
+using System.Diagnostics;
 
 namespace iSensor_FX3_Test
 {
@@ -87,10 +88,92 @@ namespace iSensor_FX3_Test
         }
 
         [Test]
-        public void PinFreqMeasureTimeoutTest()
+        public void PinFunctionTimeoutTest()
         {
             InitializeTestCase();
-            Console.WriteLine("Starting pin frequency measure timeout functionality test...");
+            Console.WriteLine("Starting pin functions timeout functionality test...");
+
+            /* Timer for measuring elapsed time */
+            Stopwatch timer = new Stopwatch();
+
+            FX3.SetPin(FX3.DIO2, 1);
+
+            for(uint timeout = 100; timeout <= 800; timeout = timeout * 2)
+            {
+                Console.WriteLine("Testing timeout of " + timeout.ToString() + "ms...");
+
+                /* Pulse wait */
+                timer.Restart();
+                FX3.PulseWait(FX3.DIO1, 0, 0, timeout);
+                timer.Stop();
+                Console.WriteLine("Pulse wait time: " + timer.ElapsedMilliseconds.ToString() + "ms");
+                Assert.GreaterOrEqual(timer.ElapsedMilliseconds, timeout, "ERROR: Function returned in less than timeout period");
+                Assert.LessOrEqual(timer.ElapsedMilliseconds, timeout + 100, "ERROR: Function returned in over 100ms more than timeout period");
+                CheckFirmwareResponsiveness();
+
+                /* Measure pin freq */
+                timer.Restart();
+                Assert.AreEqual(double.PositiveInfinity, FX3.MeasurePinFreq(FX3.DIO2, 0, timeout, 1));
+                timer.Stop();
+                Console.WriteLine("Measure pin freq time: " + timer.ElapsedMilliseconds.ToString() + "ms");
+                Assert.GreaterOrEqual(timer.ElapsedMilliseconds, timeout, "ERROR: Function returned in less than timeout period");
+                Assert.LessOrEqual(timer.ElapsedMilliseconds, timeout + 100, "ERROR: Function returned in over 100ms more than timeout period");
+                CheckFirmwareResponsiveness();
+
+                /* Measure pin delay */
+                timer.Restart();
+                Assert.AreEqual(double.PositiveInfinity, FX3.MeasurePinDelay(FX3.DIO4, 0, FX3.DIO1, timeout));
+                timer.Stop();
+                Console.WriteLine("Measure pin delay time: " + timer.ElapsedMilliseconds.ToString() + "ms");
+                Assert.GreaterOrEqual(timer.ElapsedMilliseconds, timeout, "ERROR: Function returned in less than timeout period");
+                Assert.LessOrEqual(timer.ElapsedMilliseconds, timeout + 100, "ERROR: Function returned in over 100ms more than timeout period");
+                CheckFirmwareResponsiveness();
+
+                /* Measure busy pulse */
+                timer.Restart();
+                Assert.AreEqual(double.PositiveInfinity, FX3.MeasureBusyPulse(FX3.DIO4, 1, 1, FX3.DIO1, 0, timeout));
+                timer.Stop();
+                Console.WriteLine("Measure busy pulse time: " + timer.ElapsedMilliseconds.ToString() + "ms");
+                Assert.GreaterOrEqual(timer.ElapsedMilliseconds, timeout, "ERROR: Function returned in less than timeout period");
+                Assert.LessOrEqual(timer.ElapsedMilliseconds, timeout + 100, "ERROR: Function returned in over 100ms more than timeout period");
+                CheckFirmwareResponsiveness();
+            }
+        }
+
+        [Test]
+        public void GetTimerValueTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting timer value test...");
+
+            uint time0, time1;
+
+            double scaledTime;
+
+            time0 = FX3.GetTimerValue();
+            System.Threading.Thread.Sleep(3000);
+            time1 = FX3.GetTimerValue();
+            if(time1 < time0)
+            {
+                /* Timer value just rolled over */
+                time0 = time1;
+                time1 = FX3.GetTimerValue();
+            }
+            scaledTime = (time1 - time0) / 10078;
+            Assert.AreEqual(3000, scaledTime, 0.02 * 3000, "ERROR: Invalid timestamp");
+
+            /* Timer for measuring elapsed time */
+            Stopwatch timer = new Stopwatch();
+
+            time0 = (uint) FX3.GetTimerValue() / 10078;
+            timer.Start();
+            while(timer.ElapsedMilliseconds < 5000)
+            {
+                time1 = FX3.GetTimerValue();
+                Console.WriteLine("FX3 Time: " + (time1 / 10078).ToString() + "ms, system time: " + (timer.ElapsedMilliseconds + time0).ToString() + "ms");
+                Assert.AreEqual((time1 / 10078), (timer.ElapsedMilliseconds + time0), (timer.ElapsedMilliseconds + time0) * 0.02, "ERROR: Invalid FX3 time");
+                System.Threading.Thread.Sleep(100);
+            }
         }
 
         [Test]
@@ -99,6 +182,5 @@ namespace iSensor_FX3_Test
             InitializeTestCase();
             Console.WriteLine("Starting GPIO resistor configuration test...");
         }
-
     }
 }

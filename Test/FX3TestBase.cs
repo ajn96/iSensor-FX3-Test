@@ -14,16 +14,18 @@ namespace iSensor_FX3_Test
         /* FX3 object */
         public FX3Connection FX3;
 
+        public string ResourcePath;
+
         [TestFixtureSetUp(), Timeout(5000)]
         public void TestFixtureSetup()
         {
             Console.WriteLine("Starting test fixture setup...");
             string exePath = System.AppDomain.CurrentDomain.BaseDirectory;
             Console.WriteLine("Tests executing from " + exePath);
-            string resoucePath = Path.GetFullPath(Path.Combine(exePath, @"..\..\..\"));
-            resoucePath = Path.Combine(resoucePath, "Resources");
-            Assert.True(Directory.Exists(resoucePath), "ERROR: Resource path not found. Build process may have failed!");
-            FX3 = new FX3Connection(resoucePath, resoucePath, resoucePath, DeviceType.IMU);
+            ResourcePath = Path.GetFullPath(Path.Combine(exePath, @"..\..\..\"));
+            ResourcePath = Path.Combine(ResourcePath, "Resources");
+            Assert.True(Directory.Exists(ResourcePath), "ERROR: Resource path not found. Build process may have failed!");
+            FX3 = new FX3Connection(ResourcePath, ResourcePath, ResourcePath, DeviceType.IMU);
             Connect();
             Console.WriteLine("FX3 Connected! FX3 API Info: " + Environment.NewLine + FX3.GetFX3ApiInfo.ToString());
             Console.WriteLine("FX3 Board Info: " + Environment.NewLine + FX3.ActiveFX3.ToString());
@@ -63,6 +65,14 @@ namespace iSensor_FX3_Test
             Connect();
             FX3.StopPWM(FX3.DIO1);
             FX3.StopPWM(FX3.DIO2);
+        }
+
+        public void CheckFirmwareResponsiveness()
+        {
+            uint time0, time1;
+            time0 = FX3.GetTimerValue();
+            time1 = FX3.GetTimerValue();
+            Assert.AreNotEqual(time0, time1, "ERROR: Received two identical back-to-back timestamp values");
         }
     }
 }
