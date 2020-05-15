@@ -20,6 +20,8 @@ namespace iSensor_FX3_Test
 
             string sn = FX3.ActiveFX3.SerialNumber;
 
+            int exCount = 0;
+
             for(int trial = 0; trial < RESET_TRIALS; trial++)
             {
                 Console.WriteLine("Disconnecting FX3...");
@@ -30,6 +32,18 @@ namespace iSensor_FX3_Test
                 Console.WriteLine("Connecting to FX3...");
                 FX3.Connect(sn);
             }
+
+            try
+            {
+                exCount = 0;
+                FX3.Connect("Bad SN");
+            }
+            catch(Exception e)
+            {
+                Assert.True(e is FX3ProgrammingException, "ERROR: Expected FX3 programming exception to be thrown");
+                exCount++;
+            }
+            Assert.AreEqual(1, exCount, "ERROR: No exception throw for connecting to invalid board");
         }
 
         [Test]
