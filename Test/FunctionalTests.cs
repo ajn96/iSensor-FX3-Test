@@ -14,9 +14,10 @@ namespace iSensor_FX3_Test
         [Test]
         public void FirmwareLoadTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting firmware load test...");
 
-            const int RESET_TRIALS = 10;
+            const int RESET_TRIALS = 4;
 
             string sn = FX3.ActiveFX3.SerialNumber;
 
@@ -35,6 +36,7 @@ namespace iSensor_FX3_Test
 
             try
             {
+                FX3.Disconnect();
                 exCount = 0;
                 FX3.Connect("Bad SN");
             }
@@ -49,19 +51,22 @@ namespace iSensor_FX3_Test
         [Test]
         public void ImagePathsTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting firmware image path validation test...");
         }
 
         [Test]
         public void BootStatusTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting boot status retrieval test...");
         }
 
         [Test]
         public void FirmwareVersionTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting firmware version test...");
         }
     }
 }

@@ -12,7 +12,7 @@ rmdir /S /Q %CD%\Test\bin
 IF EXIST %CD%\iSensor-FX3-API (
 cd iSensor-FX3-API\
 git fetch
-get reset --hard origin/master
+git reset --hard origin/master
 cd..
 ) ELSE (
 git clone https://github.com/juchong/iSensor-FX3-API.git

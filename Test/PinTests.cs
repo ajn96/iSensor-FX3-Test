@@ -14,7 +14,8 @@ namespace iSensor_FX3_Test
         [Test]
         public void SetReadPinTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting pin read/write test...");
 
             const int NUM_TRIALS = 100;
 
@@ -37,7 +38,8 @@ namespace iSensor_FX3_Test
         [Test]
         public void PinFreqMeasurePWMTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting pin frequency measure test...");
 
             const double MIN_FREQ = 5;
             const double MAX_FREQ = 10000;
@@ -87,13 +89,15 @@ namespace iSensor_FX3_Test
         [Test]
         public void PinFreqMeasureTimeoutTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting pin frequency measure timeout functionality test...");
         }
 
         [Test]
         public void ResistorConfigurationTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting GPIO resistor configuration test...");
         }
 
     }

@@ -57,5 +57,12 @@ namespace iSensor_FX3_Test
                 Assert.True(false, "ERROR: No FX3 board connected!");
             }
         }
+
+        public void InitializeTestCase()
+        {
+            Connect();
+            FX3.StopPWM(FX3.DIO1);
+            FX3.StopPWM(FX3.DIO2);
+        }
     }
 }

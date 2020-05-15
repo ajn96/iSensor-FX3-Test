@@ -15,13 +15,15 @@ namespace iSensor_FX3_Test
         [Test]
         public void SpiTransferTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting SPI transfer test...");
         }
 
         [Test]
         public void SpiParametersTest()
         {
-            Connect();
+            InitializeTestCase();
+            Console.WriteLine("Starting SPI configurable parameters test...");
         }
 
     }

@@ -15,25 +15,30 @@ namespace iSensor_FX3_Test
         [Test]
         public void I2CReadTest()
         {
+            InitializeTestCase();
+            Console.WriteLine("Starting I2C read test...");
 
         }
 
         [Test]
         public void I2CWriteTest()
         {
-
+            InitializeTestCase();
+            Console.WriteLine("Starting I2C write test...");
         }
 
         [Test]
         public void I2CStreamTest()
         {
-
+            InitializeTestCase();
+            Console.WriteLine("Starting I2C data stream test...");
         }
 
         [Test]
         public void I2CModeSwitchingTest()
         {
-
+            InitializeTestCase();
+            Console.WriteLine("Starting I2C mode switching stress test...");
         }
     }
 }
