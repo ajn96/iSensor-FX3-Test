@@ -30,6 +30,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="adisApi">
+      <HintPath>..\Resources\adisApi.dll</HintPath>
+    </Reference>
+    <Reference Include="adisInterface">
+      <HintPath>..\Resources\adisInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="CyUSB">
+      <HintPath>..\Resources\CyUSB.dll</HintPath>
+    </Reference>
+    <Reference Include="FX3Api">
+      <HintPath>..\Resources\FX3Api.dll</HintPath>
+    </Reference>
+    <Reference Include="FX3USB">
+      <HintPath>..\Resources\FX3USB.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\NUnit-2.6.4\bin\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks">
+      <HintPath>..\NUnit-2.6.4\bin\framework\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework">
+      <HintPath>..\NUnit-2.6.4\bin\framework\pnunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RegMapClasses">
+      <HintPath>..\Resources\RegMapClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="StreamDataLogger">
+      <HintPath>..\Resources\StreamDataLogger.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
