@@ -3,6 +3,7 @@
 This repository allows automated testing of the iSensor FX3 demonstration platform firmware and API on target hardware
 
 FX3 API Repository: https://github.com/juchong/iSensor-FX3-API
+
 FX3 Firmware Repository: https://github.com/juchong/iSensor-FX3-Firmware
 
 ## Hardware Setup
@@ -20,7 +21,7 @@ FX3 Firmware Repository: https://github.com/juchong/iSensor-FX3-Firmware
 
 ## Test Flow
 
-Running "build_script.bat" will trigger the build and test sequence:
+Running "build_script.bat" will start the build and test sequence:
 * Get latest version of the FX3 API from GitHub
 * Compile FX3 API from source
 * Copy pre-built FX3 Firmware binaries from FX3 API repo - at some point will write a makefile for the FX3 Firmware to allow automated build
