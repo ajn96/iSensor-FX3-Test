@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="14" errors="0" failures="14" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2020-05-15" time="14:29:32">
+<test-results name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="14" errors="0" failures="14" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2020-05-15" time="14:33:20">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.9043" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\anolan3\Documents\iSensor-FX3-Test" machine-name="ANOLAN3-L02" user="anolan3" user-domain="ANALOG" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Failure" success="False" time="35.188" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Failure" success="False" time="34.473" asserts="0">
     <results>
-      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Failure" success="False" time="35.167" asserts="0">
+      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Failure" success="False" time="34.466" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Error" success="False" time="9.521" asserts="1">
+          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Error" success="False" time="9.413" asserts="1">
             <failure>
               <message><![CDATA[SetUp : FX3Api.FX3Exception : ERROR: FX3 Api version 2.7.0-PUB requires matching firmware version. Supplied firmware file is version 2.8.0-PUB]]></message>
               <stack-trace><![CDATA[at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\anolan3\Documents\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 182
@@ -43,7 +43,7 @@ at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\anolan3\Documents
               </test-case>
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Error" success="False" time="8.400" asserts="1">
+          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Error" success="False" time="8.469" asserts="1">
             <failure>
               <message><![CDATA[SetUp : FX3Api.FX3Exception : ERROR: FX3 Api version 2.7.0-PUB requires matching firmware version. Supplied firmware file is version 2.8.0-PUB]]></message>
               <stack-trace><![CDATA[at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\anolan3\Documents\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 182
@@ -79,7 +79,7 @@ at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\anolan3\Documents
               </test-case>
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="PinTests" executed="True" result="Error" success="False" time="8.539" asserts="1">
+          <test-suite type="TestFixture" name="PinTests" executed="True" result="Error" success="False" time="8.373" asserts="1">
             <failure>
               <message><![CDATA[SetUp : FX3Api.FX3Exception : ERROR: FX3 Api version 2.7.0-PUB requires matching firmware version. Supplied firmware file is version 2.8.0-PUB]]></message>
               <stack-trace><![CDATA[at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\anolan3\Documents\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 182
@@ -115,7 +115,7 @@ at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\anolan3\Documents
               </test-case>
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Error" success="False" time="8.700" asserts="1">
+          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Error" success="False" time="8.205" asserts="1">
             <failure>
               <message><![CDATA[SetUp : FX3Api.FX3Exception : ERROR: FX3 Api version 2.7.0-PUB requires matching firmware version. Supplied firmware file is version 2.8.0-PUB]]></message>
               <stack-trace><![CDATA[at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\anolan3\Documents\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 182
