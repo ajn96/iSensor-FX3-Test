@@ -1,0 +1,4164 @@
+Starting test fixture setup...
+Tests executing from C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\
+FX3 Connected! FX3 API Info: 
+Project Name: FX3Api
+Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
+Version Number: 2.8.1-PUB
+Build Date and Time: Tue 05/19/2020 15:33:30.62 
+
+Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
+Current Branch: master
+
+Most Recent Commit Hash: 0aaa0bf04e8dcd0648ebdf9b12b75a2571f9a198
+
+Link to the commit: https://github.com/juchong/iSensor-FX3-API
+/tree/0aaa0bf04e8dcd0648ebdf9b12b75a2571f9a198
+
+FX3 Board Info: 
+Firmware Version: ADI FX3 REV 2.8.1-PUB
+Board Type: iSensorFX3Board_A
+Build Date and Time: May 19 2020 14:00:07
+Serial Number: 0009091203143026
+Debug Mode: False
+Uptime: 113ms
+Bootloader Version: 1.0.1
+Test fixture setup complete
+Starting boot status retrieval test...
+Application firmware running on FX3
+Disconnecting FX3...
+Application firmware Not running on FX3
+Re-connecting FX3...
+Application firmware running on FX3
+Starting firmware load test...
+Disconnecting FX3...
+Connecting to FX3...
+Disconnecting FX3...
+Connecting to FX3...
+Disconnecting FX3...
+Connecting to FX3...
+Disconnecting FX3...
+Connecting to FX3...
+Starting firmware version test...
+Starting firmware image path validation test...
+Starting USB command execution timing test...
+Average SetPin execution time: 233us
+Average ReadPin execution time: 184us
+Average SPI parameter configuration time: 214us
+Test fixture tear down complete
+Starting test fixture setup...
+Tests executing from C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\
+FX3 Connected! FX3 API Info: 
+Project Name: FX3Api
+Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
+Version Number: 2.8.1-PUB
+Build Date and Time: Tue 05/19/2020 15:33:30.62 
+
+Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
+Current Branch: master
+
+Most Recent Commit Hash: 0aaa0bf04e8dcd0648ebdf9b12b75a2571f9a198
+
+Link to the commit: https://github.com/juchong/iSensor-FX3-API
+/tree/0aaa0bf04e8dcd0648ebdf9b12b75a2571f9a198
+
+FX3 Board Info: 
+Firmware Version: ADI FX3 REV 2.8.1-PUB
+Board Type: iSensorFX3Board_A
+Build Date and Time: May 19 2020 14:00:07
+Serial Number: 0009091203143026
+Debug Mode: False
+Uptime: 3ms
+Bootloader Version: 1.0.1
+Test fixture setup complete
+Starting I2C mode switching stress test...
+Starting I2C read test...
+Testing 2 byte read
+Testing 4 byte read
+Testing 6 byte read
+Testing 8 byte read
+Testing 10 byte read
+Testing 12 byte read
+Testing 14 byte read
+Testing 16 byte read
+Testing 18 byte read
+Testing 20 byte read
+Testing 22 byte read
+Testing 24 byte read
+Testing 26 byte read
+Testing 28 byte read
+Testing 30 byte read
+Testing 32 byte read
+Testing 34 byte read
+Testing 36 byte read
+Testing 38 byte read
+Testing 40 byte read
+Testing 42 byte read
+Testing 44 byte read
+Testing 46 byte read
+Testing 48 byte read
+Testing 50 byte read
+Testing 52 byte read
+Testing 54 byte read
+Testing 56 byte read
+Testing 58 byte read
+Testing 60 byte read
+Testing 62 byte read
+Testing 64 byte read
+Testing 66 byte read
+Testing 68 byte read
+Testing 70 byte read
+Testing 72 byte read
+Testing 74 byte read
+Testing 76 byte read
+Testing 78 byte read
+Testing 80 byte read
+Testing 82 byte read
+Testing 84 byte read
+Testing 86 byte read
+Testing 88 byte read
+Testing 90 byte read
+Testing 92 byte read
+Testing 94 byte read
+Testing 96 byte read
+Testing 98 byte read
+Testing 100 byte read
+Testing 102 byte read
+Testing 104 byte read
+Testing 106 byte read
+Testing 108 byte read
+Testing 110 byte read
+Testing 112 byte read
+Testing 114 byte read
+Testing 116 byte read
+Testing 118 byte read
+Testing 120 byte read
+Testing 122 byte read
+Testing 124 byte read
+Testing 126 byte read
+Testing 128 byte read
+Testing 130 byte read
+Testing 132 byte read
+Testing 134 byte read
+Testing 136 byte read
+Testing 138 byte read
+Testing 140 byte read
+Testing 142 byte read
+Testing 144 byte read
+Testing 146 byte read
+Testing 148 byte read
+Testing 150 byte read
+Testing 152 byte read
+Testing 154 byte read
+Testing 156 byte read
+Testing 158 byte read
+Testing 160 byte read
+Testing 162 byte read
+Testing 164 byte read
+Testing 166 byte read
+Testing 168 byte read
+Testing 170 byte read
+Testing 172 byte read
+Testing 174 byte read
+Testing 176 byte read
+Testing 178 byte read
+Testing 180 byte read
+Testing 182 byte read
+Testing 184 byte read
+Testing 186 byte read
+Testing 188 byte read
+Testing 190 byte read
+Testing 192 byte read
+Testing 194 byte read
+Testing 196 byte read
+Testing 198 byte read
+Testing 200 byte read
+Testing 202 byte read
+Testing 204 byte read
+Testing 206 byte read
+Testing 208 byte read
+Testing 210 byte read
+Testing 212 byte read
+Testing 214 byte read
+Testing 216 byte read
+Testing 218 byte read
+Testing 220 byte read
+Testing 222 byte read
+Testing 224 byte read
+Testing 226 byte read
+Testing 228 byte read
+Testing 230 byte read
+Testing 232 byte read
+Testing 234 byte read
+Testing 236 byte read
+Testing 238 byte read
+Testing 240 byte read
+Testing 242 byte read
+Testing 244 byte read
+Testing 246 byte read
+Testing 248 byte read
+Testing 250 byte read
+Testing 252 byte read
+Testing 254 byte read
+Starting I2C data stream test...
+Starting I2C write test...
+Test fixture tear down complete
+Starting test fixture setup...
+Tests executing from C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\
+FX3 Connected! FX3 API Info: 
+Project Name: FX3Api
+Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
+Version Number: 2.8.1-PUB
+Build Date and Time: Tue 05/19/2020 15:33:30.62 
+
+Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
+Current Branch: master
+
+Most Recent Commit Hash: 0aaa0bf04e8dcd0648ebdf9b12b75a2571f9a198
+
+Link to the commit: https://github.com/juchong/iSensor-FX3-API
+/tree/0aaa0bf04e8dcd0648ebdf9b12b75a2571f9a198
+
+FX3 Board Info: 
+Firmware Version: ADI FX3 REV 2.8.1-PUB
+Board Type: iSensorFX3Board_A
+Build Date and Time: May 19 2020 14:00:07
+Serial Number: 0009091203143026
+Debug Mode: False
+Uptime: 3ms
+Bootloader Version: 1.0.1
+Test fixture setup complete
+Starting timer value test...
+FX3 Time: 3134ms, system time: 3134ms
+FX3 Time: 3235ms, system time: 3235ms
+FX3 Time: 3336ms, system time: 3336ms
+FX3 Time: 3437ms, system time: 3437ms
+FX3 Time: 3538ms, system time: 3537ms
+FX3 Time: 3639ms, system time: 3638ms
+FX3 Time: 3740ms, system time: 3740ms
+FX3 Time: 3841ms, system time: 3841ms
+FX3 Time: 3942ms, system time: 3941ms
+FX3 Time: 4043ms, system time: 4042ms
+FX3 Time: 4143ms, system time: 4143ms
+FX3 Time: 4244ms, system time: 4244ms
+FX3 Time: 4345ms, system time: 4344ms
+FX3 Time: 4446ms, system time: 4446ms
+FX3 Time: 4547ms, system time: 4546ms
+FX3 Time: 4648ms, system time: 4647ms
+FX3 Time: 4749ms, system time: 4748ms
+FX3 Time: 4849ms, system time: 4849ms
+FX3 Time: 4950ms, system time: 4949ms
+FX3 Time: 5051ms, system time: 5050ms
+FX3 Time: 5152ms, system time: 5151ms
+FX3 Time: 5253ms, system time: 5252ms
+FX3 Time: 5354ms, system time: 5353ms
+FX3 Time: 5455ms, system time: 5454ms
+FX3 Time: 5555ms, system time: 5554ms
+FX3 Time: 5656ms, system time: 5655ms
+FX3 Time: 5758ms, system time: 5757ms
+FX3 Time: 5859ms, system time: 5858ms
+FX3 Time: 5959ms, system time: 5958ms
+FX3 Time: 6060ms, system time: 6059ms
+FX3 Time: 6161ms, system time: 6160ms
+FX3 Time: 6262ms, system time: 6261ms
+FX3 Time: 6362ms, system time: 6361ms
+FX3 Time: 6463ms, system time: 6462ms
+FX3 Time: 6564ms, system time: 6563ms
+FX3 Time: 6665ms, system time: 6664ms
+FX3 Time: 6765ms, system time: 6764ms
+FX3 Time: 6866ms, system time: 6865ms
+FX3 Time: 6967ms, system time: 6966ms
+FX3 Time: 7068ms, system time: 7067ms
+FX3 Time: 7168ms, system time: 7167ms
+FX3 Time: 7269ms, system time: 7268ms
+FX3 Time: 7370ms, system time: 7369ms
+FX3 Time: 7471ms, system time: 7470ms
+FX3 Time: 7572ms, system time: 7570ms
+FX3 Time: 7672ms, system time: 7671ms
+FX3 Time: 7773ms, system time: 7772ms
+FX3 Time: 7874ms, system time: 7873ms
+FX3 Time: 7975ms, system time: 7973ms
+FX3 Time: 8076ms, system time: 8074ms
+Negative PWM Period: 0.5us.	 Error: 0us
+Positive PWM Period: 0.5us.	 Error: 0us
+Negative PWM Period: 1us.	 Error: 0us
+Positive PWM Period: 1us.	 Error: 0us
+Negative PWM Period: 1.5us.	 Error: 0us
+Positive PWM Period: 1.5us.	 Error: 0us
+Negative PWM Period: 2us.	 Error: 0us
+Positive PWM Period: 2us.	 Error: 0us
+Negative PWM Period: 2.5us.	 Error: 0us
+Positive PWM Period: 2.5us.	 Error: 0us
+Negative PWM Period: 3us.	 Error: 0us
+Positive PWM Period: 3us.	 Error: 0us
+Negative PWM Period: 3.5us.	 Error: 0us
+Positive PWM Period: 3.5us.	 Error: -0.1us
+Negative PWM Period: 4us.	 Error: 0us
+Positive PWM Period: 4us.	 Error: 0us
+Negative PWM Period: 4.5us.	 Error: 0us
+Positive PWM Period: 4.5us.	 Error: 0us
+Negative PWM Period: 5us.	 Error: 0us
+Positive PWM Period: 5us.	 Error: 0us
+Negative PWM Period: 5.5us.	 Error: -0.0999999999999996us
+Positive PWM Period: 5.5us.	 Error: 0us
+Negative PWM Period: 6us.	 Error: 0us
+Positive PWM Period: 6us.	 Error: 0us
+Negative PWM Period: 6.5us.	 Error: 0us
+Positive PWM Period: 6.5us.	 Error: 0.0999999999999996us
+Negative PWM Period: 7us.	 Error: 0.100000000000001us
+Positive PWM Period: 7us.	 Error: 0us
+Negative PWM Period: 7.5us.	 Error: 0us
+Positive PWM Period: 7.5us.	 Error: 0us
+Negative PWM Period: 8us.	 Error: 0us
+Positive PWM Period: 8us.	 Error: 0us
+Negative PWM Period: 8.5us.	 Error: 0us
+Positive PWM Period: 8.5us.	 Error: 0.0999999999999996us
+Negative PWM Period: 9us.	 Error: 0.0999999999999996us
+Positive PWM Period: 9us.	 Error: 0.0999999999999996us
+Negative PWM Period: 9.5us.	 Error: 0us
+Positive PWM Period: 9.5us.	 Error: 0us
+Negative PWM Period: 10us.	 Error: 0us
+Positive PWM Period: 10us.	 Error: 0.0999999999999996us
+Negative PWM Period: 10.5us.	 Error: 0us
+Positive PWM Period: 10.5us.	 Error: 0us
+Negative PWM Period: 11us.	 Error: 0us
+Positive PWM Period: 11us.	 Error: 0us
+Negative PWM Period: 11.5us.	 Error: 0us
+Positive PWM Period: 11.5us.	 Error: 0us
+Negative PWM Period: 12us.	 Error: 0us
+Positive PWM Period: 12us.	 Error: 0us
+Negative PWM Period: 12.5us.	 Error: 0us
+Positive PWM Period: 12.5us.	 Error: 0us
+Negative PWM Period: 13us.	 Error: 0us
+Positive PWM Period: 13us.	 Error: 0us
+Negative PWM Period: 13.5us.	 Error: 0us
+Positive PWM Period: 13.5us.	 Error: 0us
+Negative PWM Period: 14us.	 Error: 0us
+Positive PWM Period: 14us.	 Error: 0us
+Negative PWM Period: 14.5us.	 Error: 0us
+Positive PWM Period: 14.5us.	 Error: 0us
+Negative PWM Period: 15us.	 Error: 0us
+Positive PWM Period: 15us.	 Error: 0us
+Negative PWM Period: 15.5us.	 Error: 0us
+Positive PWM Period: 15.5us.	 Error: 0us
+Negative PWM Period: 16us.	 Error: 0us
+Positive PWM Period: 16us.	 Error: 0us
+Negative PWM Period: 16.5us.	 Error: 0us
+Positive PWM Period: 16.5us.	 Error: 0us
+Negative PWM Period: 17us.	 Error: 0us
+Positive PWM Period: 17us.	 Error: -0.100000000000001us
+Negative PWM Period: 17.5us.	 Error: -0.100000000000001us
+Positive PWM Period: 17.5us.	 Error: 0us
+Negative PWM Period: 18us.	 Error: -0.100000000000001us
+Positive PWM Period: 18us.	 Error: -0.100000000000001us
+Negative PWM Period: 18.5us.	 Error: 0us
+Positive PWM Period: 18.5us.	 Error: -0.0999999999999979us
+Negative PWM Period: 19us.	 Error: 0us
+Positive PWM Period: 19us.	 Error: -0.0999999999999979us
+Negative PWM Period: 19.5us.	 Error: 0us
+Positive PWM Period: 19.5us.	 Error: 0.0999999999999979us
+Negative PWM Period: 20us.	 Error: 0.0999999999999979us
+Positive PWM Period: 20us.	 Error: 0us
+Negative PWM Period: 20.5us.	 Error: 0.0999999999999979us
+Positive PWM Period: 20.5us.	 Error: 0.0999999999999979us
+Negative PWM Period: 21us.	 Error: 0.100000000000001us
+Positive PWM Period: 21us.	 Error: 0.100000000000001us
+Negative PWM Period: 21.5us.	 Error: 0us
+Positive PWM Period: 21.5us.	 Error: 0.100000000000001us
+Negative PWM Period: 22us.	 Error: 0us
+Positive PWM Period: 22us.	 Error: 0us
+Negative PWM Period: 22.5us.	 Error: 0us
+Positive PWM Period: 22.5us.	 Error: 0us
+Negative PWM Period: 23us.	 Error: 0us
+Positive PWM Period: 23us.	 Error: 0.100000000000001us
+Negative PWM Period: 23.5us.	 Error: 0us
+Positive PWM Period: 23.5us.	 Error: 0us
+Negative PWM Period: 24us.	 Error: 0us
+Positive PWM Period: 24us.	 Error: 0us
+Negative PWM Period: 24.5us.	 Error: 0us
+Positive PWM Period: 24.5us.	 Error: 0us
+Negative PWM Period: 25us.	 Error: 0us
+Positive PWM Period: 25us.	 Error: 0us
+Negative PWM Period: 25.5us.	 Error: 0us
+Positive PWM Period: 25.5us.	 Error: 0us
+Negative PWM Period: 26us.	 Error: 0us
+Positive PWM Period: 26us.	 Error: 0us
+Negative PWM Period: 26.5us.	 Error: 0us
+Positive PWM Period: 26.5us.	 Error: -0.0999999999999979us
+Negative PWM Period: 27us.	 Error: 0us
+Positive PWM Period: 27us.	 Error: 0us
+Negative PWM Period: 27.5us.	 Error: 0us
+Positive PWM Period: 27.5us.	 Error: 0us
+Negative PWM Period: 28us.	 Error: 0us
+Positive PWM Period: 28us.	 Error: -0.100000000000001us
+Negative PWM Period: 28.5us.	 Error: 0us
+Positive PWM Period: 28.5us.	 Error: 0us
+Negative PWM Period: 29us.	 Error: -0.100000000000001us
+Positive PWM Period: 29us.	 Error: 0us
+Negative PWM Period: 29.5us.	 Error: 0us
+Positive PWM Period: 29.5us.	 Error: 0us
+Negative PWM Period: 30us.	 Error: -0.0999999999999979us
+Positive PWM Period: 30us.	 Error: 0us
+Negative PWM Period: 30.5us.	 Error: 0us
+Positive PWM Period: 30.5us.	 Error: 0us
+Negative PWM Period: 31us.	 Error: 0us
+Positive PWM Period: 31us.	 Error: 0us
+Negative PWM Period: 31.5us.	 Error: 0us
+Positive PWM Period: 31.5us.	 Error: 0us
+Negative PWM Period: 32us.	 Error: 0.100000000000001us
+Positive PWM Period: 32us.	 Error: 0.100000000000001us
+Negative PWM Period: 32.5us.	 Error: 0.100000000000001us
+Positive PWM Period: 32.5us.	 Error: 0us
+Negative PWM Period: 33us.	 Error: 0.100000000000001us
+Positive PWM Period: 33us.	 Error: 0.100000000000001us
+Negative PWM Period: 33.5us.	 Error: 0us
+Positive PWM Period: 33.5us.	 Error: 0us
+Negative PWM Period: 34us.	 Error: 0us
+Positive PWM Period: 34us.	 Error: 0.100000000000001us
+Negative PWM Period: 34.5us.	 Error: 0us
+Positive PWM Period: 34.5us.	 Error: 0us
+Negative PWM Period: 35us.	 Error: 0us
+Positive PWM Period: 35us.	 Error: 0us
+Negative PWM Period: 35.5us.	 Error: 0us
+Positive PWM Period: 35.5us.	 Error: 0us
+Negative PWM Period: 36us.	 Error: 0us
+Positive PWM Period: 36us.	 Error: 0us
+Negative PWM Period: 36.5us.	 Error: 0us
+Positive PWM Period: 36.5us.	 Error: 0us
+Negative PWM Period: 37us.	 Error: 0us
+Positive PWM Period: 37us.	 Error: 0us
+Negative PWM Period: 37.5us.	 Error: 0us
+Positive PWM Period: 37.5us.	 Error: 0us
+Negative PWM Period: 38us.	 Error: 0us
+Positive PWM Period: 38us.	 Error: 0us
+Negative PWM Period: 38.5us.	 Error: 0us
+Positive PWM Period: 38.5us.	 Error: 0us
+Negative PWM Period: 39us.	 Error: 0us
+Positive PWM Period: 39us.	 Error: 0us
+Negative PWM Period: 39.5us.	 Error: 0us
+Positive PWM Period: 39.5us.	 Error: 0us
+Negative PWM Period: 40us.	 Error: -0.0999999999999943us
+Positive PWM Period: 40us.	 Error: 0us
+Negative PWM Period: 40.5us.	 Error: 0us
+Positive PWM Period: 40.5us.	 Error: 0us
+Negative PWM Period: 41us.	 Error: 0us
+Positive PWM Period: 41us.	 Error: 0us
+Negative PWM Period: 41.5us.	 Error: 0us
+Positive PWM Period: 41.5us.	 Error: 0us
+Negative PWM Period: 42us.	 Error: 0us
+Positive PWM Period: 42us.	 Error: 0us
+Negative PWM Period: 42.5us.	 Error: -0.100000000000001us
+Positive PWM Period: 42.5us.	 Error: 0us
+Negative PWM Period: 43us.	 Error: -0.100000000000001us
+Positive PWM Period: 43us.	 Error: 0us
+Negative PWM Period: 43.5us.	 Error: 0us
+Positive PWM Period: 43.5us.	 Error: 0us
+Negative PWM Period: 44us.	 Error: -0.100000000000001us
+Positive PWM Period: 44us.	 Error: -0.100000000000001us
+Negative PWM Period: 44.5us.	 Error: -0.100000000000001us
+Positive PWM Period: 44.5us.	 Error: 0us
+Negative PWM Period: 45us.	 Error: 0.0999999999999943us
+Positive PWM Period: 45us.	 Error: 0us
+Negative PWM Period: 45.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 45.5us.	 Error: 0us
+Negative PWM Period: 46us.	 Error: 0.0999999999999943us
+Positive PWM Period: 46us.	 Error: 0us
+Negative PWM Period: 46.5us.	 Error: 0us
+Positive PWM Period: 46.5us.	 Error: 0us
+Negative PWM Period: 47us.	 Error: 0us
+Positive PWM Period: 47us.	 Error: 0us
+Negative PWM Period: 47.5us.	 Error: 0us
+Positive PWM Period: 47.5us.	 Error: 0us
+Negative PWM Period: 48us.	 Error: 0.100000000000001us
+Positive PWM Period: 48us.	 Error: 0.100000000000001us
+Negative PWM Period: 48.5us.	 Error: 0us
+Positive PWM Period: 48.5us.	 Error: 0us
+Negative PWM Period: 49us.	 Error: 0.100000000000001us
+Positive PWM Period: 49us.	 Error: 0us
+Negative PWM Period: 49.5us.	 Error: 0.100000000000001us
+Positive PWM Period: 49.5us.	 Error: 0us
+Negative PWM Period: 50us.	 Error: 0us
+Positive PWM Period: 50us.	 Error: 0us
+Negative PWM Period: 50.5us.	 Error: 0us
+Positive PWM Period: 50.5us.	 Error: 0us
+Negative PWM Period: 51us.	 Error: 0us
+Positive PWM Period: 51us.	 Error: 0us
+Negative PWM Period: 51.5us.	 Error: 0us
+Positive PWM Period: 51.5us.	 Error: 0us
+Negative PWM Period: 52us.	 Error: -0.100000000000001us
+Positive PWM Period: 52us.	 Error: 0us
+Negative PWM Period: 52.5us.	 Error: 0us
+Positive PWM Period: 52.5us.	 Error: 0us
+Negative PWM Period: 53us.	 Error: -0.100000000000001us
+Positive PWM Period: 53us.	 Error: 0us
+Negative PWM Period: 53.5us.	 Error: 0us
+Positive PWM Period: 53.5us.	 Error: 0us
+Negative PWM Period: 54us.	 Error: 0us
+Positive PWM Period: 54us.	 Error: 0us
+Negative PWM Period: 54.5us.	 Error: -0.100000000000001us
+Positive PWM Period: 54.5us.	 Error: 0us
+Negative PWM Period: 55us.	 Error: -0.100000000000001us
+Positive PWM Period: 55us.	 Error: 0us
+Negative PWM Period: 55.5us.	 Error: 0us
+Positive PWM Period: 55.5us.	 Error: 0us
+Negative PWM Period: 56us.	 Error: -0.0999999999999943us
+Positive PWM Period: 56us.	 Error: -0.0999999999999943us
+Negative PWM Period: 56.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 56.5us.	 Error: 0us
+Negative PWM Period: 57us.	 Error: -0.100000000000001us
+Positive PWM Period: 57us.	 Error: -0.100000000000001us
+Negative PWM Period: 57.5us.	 Error: 0us
+Positive PWM Period: 57.5us.	 Error: 0.100000000000001us
+Negative PWM Period: 58us.	 Error: 0us
+Positive PWM Period: 58us.	 Error: 0us
+Negative PWM Period: 58.5us.	 Error: 0.100000000000001us
+Positive PWM Period: 58.5us.	 Error: 0.100000000000001us
+Negative PWM Period: 59us.	 Error: 0us
+Positive PWM Period: 59us.	 Error: 0us
+Negative PWM Period: 59.5us.	 Error: 0us
+Positive PWM Period: 59.5us.	 Error: 0us
+Negative PWM Period: 60us.	 Error: 0us
+Positive PWM Period: 60us.	 Error: 0us
+Negative PWM Period: 60.5us.	 Error: 0us
+Positive PWM Period: 60.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 61us.	 Error: 0us
+Positive PWM Period: 61us.	 Error: 0.0999999999999943us
+Negative PWM Period: 61.5us.	 Error: 0us
+Positive PWM Period: 61.5us.	 Error: 0us
+Negative PWM Period: 62us.	 Error: 0us
+Positive PWM Period: 62us.	 Error: 0us
+Negative PWM Period: 62.5us.	 Error: 0us
+Positive PWM Period: 62.5us.	 Error: 0us
+Negative PWM Period: 63us.	 Error: 0us
+Positive PWM Period: 63us.	 Error: 0us
+Negative PWM Period: 63.5us.	 Error: 0us
+Positive PWM Period: 63.5us.	 Error: 0us
+Negative PWM Period: 64us.	 Error: -0.100000000000009us
+Positive PWM Period: 64us.	 Error: 0us
+Negative PWM Period: 64.5us.	 Error: 0us
+Positive PWM Period: 64.5us.	 Error: 0us
+Negative PWM Period: 65us.	 Error: 0us
+Positive PWM Period: 65us.	 Error: 0us
+Negative PWM Period: 65.5us.	 Error: 0us
+Positive PWM Period: 65.5us.	 Error: 0us
+Negative PWM Period: 66us.	 Error: 0us
+Positive PWM Period: 66us.	 Error: 0us
+Negative PWM Period: 66.5us.	 Error: 0us
+Positive PWM Period: 66.5us.	 Error: 0us
+Negative PWM Period: 67us.	 Error: -0.100000000000009us
+Positive PWM Period: 67us.	 Error: 0us
+Negative PWM Period: 67.5us.	 Error: 0us
+Positive PWM Period: 67.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 68us.	 Error: 0us
+Positive PWM Period: 68us.	 Error: 0us
+Negative PWM Period: 68.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 68.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 69us.	 Error: -0.0999999999999943us
+Positive PWM Period: 69us.	 Error: -0.0999999999999943us
+Negative PWM Period: 69.5us.	 Error: 0us
+Positive PWM Period: 69.5us.	 Error: 0us
+Negative PWM Period: 70us.	 Error: 0us
+Positive PWM Period: 70us.	 Error: -0.0999999999999943us
+Negative PWM Period: 70.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 70.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 71us.	 Error: 0.0999999999999943us
+Positive PWM Period: 71us.	 Error: 0.0999999999999943us
+Negative PWM Period: 71.5us.	 Error: 0us
+Positive PWM Period: 71.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 72us.	 Error: 0.0999999999999943us
+Positive PWM Period: 72us.	 Error: 0us
+Negative PWM Period: 72.5us.	 Error: 0us
+Positive PWM Period: 72.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 73us.	 Error: 0.0999999999999943us
+Positive PWM Period: 73us.	 Error: 0us
+Negative PWM Period: 73.5us.	 Error: 0us
+Positive PWM Period: 73.5us.	 Error: 0us
+Negative PWM Period: 74us.	 Error: 0us
+Positive PWM Period: 74us.	 Error: 0.100000000000009us
+Negative PWM Period: 74.5us.	 Error: 0us
+Positive PWM Period: 74.5us.	 Error: 0us
+Negative PWM Period: 75us.	 Error: 0us
+Positive PWM Period: 75us.	 Error: 0us
+Negative PWM Period: 75.5us.	 Error: 0us
+Positive PWM Period: 75.5us.	 Error: 0us
+Negative PWM Period: 76us.	 Error: 0us
+Positive PWM Period: 76us.	 Error: 0us
+Negative PWM Period: 76.5us.	 Error: 0us
+Positive PWM Period: 76.5us.	 Error: 0us
+Negative PWM Period: 77us.	 Error: 0us
+Positive PWM Period: 77us.	 Error: 0us
+Negative PWM Period: 77.5us.	 Error: 0us
+Positive PWM Period: 77.5us.	 Error: 0us
+Negative PWM Period: 78us.	 Error: -0.100000000000009us
+Positive PWM Period: 78us.	 Error: 0us
+Negative PWM Period: 78.5us.	 Error: 0us
+Positive PWM Period: 78.5us.	 Error: 0us
+Negative PWM Period: 79us.	 Error: 0us
+Positive PWM Period: 79us.	 Error: 0us
+Negative PWM Period: 79.5us.	 Error: 0us
+Positive PWM Period: 79.5us.	 Error: -0.100000000000009us
+Negative PWM Period: 80us.	 Error: 0us
+Positive PWM Period: 80us.	 Error: 0us
+Negative PWM Period: 80.5us.	 Error: 0us
+Positive PWM Period: 80.5us.	 Error: 0us
+Negative PWM Period: 81us.	 Error: 0us
+Positive PWM Period: 81us.	 Error: 0us
+Negative PWM Period: 81.5us.	 Error: -0.100000000000009us
+Positive PWM Period: 81.5us.	 Error: 0us
+Negative PWM Period: 82us.	 Error: 0us
+Positive PWM Period: 82us.	 Error: 0us
+Negative PWM Period: 82.5us.	 Error: 0us
+Positive PWM Period: 82.5us.	 Error: 0us
+Negative PWM Period: 83us.	 Error: 0us
+Positive PWM Period: 83us.	 Error: 0.0999999999999943us
+Negative PWM Period: 83.5us.	 Error: 0us
+Positive PWM Period: 83.5us.	 Error: 0us
+Negative PWM Period: 84us.	 Error: 0.0999999999999943us
+Positive PWM Period: 84us.	 Error: 0.0999999999999943us
+Negative PWM Period: 84.5us.	 Error: 0us
+Positive PWM Period: 84.5us.	 Error: 0us
+Negative PWM Period: 85us.	 Error: 0us
+Positive PWM Period: 85us.	 Error: 0us
+Negative PWM Period: 85.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 85.5us.	 Error: 0us
+Negative PWM Period: 86us.	 Error: 0us
+Positive PWM Period: 86us.	 Error: 0us
+Negative PWM Period: 86.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 86.5us.	 Error: 0us
+Negative PWM Period: 87us.	 Error: 0us
+Positive PWM Period: 87us.	 Error: 0us
+Negative PWM Period: 87.5us.	 Error: 0us
+Positive PWM Period: 87.5us.	 Error: 0us
+Negative PWM Period: 88us.	 Error: 0.0999999999999943us
+Positive PWM Period: 88us.	 Error: 0us
+Negative PWM Period: 88.5us.	 Error: 0us
+Positive PWM Period: 88.5us.	 Error: 0us
+Negative PWM Period: 89us.	 Error: 0us
+Positive PWM Period: 89us.	 Error: 0us
+Negative PWM Period: 89.5us.	 Error: 0us
+Positive PWM Period: 89.5us.	 Error: 0us
+Negative PWM Period: 90us.	 Error: -0.0999999999999943us
+Positive PWM Period: 90us.	 Error: 0us
+Negative PWM Period: 90.5us.	 Error: 0us
+Positive PWM Period: 90.5us.	 Error: 0us
+Negative PWM Period: 91us.	 Error: 0us
+Positive PWM Period: 91us.	 Error: 0us
+Negative PWM Period: 91.5us.	 Error: 0us
+Positive PWM Period: 91.5us.	 Error: 0us
+Negative PWM Period: 92us.	 Error: -0.0999999999999943us
+Positive PWM Period: 92us.	 Error: -0.0999999999999943us
+Negative PWM Period: 92.5us.	 Error: -0.100000000000009us
+Positive PWM Period: 92.5us.	 Error: 0us
+Negative PWM Period: 93us.	 Error: 0us
+Positive PWM Period: 93us.	 Error: -0.100000000000009us
+Negative PWM Period: 93.5us.	 Error: -0.100000000000009us
+Positive PWM Period: 93.5us.	 Error: 0us
+Negative PWM Period: 94us.	 Error: 0us
+Positive PWM Period: 94us.	 Error: 0us
+Negative PWM Period: 94.5us.	 Error: -0.100000000000009us
+Positive PWM Period: 94.5us.	 Error: 0us
+Negative PWM Period: 95us.	 Error: 0us
+Positive PWM Period: 95us.	 Error: 0us
+Negative PWM Period: 95.5us.	 Error: -0.100000000000009us
+Positive PWM Period: 95.5us.	 Error: -0.100000000000009us
+Negative PWM Period: 96us.	 Error: 0us
+Positive PWM Period: 96us.	 Error: 0.0999999999999943us
+Negative PWM Period: 96.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 96.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 97us.	 Error: 0.0999999999999943us
+Positive PWM Period: 97us.	 Error: 0us
+Negative PWM Period: 97.5us.	 Error: 0us
+Positive PWM Period: 97.5us.	 Error: 0us
+Negative PWM Period: 98us.	 Error: 0us
+Positive PWM Period: 98us.	 Error: 0us
+Negative PWM Period: 98.5us.	 Error: 0us
+Positive PWM Period: 98.5us.	 Error: 0us
+Negative PWM Period: 99us.	 Error: 0us
+Positive PWM Period: 99us.	 Error: 0us
+Negative PWM Period: 99.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 99.5us.	 Error: 0us
+Negative PWM Period: 100us.	 Error: 0us
+Positive PWM Period: 100us.	 Error: 0us
+Negative PWM Period: 100.5us.	 Error: 0us
+Positive PWM Period: 100.5us.	 Error: 0us
+Negative PWM Period: 101us.	 Error: 0us
+Positive PWM Period: 101us.	 Error: 0us
+Negative PWM Period: 101.5us.	 Error: 0us
+Positive PWM Period: 101.5us.	 Error: 0us
+Negative PWM Period: 102us.	 Error: 0us
+Positive PWM Period: 102us.	 Error: 0us
+Negative PWM Period: 102.5us.	 Error: 0us
+Positive PWM Period: 102.5us.	 Error: 0us
+Negative PWM Period: 103us.	 Error: -0.0999999999999943us
+Positive PWM Period: 103us.	 Error: 0us
+Negative PWM Period: 103.5us.	 Error: 0us
+Positive PWM Period: 103.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 104us.	 Error: 0us
+Positive PWM Period: 104us.	 Error: 0us
+Negative PWM Period: 104.5us.	 Error: 0us
+Positive PWM Period: 104.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 105us.	 Error: 0us
+Positive PWM Period: 105us.	 Error: 0us
+Negative PWM Period: 105.5us.	 Error: 0us
+Positive PWM Period: 105.5us.	 Error: 0us
+Negative PWM Period: 106us.	 Error: 0us
+Positive PWM Period: 106us.	 Error: 0us
+Negative PWM Period: 106.5us.	 Error: 0us
+Positive PWM Period: 106.5us.	 Error: 0us
+Negative PWM Period: 107us.	 Error: 0us
+Positive PWM Period: 107us.	 Error: 0us
+Negative PWM Period: 107.5us.	 Error: 0us
+Positive PWM Period: 107.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 108us.	 Error: -0.100000000000009us
+Positive PWM Period: 108us.	 Error: 0us
+Negative PWM Period: 108.5us.	 Error: 0.100000000000009us
+Positive PWM Period: 108.5us.	 Error: 0.100000000000009us
+Negative PWM Period: 109us.	 Error: 0us
+Positive PWM Period: 109us.	 Error: 0us
+Negative PWM Period: 109.5us.	 Error: 0.100000000000009us
+Positive PWM Period: 109.5us.	 Error: 0us
+Negative PWM Period: 110us.	 Error: 0us
+Positive PWM Period: 110us.	 Error: 0us
+Negative PWM Period: 110.5us.	 Error: 0us
+Positive PWM Period: 110.5us.	 Error: 0.100000000000009us
+Negative PWM Period: 111us.	 Error: 0us
+Positive PWM Period: 111us.	 Error: 0us
+Negative PWM Period: 111.5us.	 Error: 0us
+Positive PWM Period: 111.5us.	 Error: 0us
+Negative PWM Period: 112us.	 Error: 0us
+Positive PWM Period: 112us.	 Error: 0us
+Negative PWM Period: 112.5us.	 Error: 0us
+Positive PWM Period: 112.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 113us.	 Error: 0us
+Positive PWM Period: 113us.	 Error: 0us
+Negative PWM Period: 113.5us.	 Error: 0us
+Positive PWM Period: 113.5us.	 Error: 0us
+Negative PWM Period: 114us.	 Error: 0us
+Positive PWM Period: 114us.	 Error: 0us
+Negative PWM Period: 114.5us.	 Error: 0us
+Positive PWM Period: 114.5us.	 Error: 0us
+Negative PWM Period: 115us.	 Error: 0us
+Positive PWM Period: 115us.	 Error: 0us
+Negative PWM Period: 115.5us.	 Error: 0us
+Positive PWM Period: 115.5us.	 Error: 0us
+Negative PWM Period: 116us.	 Error: -0.0999999999999943us
+Positive PWM Period: 116us.	 Error: 0us
+Negative PWM Period: 116.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 116.5us.	 Error: 0us
+Negative PWM Period: 117us.	 Error: 0us
+Positive PWM Period: 117us.	 Error: 0us
+Negative PWM Period: 117.5us.	 Error: 0us
+Positive PWM Period: 117.5us.	 Error: 0us
+Negative PWM Period: 118us.	 Error: 0us
+Positive PWM Period: 118us.	 Error: 0us
+Negative PWM Period: 118.5us.	 Error: 0us
+Positive PWM Period: 118.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 119us.	 Error: 0us
+Positive PWM Period: 119us.	 Error: 0us
+Negative PWM Period: 119.5us.	 Error: 0us
+Positive PWM Period: 119.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 120us.	 Error: 0us
+Positive PWM Period: 120us.	 Error: 0us
+Negative PWM Period: 120.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 120.5us.	 Error: 0us
+Negative PWM Period: 121us.	 Error: -0.0999999999999943us
+Positive PWM Period: 121us.	 Error: -0.0999999999999943us
+Negative PWM Period: 121.5us.	 Error: 0.100000000000009us
+Positive PWM Period: 121.5us.	 Error: 0us
+Negative PWM Period: 122us.	 Error: 0us
+Positive PWM Period: 122us.	 Error: 0.100000000000009us
+Negative PWM Period: 122.5us.	 Error: 0us
+Positive PWM Period: 122.5us.	 Error: 0us
+Negative PWM Period: 123us.	 Error: 0us
+Positive PWM Period: 123us.	 Error: 0.100000000000009us
+Negative PWM Period: 123.5us.	 Error: 0us
+Positive PWM Period: 123.5us.	 Error: 0us
+Negative PWM Period: 124us.	 Error: 0us
+Positive PWM Period: 124us.	 Error: 0us
+Negative PWM Period: 124.5us.	 Error: 0.100000000000009us
+Positive PWM Period: 124.5us.	 Error: 0us
+Negative PWM Period: 125us.	 Error: 0us
+Positive PWM Period: 125us.	 Error: 0.100000000000009us
+Negative PWM Period: 125.5us.	 Error: 0us
+Positive PWM Period: 125.5us.	 Error: 0us
+Negative PWM Period: 126us.	 Error: 0us
+Positive PWM Period: 126us.	 Error: 0us
+Negative PWM Period: 126.5us.	 Error: 0us
+Positive PWM Period: 126.5us.	 Error: 0us
+Negative PWM Period: 127us.	 Error: 0us
+Positive PWM Period: 127us.	 Error: 0us
+Negative PWM Period: 127.5us.	 Error: 0us
+Positive PWM Period: 127.5us.	 Error: 0us
+Negative PWM Period: 128us.	 Error: -0.0999999999999943us
+Positive PWM Period: 128us.	 Error: 0us
+Negative PWM Period: 128.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 128.5us.	 Error: 0us
+Negative PWM Period: 129us.	 Error: 0us
+Positive PWM Period: 129us.	 Error: 0us
+Negative PWM Period: 129.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 129.5us.	 Error: 0us
+Negative PWM Period: 130us.	 Error: 0us
+Positive PWM Period: 130us.	 Error: -0.0999999999999943us
+Negative PWM Period: 130.5us.	 Error: 0us
+Positive PWM Period: 130.5us.	 Error: 0us
+Negative PWM Period: 131us.	 Error: 0us
+Positive PWM Period: 131us.	 Error: 0us
+Negative PWM Period: 131.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 131.5us.	 Error: 0us
+Negative PWM Period: 132us.	 Error: 0us
+Positive PWM Period: 132us.	 Error: 0us
+Negative PWM Period: 132.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 132.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 133us.	 Error: -0.0999999999999943us
+Positive PWM Period: 133us.	 Error: 0us
+Negative PWM Period: 133.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 133.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 134us.	 Error: 0.100000000000023us
+Positive PWM Period: 134us.	 Error: 0.100000000000023us
+Negative PWM Period: 134.5us.	 Error: 0us
+Positive PWM Period: 134.5us.	 Error: 0us
+Negative PWM Period: 135us.	 Error: 0us
+Positive PWM Period: 135us.	 Error: 0.0999999999999943us
+Negative PWM Period: 135.5us.	 Error: 0us
+Positive PWM Period: 135.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 136us.	 Error: 0us
+Positive PWM Period: 136us.	 Error: 0.0999999999999943us
+Negative PWM Period: 136.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 136.5us.	 Error: 0us
+Negative PWM Period: 137us.	 Error: 0us
+Positive PWM Period: 137us.	 Error: 0us
+Negative PWM Period: 137.5us.	 Error: 0us
+Positive PWM Period: 137.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 138us.	 Error: 0us
+Positive PWM Period: 138us.	 Error: 0us
+Negative PWM Period: 138.5us.	 Error: 0us
+Positive PWM Period: 138.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 139us.	 Error: 0us
+Positive PWM Period: 139us.	 Error: 0.0999999999999943us
+Negative PWM Period: 139.5us.	 Error: 0us
+Positive PWM Period: 139.5us.	 Error: 0us
+Negative PWM Period: 140us.	 Error: 0us
+Positive PWM Period: 140us.	 Error: 0us
+Negative PWM Period: 140.5us.	 Error: 0us
+Positive PWM Period: 140.5us.	 Error: 0us
+Negative PWM Period: 141us.	 Error: 0us
+Positive PWM Period: 141us.	 Error: 0us
+Negative PWM Period: 141.5us.	 Error: 0us
+Positive PWM Period: 141.5us.	 Error: 0us
+Negative PWM Period: 142us.	 Error: -0.0999999999999943us
+Positive PWM Period: 142us.	 Error: 0us
+Negative PWM Period: 142.5us.	 Error: 0us
+Positive PWM Period: 142.5us.	 Error: 0us
+Negative PWM Period: 143us.	 Error: 0us
+Positive PWM Period: 143us.	 Error: 0us
+Negative PWM Period: 143.5us.	 Error: 0us
+Positive PWM Period: 143.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 144us.	 Error: 0us
+Positive PWM Period: 144us.	 Error: 0us
+Negative PWM Period: 144.5us.	 Error: 0us
+Positive PWM Period: 144.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 145us.	 Error: -0.0999999999999943us
+Positive PWM Period: 145us.	 Error: 0us
+Negative PWM Period: 145.5us.	 Error: 0us
+Positive PWM Period: 145.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 146us.	 Error: 0us
+Positive PWM Period: 146us.	 Error: 0us
+Negative PWM Period: 146.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 146.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 147us.	 Error: 0us
+Positive PWM Period: 147us.	 Error: 0us
+Negative PWM Period: 147.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 147.5us.	 Error: 0us
+Negative PWM Period: 148us.	 Error: 0.0999999999999943us
+Positive PWM Period: 148us.	 Error: 0.0999999999999943us
+Negative PWM Period: 148.5us.	 Error: 0us
+Positive PWM Period: 148.5us.	 Error: 0us
+Negative PWM Period: 149us.	 Error: 0us
+Positive PWM Period: 149us.	 Error: 0us
+Negative PWM Period: 149.5us.	 Error: 0us
+Positive PWM Period: 149.5us.	 Error: 0us
+Negative PWM Period: 150us.	 Error: 0us
+Positive PWM Period: 150us.	 Error: 0us
+Negative PWM Period: 150.5us.	 Error: 0us
+Positive PWM Period: 150.5us.	 Error: 0us
+Negative PWM Period: 151us.	 Error: 0us
+Positive PWM Period: 151us.	 Error: 0us
+Negative PWM Period: 151.5us.	 Error: 0us
+Positive PWM Period: 151.5us.	 Error: 0us
+Negative PWM Period: 152us.	 Error: 0us
+Positive PWM Period: 152us.	 Error: 0us
+Negative PWM Period: 152.5us.	 Error: 0us
+Positive PWM Period: 152.5us.	 Error: 0us
+Negative PWM Period: 153us.	 Error: 0us
+Positive PWM Period: 153us.	 Error: 0us
+Negative PWM Period: 153.5us.	 Error: 0us
+Positive PWM Period: 153.5us.	 Error: 0us
+Negative PWM Period: 154us.	 Error: 0us
+Positive PWM Period: 154us.	 Error: 0us
+Negative PWM Period: 154.5us.	 Error: 0us
+Positive PWM Period: 154.5us.	 Error: 0us
+Negative PWM Period: 155us.	 Error: 0us
+Positive PWM Period: 155us.	 Error: 0us
+Negative PWM Period: 155.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 155.5us.	 Error: 0us
+Negative PWM Period: 156us.	 Error: -0.0999999999999943us
+Positive PWM Period: 156us.	 Error: 0us
+Negative PWM Period: 156.5us.	 Error: 0us
+Positive PWM Period: 156.5us.	 Error: 0us
+Negative PWM Period: 157us.	 Error: 0us
+Positive PWM Period: 157us.	 Error: 0us
+Negative PWM Period: 157.5us.	 Error: 0us
+Positive PWM Period: 157.5us.	 Error: 0us
+Negative PWM Period: 158us.	 Error: 0us
+Positive PWM Period: 158us.	 Error: 0us
+Negative PWM Period: 158.5us.	 Error: 0us
+Positive PWM Period: 158.5us.	 Error: 0us
+Negative PWM Period: 159us.	 Error: 0us
+Positive PWM Period: 159us.	 Error: -0.0999999999999943us
+Negative PWM Period: 159.5us.	 Error: 0us
+Positive PWM Period: 159.5us.	 Error: 0us
+Negative PWM Period: 160us.	 Error: 0us
+Positive PWM Period: 160us.	 Error: 0.100000000000023us
+Negative PWM Period: 160.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 160.5us.	 Error: 0us
+Negative PWM Period: 161us.	 Error: 0us
+Positive PWM Period: 161us.	 Error: 0us
+Negative PWM Period: 161.5us.	 Error: 0us
+Positive PWM Period: 161.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 162us.	 Error: 0us
+Positive PWM Period: 162us.	 Error: 0.100000000000023us
+Negative PWM Period: 162.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 162.5us.	 Error: 0us
+Negative PWM Period: 163us.	 Error: 0us
+Positive PWM Period: 163us.	 Error: 0us
+Negative PWM Period: 163.5us.	 Error: 0us
+Positive PWM Period: 163.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 164us.	 Error: 0us
+Positive PWM Period: 164us.	 Error: 0us
+Negative PWM Period: 164.5us.	 Error: 0us
+Positive PWM Period: 164.5us.	 Error: 0us
+Negative PWM Period: 165us.	 Error: 0us
+Positive PWM Period: 165us.	 Error: 0us
+Negative PWM Period: 165.5us.	 Error: 0us
+Positive PWM Period: 165.5us.	 Error: 0us
+Negative PWM Period: 166us.	 Error: 0us
+Positive PWM Period: 166us.	 Error: 0us
+Negative PWM Period: 166.5us.	 Error: 0us
+Positive PWM Period: 166.5us.	 Error: 0us
+Negative PWM Period: 167us.	 Error: 0us
+Positive PWM Period: 167us.	 Error: 0us
+Negative PWM Period: 167.5us.	 Error: 0us
+Positive PWM Period: 167.5us.	 Error: 0us
+Negative PWM Period: 168us.	 Error: 0us
+Positive PWM Period: 168us.	 Error: -0.0999999999999943us
+Negative PWM Period: 168.5us.	 Error: 0us
+Positive PWM Period: 168.5us.	 Error: 0us
+Negative PWM Period: 169us.	 Error: -0.0999999999999943us
+Positive PWM Period: 169us.	 Error: 0us
+Negative PWM Period: 169.5us.	 Error: 0us
+Positive PWM Period: 169.5us.	 Error: 0us
+Negative PWM Period: 170us.	 Error: 0us
+Positive PWM Period: 170us.	 Error: 0us
+Negative PWM Period: 170.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 170.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 171us.	 Error: 0us
+Positive PWM Period: 171us.	 Error: -0.0999999999999943us
+Negative PWM Period: 171.5us.	 Error: 0us
+Positive PWM Period: 171.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 172us.	 Error: -0.0999999999999943us
+Positive PWM Period: 172us.	 Error: 0us
+Negative PWM Period: 172.5us.	 Error: 0us
+Positive PWM Period: 172.5us.	 Error: 0us
+Negative PWM Period: 173us.	 Error: 0us
+Positive PWM Period: 173us.	 Error: 0us
+Negative PWM Period: 173.5us.	 Error: 0us
+Positive PWM Period: 173.5us.	 Error: 0us
+Negative PWM Period: 174us.	 Error: 0us
+Positive PWM Period: 174us.	 Error: 0us
+Negative PWM Period: 174.5us.	 Error: 0us
+Positive PWM Period: 174.5us.	 Error: 0us
+Negative PWM Period: 175us.	 Error: 0us
+Positive PWM Period: 175us.	 Error: 0.0999999999999943us
+Negative PWM Period: 175.5us.	 Error: 0us
+Positive PWM Period: 175.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 176us.	 Error: 0us
+Positive PWM Period: 176us.	 Error: 0us
+Negative PWM Period: 176.5us.	 Error: 0us
+Positive PWM Period: 176.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 177us.	 Error: 0us
+Positive PWM Period: 177us.	 Error: 0us
+Negative PWM Period: 177.5us.	 Error: 0us
+Positive PWM Period: 177.5us.	 Error: 0us
+Negative PWM Period: 178us.	 Error: 0us
+Positive PWM Period: 178us.	 Error: 0us
+Negative PWM Period: 178.5us.	 Error: 0us
+Positive PWM Period: 178.5us.	 Error: 0us
+Negative PWM Period: 179us.	 Error: 0us
+Positive PWM Period: 179us.	 Error: 0us
+Negative PWM Period: 179.5us.	 Error: 0us
+Positive PWM Period: 179.5us.	 Error: 0us
+Negative PWM Period: 180us.	 Error: 0us
+Positive PWM Period: 180us.	 Error: -0.100000000000023us
+Negative PWM Period: 180.5us.	 Error: 0us
+Positive PWM Period: 180.5us.	 Error: 0us
+Negative PWM Period: 181us.	 Error: 0us
+Positive PWM Period: 181us.	 Error: 0us
+Negative PWM Period: 181.5us.	 Error: 0us
+Positive PWM Period: 181.5us.	 Error: 0us
+Negative PWM Period: 182us.	 Error: 0us
+Positive PWM Period: 182us.	 Error: 0us
+Negative PWM Period: 182.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 182.5us.	 Error: 0us
+Negative PWM Period: 183us.	 Error: 0us
+Positive PWM Period: 183us.	 Error: 0us
+Negative PWM Period: 183.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 183.5us.	 Error: 0us
+Negative PWM Period: 184us.	 Error: 0us
+Positive PWM Period: 184us.	 Error: -0.100000000000023us
+Negative PWM Period: 184.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 184.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 185us.	 Error: 0.0999999999999943us
+Positive PWM Period: 185us.	 Error: 0us
+Negative PWM Period: 185.5us.	 Error: 0us
+Positive PWM Period: 185.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 186us.	 Error: 0.0999999999999943us
+Positive PWM Period: 186us.	 Error: 0.0999999999999943us
+Negative PWM Period: 186.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 186.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 187us.	 Error: 0.0999999999999943us
+Positive PWM Period: 187us.	 Error: 0us
+Negative PWM Period: 187.5us.	 Error: 0us
+Positive PWM Period: 187.5us.	 Error: 0us
+Negative PWM Period: 188us.	 Error: 0us
+Positive PWM Period: 188us.	 Error: 0us
+Negative PWM Period: 188.5us.	 Error: 0us
+Positive PWM Period: 188.5us.	 Error: 0us
+Negative PWM Period: 189us.	 Error: 0us
+Positive PWM Period: 189us.	 Error: 0us
+Negative PWM Period: 189.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 189.5us.	 Error: 0us
+Negative PWM Period: 190us.	 Error: 0us
+Positive PWM Period: 190us.	 Error: 0us
+Negative PWM Period: 190.5us.	 Error: 0us
+Positive PWM Period: 190.5us.	 Error: 0us
+Negative PWM Period: 191us.	 Error: 0us
+Positive PWM Period: 191us.	 Error: 0us
+Negative PWM Period: 191.5us.	 Error: 0us
+Positive PWM Period: 191.5us.	 Error: 0us
+Negative PWM Period: 192us.	 Error: 0us
+Positive PWM Period: 192us.	 Error: 0us
+Negative PWM Period: 192.5us.	 Error: 0us
+Positive PWM Period: 192.5us.	 Error: 0us
+Negative PWM Period: 193us.	 Error: 0us
+Positive PWM Period: 193us.	 Error: 0us
+Negative PWM Period: 193.5us.	 Error: 0us
+Positive PWM Period: 193.5us.	 Error: 0us
+Negative PWM Period: 194us.	 Error: -0.0999999999999943us
+Positive PWM Period: 194us.	 Error: 0us
+Negative PWM Period: 194.5us.	 Error: 0us
+Positive PWM Period: 194.5us.	 Error: 0us
+Negative PWM Period: 195us.	 Error: -0.0999999999999943us
+Positive PWM Period: 195us.	 Error: -0.0999999999999943us
+Negative PWM Period: 195.5us.	 Error: 0us
+Positive PWM Period: 195.5us.	 Error: 0us
+Negative PWM Period: 196us.	 Error: 0us
+Positive PWM Period: 196us.	 Error: 0us
+Negative PWM Period: 196.5us.	 Error: 0us
+Positive PWM Period: 196.5us.	 Error: 0us
+Negative PWM Period: 197us.	 Error: -0.0999999999999943us
+Positive PWM Period: 197us.	 Error: 0us
+Negative PWM Period: 197.5us.	 Error: 0us
+Positive PWM Period: 197.5us.	 Error: 0us
+Negative PWM Period: 198us.	 Error: 0.0999999999999943us
+Positive PWM Period: 198us.	 Error: 0us
+Negative PWM Period: 198.5us.	 Error: 0us
+Positive PWM Period: 198.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 199us.	 Error: 0.0999999999999943us
+Positive PWM Period: 199us.	 Error: 0.0999999999999943us
+Negative PWM Period: 199.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 199.5us.	 Error: 0us
+Negative PWM Period: 200us.	 Error: 0.0999999999999943us
+Positive PWM Period: 200us.	 Error: 0.0999999999999943us
+Negative PWM Period: 200.5us.	 Error: 0us
+Positive PWM Period: 200.5us.	 Error: 0us
+Negative PWM Period: 201us.	 Error: 0.0999999999999943us
+Positive PWM Period: 201us.	 Error: 0us
+Negative PWM Period: 201.5us.	 Error: 0us
+Positive PWM Period: 201.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 202us.	 Error: 0us
+Positive PWM Period: 202us.	 Error: 0us
+Negative PWM Period: 202.5us.	 Error: 0us
+Positive PWM Period: 202.5us.	 Error: 0us
+Negative PWM Period: 203us.	 Error: 0us
+Positive PWM Period: 203us.	 Error: 0us
+Negative PWM Period: 203.5us.	 Error: 0us
+Positive PWM Period: 203.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 204us.	 Error: 0us
+Positive PWM Period: 204us.	 Error: 0us
+Negative PWM Period: 204.5us.	 Error: 0us
+Positive PWM Period: 204.5us.	 Error: 0us
+Negative PWM Period: 205us.	 Error: 0us
+Positive PWM Period: 205us.	 Error: 0us
+Negative PWM Period: 205.5us.	 Error: 0us
+Positive PWM Period: 205.5us.	 Error: 0us
+Negative PWM Period: 206us.	 Error: 0us
+Positive PWM Period: 206us.	 Error: 0us
+Negative PWM Period: 206.5us.	 Error: 0us
+Positive PWM Period: 206.5us.	 Error: 0us
+Negative PWM Period: 207us.	 Error: 0us
+Positive PWM Period: 207us.	 Error: 0us
+Negative PWM Period: 207.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 207.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 208us.	 Error: -0.0999999999999943us
+Positive PWM Period: 208us.	 Error: 0us
+Negative PWM Period: 208.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 208.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 209us.	 Error: 0us
+Positive PWM Period: 209us.	 Error: -0.0999999999999943us
+Negative PWM Period: 209.5us.	 Error: 0us
+Positive PWM Period: 209.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 210us.	 Error: -0.100000000000023us
+Positive PWM Period: 210us.	 Error: 0us
+Negative PWM Period: 210.5us.	 Error: 0us
+Positive PWM Period: 210.5us.	 Error: 0us
+Negative PWM Period: 211us.	 Error: 0us
+Positive PWM Period: 211us.	 Error: 0us
+Negative PWM Period: 211.5us.	 Error: 0us
+Positive PWM Period: 211.5us.	 Error: 0us
+Negative PWM Period: 212us.	 Error: 0us
+Positive PWM Period: 212us.	 Error: 0us
+Negative PWM Period: 212.5us.	 Error: 0us
+Positive PWM Period: 212.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 213us.	 Error: 0us
+Positive PWM Period: 213us.	 Error: 0.0999999999999943us
+Negative PWM Period: 213.5us.	 Error: 0us
+Positive PWM Period: 213.5us.	 Error: 0us
+Negative PWM Period: 214us.	 Error: 0us
+Positive PWM Period: 214us.	 Error: 0us
+Negative PWM Period: 214.5us.	 Error: 0us
+Positive PWM Period: 214.5us.	 Error: 0us
+Negative PWM Period: 215us.	 Error: 0us
+Positive PWM Period: 215us.	 Error: 0us
+Negative PWM Period: 215.5us.	 Error: 0us
+Positive PWM Period: 215.5us.	 Error: 0us
+Negative PWM Period: 216us.	 Error: 0us
+Positive PWM Period: 216us.	 Error: 0us
+Negative PWM Period: 216.5us.	 Error: 0us
+Positive PWM Period: 216.5us.	 Error: 0us
+Negative PWM Period: 217us.	 Error: 0us
+Positive PWM Period: 217us.	 Error: 0us
+Negative PWM Period: 217.5us.	 Error: 0us
+Positive PWM Period: 217.5us.	 Error: 0us
+Negative PWM Period: 218us.	 Error: 0us
+Positive PWM Period: 218us.	 Error: -0.0999999999999943us
+Negative PWM Period: 218.5us.	 Error: 0us
+Positive PWM Period: 218.5us.	 Error: 0us
+Negative PWM Period: 219us.	 Error: -0.0999999999999943us
+Positive PWM Period: 219us.	 Error: 0us
+Negative PWM Period: 219.5us.	 Error: 0us
+Positive PWM Period: 219.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 220us.	 Error: 0us
+Positive PWM Period: 220us.	 Error: 0us
+Negative PWM Period: 220.5us.	 Error: 0us
+Positive PWM Period: 220.5us.	 Error: 0us
+Negative PWM Period: 221us.	 Error: 0us
+Positive PWM Period: 221us.	 Error: 0us
+Negative PWM Period: 221.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 221.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 222us.	 Error: 0us
+Positive PWM Period: 222us.	 Error: 0us
+Negative PWM Period: 222.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 222.5us.	 Error: 0us
+Negative PWM Period: 223us.	 Error: 0us
+Positive PWM Period: 223us.	 Error: 0us
+Negative PWM Period: 223.5us.	 Error: 0us
+Positive PWM Period: 223.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 224us.	 Error: 0.100000000000023us
+Positive PWM Period: 224us.	 Error: 0.100000000000023us
+Negative PWM Period: 224.5us.	 Error: 0us
+Positive PWM Period: 224.5us.	 Error: 0us
+Negative PWM Period: 225us.	 Error: 0us
+Positive PWM Period: 225us.	 Error: 0us
+Negative PWM Period: 225.5us.	 Error: 0us
+Positive PWM Period: 225.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 226us.	 Error: 0us
+Positive PWM Period: 226us.	 Error: 0us
+Negative PWM Period: 226.5us.	 Error: 0us
+Positive PWM Period: 226.5us.	 Error: 0us
+Negative PWM Period: 227us.	 Error: 0us
+Positive PWM Period: 227us.	 Error: 0us
+Negative PWM Period: 227.5us.	 Error: 0us
+Positive PWM Period: 227.5us.	 Error: 0us
+Negative PWM Period: 228us.	 Error: 0.100000000000023us
+Positive PWM Period: 228us.	 Error: 0us
+Negative PWM Period: 228.5us.	 Error: 0us
+Positive PWM Period: 228.5us.	 Error: 0us
+Negative PWM Period: 229us.	 Error: 0us
+Positive PWM Period: 229us.	 Error: 0us
+Negative PWM Period: 229.5us.	 Error: 0us
+Positive PWM Period: 229.5us.	 Error: 0us
+Negative PWM Period: 230us.	 Error: 0us
+Positive PWM Period: 230us.	 Error: 0us
+Negative PWM Period: 230.5us.	 Error: 0us
+Positive PWM Period: 230.5us.	 Error: 0us
+Negative PWM Period: 231us.	 Error: 0us
+Positive PWM Period: 231us.	 Error: 0us
+Negative PWM Period: 231.5us.	 Error: 0us
+Positive PWM Period: 231.5us.	 Error: 0us
+Negative PWM Period: 232us.	 Error: -0.0999999999999943us
+Positive PWM Period: 232us.	 Error: -0.0999999999999943us
+Negative PWM Period: 232.5us.	 Error: 0us
+Positive PWM Period: 232.5us.	 Error: 0us
+Negative PWM Period: 233us.	 Error: 0us
+Positive PWM Period: 233us.	 Error: 0us
+Negative PWM Period: 233.5us.	 Error: 0us
+Positive PWM Period: 233.5us.	 Error: 0us
+Negative PWM Period: 234us.	 Error: 0us
+Positive PWM Period: 234us.	 Error: 0us
+Negative PWM Period: 234.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 234.5us.	 Error: -0.0999999999999943us
+Negative PWM Period: 235us.	 Error: -0.0999999999999943us
+Positive PWM Period: 235us.	 Error: -0.0999999999999943us
+Negative PWM Period: 235.5us.	 Error: -0.0999999999999943us
+Positive PWM Period: 235.5us.	 Error: 0us
+Negative PWM Period: 236us.	 Error: 0us
+Positive PWM Period: 236us.	 Error: 0us
+Negative PWM Period: 236.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 236.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 237us.	 Error: 0.0999999999999943us
+Positive PWM Period: 237us.	 Error: 0us
+Negative PWM Period: 237.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 237.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 238us.	 Error: 0us
+Positive PWM Period: 238us.	 Error: 0us
+Negative PWM Period: 238.5us.	 Error: 0us
+Positive PWM Period: 238.5us.	 Error: 0us
+Negative PWM Period: 239us.	 Error: 0us
+Positive PWM Period: 239us.	 Error: 0us
+Negative PWM Period: 239.5us.	 Error: 0us
+Positive PWM Period: 239.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 240us.	 Error: 0us
+Positive PWM Period: 240us.	 Error: 0us
+Negative PWM Period: 240.5us.	 Error: 0us
+Positive PWM Period: 240.5us.	 Error: 0us
+Negative PWM Period: 241us.	 Error: 0us
+Positive PWM Period: 241us.	 Error: 0us
+Negative PWM Period: 241.5us.	 Error: 0us
+Positive PWM Period: 241.5us.	 Error: 0us
+Negative PWM Period: 242us.	 Error: 0us
+Positive PWM Period: 242us.	 Error: 0us
+Negative PWM Period: 242.5us.	 Error: 0us
+Positive PWM Period: 242.5us.	 Error: 0us
+Negative PWM Period: 243us.	 Error: -0.100000000000023us
+Positive PWM Period: 243us.	 Error: 0us
+Negative PWM Period: 243.5us.	 Error: 0us
+Positive PWM Period: 243.5us.	 Error: 0us
+Negative PWM Period: 244us.	 Error: 0us
+Positive PWM Period: 244us.	 Error: 0us
+Negative PWM Period: 244.5us.	 Error: 0us
+Positive PWM Period: 244.5us.	 Error: 0us
+Negative PWM Period: 245us.	 Error: 0us
+Positive PWM Period: 245us.	 Error: 0us
+Negative PWM Period: 245.5us.	 Error: 0us
+Positive PWM Period: 245.5us.	 Error: 0us
+Negative PWM Period: 246us.	 Error: -0.100000000000023us
+Positive PWM Period: 246us.	 Error: 0us
+Negative PWM Period: 246.5us.	 Error: 0us
+Positive PWM Period: 246.5us.	 Error: 0us
+Negative PWM Period: 247us.	 Error: -0.0999999999999943us
+Positive PWM Period: 247us.	 Error: 0us
+Negative PWM Period: 247.5us.	 Error: 0us
+Positive PWM Period: 247.5us.	 Error: 0us
+Negative PWM Period: 248us.	 Error: 0us
+Positive PWM Period: 248us.	 Error: 0us
+Negative PWM Period: 248.5us.	 Error: 0us
+Positive PWM Period: 248.5us.	 Error: 0us
+Negative PWM Period: 249us.	 Error: 0us
+Positive PWM Period: 249us.	 Error: 0.0999999999999943us
+Negative PWM Period: 249.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 249.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 250us.	 Error: 0us
+Positive PWM Period: 250us.	 Error: 0us
+Negative PWM Period: 250.5us.	 Error: 0.0999999999999943us
+Positive PWM Period: 250.5us.	 Error: 0us
+Negative PWM Period: 251us.	 Error: 0.0999999999999943us
+Positive PWM Period: 251us.	 Error: 0us
+Negative PWM Period: 251.5us.	 Error: 0us
+Positive PWM Period: 251.5us.	 Error: 0us
+Negative PWM Period: 252us.	 Error: 0us
+Positive PWM Period: 252us.	 Error: 0us
+Negative PWM Period: 252.5us.	 Error: 0us
+Positive PWM Period: 252.5us.	 Error: 0us
+Negative PWM Period: 253us.	 Error: 0us
+Positive PWM Period: 253us.	 Error: 0us
+Negative PWM Period: 253.5us.	 Error: 0us
+Positive PWM Period: 253.5us.	 Error: 0.0999999999999943us
+Negative PWM Period: 254us.	 Error: 0us
+Positive PWM Period: 254us.	 Error: 0us
+Negative PWM Period: 254.5us.	 Error: 0us
+Positive PWM Period: 254.5us.	 Error: 0us
+Negative PWM Period: 255us.	 Error: 0us
+Positive PWM Period: 255us.	 Error: 0us
+Negative PWM Period: 255.5us.	 Error: 0us
+Positive PWM Period: 255.5us.	 Error: 0us
+Negative PWM Period: 256us.	 Error: 0us
+Positive PWM Period: 256us.	 Error: 0us
+Negative PWM Period: 256.5us.	 Error: 0us
+Positive PWM Period: 256.5us.	 Error: 0us
+Negative PWM Period: 257us.	 Error: 0us
+Positive PWM Period: 257us.	 Error: 0us
+Negative PWM Period: 257.5us.	 Error: 0us
+Positive PWM Period: 257.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 258us.	 Error: 0us
+Positive PWM Period: 258us.	 Error: 0us
+Negative PWM Period: 258.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 258.5us.	 Error: 0us
+Negative PWM Period: 259us.	 Error: -0.100000000000023us
+Positive PWM Period: 259us.	 Error: 0us
+Negative PWM Period: 259.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 259.5us.	 Error: 0us
+Negative PWM Period: 260us.	 Error: 0us
+Positive PWM Period: 260us.	 Error: 0us
+Negative PWM Period: 260.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 260.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 261us.	 Error: -0.100000000000023us
+Positive PWM Period: 261us.	 Error: 0us
+Negative PWM Period: 261.5us.	 Error: 0us
+Positive PWM Period: 261.5us.	 Error: 0us
+Negative PWM Period: 262us.	 Error: 0us
+Positive PWM Period: 262us.	 Error: 0.0999999999999659us
+Negative PWM Period: 262.5us.	 Error: 0us
+Positive PWM Period: 262.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 263us.	 Error: 0us
+Positive PWM Period: 263us.	 Error: 0.0999999999999659us
+Negative PWM Period: 263.5us.	 Error: 0us
+Positive PWM Period: 263.5us.	 Error: 0us
+Negative PWM Period: 264us.	 Error: 0us
+Positive PWM Period: 264us.	 Error: 0us
+Negative PWM Period: 264.5us.	 Error: 0.0999999999999659us
+Positive PWM Period: 264.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 265us.	 Error: 0us
+Positive PWM Period: 265us.	 Error: 0.0999999999999659us
+Negative PWM Period: 265.5us.	 Error: 0us
+Positive PWM Period: 265.5us.	 Error: 0us
+Negative PWM Period: 266us.	 Error: 0us
+Positive PWM Period: 266us.	 Error: 0.0999999999999659us
+Negative PWM Period: 266.5us.	 Error: 0us
+Positive PWM Period: 266.5us.	 Error: 0us
+Negative PWM Period: 267us.	 Error: 0us
+Positive PWM Period: 267us.	 Error: 0us
+Negative PWM Period: 267.5us.	 Error: 0us
+Positive PWM Period: 267.5us.	 Error: 0us
+Negative PWM Period: 268us.	 Error: 0us
+Positive PWM Period: 268us.	 Error: 0us
+Negative PWM Period: 268.5us.	 Error: 0us
+Positive PWM Period: 268.5us.	 Error: 0us
+Negative PWM Period: 269us.	 Error: 0us
+Positive PWM Period: 269us.	 Error: 0us
+Negative PWM Period: 269.5us.	 Error: 0us
+Positive PWM Period: 269.5us.	 Error: 0us
+Negative PWM Period: 270us.	 Error: 0us
+Positive PWM Period: 270us.	 Error: 0us
+Negative PWM Period: 270.5us.	 Error: 0us
+Positive PWM Period: 270.5us.	 Error: 0us
+Negative PWM Period: 271us.	 Error: 0us
+Positive PWM Period: 271us.	 Error: -0.100000000000023us
+Negative PWM Period: 271.5us.	 Error: 0us
+Positive PWM Period: 271.5us.	 Error: 0us
+Negative PWM Period: 272us.	 Error: 0us
+Positive PWM Period: 272us.	 Error: 0us
+Negative PWM Period: 272.5us.	 Error: 0us
+Positive PWM Period: 272.5us.	 Error: 0us
+Negative PWM Period: 273us.	 Error: 0us
+Positive PWM Period: 273us.	 Error: -0.100000000000023us
+Negative PWM Period: 273.5us.	 Error: 0us
+Positive PWM Period: 273.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 274us.	 Error: -0.100000000000023us
+Positive PWM Period: 274us.	 Error: -0.100000000000023us
+Negative PWM Period: 274.5us.	 Error: 0us
+Positive PWM Period: 274.5us.	 Error: 0us
+Negative PWM Period: 275us.	 Error: 0.100000000000023us
+Positive PWM Period: 275us.	 Error: 0.100000000000023us
+Negative PWM Period: 275.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 275.5us.	 Error: 0us
+Negative PWM Period: 276us.	 Error: 0.100000000000023us
+Positive PWM Period: 276us.	 Error: 0us
+Negative PWM Period: 276.5us.	 Error: 0us
+Positive PWM Period: 276.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 277us.	 Error: 0us
+Positive PWM Period: 277us.	 Error: 0us
+Negative PWM Period: 277.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 277.5us.	 Error: 0us
+Negative PWM Period: 278us.	 Error: 0us
+Positive PWM Period: 278us.	 Error: 0us
+Negative PWM Period: 278.5us.	 Error: 0us
+Positive PWM Period: 278.5us.	 Error: 0us
+Negative PWM Period: 279us.	 Error: 0us
+Positive PWM Period: 279us.	 Error: 0us
+Negative PWM Period: 279.5us.	 Error: 0us
+Positive PWM Period: 279.5us.	 Error: 0us
+Negative PWM Period: 280us.	 Error: 0us
+Positive PWM Period: 280us.	 Error: 0us
+Negative PWM Period: 280.5us.	 Error: 0us
+Positive PWM Period: 280.5us.	 Error: 0us
+Negative PWM Period: 281us.	 Error: 0us
+Positive PWM Period: 281us.	 Error: 0us
+Negative PWM Period: 281.5us.	 Error: 0us
+Positive PWM Period: 281.5us.	 Error: 0us
+Negative PWM Period: 282us.	 Error: 0us
+Positive PWM Period: 282us.	 Error: 0us
+Negative PWM Period: 282.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 282.5us.	 Error: 0us
+Negative PWM Period: 283us.	 Error: 0us
+Positive PWM Period: 283us.	 Error: 0us
+Negative PWM Period: 283.5us.	 Error: 0us
+Positive PWM Period: 283.5us.	 Error: 0us
+Negative PWM Period: 284us.	 Error: 0us
+Positive PWM Period: 284us.	 Error: 0us
+Negative PWM Period: 284.5us.	 Error: 0us
+Positive PWM Period: 284.5us.	 Error: 0us
+Negative PWM Period: 285us.	 Error: 0us
+Positive PWM Period: 285us.	 Error: 0us
+Negative PWM Period: 285.5us.	 Error: 0us
+Positive PWM Period: 285.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 286us.	 Error: -0.100000000000023us
+Positive PWM Period: 286us.	 Error: 0us
+Negative PWM Period: 286.5us.	 Error: 0us
+Positive PWM Period: 286.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 287us.	 Error: 0us
+Positive PWM Period: 287us.	 Error: 0us
+Negative PWM Period: 287.5us.	 Error: 0us
+Positive PWM Period: 287.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 288us.	 Error: 0us
+Positive PWM Period: 288us.	 Error: 0us
+Negative PWM Period: 288.5us.	 Error: 0us
+Positive PWM Period: 288.5us.	 Error: 0us
+Negative PWM Period: 289us.	 Error: 0us
+Positive PWM Period: 289us.	 Error: 0us
+Negative PWM Period: 289.5us.	 Error: 0us
+Positive PWM Period: 289.5us.	 Error: 0us
+Negative PWM Period: 290us.	 Error: 0us
+Positive PWM Period: 290us.	 Error: 0.100000000000023us
+Negative PWM Period: 290.5us.	 Error: 0us
+Positive PWM Period: 290.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 291us.	 Error: 0us
+Positive PWM Period: 291us.	 Error: 0us
+Negative PWM Period: 291.5us.	 Error: 0us
+Positive PWM Period: 291.5us.	 Error: 0us
+Negative PWM Period: 292us.	 Error: 0us
+Positive PWM Period: 292us.	 Error: 0us
+Negative PWM Period: 292.5us.	 Error: 0us
+Positive PWM Period: 292.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 293us.	 Error: 0us
+Positive PWM Period: 293us.	 Error: 0.100000000000023us
+Negative PWM Period: 293.5us.	 Error: 0us
+Positive PWM Period: 293.5us.	 Error: 0us
+Negative PWM Period: 294us.	 Error: 0us
+Positive PWM Period: 294us.	 Error: 0us
+Negative PWM Period: 294.5us.	 Error: 0us
+Positive PWM Period: 294.5us.	 Error: 0us
+Negative PWM Period: 295us.	 Error: 0us
+Positive PWM Period: 295us.	 Error: 0us
+Negative PWM Period: 295.5us.	 Error: 0us
+Positive PWM Period: 295.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 296us.	 Error: 0us
+Positive PWM Period: 296us.	 Error: 0us
+Negative PWM Period: 296.5us.	 Error: 0us
+Positive PWM Period: 296.5us.	 Error: 0us
+Negative PWM Period: 297us.	 Error: -0.0999999999999659us
+Positive PWM Period: 297us.	 Error: 0us
+Negative PWM Period: 297.5us.	 Error: 0us
+Positive PWM Period: 297.5us.	 Error: 0us
+Negative PWM Period: 298us.	 Error: 0us
+Positive PWM Period: 298us.	 Error: 0us
+Negative PWM Period: 298.5us.	 Error: 0us
+Positive PWM Period: 298.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 299us.	 Error: 0us
+Positive PWM Period: 299us.	 Error: 0us
+Negative PWM Period: 299.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 299.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 300us.	 Error: 0.100000000000023us
+Positive PWM Period: 300us.	 Error: 0us
+Negative PWM Period: 300.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 300.5us.	 Error: 0us
+Negative PWM Period: 301us.	 Error: 0us
+Positive PWM Period: 301us.	 Error: 0.100000000000023us
+Negative PWM Period: 301.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 301.5us.	 Error: 0us
+Negative PWM Period: 302us.	 Error: 0us
+Positive PWM Period: 302us.	 Error: 0.100000000000023us
+Negative PWM Period: 302.5us.	 Error: 0us
+Positive PWM Period: 302.5us.	 Error: 0us
+Negative PWM Period: 303us.	 Error: 0.100000000000023us
+Positive PWM Period: 303us.	 Error: 0us
+Negative PWM Period: 303.5us.	 Error: 0us
+Positive PWM Period: 303.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 304us.	 Error: 0us
+Positive PWM Period: 304us.	 Error: 0us
+Negative PWM Period: 304.5us.	 Error: 0us
+Positive PWM Period: 304.5us.	 Error: 0us
+Negative PWM Period: 305us.	 Error: 0us
+Positive PWM Period: 305us.	 Error: 0us
+Negative PWM Period: 305.5us.	 Error: 0us
+Positive PWM Period: 305.5us.	 Error: 0us
+Negative PWM Period: 306us.	 Error: 0us
+Positive PWM Period: 306us.	 Error: 0us
+Negative PWM Period: 306.5us.	 Error: 0us
+Positive PWM Period: 306.5us.	 Error: 0us
+Negative PWM Period: 307us.	 Error: -0.0999999999999659us
+Positive PWM Period: 307us.	 Error: 0us
+Negative PWM Period: 307.5us.	 Error: 0us
+Positive PWM Period: 307.5us.	 Error: 0us
+Negative PWM Period: 308us.	 Error: 0us
+Positive PWM Period: 308us.	 Error: 0us
+Negative PWM Period: 308.5us.	 Error: 0us
+Positive PWM Period: 308.5us.	 Error: 0us
+Negative PWM Period: 309us.	 Error: 0us
+Positive PWM Period: 309us.	 Error: -0.0999999999999659us
+Negative PWM Period: 309.5us.	 Error: 0us
+Positive PWM Period: 309.5us.	 Error: 0us
+Negative PWM Period: 310us.	 Error: -0.0999999999999659us
+Positive PWM Period: 310us.	 Error: 0us
+Negative PWM Period: 310.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 310.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 311us.	 Error: 0us
+Positive PWM Period: 311us.	 Error: 0us
+Negative PWM Period: 311.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 311.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 312us.	 Error: 0us
+Positive PWM Period: 312us.	 Error: 0us
+Negative PWM Period: 312.5us.	 Error: 0us
+Positive PWM Period: 312.5us.	 Error: 0us
+Negative PWM Period: 313us.	 Error: 0us
+Positive PWM Period: 313us.	 Error: 0.0999999999999659us
+Negative PWM Period: 313.5us.	 Error: 0us
+Positive PWM Period: 313.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 314us.	 Error: 0.0999999999999659us
+Positive PWM Period: 314us.	 Error: 0us
+Negative PWM Period: 314.5us.	 Error: 0us
+Positive PWM Period: 314.5us.	 Error: 0us
+Negative PWM Period: 315us.	 Error: 0.0999999999999659us
+Positive PWM Period: 315us.	 Error: 0us
+Negative PWM Period: 315.5us.	 Error: 0us
+Positive PWM Period: 315.5us.	 Error: 0us
+Negative PWM Period: 316us.	 Error: 0us
+Positive PWM Period: 316us.	 Error: 0us
+Negative PWM Period: 316.5us.	 Error: 0us
+Positive PWM Period: 316.5us.	 Error: 0us
+Negative PWM Period: 317us.	 Error: 0us
+Positive PWM Period: 317us.	 Error: 0.0999999999999659us
+Negative PWM Period: 317.5us.	 Error: 0us
+Positive PWM Period: 317.5us.	 Error: 0us
+Negative PWM Period: 318us.	 Error: 0us
+Positive PWM Period: 318us.	 Error: 0us
+Negative PWM Period: 318.5us.	 Error: 0us
+Positive PWM Period: 318.5us.	 Error: 0us
+Negative PWM Period: 319us.	 Error: 0us
+Positive PWM Period: 319us.	 Error: 0us
+Negative PWM Period: 319.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 319.5us.	 Error: 0us
+Negative PWM Period: 320us.	 Error: 0us
+Positive PWM Period: 320us.	 Error: 0us
+Negative PWM Period: 320.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 320.5us.	 Error: 0us
+Negative PWM Period: 321us.	 Error: 0us
+Positive PWM Period: 321us.	 Error: 0us
+Negative PWM Period: 321.5us.	 Error: 0us
+Positive PWM Period: 321.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 322us.	 Error: 0us
+Positive PWM Period: 322us.	 Error: 0us
+Negative PWM Period: 322.5us.	 Error: 0us
+Positive PWM Period: 322.5us.	 Error: 0us
+Negative PWM Period: 323us.	 Error: 0us
+Positive PWM Period: 323us.	 Error: 0us
+Negative PWM Period: 323.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 323.5us.	 Error: 0us
+Negative PWM Period: 324us.	 Error: 0us
+Positive PWM Period: 324us.	 Error: -0.100000000000023us
+Negative PWM Period: 324.5us.	 Error: 0us
+Positive PWM Period: 324.5us.	 Error: 0us
+Negative PWM Period: 325us.	 Error: 0us
+Positive PWM Period: 325us.	 Error: 0us
+Negative PWM Period: 325.5us.	 Error: 0.0999999999999659us
+Positive PWM Period: 325.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 326us.	 Error: 0.0999999999999659us
+Positive PWM Period: 326us.	 Error: 0.0999999999999659us
+Negative PWM Period: 326.5us.	 Error: 0.0999999999999659us
+Positive PWM Period: 326.5us.	 Error: 0us
+Negative PWM Period: 327us.	 Error: 0us
+Positive PWM Period: 327us.	 Error: 0.0999999999999659us
+Negative PWM Period: 327.5us.	 Error: 0us
+Positive PWM Period: 327.5us.	 Error: 0us
+Negative PWM Period: 328us.	 Error: 0us
+Positive PWM Period: 328us.	 Error: 0us
+Negative PWM Period: 328.5us.	 Error: 0us
+Positive PWM Period: 328.5us.	 Error: 0us
+Negative PWM Period: 329us.	 Error: 0us
+Positive PWM Period: 329us.	 Error: 0us
+Negative PWM Period: 329.5us.	 Error: 0us
+Positive PWM Period: 329.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 330us.	 Error: 0us
+Positive PWM Period: 330us.	 Error: 0us
+Negative PWM Period: 330.5us.	 Error: 0us
+Positive PWM Period: 330.5us.	 Error: 0us
+Negative PWM Period: 331us.	 Error: 0us
+Positive PWM Period: 331us.	 Error: 0.0999999999999659us
+Negative PWM Period: 331.5us.	 Error: 0us
+Positive PWM Period: 331.5us.	 Error: 0us
+Negative PWM Period: 332us.	 Error: 0us
+Positive PWM Period: 332us.	 Error: 0us
+Negative PWM Period: 332.5us.	 Error: 0us
+Positive PWM Period: 332.5us.	 Error: 0us
+Negative PWM Period: 333us.	 Error: 0us
+Positive PWM Period: 333us.	 Error: 0us
+Negative PWM Period: 333.5us.	 Error: 0us
+Positive PWM Period: 333.5us.	 Error: 0us
+Negative PWM Period: 334us.	 Error: 0us
+Positive PWM Period: 334us.	 Error: 0us
+Negative PWM Period: 334.5us.	 Error: 0us
+Positive PWM Period: 334.5us.	 Error: 0us
+Negative PWM Period: 335us.	 Error: 0us
+Positive PWM Period: 335us.	 Error: 0us
+Negative PWM Period: 335.5us.	 Error: 0us
+Positive PWM Period: 335.5us.	 Error: 0us
+Negative PWM Period: 336us.	 Error: -0.100000000000023us
+Positive PWM Period: 336us.	 Error: 0us
+Negative PWM Period: 336.5us.	 Error: 0us
+Positive PWM Period: 336.5us.	 Error: 0us
+Negative PWM Period: 337us.	 Error: -0.100000000000023us
+Positive PWM Period: 337us.	 Error: 0us
+Negative PWM Period: 337.5us.	 Error: 0us
+Positive PWM Period: 337.5us.	 Error: 0us
+Negative PWM Period: 338us.	 Error: 0us
+Positive PWM Period: 338us.	 Error: 0us
+Negative PWM Period: 338.5us.	 Error: 0us
+Positive PWM Period: 338.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 339us.	 Error: 0us
+Positive PWM Period: 339us.	 Error: 0us
+Negative PWM Period: 339.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 339.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 340us.	 Error: 0.100000000000023us
+Positive PWM Period: 340us.	 Error: 0us
+Negative PWM Period: 340.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 340.5us.	 Error: 0us
+Negative PWM Period: 341us.	 Error: 0.100000000000023us
+Positive PWM Period: 341us.	 Error: 0us
+Negative PWM Period: 341.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 341.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 342us.	 Error: 0us
+Positive PWM Period: 342us.	 Error: 0us
+Negative PWM Period: 342.5us.	 Error: 0us
+Positive PWM Period: 342.5us.	 Error: 0us
+Negative PWM Period: 343us.	 Error: 0us
+Positive PWM Period: 343us.	 Error: 0us
+Negative PWM Period: 343.5us.	 Error: 0us
+Positive PWM Period: 343.5us.	 Error: 0us
+Negative PWM Period: 344us.	 Error: 0us
+Positive PWM Period: 344us.	 Error: 0us
+Negative PWM Period: 344.5us.	 Error: 0us
+Positive PWM Period: 344.5us.	 Error: 0us
+Negative PWM Period: 345us.	 Error: 0us
+Positive PWM Period: 345us.	 Error: 0us
+Negative PWM Period: 345.5us.	 Error: 0us
+Positive PWM Period: 345.5us.	 Error: 0us
+Negative PWM Period: 346us.	 Error: 0us
+Positive PWM Period: 346us.	 Error: 0us
+Negative PWM Period: 346.5us.	 Error: 0us
+Positive PWM Period: 346.5us.	 Error: 0us
+Negative PWM Period: 347us.	 Error: 0us
+Positive PWM Period: 347us.	 Error: 0us
+Negative PWM Period: 347.5us.	 Error: 0us
+Positive PWM Period: 347.5us.	 Error: 0us
+Negative PWM Period: 348us.	 Error: 0us
+Positive PWM Period: 348us.	 Error: 0us
+Negative PWM Period: 348.5us.	 Error: 0us
+Positive PWM Period: 348.5us.	 Error: 0us
+Negative PWM Period: 349us.	 Error: 0us
+Positive PWM Period: 349us.	 Error: 0us
+Negative PWM Period: 349.5us.	 Error: 0us
+Positive PWM Period: 349.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 350us.	 Error: 0us
+Positive PWM Period: 350us.	 Error: 0us
+Negative PWM Period: 350.5us.	 Error: 0us
+Positive PWM Period: 350.5us.	 Error: 0us
+Negative PWM Period: 351us.	 Error: 0us
+Positive PWM Period: 351us.	 Error: 0.100000000000023us
+Negative PWM Period: 351.5us.	 Error: 0us
+Positive PWM Period: 351.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 352us.	 Error: 0.100000000000023us
+Positive PWM Period: 352us.	 Error: 0.100000000000023us
+Negative PWM Period: 352.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 352.5us.	 Error: 0us
+Negative PWM Period: 353us.	 Error: 0us
+Positive PWM Period: 353us.	 Error: 0us
+Negative PWM Period: 353.5us.	 Error: 0us
+Positive PWM Period: 353.5us.	 Error: 0us
+Negative PWM Period: 354us.	 Error: 0us
+Positive PWM Period: 354us.	 Error: 0us
+Negative PWM Period: 354.5us.	 Error: 0us
+Positive PWM Period: 354.5us.	 Error: 0us
+Negative PWM Period: 355us.	 Error: 0us
+Positive PWM Period: 355us.	 Error: 0us
+Negative PWM Period: 355.5us.	 Error: 0us
+Positive PWM Period: 355.5us.	 Error: 0us
+Negative PWM Period: 356us.	 Error: 0us
+Positive PWM Period: 356us.	 Error: 0us
+Negative PWM Period: 356.5us.	 Error: 0us
+Positive PWM Period: 356.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 357us.	 Error: 0us
+Positive PWM Period: 357us.	 Error: 0us
+Negative PWM Period: 357.5us.	 Error: 0us
+Positive PWM Period: 357.5us.	 Error: 0us
+Negative PWM Period: 358us.	 Error: 0us
+Positive PWM Period: 358us.	 Error: 0us
+Negative PWM Period: 358.5us.	 Error: 0us
+Positive PWM Period: 358.5us.	 Error: 0us
+Negative PWM Period: 359us.	 Error: -0.0999999999999659us
+Positive PWM Period: 359us.	 Error: 0us
+Negative PWM Period: 359.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 359.5us.	 Error: 0us
+Negative PWM Period: 360us.	 Error: 0us
+Positive PWM Period: 360us.	 Error: 0us
+Negative PWM Period: 360.5us.	 Error: 0us
+Positive PWM Period: 360.5us.	 Error: 0us
+Negative PWM Period: 361us.	 Error: 0us
+Positive PWM Period: 361us.	 Error: -0.0999999999999659us
+Negative PWM Period: 361.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 361.5us.	 Error: 0us
+Negative PWM Period: 362us.	 Error: 0us
+Positive PWM Period: 362us.	 Error: 0us
+Negative PWM Period: 362.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 362.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 363us.	 Error: -0.0999999999999659us
+Positive PWM Period: 363us.	 Error: 0us
+Negative PWM Period: 363.5us.	 Error: 0us
+Positive PWM Period: 363.5us.	 Error: 0us
+Negative PWM Period: 364us.	 Error: 0us
+Positive PWM Period: 364us.	 Error: 0.100000000000023us
+Negative PWM Period: 364.5us.	 Error: 0us
+Positive PWM Period: 364.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 365us.	 Error: 0us
+Positive PWM Period: 365us.	 Error: 0us
+Negative PWM Period: 365.5us.	 Error: 0us
+Positive PWM Period: 365.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 366us.	 Error: 0us
+Positive PWM Period: 366us.	 Error: 0us
+Negative PWM Period: 366.5us.	 Error: 0us
+Positive PWM Period: 366.5us.	 Error: 0us
+Negative PWM Period: 367us.	 Error: 0us
+Positive PWM Period: 367us.	 Error: 0us
+Negative PWM Period: 367.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 367.5us.	 Error: 0us
+Negative PWM Period: 368us.	 Error: 0us
+Positive PWM Period: 368us.	 Error: 0us
+Negative PWM Period: 368.5us.	 Error: 0us
+Positive PWM Period: 368.5us.	 Error: 0us
+Negative PWM Period: 369us.	 Error: 0us
+Positive PWM Period: 369us.	 Error: 0us
+Negative PWM Period: 369.5us.	 Error: 0us
+Positive PWM Period: 369.5us.	 Error: 0us
+Negative PWM Period: 370us.	 Error: 0us
+Positive PWM Period: 370us.	 Error: 0us
+Negative PWM Period: 370.5us.	 Error: 0us
+Positive PWM Period: 370.5us.	 Error: 0us
+Negative PWM Period: 371us.	 Error: 0us
+Positive PWM Period: 371us.	 Error: 0us
+Negative PWM Period: 371.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 371.5us.	 Error: 0us
+Negative PWM Period: 372us.	 Error: -0.0999999999999659us
+Positive PWM Period: 372us.	 Error: 0us
+Negative PWM Period: 372.5us.	 Error: 0us
+Positive PWM Period: 372.5us.	 Error: 0us
+Negative PWM Period: 373us.	 Error: 0us
+Positive PWM Period: 373us.	 Error: -0.0999999999999659us
+Negative PWM Period: 373.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 373.5us.	 Error: 0us
+Negative PWM Period: 374us.	 Error: -0.0999999999999659us
+Positive PWM Period: 374us.	 Error: -0.0999999999999659us
+Negative PWM Period: 374.5us.	 Error: 0us
+Positive PWM Period: 374.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 375us.	 Error: 0us
+Positive PWM Period: 375us.	 Error: 0us
+Negative PWM Period: 375.5us.	 Error: 0us
+Positive PWM Period: 375.5us.	 Error: 0us
+Negative PWM Period: 376us.	 Error: 0us
+Positive PWM Period: 376us.	 Error: -0.0999999999999659us
+Negative PWM Period: 376.5us.	 Error: 0.0999999999999659us
+Positive PWM Period: 376.5us.	 Error: 0us
+Negative PWM Period: 377us.	 Error: 0us
+Positive PWM Period: 377us.	 Error: 0us
+Negative PWM Period: 377.5us.	 Error: 0.0999999999999659us
+Positive PWM Period: 377.5us.	 Error: 0us
+Negative PWM Period: 378us.	 Error: 0us
+Positive PWM Period: 378us.	 Error: 0us
+Negative PWM Period: 378.5us.	 Error: 0us
+Positive PWM Period: 378.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 379us.	 Error: 0.0999999999999659us
+Positive PWM Period: 379us.	 Error: 0.0999999999999659us
+Negative PWM Period: 379.5us.	 Error: 0us
+Positive PWM Period: 379.5us.	 Error: 0us
+Negative PWM Period: 380us.	 Error: 0us
+Positive PWM Period: 380us.	 Error: 0us
+Negative PWM Period: 380.5us.	 Error: 0us
+Positive PWM Period: 380.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 381us.	 Error: 0.0999999999999659us
+Positive PWM Period: 381us.	 Error: 0us
+Negative PWM Period: 381.5us.	 Error: 0.0999999999999659us
+Positive PWM Period: 381.5us.	 Error: 0us
+Negative PWM Period: 382us.	 Error: 0us
+Positive PWM Period: 382us.	 Error: 0us
+Negative PWM Period: 382.5us.	 Error: 0us
+Positive PWM Period: 382.5us.	 Error: 0us
+Negative PWM Period: 383us.	 Error: 0us
+Positive PWM Period: 383us.	 Error: 0us
+Negative PWM Period: 383.5us.	 Error: 0us
+Positive PWM Period: 383.5us.	 Error: 0us
+Negative PWM Period: 384us.	 Error: 0us
+Positive PWM Period: 384us.	 Error: 0us
+Negative PWM Period: 384.5us.	 Error: 0us
+Positive PWM Period: 384.5us.	 Error: 0us
+Negative PWM Period: 385us.	 Error: 0us
+Positive PWM Period: 385us.	 Error: 0us
+Negative PWM Period: 385.5us.	 Error: 0us
+Positive PWM Period: 385.5us.	 Error: 0us
+Negative PWM Period: 386us.	 Error: -0.100000000000023us
+Positive PWM Period: 386us.	 Error: 0us
+Negative PWM Period: 386.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 386.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 387us.	 Error: -0.100000000000023us
+Positive PWM Period: 387us.	 Error: -0.100000000000023us
+Negative PWM Period: 387.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 387.5us.	 Error: 0us
+Negative PWM Period: 388us.	 Error: -0.100000000000023us
+Positive PWM Period: 388us.	 Error: 0us
+Negative PWM Period: 388.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 388.5us.	 Error: 0us
+Negative PWM Period: 389us.	 Error: 0us
+Positive PWM Period: 389us.	 Error: 0us
+Negative PWM Period: 389.5us.	 Error: 0.0999999999999659us
+Positive PWM Period: 389.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 390us.	 Error: 0us
+Positive PWM Period: 390us.	 Error: 0us
+Negative PWM Period: 390.5us.	 Error: 0us
+Positive PWM Period: 390.5us.	 Error: 0us
+Negative PWM Period: 391us.	 Error: 0.0999999999999659us
+Positive PWM Period: 391us.	 Error: 0.0999999999999659us
+Negative PWM Period: 391.5us.	 Error: 0us
+Positive PWM Period: 391.5us.	 Error: 0us
+Negative PWM Period: 392us.	 Error: 0us
+Positive PWM Period: 392us.	 Error: 0us
+Negative PWM Period: 392.5us.	 Error: 0.0999999999999659us
+Positive PWM Period: 392.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 393us.	 Error: 0us
+Positive PWM Period: 393us.	 Error: 0us
+Negative PWM Period: 393.5us.	 Error: 0us
+Positive PWM Period: 393.5us.	 Error: 0us
+Negative PWM Period: 394us.	 Error: 0us
+Positive PWM Period: 394us.	 Error: 0us
+Negative PWM Period: 394.5us.	 Error: 0us
+Positive PWM Period: 394.5us.	 Error: 0us
+Negative PWM Period: 395us.	 Error: 0us
+Positive PWM Period: 395us.	 Error: 0us
+Negative PWM Period: 395.5us.	 Error: 0us
+Positive PWM Period: 395.5us.	 Error: 0us
+Negative PWM Period: 396us.	 Error: 0us
+Positive PWM Period: 396us.	 Error: 0us
+Negative PWM Period: 396.5us.	 Error: 0us
+Positive PWM Period: 396.5us.	 Error: 0us
+Negative PWM Period: 397us.	 Error: 0us
+Positive PWM Period: 397us.	 Error: -0.100000000000023us
+Negative PWM Period: 397.5us.	 Error: 0us
+Positive PWM Period: 397.5us.	 Error: 0us
+Negative PWM Period: 398us.	 Error: 0us
+Positive PWM Period: 398us.	 Error: 0us
+Negative PWM Period: 398.5us.	 Error: 0us
+Positive PWM Period: 398.5us.	 Error: 0us
+Negative PWM Period: 399us.	 Error: 0us
+Positive PWM Period: 399us.	 Error: 0us
+Negative PWM Period: 399.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 399.5us.	 Error: 0us
+Negative PWM Period: 400us.	 Error: 0us
+Positive PWM Period: 400us.	 Error: 0us
+Negative PWM Period: 400.5us.	 Error: 0us
+Positive PWM Period: 400.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 401us.	 Error: -0.100000000000023us
+Positive PWM Period: 401us.	 Error: 0us
+Negative PWM Period: 401.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 401.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 402us.	 Error: 0us
+Positive PWM Period: 402us.	 Error: 0us
+Negative PWM Period: 402.5us.	 Error: 0us
+Positive PWM Period: 402.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 403us.	 Error: 0us
+Positive PWM Period: 403us.	 Error: 0.100000000000023us
+Negative PWM Period: 403.5us.	 Error: 0us
+Positive PWM Period: 403.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 404us.	 Error: 0us
+Positive PWM Period: 404us.	 Error: 0.100000000000023us
+Negative PWM Period: 404.5us.	 Error: 0us
+Positive PWM Period: 404.5us.	 Error: 0us
+Negative PWM Period: 405us.	 Error: 0us
+Positive PWM Period: 405us.	 Error: 0.100000000000023us
+Negative PWM Period: 405.5us.	 Error: 0us
+Positive PWM Period: 405.5us.	 Error: 0us
+Negative PWM Period: 406us.	 Error: 0us
+Positive PWM Period: 406us.	 Error: 0us
+Negative PWM Period: 406.5us.	 Error: 0us
+Positive PWM Period: 406.5us.	 Error: 0us
+Negative PWM Period: 407us.	 Error: 0us
+Positive PWM Period: 407us.	 Error: 0.100000000000023us
+Negative PWM Period: 407.5us.	 Error: 0us
+Positive PWM Period: 407.5us.	 Error: 0us
+Negative PWM Period: 408us.	 Error: 0us
+Positive PWM Period: 408us.	 Error: 0us
+Negative PWM Period: 408.5us.	 Error: 0us
+Positive PWM Period: 408.5us.	 Error: 0us
+Negative PWM Period: 409us.	 Error: 0us
+Positive PWM Period: 409us.	 Error: 0us
+Negative PWM Period: 409.5us.	 Error: 0us
+Positive PWM Period: 409.5us.	 Error: 0us
+Negative PWM Period: 410us.	 Error: 0us
+Positive PWM Period: 410us.	 Error: 0us
+Negative PWM Period: 410.5us.	 Error: 0us
+Positive PWM Period: 410.5us.	 Error: 0us
+Negative PWM Period: 411us.	 Error: 0us
+Positive PWM Period: 411us.	 Error: 0us
+Negative PWM Period: 411.5us.	 Error: 0us
+Positive PWM Period: 411.5us.	 Error: 0us
+Negative PWM Period: 412us.	 Error: 0us
+Positive PWM Period: 412us.	 Error: -0.100000000000023us
+Negative PWM Period: 412.5us.	 Error: 0us
+Positive PWM Period: 412.5us.	 Error: 0us
+Negative PWM Period: 413us.	 Error: 0us
+Positive PWM Period: 413us.	 Error: 0us
+Negative PWM Period: 413.5us.	 Error: 0us
+Positive PWM Period: 413.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 414us.	 Error: 0us
+Positive PWM Period: 414us.	 Error: 0us
+Negative PWM Period: 414.5us.	 Error: 0us
+Positive PWM Period: 414.5us.	 Error: 0us
+Negative PWM Period: 415us.	 Error: 0us
+Positive PWM Period: 415us.	 Error: 0us
+Negative PWM Period: 415.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 415.5us.	 Error: 0us
+Negative PWM Period: 416us.	 Error: 0us
+Positive PWM Period: 416us.	 Error: 0us
+Negative PWM Period: 416.5us.	 Error: 0us
+Positive PWM Period: 416.5us.	 Error: 0us
+Negative PWM Period: 417us.	 Error: 0.100000000000023us
+Positive PWM Period: 417us.	 Error: 0us
+Negative PWM Period: 417.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 417.5us.	 Error: 0us
+Negative PWM Period: 418us.	 Error: 0us
+Positive PWM Period: 418us.	 Error: 0.100000000000023us
+Negative PWM Period: 418.5us.	 Error: 0us
+Positive PWM Period: 418.5us.	 Error: 0us
+Negative PWM Period: 419us.	 Error: 0us
+Positive PWM Period: 419us.	 Error: 0us
+Negative PWM Period: 419.5us.	 Error: 0us
+Positive PWM Period: 419.5us.	 Error: 0us
+Negative PWM Period: 420us.	 Error: 0us
+Positive PWM Period: 420us.	 Error: 0us
+Negative PWM Period: 420.5us.	 Error: 0us
+Positive PWM Period: 420.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 421us.	 Error: 0us
+Positive PWM Period: 421us.	 Error: 0us
+Negative PWM Period: 421.5us.	 Error: 0us
+Positive PWM Period: 421.5us.	 Error: 0us
+Negative PWM Period: 422us.	 Error: 0us
+Positive PWM Period: 422us.	 Error: 0us
+Negative PWM Period: 422.5us.	 Error: 0us
+Positive PWM Period: 422.5us.	 Error: 0us
+Negative PWM Period: 423us.	 Error: 0us
+Positive PWM Period: 423us.	 Error: 0us
+Negative PWM Period: 423.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 423.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 424us.	 Error: 0us
+Positive PWM Period: 424us.	 Error: -0.0999999999999659us
+Negative PWM Period: 424.5us.	 Error: 0us
+Positive PWM Period: 424.5us.	 Error: 0us
+Negative PWM Period: 425us.	 Error: 0us
+Positive PWM Period: 425us.	 Error: -0.0999999999999659us
+Negative PWM Period: 425.5us.	 Error: 0us
+Positive PWM Period: 425.5us.	 Error: 0us
+Negative PWM Period: 426us.	 Error: 0us
+Positive PWM Period: 426us.	 Error: -0.0999999999999659us
+Negative PWM Period: 426.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 426.5us.	 Error: 0us
+Negative PWM Period: 427us.	 Error: 0us
+Positive PWM Period: 427us.	 Error: -0.0999999999999659us
+Negative PWM Period: 427.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 427.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 428us.	 Error: 0us
+Positive PWM Period: 428us.	 Error: 0us
+Negative PWM Period: 428.5us.	 Error: 0us
+Positive PWM Period: 428.5us.	 Error: 0us
+Negative PWM Period: 429us.	 Error: 0.100000000000023us
+Positive PWM Period: 429us.	 Error: 0us
+Negative PWM Period: 429.5us.	 Error: 0us
+Positive PWM Period: 429.5us.	 Error: 0us
+Negative PWM Period: 430us.	 Error: 0us
+Positive PWM Period: 430us.	 Error: 0us
+Negative PWM Period: 430.5us.	 Error: 0us
+Positive PWM Period: 430.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 431us.	 Error: 0us
+Positive PWM Period: 431us.	 Error: 0us
+Negative PWM Period: 431.5us.	 Error: 0us
+Positive PWM Period: 431.5us.	 Error: 0us
+Negative PWM Period: 432us.	 Error: 0us
+Positive PWM Period: 432us.	 Error: 0us
+Negative PWM Period: 432.5us.	 Error: 0us
+Positive PWM Period: 432.5us.	 Error: 0us
+Negative PWM Period: 433us.	 Error: 0us
+Positive PWM Period: 433us.	 Error: 0us
+Negative PWM Period: 433.5us.	 Error: 0us
+Positive PWM Period: 433.5us.	 Error: 0us
+Negative PWM Period: 434us.	 Error: 0us
+Positive PWM Period: 434us.	 Error: 0us
+Negative PWM Period: 434.5us.	 Error: 0us
+Positive PWM Period: 434.5us.	 Error: 0us
+Negative PWM Period: 435us.	 Error: 0us
+Positive PWM Period: 435us.	 Error: 0us
+Negative PWM Period: 435.5us.	 Error: 0us
+Positive PWM Period: 435.5us.	 Error: 0us
+Negative PWM Period: 436us.	 Error: 0us
+Positive PWM Period: 436us.	 Error: 0us
+Negative PWM Period: 436.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 436.5us.	 Error: 0us
+Negative PWM Period: 437us.	 Error: -0.0999999999999659us
+Positive PWM Period: 437us.	 Error: 0us
+Negative PWM Period: 437.5us.	 Error: 0us
+Positive PWM Period: 437.5us.	 Error: 0us
+Negative PWM Period: 438us.	 Error: 0us
+Positive PWM Period: 438us.	 Error: -0.0999999999999659us
+Negative PWM Period: 438.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 438.5us.	 Error: 0us
+Negative PWM Period: 439us.	 Error: 0us
+Positive PWM Period: 439us.	 Error: 0us
+Negative PWM Period: 439.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 439.5us.	 Error: 0us
+Negative PWM Period: 440us.	 Error: -0.0999999999999659us
+Positive PWM Period: 440us.	 Error: 0us
+Negative PWM Period: 440.5us.	 Error: 0us
+Positive PWM Period: 440.5us.	 Error: 0us
+Negative PWM Period: 441us.	 Error: 0us
+Positive PWM Period: 441us.	 Error: 0.0999999999999659us
+Negative PWM Period: 441.5us.	 Error: 0us
+Positive PWM Period: 441.5us.	 Error: 0us
+Negative PWM Period: 442us.	 Error: 0.0999999999999659us
+Positive PWM Period: 442us.	 Error: 0us
+Negative PWM Period: 442.5us.	 Error: 0us
+Positive PWM Period: 442.5us.	 Error: 0.0999999999999659us
+Negative PWM Period: 443us.	 Error: 0us
+Positive PWM Period: 443us.	 Error: 0us
+Negative PWM Period: 443.5us.	 Error: 0us
+Positive PWM Period: 443.5us.	 Error: 0us
+Negative PWM Period: 444us.	 Error: 0us
+Positive PWM Period: 444us.	 Error: 0.0999999999999659us
+Negative PWM Period: 444.5us.	 Error: 0us
+Positive PWM Period: 444.5us.	 Error: 0us
+Negative PWM Period: 445us.	 Error: 0us
+Positive PWM Period: 445us.	 Error: 0us
+Negative PWM Period: 445.5us.	 Error: 0us
+Positive PWM Period: 445.5us.	 Error: 0us
+Negative PWM Period: 446us.	 Error: 0us
+Positive PWM Period: 446us.	 Error: 0us
+Negative PWM Period: 446.5us.	 Error: 0us
+Positive PWM Period: 446.5us.	 Error: 0us
+Negative PWM Period: 447us.	 Error: 0us
+Positive PWM Period: 447us.	 Error: 0us
+Negative PWM Period: 447.5us.	 Error: 0us
+Positive PWM Period: 447.5us.	 Error: 0us
+Negative PWM Period: 448us.	 Error: 0us
+Positive PWM Period: 448us.	 Error: 0us
+Negative PWM Period: 448.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 448.5us.	 Error: 0us
+Negative PWM Period: 449us.	 Error: 0us
+Positive PWM Period: 449us.	 Error: 0us
+Negative PWM Period: 449.5us.	 Error: 0us
+Positive PWM Period: 449.5us.	 Error: 0us
+Negative PWM Period: 450us.	 Error: 0us
+Positive PWM Period: 450us.	 Error: 0us
+Negative PWM Period: 450.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 450.5us.	 Error: 0us
+Negative PWM Period: 451us.	 Error: 0us
+Positive PWM Period: 451us.	 Error: 0us
+Negative PWM Period: 451.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 451.5us.	 Error: 0us
+Negative PWM Period: 452us.	 Error: -0.100000000000023us
+Positive PWM Period: 452us.	 Error: 0us
+Negative PWM Period: 452.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 452.5us.	 Error: -0.100000000000023us
+Negative PWM Period: 453us.	 Error: 0us
+Positive PWM Period: 453us.	 Error: 0.0999999999999659us
+Negative PWM Period: 453.5us.	 Error: 0us
+Positive PWM Period: 453.5us.	 Error: 0us
+Negative PWM Period: 454us.	 Error: 0us
+Positive PWM Period: 454us.	 Error: 0.0999999999999659us
+Negative PWM Period: 454.5us.	 Error: 0us
+Positive PWM Period: 454.5us.	 Error: 0us
+Negative PWM Period: 455us.	 Error: 0.0999999999999659us
+Positive PWM Period: 455us.	 Error: 0.0999999999999659us
+Negative PWM Period: 455.5us.	 Error: 0us
+Positive PWM Period: 455.5us.	 Error: 0us
+Negative PWM Period: 456us.	 Error: 0us
+Positive PWM Period: 456us.	 Error: 0us
+Negative PWM Period: 456.5us.	 Error: 0us
+Positive PWM Period: 456.5us.	 Error: 0us
+Negative PWM Period: 457us.	 Error: 0us
+Positive PWM Period: 457us.	 Error: 0us
+Negative PWM Period: 457.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 457.5us.	 Error: 0us
+Negative PWM Period: 458us.	 Error: 0us
+Positive PWM Period: 458us.	 Error: 0us
+Negative PWM Period: 458.5us.	 Error: 0us
+Positive PWM Period: 458.5us.	 Error: 0us
+Negative PWM Period: 459us.	 Error: 0us
+Positive PWM Period: 459us.	 Error: 0us
+Negative PWM Period: 459.5us.	 Error: 0us
+Positive PWM Period: 459.5us.	 Error: 0us
+Negative PWM Period: 460us.	 Error: 0us
+Positive PWM Period: 460us.	 Error: 0us
+Negative PWM Period: 460.5us.	 Error: 0us
+Positive PWM Period: 460.5us.	 Error: 0us
+Negative PWM Period: 461us.	 Error: 0us
+Positive PWM Period: 461us.	 Error: 0us
+Negative PWM Period: 461.5us.	 Error: 0us
+Positive PWM Period: 461.5us.	 Error: 0us
+Negative PWM Period: 462us.	 Error: -0.100000000000023us
+Positive PWM Period: 462us.	 Error: 0us
+Negative PWM Period: 462.5us.	 Error: 0us
+Positive PWM Period: 462.5us.	 Error: 0us
+Negative PWM Period: 463us.	 Error: -0.100000000000023us
+Positive PWM Period: 463us.	 Error: -0.100000000000023us
+Negative PWM Period: 463.5us.	 Error: 0us
+Positive PWM Period: 463.5us.	 Error: 0us
+Negative PWM Period: 464us.	 Error: 0us
+Positive PWM Period: 464us.	 Error: 0us
+Negative PWM Period: 464.5us.	 Error: 0us
+Positive PWM Period: 464.5us.	 Error: 0us
+Negative PWM Period: 465us.	 Error: -0.100000000000023us
+Positive PWM Period: 465us.	 Error: -0.100000000000023us
+Negative PWM Period: 465.5us.	 Error: 0us
+Positive PWM Period: 465.5us.	 Error: 0us
+Negative PWM Period: 466us.	 Error: 0us
+Positive PWM Period: 466us.	 Error: 0us
+Negative PWM Period: 466.5us.	 Error: 0us
+Positive PWM Period: 466.5us.	 Error: 0us
+Negative PWM Period: 467us.	 Error: 0.100000000000023us
+Positive PWM Period: 467us.	 Error: 0.100000000000023us
+Negative PWM Period: 467.5us.	 Error: 0us
+Positive PWM Period: 467.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 468us.	 Error: 0.100000000000023us
+Positive PWM Period: 468us.	 Error: 0.100000000000023us
+Negative PWM Period: 468.5us.	 Error: 0us
+Positive PWM Period: 468.5us.	 Error: 0us
+Negative PWM Period: 469us.	 Error: 0.100000000000023us
+Positive PWM Period: 469us.	 Error: 0us
+Negative PWM Period: 469.5us.	 Error: 0us
+Positive PWM Period: 469.5us.	 Error: 0us
+Negative PWM Period: 470us.	 Error: 0.100000000000023us
+Positive PWM Period: 470us.	 Error: 0us
+Negative PWM Period: 470.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 470.5us.	 Error: 0us
+Negative PWM Period: 471us.	 Error: 0us
+Positive PWM Period: 471us.	 Error: 0us
+Negative PWM Period: 471.5us.	 Error: 0us
+Positive PWM Period: 471.5us.	 Error: 0us
+Negative PWM Period: 472us.	 Error: 0us
+Positive PWM Period: 472us.	 Error: 0us
+Negative PWM Period: 472.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 472.5us.	 Error: 0us
+Negative PWM Period: 473us.	 Error: 0us
+Positive PWM Period: 473us.	 Error: 0us
+Negative PWM Period: 473.5us.	 Error: 0us
+Positive PWM Period: 473.5us.	 Error: 0us
+Negative PWM Period: 474us.	 Error: 0us
+Positive PWM Period: 474us.	 Error: 0us
+Negative PWM Period: 474.5us.	 Error: 0us
+Positive PWM Period: 474.5us.	 Error: 0us
+Negative PWM Period: 475us.	 Error: 0us
+Positive PWM Period: 475us.	 Error: 0us
+Negative PWM Period: 475.5us.	 Error: 0us
+Positive PWM Period: 475.5us.	 Error: 0us
+Negative PWM Period: 476us.	 Error: 0us
+Positive PWM Period: 476us.	 Error: 0us
+Negative PWM Period: 476.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 476.5us.	 Error: 0us
+Negative PWM Period: 477us.	 Error: -0.100000000000023us
+Positive PWM Period: 477us.	 Error: 0us
+Negative PWM Period: 477.5us.	 Error: -0.100000000000023us
+Positive PWM Period: 477.5us.	 Error: 0us
+Negative PWM Period: 478us.	 Error: 0us
+Positive PWM Period: 478us.	 Error: 0us
+Negative PWM Period: 478.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 478.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 479us.	 Error: 0us
+Positive PWM Period: 479us.	 Error: 0.100000000000023us
+Negative PWM Period: 479.5us.	 Error: 0us
+Positive PWM Period: 479.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 480us.	 Error: 0.100000000000023us
+Positive PWM Period: 480us.	 Error: 0.100000000000023us
+Negative PWM Period: 480.5us.	 Error: 0us
+Positive PWM Period: 480.5us.	 Error: 0us
+Negative PWM Period: 481us.	 Error: 0us
+Positive PWM Period: 481us.	 Error: 0us
+Negative PWM Period: 481.5us.	 Error: 0us
+Positive PWM Period: 481.5us.	 Error: 0us
+Negative PWM Period: 482us.	 Error: 0us
+Positive PWM Period: 482us.	 Error: 0us
+Negative PWM Period: 482.5us.	 Error: 0us
+Positive PWM Period: 482.5us.	 Error: 0us
+Negative PWM Period: 483us.	 Error: 0us
+Positive PWM Period: 483us.	 Error: 0us
+Negative PWM Period: 483.5us.	 Error: 0us
+Positive PWM Period: 483.5us.	 Error: 0us
+Negative PWM Period: 484us.	 Error: 0us
+Positive PWM Period: 484us.	 Error: 0us
+Negative PWM Period: 484.5us.	 Error: 0us
+Positive PWM Period: 484.5us.	 Error: 0us
+Negative PWM Period: 485us.	 Error: 0us
+Positive PWM Period: 485us.	 Error: 0us
+Negative PWM Period: 485.5us.	 Error: 0us
+Positive PWM Period: 485.5us.	 Error: 0us
+Negative PWM Period: 486us.	 Error: -0.0999999999999659us
+Positive PWM Period: 486us.	 Error: 0us
+Negative PWM Period: 486.5us.	 Error: 0us
+Positive PWM Period: 486.5us.	 Error: 0us
+Negative PWM Period: 487us.	 Error: 0us
+Positive PWM Period: 487us.	 Error: 0us
+Negative PWM Period: 487.5us.	 Error: 0us
+Positive PWM Period: 487.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 488us.	 Error: 0us
+Positive PWM Period: 488us.	 Error: -0.0999999999999659us
+Negative PWM Period: 488.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 488.5us.	 Error: 0us
+Negative PWM Period: 489us.	 Error: -0.0999999999999659us
+Positive PWM Period: 489us.	 Error: 0us
+Negative PWM Period: 489.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 489.5us.	 Error: 0us
+Negative PWM Period: 490us.	 Error: 0us
+Positive PWM Period: 490us.	 Error: -0.0999999999999659us
+Negative PWM Period: 490.5us.	 Error: -0.0999999999999659us
+Positive PWM Period: 490.5us.	 Error: 0us
+Negative PWM Period: 491us.	 Error: -0.0999999999999659us
+Positive PWM Period: 491us.	 Error: -0.0999999999999659us
+Negative PWM Period: 491.5us.	 Error: 0.100000000000023us
+Positive PWM Period: 491.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 492us.	 Error: 0us
+Positive PWM Period: 492us.	 Error: 0us
+Negative PWM Period: 492.5us.	 Error: 0us
+Positive PWM Period: 492.5us.	 Error: 0.100000000000023us
+Negative PWM Period: 493us.	 Error: 0us
+Positive PWM Period: 493us.	 Error: 0.100000000000023us
+Negative PWM Period: 493.5us.	 Error: 0us
+Positive PWM Period: 493.5us.	 Error: 0us
+Negative PWM Period: 494us.	 Error: 0us
+Positive PWM Period: 494us.	 Error: 0us
+Negative PWM Period: 494.5us.	 Error: 0us
+Positive PWM Period: 494.5us.	 Error: 0us
+Negative PWM Period: 495us.	 Error: 0us
+Positive PWM Period: 495us.	 Error: 0us
+Negative PWM Period: 495.5us.	 Error: 0us
+Positive PWM Period: 495.5us.	 Error: 0us
+Negative PWM Period: 496us.	 Error: 0.0999999999999659us
+Positive PWM Period: 496us.	 Error: 0us
+Negative PWM Period: 496.5us.	 Error: 0us
+Positive PWM Period: 496.5us.	 Error: 0us
+Negative PWM Period: 497us.	 Error: 0us
+Positive PWM Period: 497us.	 Error: 0.0999999999999659us
+Negative PWM Period: 497.5us.	 Error: 0us
+Positive PWM Period: 497.5us.	 Error: 0us
+Negative PWM Period: 498us.	 Error: 0us
+Positive PWM Period: 498us.	 Error: 0us
+Negative PWM Period: 498.5us.	 Error: 0us
+Positive PWM Period: 498.5us.	 Error: 0us
+Negative PWM Period: 499us.	 Error: 0us
+Positive PWM Period: 499us.	 Error: 0us
+Negative PWM Period: 499.5us.	 Error: 0us
+Positive PWM Period: 499.5us.	 Error: -0.0999999999999659us
+Negative PWM Period: 2ms.	 Error: 0ms
+Positive PWM Period: 2ms.	 Error: 9.9999999999989E-05ms
+Negative PWM Period: 4ms.	 Error: 0ms
+Positive PWM Period: 4ms.	 Error: 0.000100000000000211ms
+Negative PWM Period: 6ms.	 Error: 0ms
+Positive PWM Period: 6ms.	 Error: 0ms
+Negative PWM Period: 8ms.	 Error: 0ms
+Positive PWM Period: 8ms.	 Error: 0ms
+Negative PWM Period: 10ms.	 Error: 0ms
+Positive PWM Period: 10ms.	 Error: 0ms
+Negative PWM Period: 12ms.	 Error: 0ms
+Positive PWM Period: 12ms.	 Error: 0ms
+Negative PWM Period: 14ms.	 Error: 9.99999999997669E-05ms
+Positive PWM Period: 14ms.	 Error: 9.99999999997669E-05ms
+Negative PWM Period: 16ms.	 Error: 0ms
+Positive PWM Period: 16ms.	 Error: 0ms
+Negative PWM Period: 18ms.	 Error: 0ms
+Positive PWM Period: 18ms.	 Error: 0ms
+Negative PWM Period: 20ms.	 Error: 0ms
+Positive PWM Period: 20ms.	 Error: 0ms
+Negative PWM Period: 22ms.	 Error: 0ms
+Positive PWM Period: 22ms.	 Error: 9.99999999997669E-05ms
+Negative PWM Period: 24ms.	 Error: 9.99999999997669E-05ms
+Positive PWM Period: 24ms.	 Error: 9.99999999997669E-05ms
+Negative PWM Period: 26ms.	 Error: 0ms
+Positive PWM Period: 26ms.	 Error: 0ms
+Negative PWM Period: 28ms.	 Error: 0ms
+Positive PWM Period: 28ms.	 Error: 0ms
+Negative PWM Period: 30ms.	 Error: 9.99999999997669E-05ms
+Positive PWM Period: 30ms.	 Error: 0ms
+Negative PWM Period: 32ms.	 Error: 0ms
+Positive PWM Period: 32ms.	 Error: 9.99999999997669E-05ms
+Negative PWM Period: 34ms.	 Error: 0ms
+Positive PWM Period: 34ms.	 Error: 0.00010000000000332ms
+Negative PWM Period: 36ms.	 Error: 0ms
+Positive PWM Period: 36ms.	 Error: 0ms
+Negative PWM Period: 38ms.	 Error: 0ms
+Positive PWM Period: 38ms.	 Error: 0ms
+Negative PWM Period: 40ms.	 Error: 0ms
+Positive PWM Period: 40ms.	 Error: 0ms
+Negative PWM Period: 42ms.	 Error: 0.00010000000000332ms
+Positive PWM Period: 42ms.	 Error: 0.00010000000000332ms
+Negative PWM Period: 44ms.	 Error: 0.00010000000000332ms
+Positive PWM Period: 44ms.	 Error: 0.00010000000000332ms
+Negative PWM Period: 46ms.	 Error: 0.00010000000000332ms
+Positive PWM Period: 46ms.	 Error: 0ms
+Negative PWM Period: 48ms.	 Error: 0ms
+Positive PWM Period: 48ms.	 Error: 0.00010000000000332ms
+Testing 1 second period signal measurements...
+Starting pin frequency measure test...
+Sweeping PWM duty cycle with fixed frequency...
+Testing duty cycle of 0.02
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.03
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.04
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.05
+Pin freq measured on DIO2: 3999.04769462741Hz
+Testing duty cycle of 0.06
+Pin freq measured on DIO2: 3996.19349722442Hz
+Testing duty cycle of 0.07
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.08
+Pin freq measured on DIO2: 3994.60959175585Hz
+Testing duty cycle of 0.09
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.1
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.11
+Pin freq measured on DIO2: 3999.68251448528Hz
+Testing duty cycle of 0.12
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.13
+Pin freq measured on DIO2: 3996.19349722442Hz
+Testing duty cycle of 0.14
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.15
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.16
+Pin freq measured on DIO2: 3995.55978433238Hz
+Testing duty cycle of 0.17
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.18
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.19
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.2
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.21
+Pin freq measured on DIO2: 3999.36507936508Hz
+Testing duty cycle of 0.22
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.23
+Pin freq measured on DIO2: 3999.68251448528Hz
+Testing duty cycle of 0.24
+Pin freq measured on DIO2: 3995.24300325061Hz
+Testing duty cycle of 0.25
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.26
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.27
+Pin freq measured on DIO2: 3996.19349722442Hz
+Testing duty cycle of 0.28
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.29
+Pin freq measured on DIO2: 3998.41307625169Hz
+Testing duty cycle of 0.3
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.31
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.32
+Pin freq measured on DIO2: 3995.24300325061Hz
+Testing duty cycle of 0.33
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.34
+Pin freq measured on DIO2: 3999.04769462741Hz
+Testing duty cycle of 0.35
+Pin freq measured on DIO2: 3998.41307625169Hz
+Testing duty cycle of 0.36
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.37
+Pin freq measured on DIO2: 3996.19349722442Hz
+Testing duty cycle of 0.38
+Pin freq measured on DIO2: 3995.24300325061Hz
+Testing duty cycle of 0.39
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.4
+Pin freq measured on DIO2: 3999.68251448528Hz
+Testing duty cycle of 0.41
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.42
+Pin freq measured on DIO2: 3995.24300325061Hz
+Testing duty cycle of 0.43
+Pin freq measured on DIO2: 3998.73036026028Hz
+Testing duty cycle of 0.44
+Pin freq measured on DIO2: 3998.73036026028Hz
+Testing duty cycle of 0.45
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.46
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.47
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.48
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.49
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.5
+Pin freq measured on DIO2: 3999.36507936508Hz
+Testing duty cycle of 0.51
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.52
+Pin freq measured on DIO2: 3998.41307625169Hz
+Testing duty cycle of 0.53
+Pin freq measured on DIO2: 4000Hz
+Testing duty cycle of 0.54
+Pin freq measured on DIO2: 3999.04769462741Hz
+Testing duty cycle of 0.55
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.56
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.57
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.58
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.59
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.6
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.61
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.62
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.63
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.64
+Pin freq measured on DIO2: 4000.63512226104Hz
+Testing duty cycle of 0.65
+Pin freq measured on DIO2: 3995.24300325061Hz
+Testing duty cycle of 0.66
+Pin freq measured on DIO2: 3996.51042905861Hz
+Testing duty cycle of 0.67
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.68
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.69
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.7
+Pin freq measured on DIO2: 3998.09584258965Hz
+Testing duty cycle of 0.71
+Pin freq measured on DIO2: 3997.7786592622Hz
+Testing duty cycle of 0.72
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.73
+Pin freq measured on DIO2: 3998.73036026028Hz
+Testing duty cycle of 0.74
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.75
+Pin freq measured on DIO2: 3998.41307625169Hz
+Testing duty cycle of 0.76
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.77
+Pin freq measured on DIO2: 3994.92627239575Hz
+Testing duty cycle of 0.78
+Pin freq measured on DIO2: 4015.61877440434Hz
+Testing duty cycle of 0.79
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.8
+Pin freq measured on DIO2: 3996.19349722442Hz
+Testing duty cycle of 0.810000000000001
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.820000000000001
+Pin freq measured on DIO2: 3997.1444435631Hz
+Testing duty cycle of 0.830000000000001
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.840000000000001
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.850000000000001
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.860000000000001
+Pin freq measured on DIO2: 3996.19349722442Hz
+Testing duty cycle of 0.870000000000001
+Pin freq measured on DIO2: 3998.41307625169Hz
+Testing duty cycle of 0.880000000000001
+Pin freq measured on DIO2: 3996.82741116751Hz
+Testing duty cycle of 0.890000000000001
+Pin freq measured on DIO2: 3995.876615653Hz
+Testing duty cycle of 0.900000000000001
+Pin freq measured on DIO2: 4000.31753592125Hz
+Testing duty cycle of 0.910000000000001
+Pin freq measured on DIO2: 3998.41307625169Hz
+Testing duty cycle of 0.920000000000001
+Pin freq measured on DIO2: 3996.19349722442Hz
+Testing duty cycle of 0.930000000000001
+Pin freq measured on DIO2: 3997.46152625734Hz
+Testing duty cycle of 0.940000000000001
+Pin freq measured on DIO2: 3995.24300325061Hz
+Testing duty cycle of 0.950000000000001
+Pin freq measured on DIO2: 3999.04769462741Hz
+Testing duty cycle of 0.960000000000001
+Pin freq measured on DIO2: 3998.41307625169Hz
+Testing duty cycle of 0.970000000000001
+Pin freq measured on DIO2: 3998.41307625169Hz
+Sweeping freq range...
+Testing PWM freq of 5Hz
+Pin freq measured on DIO2: 4.99999875972407Hz
+Pin freq measured on DIO1: 4.99999875972407Hz
+Testing PWM freq of 5.25Hz
+Pin freq measured on DIO2: 5.2499897119288Hz
+Pin freq measured on DIO1: 5.24999381412957Hz
+Testing PWM freq of 5.5125Hz
+Pin freq measured on DIO2: 5.51248847964076Hz
+Pin freq measured on DIO1: 5.51249450987621Hz
+Testing PWM freq of 5.788125Hz
+Pin freq measured on DIO2: 5.78812556713109Hz
+Pin freq measured on DIO1: 5.78810728420874Hz
+Testing PWM freq of 6.07753125Hz
+Pin freq measured on DIO2: 6.07751448086138Hz
+Pin freq measured on DIO1: 6.07752730798779Hz
+Testing PWM freq of 6.3814078125Hz
+Pin freq measured on DIO2: 6.3813937644265Hz
+Pin freq measured on DIO1: 6.38140992663063Hz
+Testing PWM freq of 6.700478203125Hz
+Pin freq measured on DIO2: 6.70046239200604Hz
+Pin freq measured on DIO1: 6.70046461935419Hz
+Testing PWM freq of 7.03550211328125Hz
+Pin freq measured on DIO2: 7.03549053984671Hz
+Pin freq measured on DIO1: 7.0354954511582Hz
+Testing PWM freq of 7.38727721894532Hz
+Pin freq measured on DIO2: 7.38723966932456Hz
+Pin freq measured on DIO1: 7.38726945018409Hz
+Testing PWM freq of 7.75664107989258Hz
+Pin freq measured on DIO2: 7.75661600848745Hz
+Pin freq measured on DIO1: 7.75663093278289Hz
+Testing PWM freq of 8.14447313388721Hz
+Pin freq measured on DIO2: 8.14447423234427Hz
+Pin freq measured on DIO1: 8.14448739565744Hz
+Testing PWM freq of 8.55169679058157Hz
+Pin freq measured on DIO2: 8.55168481359798Hz
+Pin freq measured on DIO1: 8.55165578872699Hz
+Testing PWM freq of 8.97928163011065Hz
+Pin freq measured on DIO2: 8.97929000672663Hz
+Pin freq measured on DIO1: 8.97923800673817Hz
+Testing PWM freq of 9.42824571161618Hz
+Pin freq measured on DIO2: 9.42821166701903Hz
+Pin freq measured on DIO1: 9.4281940271141Hz
+Testing PWM freq of 9.89965799719699Hz
+Pin freq measured on DIO2: 9.89965674759382Hz
+Pin freq measured on DIO1: 9.89961785141242Hz
+Testing PWM freq of 10.3946408970568Hz
+Pin freq measured on DIO2: 10.3946306509794Hz
+Pin freq measured on DIO1: 10.3946306509794Hz
+Testing PWM freq of 10.9143729419097Hz
+Pin freq measured on DIO2: 10.914322503372Hz
+Pin freq measured on DIO1: 10.9143934213013Hz
+Testing PWM freq of 11.4600915890052Hz
+Pin freq measured on DIO2: 11.4600265282603Hz
+Pin freq measured on DIO1: 11.4600656215656Hz
+Testing PWM freq of 12.0330961684554Hz
+Pin freq measured on DIO2: 12.0330196451128Hz
+Pin freq measured on DIO1: 12.0330771122716Hz
+Testing PWM freq of 12.6347509768782Hz
+Pin freq measured on DIO2: 12.6346800555362Hz
+Pin freq measured on DIO1: 12.6346483769484Hz
+Testing PWM freq of 13.2664885257221Hz
+Pin freq measured on DIO2: 13.2664726839057Hz
+Pin freq measured on DIO1: 13.2664290265002Hz
+Testing PWM freq of 13.9298129520082Hz
+Pin freq measured on DIO2: 13.929802277359Hz
+Pin freq measured on DIO1: 13.9297541450362Hz
+Testing PWM freq of 14.6263035996086Hz
+Pin freq measured on DIO2: 14.6262388199628Hz
+Pin freq measured on DIO1: 14.6261326893717Hz
+Testing PWM freq of 15.3576187795891Hz
+Pin freq measured on DIO2: 15.3575151009064Hz
+Pin freq measured on DIO1: 15.3574916990856Hz
+Testing PWM freq of 16.1254997185685Hz
+Pin freq measured on DIO2: 16.1254658007453Hz
+Pin freq measured on DIO1: 16.1254012990369Hz
+Testing PWM freq of 16.9317747044969Hz
+Pin freq measured on DIO2: 16.9317573771098Hz
+Pin freq measured on DIO1: 16.9317858225862Hz
+Testing PWM freq of 17.7783634397218Hz
+Pin freq measured on DIO2: 17.7782481764701Hz
+Pin freq measured on DIO1: 17.7781384145486Hz
+Testing PWM freq of 18.6672816117079Hz
+Pin freq measured on DIO2: 18.6671260101389Hz
+Pin freq measured on DIO1: 18.6672124482657Hz
+Testing PWM freq of 19.6006456922933Hz
+Pin freq measured on DIO2: 19.6005939456055Hz
+Pin freq measured on DIO1: 19.6005748858883Hz
+Testing PWM freq of 20.5806779769079Hz
+Pin freq measured on DIO2: 20.5804485330529Hz
+Pin freq measured on DIO1: 20.5804065071364Hz
+Testing PWM freq of 21.6097118757533Hz
+Pin freq measured on DIO2: 21.6097302107176Hz
+Pin freq measured on DIO1: 21.6095217062225Hz
+Testing PWM freq of 22.690197469541Hz
+Pin freq measured on DIO2: 22.6900537398379Hz
+Pin freq measured on DIO1: 22.6899515735773Hz
+Testing PWM freq of 23.8247073430181Hz
+Pin freq measured on DIO2: 23.824596655044Hz
+Pin freq measured on DIO1: 23.8243150603976Hz
+Testing PWM freq of 25.015942710169Hz
+Pin freq measured on DIO2: 25.0156683011342Hz
+Pin freq measured on DIO1: 25.0157614388332Hz
+Testing PWM freq of 26.2667398456774Hz
+Pin freq measured on DIO2: 26.2664566059028Hz
+Pin freq measured on DIO1: 26.2664908339371Hz
+Testing PWM freq of 27.5800768379613Hz
+Pin freq measured on DIO2: 27.5797902180189Hz
+Pin freq measured on DIO1: 27.5797524816824Hz
+Testing PWM freq of 28.9590806798593Hz
+Pin freq measured on DIO2: 28.958631142654Hz
+Pin freq measured on DIO1: 28.9587559550149Hz
+Testing PWM freq of 30.4070347138523Hz
+Pin freq measured on DIO2: 30.4070912870457Hz
+Pin freq measured on DIO1: 30.4067702008583Hz
+Testing PWM freq of 31.9273864495449Hz
+Pin freq measured on DIO2: 31.9270123863528Hz
+Pin freq measured on DIO1: 31.9273158106486Hz
+Testing PWM freq of 33.5237557720222Hz
+Pin freq measured on DIO2: 33.5233178717962Hz
+Pin freq measured on DIO1: 33.5233178717962Hz
+Testing PWM freq of 35.1999435606233Hz
+Pin freq measured on DIO2: 35.1993461940777Hz
+Pin freq measured on DIO1: 35.1995305984172Hz
+Testing PWM freq of 36.9599407386545Hz
+Pin freq measured on DIO2: 36.9590488868353Hz
+Pin freq measured on DIO1: 36.9595232638093Hz
+Testing PWM freq of 38.8079377755872Hz
+Pin freq measured on DIO2: 38.8076310687462Hz
+Pin freq measured on DIO1: 38.8076310687462Hz
+Testing PWM freq of 40.7483346643665Hz
+Pin freq measured on DIO2: 40.7477262757418Hz
+Pin freq measured on DIO1: 40.7476439028532Hz
+Testing PWM freq of 42.7857513975849Hz
+Pin freq measured on DIO2: 42.7854888317665Hz
+Pin freq measured on DIO1: 42.78476230098Hz
+Testing PWM freq of 44.9250389674641Hz
+Pin freq measured on DIO2: 44.9241672888552Hz
+Pin freq measured on DIO1: 44.9240671650107Hz
+Testing PWM freq of 47.1712909158373Hz
+Pin freq measured on DIO2: 47.1693874494533Hz
+Pin freq measured on DIO1: 47.1709328503162Hz
+Testing PWM freq of 49.5298554616292Hz
+Pin freq measured on DIO2: 49.5283494072117Hz
+Pin freq measured on DIO1: 49.5292013131254Hz
+Testing PWM freq of 52.0063482347107Hz
+Pin freq measured on DIO2: 52.0050671709757Hz
+Pin freq measured on DIO1: 52.0043963075145Hz
+Testing PWM freq of 54.6066656464462Hz
+Pin freq measured on DIO2: 54.6043132336249Hz
+Pin freq measured on DIO1: 54.6052007791145Hz
+Testing PWM freq of 57.3369989287685Hz
+Pin freq measured on DIO2: 57.3349793208595Hz
+Pin freq measured on DIO1: 57.3353054955057Hz
+Testing PWM freq of 60.2038488752069Hz
+Pin freq measured on DIO2: 60.202618751792Hz
+Pin freq measured on DIO1: 60.2031581808353Hz
+Testing PWM freq of 63.2140413189673Hz
+Pin freq measured on DIO2: 63.2112393376819Hz
+Pin freq measured on DIO1: 63.2118340300492Hz
+Testing PWM freq of 66.3747433849157Hz
+Pin freq measured on DIO2: 66.3746945818323Hz
+Pin freq measured on DIO1: 66.370979160287Hz
+Testing PWM freq of 69.6934805541615Hz
+Pin freq measured on DIO2: 69.6895625386794Hz
+Pin freq measured on DIO1: 69.6900444275416Hz
+Testing PWM freq of 73.1781545818695Hz
+Pin freq measured on DIO2: 73.1755839365711Hz
+Pin freq measured on DIO1: 73.1766465544156Hz
+Testing PWM freq of 76.837062310963Hz
+Pin freq measured on DIO2: 76.8349349505792Hz
+Pin freq measured on DIO1: 76.8325919488311Hz
+Testing PWM freq of 80.6789154265112Hz
+Pin freq measured on DIO2: 80.6772198763233Hz
+Pin freq measured on DIO1: 80.674959576069Hz
+Testing PWM freq of 84.7128611978367Hz
+Pin freq measured on DIO2: 84.7109452485417Hz
+Pin freq measured on DIO1: 84.7073853369082Hz
+Testing PWM freq of 88.9485042577286Hz
+Pin freq measured on DIO2: 88.9461560864539Hz
+Pin freq measured on DIO1: 88.9441936608376Hz
+Testing PWM freq of 93.395929470615Hz
+Pin freq measured on DIO2: 93.3937523745981Hz
+Pin freq measured on DIO1: 93.3920214984015Hz
+Testing PWM freq of 98.0657259441458Hz
+Pin freq measured on DIO2: 98.0632355302142Hz
+Pin freq measured on DIO1: 98.0603731361436Hz
+Testing PWM freq of 102.969012241353Hz
+Pin freq measured on DIO2: 102.961638657608Hz
+Pin freq measured on DIO1: 102.96426838301Hz
+Testing PWM freq of 108.117462853421Hz
+Pin freq measured on DIO2: 108.108340037544Hz
+Pin freq measured on DIO1: 108.110659386632Hz
+Testing PWM freq of 113.523335996092Hz
+Pin freq measured on DIO2: 113.518506003469Hz
+Pin freq measured on DIO1: 113.514670270879Hz
+Testing PWM freq of 119.199502795896Hz
+Pin freq measured on DIO2: 119.188490808139Hz
+Pin freq measured on DIO1: 119.189195581731Hz
+Testing PWM freq of 125.159477935691Hz
+Pin freq measured on DIO2: 125.150098409919Hz
+Pin freq measured on DIO1: 125.156315001894Hz
+Testing PWM freq of 131.417451832476Hz
+Pin freq measured on DIO2: 131.403687188714Hz
+Pin freq measured on DIO1: 131.408827172567Hz
+Testing PWM freq of 137.9883244241Hz
+Pin freq measured on DIO2: 137.979943183763Hz
+Pin freq measured on DIO1: 137.978054173198Hz
+Testing PWM freq of 144.887740645304Hz
+Pin freq measured on DIO2: 144.872246379416Hz
+Pin freq measured on DIO1: 144.87745274204Hz
+Testing PWM freq of 152.13212767757Hz
+Pin freq measured on DIO2: 152.115312051921Hz
+Pin freq measured on DIO1: 152.122200084526Hz
+Testing PWM freq of 159.738734061448Hz
+Pin freq measured on DIO2: 159.722343283227Hz
+Pin freq measured on DIO1: 159.738798281901Hz
+Testing PWM freq of 167.725670764521Hz
+Pin freq measured on DIO2: 167.700819501643Hz
+Pin freq measured on DIO1: 167.71616854157Hz
+Testing PWM freq of 176.111954302747Hz
+Pin freq measured on DIO2: 176.097288230361Hz
+Pin freq measured on DIO1: 176.095749792513Hz
+Testing PWM freq of 184.917552017884Hz
+Pin freq measured on DIO2: 184.901021887097Hz
+Pin freq measured on DIO1: 184.899325780856Hz
+Testing PWM freq of 194.163429618778Hz
+Pin freq measured on DIO2: 194.155156138627Hz
+Pin freq measured on DIO1: 194.155156138627Hz
+Testing PWM freq of 203.871601099717Hz
+Pin freq measured on DIO2: 203.849071105672Hz
+Pin freq measured on DIO1: 203.861441213654Hz
+Testing PWM freq of 214.065181154703Hz
+Pin freq measured on DIO2: 214.049209400121Hz
+Pin freq measured on DIO1: 214.040117655804Hz
+Testing PWM freq of 224.768440212438Hz
+Pin freq measured on DIO2: 224.748567223424Hz
+Pin freq measured on DIO1: 224.75859146763Hz
+Testing PWM freq of 236.00686222306Hz
+Pin freq measured on DIO2: 235.983890605975Hz
+Pin freq measured on DIO1: 235.989416254947Hz
+Testing PWM freq of 247.807205334213Hz
+Pin freq measured on DIO2: 247.77264234438Hz
+Pin freq measured on DIO1: 247.790917807882Hz
+Testing PWM freq of 260.197565600924Hz
+Pin freq measured on DIO2: 260.17166828009Hz
+Pin freq measured on DIO1: 260.181743081371Hz
+Testing PWM freq of 273.20744388097Hz
+Pin freq measured on DIO2: 273.171789450859Hz
+Pin freq measured on DIO1: 273.156981786644Hz
+Testing PWM freq of 286.867816075018Hz
+Pin freq measured on DIO2: 286.815219556618Hz
+Pin freq measured on DIO1: 286.835626769883Hz
+Testing PWM freq of 301.211206878769Hz
+Pin freq measured on DIO2: 301.175908078952Hz
+Pin freq measured on DIO1: 301.153409430467Hz
+Testing PWM freq of 316.271767222708Hz
+Pin freq measured on DIO2: 316.22974223812Hz
+Pin freq measured on DIO1: 316.289287451553Hz
+Testing PWM freq of 332.085355583843Hz
+Pin freq measured on DIO2: 332.023258495445Hz
+Pin freq measured on DIO1: 332.034197044822Hz
+Testing PWM freq of 348.689623363036Hz
+Pin freq measured on DIO2: 348.612936700104Hz
+Pin freq measured on DIO1: 348.618966083813Hz
+Testing PWM freq of 366.124104531187Hz
+Pin freq measured on DIO2: 366.06795852024Hz
+Pin freq measured on DIO1: 366.041367788331Hz
+Testing PWM freq of 384.430309757747Hz
+Pin freq measured on DIO2: 384.356348797742Hz
+Pin freq measured on DIO1: 384.400328012663Hz
+Testing PWM freq of 403.651825245634Hz
+Pin freq measured on DIO2: 403.612262469714Hz
+Pin freq measured on DIO1: 403.53953953954Hz
+Testing PWM freq of 423.834416507916Hz
+Pin freq measured on DIO2: 423.764874069714Hz
+Pin freq measured on DIO1: 423.738148794383Hz
+Testing PWM freq of 445.026137333312Hz
+Pin freq measured on DIO2: 444.991942071219Hz
+Pin freq measured on DIO1: 444.942828131208Hz
+Testing PWM freq of 467.277444199977Hz
+Pin freq measured on DIO2: 467.187391354734Hz
+Pin freq measured on DIO1: 467.13325608343Hz
+Testing PWM freq of 490.641316409976Hz
+Pin freq measured on DIO2: 490.468890673285Hz
+Pin freq measured on DIO1: 490.552445850572Hz
+Testing PWM freq of 515.173382230475Hz
+Pin freq measured on DIO2: 515.12394582162Hz
+Pin freq measured on DIO1: 515.137110582944Hz
+Testing PWM freq of 540.932051341999Hz
+Pin freq measured on DIO2: 540.788238134843Hz
+Pin freq measured on DIO1: 540.759221998659Hz
+Testing PWM freq of 567.978653909099Hz
+Pin freq measured on DIO2: 567.909165187502Hz
+Pin freq measured on DIO1: 567.893165041979Hz
+Testing PWM freq of 596.377586604554Hz
+Pin freq measured on DIO2: 596.178645371192Hz
+Pin freq measured on DIO1: 596.266824434255Hz
+Testing PWM freq of 626.196465934781Hz
+Pin freq measured on DIO2: 626.026461270886Hz
+Pin freq measured on DIO1: 626.045904897972Hz
+Testing PWM freq of 657.50628923152Hz
+Pin freq measured on DIO2: 657.38699367295Hz
+Pin freq measured on DIO1: 657.322680580466Hz
+Testing PWM freq of 690.381603693096Hz
+Pin freq measured on DIO2: 690.254092185467Hz
+Pin freq measured on DIO1: 690.112298000548Hz
+Testing PWM freq of 724.900683877751Hz
+Pin freq measured on DIO2: 724.725847625211Hz
+Pin freq measured on DIO1: 724.725847625211Hz
+Testing PWM freq of 761.145718071639Hz
+Pin freq measured on DIO2: 760.921102302756Hz
+Pin freq measured on DIO1: 760.949828230586Hz
+Testing PWM freq of 799.203003975221Hz
+Pin freq measured on DIO2: 799.080277502478Hz
+Pin freq measured on DIO1: 798.637029993264Hz
+Testing PWM freq of 839.163154173982Hz
+Pin freq measured on DIO2: 838.818143986683Hz
+Pin freq measured on DIO1: 838.887964041951Hz
+Testing PWM freq of 881.121311882681Hz
+Pin freq measured on DIO2: 880.786541402666Hz
+Pin freq measured on DIO1: 880.786541402666Hz
+Testing PWM freq of 925.177377476815Hz
+Pin freq measured on DIO2: 924.666269094913Hz
+Pin freq measured on DIO1: 924.623853211009Hz
+Testing PWM freq of 971.436246350656Hz
+Pin freq measured on DIO2: 971.224824130288Hz
+Pin freq measured on DIO1: 970.757079560778Hz
+Testing PWM freq of 1020.00805866819Hz
+Pin freq measured on DIO2: 1019.8229193018Hz
+Pin freq measured on DIO1: 1019.8229193018Hz
+Testing PWM freq of 1071.0084616016Hz
+Pin freq measured on DIO2: 1070.91701200723Hz
+Pin freq measured on DIO1: 1070.74634794157Hz
+Testing PWM freq of 1124.55888468168Hz
+Pin freq measured on DIO2: 1123.75536600323Hz
+Pin freq measured on DIO1: 1124.00602241677Hz
+Testing PWM freq of 1180.78682891576Hz
+Pin freq measured on DIO2: 1180.20961414603Hz
+Pin freq measured on DIO1: 1179.93326699058Hz
+Testing PWM freq of 1239.82617036155Hz
+Pin freq measured on DIO2: 1239.04597983772Hz
+Pin freq measured on DIO1: 1239.04597983772Hz
+Testing PWM freq of 1301.81747887963Hz
+Pin freq measured on DIO2: 1300.60652987482Hz
+Pin freq measured on DIO1: 1301.44628099174Hz
+Testing PWM freq of 1366.90835282361Hz
+Pin freq measured on DIO2: 1366.74803363168Hz
+Pin freq measured on DIO1: 1365.35934430671Hz
+Testing PWM freq of 1435.25377046479Hz
+Pin freq measured on DIO2: 1435.05624377047Hz
+Pin freq measured on DIO1: 1434.13731768054Hz
+Testing PWM freq of 1507.01645898803Hz
+Pin freq measured on DIO2: 1505.92454239821Hz
+Pin freq measured on DIO1: 1506.03705917513Hz
+Testing PWM freq of 1582.36728193743Hz
+Pin freq measured on DIO2: 1581.1735174145Hz
+Pin freq measured on DIO1: 1582.04222588494Hz
+Testing PWM freq of 1661.4856460343Hz
+Pin freq measured on DIO2: 1660.90969017798Hz
+Pin freq measured on DIO1: 1660.77284337151Hz
+Testing PWM freq of 1744.55992833602Hz
+Pin freq measured on DIO2: 1743.06468350052Hz
+Pin freq measured on DIO1: 1744.5733079453Hz
+Testing PWM freq of 1831.78792475282Hz
+Pin freq measured on DIO2: 1829.27670387512Hz
+Pin freq measured on DIO1: 1829.77487291213Hz
+Testing PWM freq of 1923.37732099046Hz
+Pin freq measured on DIO2: 1921.34210275474Hz
+Pin freq measured on DIO1: 1922.07494993802Hz
+Testing PWM freq of 2019.54618703998Hz
+Pin freq measured on DIO2: 2019.51708245667Hz
+Pin freq measured on DIO1: 2016.08321664333Hz
+Testing PWM freq of 2120.52349639198Hz
+Pin freq measured on DIO2: 2116.86620457887Hz
+Pin freq measured on DIO1: 2118.2009247583Hz
+Testing PWM freq of 2226.54967121158Hz
+Pin freq measured on DIO2: 2224.81236203091Hz
+Pin freq measured on DIO1: 2226.53264111344Hz
+Testing PWM freq of 2337.87715477216Hz
+Pin freq measured on DIO2: 2335.39566678253Hz
+Pin freq measured on DIO1: 2335.66628041715Hz
+Testing PWM freq of 2454.77101251077Hz
+Pin freq measured on DIO2: 2455.15225334957Hz
+Pin freq measured on DIO1: 2453.06072775952Hz
+Testing PWM freq of 2577.50956313631Hz
+Pin freq measured on DIO2: 2574.96167603475Hz
+Pin freq measured on DIO1: 2574.30395913155Hz
+Testing PWM freq of 2706.38504129312Hz
+Pin freq measured on DIO2: 2703.07094005632Hz
+Pin freq measured on DIO1: 2704.1588408908Hz
+Testing PWM freq of 2841.70429335778Hz
+Pin freq measured on DIO2: 2839.78585517047Hz
+Pin freq measured on DIO1: 2839.78585517047Hz
+Testing PWM freq of 2983.78950802567Hz
+Pin freq measured on DIO2: 2977.81060717979Hz
+Pin freq measured on DIO1: 2977.37075332349Hz
+Testing PWM freq of 3132.97898342695Hz
+Pin freq measured on DIO2: 3131.88315724052Hz
+Pin freq measured on DIO1: 3128.4805214962Hz
+Testing PWM freq of 3289.6279325983Hz
+Pin freq measured on DIO2: 3289.29503916449Hz
+Pin freq measured on DIO1: 3282.33186777398Hz
+Testing PWM freq of 3454.10932922821Hz
+Pin freq measured on DIO2: 3447.96442011632Hz
+Pin freq measured on DIO1: 3453.2807949289Hz
+Testing PWM freq of 3626.81479568963Hz
+Pin freq measured on DIO2: 3619.46489495421Hz
+Pin freq measured on DIO1: 3616.86703750224Hz
+Testing PWM freq of 3808.15553547411Hz
+Pin freq measured on DIO2: 3806.04229607251Hz
+Pin freq measured on DIO1: 3796.72254661895Hz
+Testing PWM freq of 3998.56331224781Hz
+Pin freq measured on DIO2: 3991.44554455446Hz
+Pin freq measured on DIO1: 3997.7786592622Hz
+Testing PWM freq of 4198.4914778602Hz
+Pin freq measured on DIO2: 4191.47431898524Hz
+Pin freq measured on DIO1: 4189.73186447724Hz
+Testing PWM freq of 4408.41605175321Hz
+Pin freq measured on DIO2: 4406.82116309576Hz
+Pin freq measured on DIO1: 4397.20767888307Hz
+Testing PWM freq of 4628.83685434088Hz
+Pin freq measured on DIO2: 4622.05916074295Hz
+Pin freq measured on DIO1: 4664.84610043971Hz
+Testing PWM freq of 4860.27869705792Hz
+Pin freq measured on DIO2: 4850.04812319538Hz
+Pin freq measured on DIO1: 4841.89286572184Hz
+Testing PWM freq of 5103.29263191082Hz
+Pin freq measured on DIO2: 5093.96007076068Hz
+Pin freq measured on DIO1: 5093.96007076068Hz
+Testing PWM freq of 5358.45726350636Hz
+Pin freq measured on DIO2: 5340.96449390567Hz
+Pin freq measured on DIO1: 5346.63129973475Hz
+Testing PWM freq of 5626.38012668168Hz
+Pin freq measured on DIO2: 5627.24734785036Hz
+Pin freq measured on DIO1: 5625.67680714485Hz
+Testing PWM freq of 5907.69913301576Hz
+Pin freq measured on DIO2: 5898.97570968686Hz
+Pin freq measured on DIO1: 5890.35651665693Hz
+Testing PWM freq of 6203.08408966655Hz
+Pin freq measured on DIO2: 6181.17141980987Hz
+Pin freq measured on DIO1: 6183.06748466258Hz
+Testing PWM freq of 6513.23829414988Hz
+Pin freq measured on DIO2: 6491.7230273752Hz
+Pin freq measured on DIO1: 6491.7230273752Hz
+Testing PWM freq of 6838.90020885737Hz
+Pin freq measured on DIO2: 6812.031091585Hz
+Pin freq measured on DIO1: 6812.031091585Hz
+Testing PWM freq of 7180.84521930024Hz
+Pin freq measured on DIO2: 7137.67705382436Hz
+Pin freq measured on DIO1: 7152.87437899219Hz
+Testing PWM freq of 7539.88748026525Hz
+Pin freq measured on DIO2: 7532.43647234679Hz
+Pin freq measured on DIO1: 7504.39314966493Hz
+Testing PWM freq of 7916.88185427851Hz
+Pin freq measured on DIO2: 7907.72852098862Hz
+Pin freq measured on DIO1: 7867.60343481655Hz
+Testing PWM freq of 8312.72594699244Hz
+Pin freq measured on DIO2: 8274.54844006568Hz
+Pin freq measured on DIO1: 8294.97942386831Hz
+Testing PWM freq of 8728.36224434206Hz
+Pin freq measured on DIO2: 8699.52524816573Hz
+Pin freq measured on DIO1: 8673.32185886403Hz
+Testing PWM freq of 9164.78035655916Hz
+Pin freq measured on DIO2: 9116.59882406151Hz
+Pin freq measured on DIO1: 9120.72398190045Hz
+Testing PWM freq of 9623.01937438712Hz
+Pin freq measured on DIO2: 9571.13010446344Hz
+Pin freq measured on DIO1: 9616.79389312977Hz
+Testing averaging...
+Testing pin freq measure with 1 averages...
+Pin freq measured on DIO2: 3991.44554455446Hz
+Testing pin freq measure with 3 averages...
+Pin freq measured on DIO2: 3996.72174487773Hz
+Testing pin freq measure with 5 averages...
+Pin freq measured on DIO2: 3996.19349722442Hz
+Testing pin freq measure with 7 averages...
+Pin freq measured on DIO2: 3998.91168801723Hz
+Testing pin freq measure with 9 averages...
+Pin freq measured on DIO2: 3999.01243276607Hz
+Testing pin freq measure with 11 averages...
+Pin freq measured on DIO2: 3998.21119446047Hz
+Testing pin freq measure with 13 averages...
+Pin freq measured on DIO2: 3998.87681601758Hz
+Testing pin freq measure with 15 averages...
+Pin freq measured on DIO2: 3999.36507936508Hz
+Testing pin freq measure with 17 averages...
+Pin freq measured on DIO2: 3998.80502263922Hz
+Testing pin freq measure with 19 averages...
+Pin freq measured on DIO2: 3999.36507936508Hz
+Testing pin freq measure with 21 averages...
+Pin freq measured on DIO2: 3999.66739738453Hz
+Testing pin freq measure with 23 averages...
+Pin freq measured on DIO2: 3999.15808360506Hz
+Testing pin freq measure with 25 averages...
+Pin freq measured on DIO2: 3999.30159838733Hz
+Testing pin freq measure with 27 averages...
+Pin freq measured on DIO2: 3999.24752358837Hz
+Testing pin freq measure with 29 averages...
+Pin freq measured on DIO2: 3999.09146883765Hz
+Testing pin freq measure with 31 averages...
+Pin freq measured on DIO2: 3999.56987044908Hz
+Testing pin freq measure with 33 averages...
+Pin freq measured on DIO2: 3999.5574582712Hz
+Testing pin freq measure with 35 averages...
+Pin freq measured on DIO2: 3999.59181359488Hz
+Testing pin freq measure with 37 averages...
+Pin freq measured on DIO2: 3999.70825467651Hz
+Testing pin freq measure with 39 averages...
+Pin freq measured on DIO2: 3999.60925575432Hz
+Testing pin freq measure with 41 averages...
+Pin freq measured on DIO2: 3999.79091850662Hz
+Testing pin freq measure with 43 averages...
+Pin freq measured on DIO2: 3999.73419473927Hz
+Testing pin freq measure with 45 averages...
+Pin freq measured on DIO2: 3999.50615541994Hz
+Testing pin freq measure with 47 averages...
+Pin freq measured on DIO2: 3999.9054245761Hz
+Testing pin freq measure with 49 averages...
+Pin freq measured on DIO2: 3999.72138755477Hz
+Testing pin freq measure with 51 averages...
+Pin freq measured on DIO2: 3999.76966235302Hz
+Testing pin freq measure with 53 averages...
+Pin freq measured on DIO2: 3999.57470068063Hz
+Testing pin freq measure with 55 averages...
+Pin freq measured on DIO2: 3999.85568215438Hz
+Testing pin freq measure with 57 averages...
+Pin freq measured on DIO2: 3999.61568185141Hz
+Testing pin freq measure with 59 averages...
+Pin freq measured on DIO2: 3999.58028411537Hz
+Testing pin freq measure with 61 averages...
+Pin freq measured on DIO2: 3999.75537555707Hz
+Testing pin freq measure with 63 averages...
+Pin freq measured on DIO2: 3999.71778816474Hz
+Testing pin freq measure with 65 averages...
+Pin freq measured on DIO2: 3999.70693465864Hz
+Testing pin freq measure with 67 averages...
+Pin freq measured on DIO2: 3999.79149636896Hz
+Testing pin freq measure with 69 averages...
+Pin freq measured on DIO2: 3999.71011992063Hz
+Testing pin freq measure with 71 averages...
+Pin freq measured on DIO2: 3999.87926013293Hz
+Testing pin freq measure with 73 averages...
+Pin freq measured on DIO2: 3999.77818974563Hz
+Testing pin freq measure with 75 averages...
+Pin freq measured on DIO2: 3999.64018689116Hz
+Testing pin freq measure with 77 averages...
+Pin freq measured on DIO2: 3999.85980537688Hz
+Testing pin freq measure with 79 averages...
+Pin freq measured on DIO2: 3999.78699782477Hz
+Testing pin freq measure with 81 averages...
+Pin freq measured on DIO2: 3999.83537158984Hz
+Testing pin freq measure with 83 averages...
+Pin freq measured on DIO2: 3999.80491256927Hz
+Testing pin freq measure with 85 averages...
+Pin freq measured on DIO2: 3999.85058877361Hz
+Testing pin freq measure with 87 averages...
+Pin freq measured on DIO2: 3999.8759192015Hz
+Testing pin freq measure with 89 averages...
+Pin freq measured on DIO2: 3999.86443822129Hz
+Testing pin freq measure with 91 averages...
+Pin freq measured on DIO2: 3999.83601767171Hz
+Testing pin freq measure with 93 averages...
+Pin freq measured on DIO2: 3999.94537524645Hz
+Testing pin freq measure with 95 averages...
+Pin freq measured on DIO2: 3999.8663157455Hz
+Testing pin freq measure with 97 averages...
+Pin freq measured on DIO2: 3999.93780814631Hz
+Testing pin freq measure with 99 averages...
+Pin freq measured on DIO2: 3999.79795793195Hz
+Testing pin freq measure with 101 averages...
+Pin freq measured on DIO2: 3999.91512269878Hz
+Testing pin freq measure with 103 averages...
+Pin freq measured on DIO2: 3999.84279213498Hz
+Testing pin freq measure with 105 averages...
+Pin freq measured on DIO2: 3999.87904719427Hz
+Testing pin freq measure with 107 averages...
+Pin freq measured on DIO2: 3999.94362038716Hz
+Testing pin freq measure with 109 averages...
+Pin freq measured on DIO2: 3999.97669659697Hz
+Testing pin freq measure with 111 averages...
+Pin freq measured on DIO2: 3999.77975694606Hz
+Testing pin freq measure with 113 averages...
+Pin freq measured on DIO2: 3999.80051206586Hz
+Testing pin freq measure with 115 averages...
+Pin freq measured on DIO2: 3999.86195662677Hz
+Testing pin freq measure with 117 averages...
+Pin freq measured on DIO2: 3999.90773405699Hz
+Testing pin freq measure with 119 averages...
+Pin freq measured on DIO2: 3999.87193255114Hz
+Testing pin freq measure with 121 averages...
+Pin freq measured on DIO2: 3999.92915175628Hz
+Testing pin freq measure with 123 averages...
+Pin freq measured on DIO2: 3999.88125967992Hz
+Testing pin freq measure with 125 averages...
+Pin freq measured on DIO2: 3999.83490124237Hz
+Testing pin freq measure with 127 averages...
+Pin freq measured on DIO2: 3999.87749961719Hz
+Testing pin freq measure with 129 averages...
+Pin freq measured on DIO2: 3999.77111002409Hz
+Testing pin freq measure with 131 averages...
+Pin freq measured on DIO2: 3999.87396918304Hz
+Testing pin freq measure with 133 averages...
+Pin freq measured on DIO2: 3999.89018727844Hz
+Testing pin freq measure with 135 averages...
+Pin freq measured on DIO2: 3999.97648082599Hz
+Testing pin freq measure with 137 averages...
+Pin freq measured on DIO2: 3999.89802835507Hz
+Testing pin freq measure with 139 averages...
+Pin freq measured on DIO2: 3999.89035901711Hz
+Testing pin freq measure with 141 averages...
+Pin freq measured on DIO2: 3999.91668332062Hz
+Testing pin freq measure with 143 averages...
+Pin freq measured on DIO2: 3999.85346196117Hz
+Testing pin freq measure with 145 averages...
+Pin freq measured on DIO2: 3999.91241275489Hz
+Testing pin freq measure with 147 averages...
+Pin freq measured on DIO2: 3999.90496503685Hz
+Testing pin freq measure with 149 averages...
+Pin freq measured on DIO2: 3999.83379324306Hz
+Testing pin freq measure with 151 averages...
+Pin freq measured on DIO2: 3999.86963561051Hz
+Testing pin freq measure with 153 averages...
+Pin freq measured on DIO2: 3999.86303928282Hz
+Testing pin freq measure with 155 averages...
+Pin freq measured on DIO2: 3999.94878924984Hz
+Testing pin freq measure with 157 averages...
+Pin freq measured on DIO2: 3999.93124089953Hz
+Testing pin freq measure with 159 averages...
+Pin freq measured on DIO2: 3999.86421386317Hz
+Testing pin freq measure with 161 averages...
+Pin freq measured on DIO2: 3999.89745258415Hz
+Testing pin freq measure with 163 averages...
+Pin freq measured on DIO2: 3999.96883354679Hz
+Testing pin freq measure with 165 averages...
+Pin freq measured on DIO2: 3999.83644056178Hz
+Testing pin freq measure with 167 averages...
+Pin freq measured on DIO2: 3999.9353581444Hz
+Testing pin freq measure with 169 averages...
+Pin freq measured on DIO2: 3999.9473953661Hz
+Testing pin freq measure with 171 averages...
+Pin freq measured on DIO2: 3999.89416589496Hz
+Testing pin freq measure with 173 averages...
+Pin freq measured on DIO2: 3999.92475321118Hz
+Testing pin freq measure with 175 averages...
+Pin freq measured on DIO2: 3999.90928470994Hz
+Testing pin freq measure with 177 averages...
+Pin freq measured on DIO2: 3999.93004123531Hz
+Testing pin freq measure with 179 averages...
+Pin freq measured on DIO2: 3999.94146536146Hz
+Testing pin freq measure with 181 averages...
+Pin freq measured on DIO2: 3999.98772061774Hz
+Testing pin freq measure with 183 averages...
+Pin freq measured on DIO2: 3999.98091474748Hz
+Testing pin freq measure with 185 averages...
+Pin freq measured on DIO2: 4000Hz
+Testing pin freq measure with 187 averages...
+Pin freq measured on DIO2: 3999.88284707086Hz
+Testing pin freq measure with 189 averages...
+Pin freq measured on DIO2: 3999.92776341679Hz
+Testing pin freq measure with 191 averages...
+Pin freq measured on DIO2: 3999.93018210833Hz
+Testing pin freq measure with 193 averages...
+Pin freq measured on DIO2: 3999.96545250027Hz
+Testing pin freq measure with 195 averages...
+Pin freq measured on DIO2: 3999.92672963847Hz
+Testing pin freq measure with 197 averages...
+Pin freq measured on DIO2: 3999.91296849943Hz
+Testing pin freq measure with 199 averages...
+Pin freq measured on DIO2: 3999.97925820149Hz
+Testing pin freq measure with 201 averages...
+Pin freq measured on DIO2: 3999.92575757875Hz
+Testing pin freq measure with 203 averages...
+Pin freq measured on DIO2: 3999.8811325255Hz
+Testing pin freq measure with 205 averages...
+Pin freq measured on DIO2: 3999.92255986123Hz
+Testing pin freq measure with 207 averages...
+Pin freq measured on DIO2: 3999.94784916137Hz
+Testing pin freq measure with 209 averages...
+Pin freq measured on DIO2: 3999.91188891927Hz
+Testing pin freq measure with 211 averages...
+Pin freq measured on DIO2: 3999.87661101623Hz
+Testing pin freq measure with 213 averages...
+Pin freq measured on DIO2: 3999.98360280019Hz
+Testing pin freq measure with 215 averages...
+Pin freq measured on DIO2: 4000Hz
+Testing pin freq measure with 217 averages...
+Pin freq measured on DIO2: 3999.92830531693Hz
+Testing pin freq measure with 219 averages...
+Pin freq measured on DIO2: 3999.95215649177Hz
+Testing pin freq measure with 221 averages...
+Pin freq measured on DIO2: 3999.89656026981Hz
+Testing pin freq measure with 223 averages...
+Pin freq measured on DIO2: 3999.92026795662Hz
+Testing pin freq measure with 225 averages...
+Pin freq measured on DIO2: 3999.91533226793Hz
+Testing pin freq measure with 227 averages...
+Pin freq measured on DIO2: 3999.93845701957Hz
+Testing pin freq measure with 229 averages...
+Pin freq measured on DIO2: 3999.94731332626Hz
+Testing pin freq measure with 231 averages...
+Pin freq measured on DIO2: 3999.94914395182Hz
+Testing pin freq measure with 233 averages...
+Pin freq measured on DIO2: 3999.88281063698Hz
+Testing pin freq measure with 235 averages...
+Pin freq measured on DIO2: 3999.9054245761Hz
+Testing pin freq measure with 237 averages...
+Pin freq measured on DIO2: 3999.93435540186Hz
+Testing pin freq measure with 239 averages...
+Pin freq measured on DIO2: 3999.89637994022Hz
+Testing pin freq measure with 241 averages...
+Pin freq measured on DIO2: 3999.94466694772Hz
+Testing pin freq measure with 243 averages...
+Pin freq measured on DIO2: 3999.94642895058Hz
+Testing pin freq measure with 245 averages...
+Pin freq measured on DIO2: 3999.90280520381Hz
+Testing pin freq measure with 247 averages...
+Pin freq measured on DIO2: 3999.95629454903Hz
+Testing pin freq measure with 249 averages...
+Pin freq measured on DIO2: 3999.95792070923Hz
+Testing pin freq measure with 251 averages...
+Pin freq measured on DIO2: 3999.99747003574Hz
+Testing pin freq measure with 253 averages...
+Pin freq measured on DIO2: 3999.94227161207Hz
+Testing pin freq measure with 255 averages...
+Pin freq measured on DIO2: 3999.90039127552Hz
+Testing pin freq measure with 257 averages...
+Pin freq measured on DIO2: 3999.95181802037Hz
+Testing pin freq measure with 259 averages...
+Pin freq measured on DIO2: 3999.92889847806Hz
+Testing pin freq measure with 261 averages...
+Pin freq measured on DIO2: 3999.93674216044Hz
+Testing pin freq measure with 263 averages...
+Pin freq measured on DIO2: 3999.94446657733Hz
+Testing pin freq measure with 265 averages...
+Pin freq measured on DIO2: 3999.98202777607Hz
+Testing pin freq measure with 267 averages...
+Pin freq measured on DIO2: 3999.94767682113Hz
+Testing pin freq measure with 269 averages...
+Pin freq measured on DIO2: 3999.93154161208Hz
+Testing pin freq measure with 271 averages...
+Pin freq measured on DIO2: 3999.93907636251Hz
+Testing pin freq measure with 273 averages...
+Pin freq measured on DIO2: 3999.9348706572Hz
+Testing pin freq measure with 275 averages...
+Pin freq measured on DIO2: 3999.94804437588Hz
+Testing pin freq measure with 277 averages...
+Pin freq measured on DIO2: 3999.94956572074Hz
+Testing pin freq measure with 279 averages...
+Pin freq measured on DIO2: 3999.96813537912Hz
+Testing pin freq measure with 281 averages...
+Pin freq measured on DIO2: 3999.92994548177Hz
+Testing pin freq measure with 283 averages...
+Pin freq measured on DIO2: 3999.95961035209Hz
+Testing pin freq measure with 285 averages...
+Pin freq measured on DIO2: 3999.97771867036Hz
+Testing pin freq measure with 287 averages...
+Pin freq measured on DIO2: 3999.94579158802Hz
+Testing pin freq measure with 289 averages...
+Pin freq measured on DIO2: 3999.96923795268Hz
+Testing pin freq measure with 291 averages...
+Pin freq measured on DIO2: 3999.93780814631Hz
+Testing pin freq measure with 293 averages...
+Pin freq measured on DIO2: 3999.96098882492Hz
+Testing pin freq measure with 295 averages...
+Pin freq measured on DIO2: 3999.94080396291Hz
+Testing pin freq measure with 297 averages...
+Pin freq measured on DIO2: 3999.93692647525Hz
+Testing pin freq measure with 299 averages...
+Pin freq measured on DIO2: 3999.95964787461Hz
+Testing pin freq measure with 301 averages...
+Pin freq measured on DIO2: 3999.91877797776Hz
+Testing pin freq measure with 303 averages...
+Pin freq measured on DIO2: 3999.95703696524Hz
+Testing pin freq measure with 305 averages...
+Pin freq measured on DIO2: 3999.9427447888Hz
+Testing pin freq measure with 307 averages...
+Pin freq measured on DIO2: 3999.95966516919Hz
+Testing pin freq measure with 309 averages...
+Pin freq measured on DIO2: 3999.97636665592Hz
+Testing pin freq measure with 311 averages...
+Pin freq measured on DIO2: 3999.95201664104Hz
+Testing pin freq measure with 313 averages...
+Pin freq measured on DIO2: 3999.95333762762Hz
+Testing pin freq measure with 315 averages...
+Pin freq measured on DIO2: 3999.95464184063Hz
+Testing pin freq measure with 317 averages...
+Pin freq measured on DIO2: 3999.9459137324Hz
+Testing pin freq measure with 319 averages...
+Pin freq measured on DIO2: 3999.94227161207Hz
+Testing pin freq measure with 321 averages...
+Pin freq measured on DIO2: 3999.95351143236Hz
+Testing pin freq measure with 323 averages...
+Pin freq measured on DIO2: 3999.95478226679Hz
+Testing pin freq measure with 325 averages...
+Pin freq measured on DIO2: 3999.94626813908Hz
+Testing pin freq measure with 327 averages...
+Pin freq measured on DIO2: 3999.98640631524Hz
+Testing pin freq measure with 329 averages...
+Pin freq measured on DIO2: 3999.94402624976Hz
+Testing pin freq measure with 331 averages...
+Pin freq measured on DIO2: 3999.99808150717Hz
+Testing pin freq measure with 333 averages...
+Pin freq measured on DIO2: 3999.94183822206Hz
+Testing pin freq measure with 335 averages...
+Pin freq measured on DIO2: 3999.92891677457Hz
+Testing pin freq measure with 337 averages...
+Pin freq measured on DIO2: 3999.98680968734Hz
+Testing pin freq measure with 339 averages...
+Pin freq measured on DIO2: 3999.89884870154Hz
+Testing pin freq measure with 341 averages...
+Pin freq measured on DIO2: 3999.93761616952Hz
+Testing pin freq measure with 343 averages...
+Pin freq measured on DIO2: 3999.96204718414Hz
+Testing pin freq measure with 345 averages...
+Pin freq measured on DIO2: 3999.93097712237Hz
+Testing pin freq measure with 347 averages...
+Pin freq measured on DIO2: 3999.9551646954Hz
+Testing pin freq measure with 349 averages...
+Pin freq measured on DIO2: 3999.96542893144Hz
+Testing pin freq measure with 351 averages...
+Pin freq measured on DIO2: 3999.96200762561Hz
+Testing pin freq measure with 353 averages...
+Pin freq measured on DIO2: 3999.95862509388Hz
+Testing pin freq measure with 355 averages...
+Pin freq measured on DIO2: 3999.92844956924Hz
+Testing pin freq measure with 357 averages...
+Pin freq measured on DIO2: 3999.9430801214Hz
+Testing pin freq measure with 359 averages...
+Pin freq measured on DIO2: 3999.98408030601Hz
+Testing pin freq measure with 361 averages...
+Pin freq measured on DIO2: 3999.95426490733Hz
+Testing pin freq measure with 363 averages...
+Pin freq measured on DIO2: 3999.98163169582Hz
+Testing pin freq measure with 365 averages...
+Pin freq measured on DIO2: 3999.9695539987Hz
+Testing pin freq measure with 367 averages...
+Pin freq measured on DIO2: 3999.97923646423Hz
+Testing pin freq measure with 369 averages...
+Pin freq measured on DIO2: 3999.97590719106Hz
+Testing pin freq measure with 371 averages...
+Pin freq measured on DIO2: 3999.96405571364Hz
+Testing pin freq measure with 373 averages...
+Pin freq measured on DIO2: 3999.98212414145Hz
+Testing pin freq measure with 375 averages...
+Pin freq measured on DIO2: 3999.93649886492Hz
+Testing pin freq measure with 377 averages...
+Pin freq measured on DIO2: 3999.95873245471Hz
+Testing pin freq measure with 379 averages...
+Pin freq measured on DIO2: 3999.97235413929Hz
+Testing pin freq measure with 381 averages...
+Pin freq measured on DIO2: 3999.97333261109Hz
+Testing pin freq measure with 383 averages...
+Pin freq measured on DIO2: 3999.93285134137Hz
+Testing pin freq measure with 385 averages...
+Pin freq measured on DIO2: 3999.94639501309Hz
+Testing pin freq measure with 387 averages...
+Pin freq measured on DIO2: 3999.98851385721Hz
+Testing pin freq measure with 389 averages...
+Pin freq measured on DIO2: 3999.9853080414Hz
+Testing pin freq measure with 391 averages...
+Pin freq measured on DIO2: 3999.9861952339Hz
+Testing pin freq measure with 393 averages...
+Pin freq measured on DIO2: 3999.97495478227Hz
+Testing pin freq measure with 395 averages...
+Pin freq measured on DIO2: 3999.98392357266Hz
+Testing pin freq measure with 397 averages...
+Pin freq measured on DIO2: 3999.98480433077Hz
+Testing pin freq measure with 399 averages...
+Pin freq measured on DIO2: 3999.97771867036Hz
+Testing pin freq measure with 401 averages...
+Pin freq measured on DIO2: 3999.9469502847Hz
+Testing pin freq measure with 403 averages...
+Pin freq measured on DIO2: 3999.9952727989Hz
+Testing pin freq measure with 405 averages...
+Pin freq measured on DIO2: 3999.93336305864Hz
+Testing pin freq measure with 407 averages...
+Pin freq measured on DIO2: 3999.95787371476Hz
+Testing pin freq measure with 409 averages...
+Pin freq measured on DIO2: 3999.97438194004Hz
+Testing pin freq measure with 411 averages...
+Pin freq measured on DIO2: 3999.95596615188Hz
+Testing pin freq measure with 413 averages...
+Pin freq measured on DIO2: 3999.96079203925Hz
+Testing pin freq measure with 415 averages...
+Pin freq measured on DIO2: 3999.93879405155Hz
+Testing pin freq measure with 417 averages...
+Pin freq measured on DIO2: 3999.94746294567Hz
+Testing pin freq measure with 419 averages...
+Pin freq measured on DIO2: 3999.94468266891Hz
+Testing pin freq measure with 421 averages...
+Pin freq measured on DIO2: 3999.96832459746Hz
+Testing pin freq measure with 423 averages...
+Pin freq measured on DIO2: 3999.96547194596Hz
+Testing pin freq measure with 425 averages...
+Pin freq measured on DIO2: 3999.98132298627Hz
+Testing pin freq measure with 427 averages...
+Pin freq measured on DIO2: 3999.96356467595Hz
+Testing pin freq measure with 429 averages...
+Pin freq measured on DIO2: 3999.964474641Hz
+Testing pin freq measure with 431 averages...
+Pin freq measured on DIO2: 3999.96905951991Hz
+Testing pin freq measure with 433 averages...
+Pin freq measured on DIO2: 3999.98093478229Hz
+Testing pin freq measure with 435 averages...
+Pin freq measured on DIO2: 3999.91241275489Hz
+Testing pin freq measure with 437 averages...
+Pin freq measured on DIO2: 3999.96076565105Hz
+Testing pin freq measure with 439 averages...
+Pin freq measured on DIO2: 3999.97974884957Hz
+Testing pin freq measure with 441 averages...
+Pin freq measured on DIO2: 3999.96616127572Hz
+Testing pin freq measure with 443 averages...
+Pin freq measured on DIO2: 3999.96703076173Hz
+Testing pin freq measure with 445 averages...
+Pin freq measured on DIO2: 3999.95362256797Hz
+Testing pin freq measure with 447 averages...
+Pin freq measured on DIO2: 3999.96519487761Hz
+Testing pin freq measure with 449 averages...
+Pin freq measured on DIO2: 3999.97312844955Hz
+Testing pin freq measure with 451 averages...
+Pin freq measured on DIO2: 3999.98803178266Hz
+Testing pin freq measure with 453 averages...
+Pin freq measured on DIO2: 3999.96775855362Hz
+Testing pin freq measure with 455 averages...
+Pin freq measured on DIO2: 3999.96510901688Hz
+Testing pin freq measure with 457 averages...
+Pin freq measured on DIO2: 3999.97290408306Hz
+Testing pin freq measure with 459 averages...
+Pin freq measured on DIO2: 3999.94604465842Hz
+Testing pin freq measure with 461 averages...
+Pin freq measured on DIO2: 3999.9641856629Hz
+Testing pin freq measure with 463 averages...
+Pin freq measured on DIO2: 3999.96845490766Hz
+Testing pin freq measure with 465 averages...
+Pin freq measured on DIO2: 3999.99317182422Hz
+Testing pin freq measure with 467 averages...
+Pin freq measured on DIO2: 3999.96328603578Hz
+Testing pin freq measure with 469 averages...
+Pin freq measured on DIO2: 3999.9505799661Hz
+Testing pin freq measure with 471 averages...
+Pin freq measured on DIO2: 3999.95483444211Hz
+Testing pin freq measure with 473 averages...
+Pin freq measured on DIO2: 3999.96912181778Hz
+Testing pin freq measure with 475 averages...
+Pin freq measured on DIO2: 3999.9766046104Hz
+Testing pin freq measure with 477 averages...
+Pin freq measured on DIO2: 3999.96405571364Hz
+Testing pin freq measure with 479 averages...
+Pin freq measured on DIO2: 3999.96155439556Hz
+Testing pin freq measure with 481 averages...
+Pin freq measured on DIO2: 3999.97227576374Hz
+Testing pin freq measure with 483 averages...
+Pin freq measured on DIO2: 3999.97304792621Hz
+Testing pin freq measure with 485 averages...
+Pin freq measured on DIO2: 3999.94435456616Hz
+Testing pin freq measure with 487 averages...
+Pin freq measured on DIO2: 3999.97783305027Hz
+Testing pin freq measure with 489 averages...
+Pin freq measured on DIO2: 3999.94935476017Hz
+Testing pin freq measure with 491 averages...
+Pin freq measured on DIO2: 3999.95344092575Hz
+Testing pin freq measure with 493 averages...
+Pin freq measured on DIO2: 3999.96393419923Hz
+Testing pin freq measure with 495 averages...
+Pin freq measured on DIO2: 3999.97754987336Hz
+Testing pin freq measure with 497 averages...
+Pin freq measured on DIO2: 3999.95591952118Hz
+Testing pin freq measure with 499 averages...
+Pin freq measured on DIO2: 3999.96627670126Hz
+Testing pin freq measure with 501 averages...
+Pin freq measured on DIO2: 3999.96070764268Hz
+Testing pin freq measure with 503 averages...
+Pin freq measured on DIO2: 3999.9772757041Hz
+Testing pin freq measure with 505 averages...
+Pin freq measured on DIO2: 3999.96227631031Hz
+Testing pin freq measure with 507 averages...
+Pin freq measured on DIO2: 3999.95678894924Hz
+Testing pin freq measure with 509 averages...
+Pin freq measured on DIO2: 3999.95134472574Hz
+Testing pin freq measure with 511 averages...
+Pin freq measured on DIO2: 3999.97079668356Hz
+Testing pin freq measure with 513 averages...
+Pin freq measured on DIO2: 3999.99628642782Hz
+Testing pin freq measure with 515 averages...
+Pin freq measured on DIO2: 3999.95992623344Hz
+Testing pin freq measure with 517 averages...
+Pin freq measured on DIO2: 3999.99447274179Hz
+Testing pin freq measure with 519 averages...
+Pin freq measured on DIO2: 3999.98898809797Hz
+Testing pin freq measure with 521 averages...
+Pin freq measured on DIO2: 3999.96526304483Hz
+Testing pin freq measure with 523 averages...
+Pin freq measured on DIO2: 3999.95082590473Hz
+Testing pin freq measure with 525 averages...
+Pin freq measured on DIO2: 3999.97883273095Hz
+Testing pin freq measure with 527 averages...
+Pin freq measured on DIO2: 3999.96445357539Hz
+Testing pin freq measure with 529 averages...
+Pin freq measured on DIO2: 3999.98019319141Hz
+Testing pin freq measure with 531 averages...
+Pin freq measured on DIO2: 3999.97488631573Hz
+Testing pin freq measure with 533 averages...
+Pin freq measured on DIO2: 3999.97259776195Hz
+Testing pin freq measure with 535 averages...
+Pin freq measured on DIO2: 3999.9673589778Hz
+Testing pin freq measure with 537 averages...
+Pin freq measured on DIO2: 3999.95033413597Hz
+Testing pin freq measure with 539 averages...
+Pin freq measured on DIO2: 3999.99234205676Hz
+Testing pin freq measure with 541 averages...
+Pin freq measured on DIO2: 3999.98708833049Hz
+Testing pin freq measure with 543 averages...
+Pin freq measured on DIO2: 3999.96433152676Hz
+Testing pin freq measure with 545 averages...
+Pin freq measured on DIO2: 3999.97378369069Hz
+Testing pin freq measure with 547 averages...
+Pin freq measured on DIO2: 3999.97445999579Hz
+Testing pin freq measure with 549 averages...
+Pin freq measured on DIO2: 3999.98958983968Hz
+Testing pin freq measure with 551 averages...
+Pin freq measured on DIO2: 3999.9902038676Hz
+Testing pin freq measure with 553 averages...
+Pin freq measured on DIO2: 3999.98220110597Hz
+Testing pin freq measure with 555 averages...
+Pin freq measured on DIO2: 3999.9685352216Hz
+Testing pin freq measure with 557 averages...
+Pin freq measured on DIO2: 3999.98346898975Hz
+Testing pin freq measure with 559 averages...
+Pin freq measured on DIO2: 3999.98409612755Hz
+Testing pin freq measure with 561 averages...
+Pin freq measured on DIO2: 3999.98471879397Hz
+Testing pin freq measure with 563 averages...
+Pin freq measured on DIO2: 3999.99379642547Hz
+Testing pin freq measure with 565 averages...
+Pin freq measured on DIO2: 3999.97190190393Hz
+Testing pin freq measure with 567 averages...
+Pin freq measured on DIO2: 3999.98096064734Hz
+Testing pin freq measure with 569 averages...
+Pin freq measured on DIO2: 3999.95926529661Hz
+Testing pin freq measure with 571 averages...
+Pin freq measured on DIO2: 3999.95718377682Hz
+Testing pin freq measure with 573 averages...
+Pin freq measured on DIO2: 3999.99667528322Hz
+Testing pin freq measure with 575 averages...
+Pin freq measured on DIO2: 3999.9889561795Hz
+Testing pin freq measure with 577 averages...
+Pin freq measured on DIO2: 3999.96753382982Hz
+Testing pin freq measure with 579 averages...
+Pin freq measured on DIO2: 3999.97641989585Hz
+Testing pin freq measure with 581 averages...
+Pin freq measured on DIO2: 3999.97431513283Hz
+Testing pin freq measure with 583 averages...
+Pin freq measured on DIO2: 3999.97222481291Hz
+Testing pin freq measure with 585 averages...
+Pin freq measured on DIO2: 3999.99728623504Hz
+Testing pin freq measure with 587 averages...
+Pin freq measured on DIO2: 3999.97620036051Hz
+Testing pin freq measure with 589 averages...
+Pin freq measured on DIO2: 3999.97682023486Hz
+Testing pin freq measure with 591 averages...
+Pin freq measured on DIO2: 3999.9747497302Hz
+Testing pin freq measure with 593 averages...
+Pin freq measured on DIO2: 3999.9887559759Hz
+Testing pin freq measure with 595 averages...
+Pin freq measured on DIO2: 3999.98665925811Hz
+Testing pin freq measure with 597 averages...
+Pin freq measured on DIO2: 3999.96330311824Hz
+Testing pin freq measure with 599 averages...
+Pin freq measured on DIO2: 3999.99045879924Hz
+Testing pin freq measure with 601 averages...
+Pin freq measured on DIO2: 3999.97252837964Hz
+Testing pin freq measure with 603 averages...
+Pin freq measured on DIO2: 3999.97841149404Hz
+Testing pin freq measure with 605 averages...
+Pin freq measured on DIO2: 3999.9763836399Hz
+Testing pin freq measure with 607 averages...
+Pin freq measured on DIO2: 3999.97698452863Hz
+Testing pin freq measure with 609 averages...
+Pin freq measured on DIO2: 3999.96194078534Hz
+Testing pin freq measure with 611 averages...
+Pin freq measured on DIO2: 3999.96778149619Hz
+Testing pin freq measure with 613 averages...
+Pin freq measured on DIO2: 3999.98912282724Hz
+Testing pin freq measure with 615 averages...
+Pin freq measured on DIO2: 3999.95869821951Hz
+Testing pin freq measure with 617 averages...
+Pin freq measured on DIO2: 3999.99536856866Hz
+Testing pin freq measure with 619 averages...
+Pin freq measured on DIO2: 3999.98563769285Hz
+Testing pin freq measure with 621 averages...
+Pin freq measured on DIO2: 3999.96830030856Hz
+Testing pin freq measure with 623 averages...
+Pin freq measured on DIO2: 3999.97145991456Hz
+Testing pin freq measure with 625 averages...
+Pin freq measured on DIO2: 3999.97459930402Hz
+Testing pin freq measure with 627 averages...
+Pin freq measured on DIO2: 3999.98025062714Hz
+Testing pin freq measure with 629 averages...
+Pin freq measured on DIO2: 3999.97829429777Hz
+Testing pin freq measure with 631 averages...
+Pin freq measured on DIO2: 3999.95873912814Hz
+Testing pin freq measure with 633 averages...
+Pin freq measured on DIO2: 3999.96940283488Hz
+Testing pin freq measure with 635 averages...
+Pin freq measured on DIO2: 3999.97499931248Hz
+Testing pin freq measure with 637 averages...
+Pin freq measured on DIO2: 3999.97308404507Hz
+Testing pin freq measure with 639 averages...
+Pin freq measured on DIO2: 3999.95627443259Hz
+Testing pin freq measure with 641 averages...
+Pin freq measured on DIO2: 3999.97671931857Hz
+Testing pin freq measure with 643 averages...
+Pin freq measured on DIO2: 3999.98222342927Hz
+Testing pin freq measure with 645 averages...
+Pin freq measured on DIO2: 3999.96554176953Hz
+Testing pin freq measure with 647 averages...
+Pin freq measured on DIO2: 3999.9784074249Hz
+Testing pin freq measure with 649 averages...
+Pin freq measured on DIO2: 3999.98385545248Hz
+Testing pin freq measure with 651 averages...
+Pin freq measured on DIO2: 3999.96976111279Hz
+Testing pin freq measure with 653 averages...
+Pin freq measured on DIO2: 3999.9630465674Hz
+Testing pin freq measure with 655 averages...
+Pin freq measured on DIO2: 3999.96606784492Hz
+Testing pin freq measure with 657 averages...
+Pin freq measured on DIO2: 3999.97390339908Hz
+Testing pin freq measure with 659 averages...
+Pin freq measured on DIO2: 3999.98410043706Hz
+Testing pin freq measure with 661 averages...
+Pin freq measured on DIO2: 3999.97982544204Hz
+Testing pin freq measure with 663 averages...
+Pin freq measured on DIO2: 3999.96360392934Hz
+Testing pin freq measure with 665 averages...
+Pin freq measured on DIO2: 3999.99283811697Hz
+Testing pin freq measure with 667 averages...
+Pin freq measured on DIO2: 3999.97667476108Hz
+Testing pin freq measure with 669 averages...
+Pin freq measured on DIO2: 3999.99620316395Hz
+Testing pin freq measure with 671 averages...
+Pin freq measured on DIO2: 3999.96593058594Hz
+Testing pin freq measure with 673 averages...
+Pin freq measured on DIO2: 3999.97122137544Hz
+Testing pin freq measure with 675 averages...
+Pin freq measured on DIO2: 3999.98588846241Hz
+Testing pin freq measure with 677 averages...
+Pin freq measured on DIO2: 3999.9793642549Hz
+Testing pin freq measure with 679 averages...
+Pin freq measured on DIO2: 3999.97287850271Hz
+Testing pin freq measure with 681 averages...
+Pin freq measured on DIO2: 3999.97575556952Hz
+Testing pin freq measure with 683 averages...
+Pin freq measured on DIO2: 3999.97861579084Hz
+Testing pin freq measure with 685 averages...
+Pin freq measured on DIO2: 3999.99536481244Hz
+Testing pin freq measure with 687 averages...
+Pin freq measured on DIO2: 3999.96117810584Hz
+Testing pin freq measure with 689 averages...
+Pin freq measured on DIO2: 3999.98940097661Hz
+Testing pin freq measure with 691 averages...
+Pin freq measured on DIO2: 3999.96691666791Hz
+Testing pin freq measure with 693 averages...
+Pin freq measured on DIO2: 3999.99496015372Hz
+Testing pin freq measure with 695 averages...
+Pin freq measured on DIO2: 3999.98629454843Hz
+Testing pin freq measure with 697 averages...
+Pin freq measured on DIO2: 3999.98451173236Hz
+Testing pin freq measure with 699 averages...
+Pin freq measured on DIO2: 3999.9759256557Hz
+Testing pin freq measure with 701 averages...
+Pin freq measured on DIO2: 3999.98550598275Hz
+Testing pin freq measure with 703 averages...
+Pin freq measured on DIO2: 3999.96793302971Hz
+Testing pin freq measure with 705 averages...
+Pin freq measured on DIO2: 3999.97297799395Hz
+Testing pin freq measure with 707 averages...
+Pin freq measured on DIO2: 3999.99595814207Hz
+Testing pin freq measure with 709 averages...
+Pin freq measured on DIO2: 3999.98746082909Hz
+Testing pin freq measure with 711 averages...
+Pin freq measured on DIO2: 3999.96114885515Hz
+Testing pin freq measure with 713 averages...
+Pin freq measured on DIO2: 3999.97283587357Hz
+Testing pin freq measure with 715 averages...
+Pin freq measured on DIO2: 3999.96003401549Hz
+Testing pin freq measure with 717 averages...
+Pin freq measured on DIO2: 3999.98051547636Hz
+Testing pin freq measure with 719 averages...
+Pin freq measured on DIO2: 3999.97659531365Hz
+Testing pin freq measure with 721 averages...
+Pin freq measured on DIO2: 3999.98590803451Hz
+Testing pin freq measure with 723 averages...
+Pin freq measured on DIO2: 3999.96442857637Hz
+Testing pin freq measure with 725 averages...
+Pin freq measured on DIO2: 3999.99781027212Hz
+Testing pin freq measure with 727 averages...
+Pin freq measured on DIO2: 3999.98951824317Hz
+Testing pin freq measure with 729 averages...
+Pin freq measured on DIO2: 3999.97909405389Hz
+Testing pin freq measure with 731 averages...
+Pin freq measured on DIO2: 3999.97524213571Hz
+Testing pin freq measure with 733 averages...
+Pin freq measured on DIO2: 3999.96924544678Hz
+Testing pin freq measure with 735 averages...
+Pin freq measured on DIO2: 3999.99784006432Hz
+Testing pin freq measure with 737 averages...
+Pin freq measured on DIO2: 3999.98535234083Hz
+Testing pin freq measure with 739 averages...
+Pin freq measured on DIO2: 3999.99011809415Hz
+Testing pin freq measure with 741 averages...
+Pin freq measured on DIO2: 3999.97771867036Hz
+Testing pin freq measure with 743 averages...
+Pin freq measured on DIO2: 3999.99529930852Hz
+Testing pin freq measure with 745 averages...
+Pin freq measured on DIO2: 3999.98082159233Hz
+Testing pin freq measure with 747 averages...
+Pin freq measured on DIO2: 3999.97917276563Hz
+Testing pin freq measure with 749 averages...
+Pin freq measured on DIO2: 3999.9648155439Hz
+Testing pin freq measure with 751 averages...
+Pin freq measured on DIO2: 4000.07948495441Hz
+Testing pin freq measure with 753 averages...
+Pin freq measured on DIO2: 3999.98271197465Hz
+Testing pin freq measure with 755 averages...
+Pin freq measured on DIO2: 3999.98738371995Hz
+Testing pin freq measure with 757 averages...
+Pin freq measured on DIO2: 3999.98993363539Hz
+Testing pin freq measure with 759 averages...
+Pin freq measured on DIO2: 3999.97573714121Hz
+Testing pin freq measure with 761 averages...
+Pin freq measured on DIO2: 3999.98456261347Hz
+Testing pin freq measure with 763 averages...
+Pin freq measured on DIO2: 3999.98085789903Hz
+Testing pin freq measure with 765 averages...
+Pin freq measured on DIO2: 3999.97924777329Hz
+Testing pin freq measure with 767 averages...
+Pin freq measured on DIO2: 3999.99834414297Hz
+Testing pin freq measure with 769 averages...
+Pin freq measured on DIO2: 3999.97398823794Hz
+Testing pin freq measure with 771 averages...
+Pin freq measured on DIO2: 3999.96417226346Hz
+Testing pin freq measure with 773 averages...
+Pin freq measured on DIO2: 3999.99753549402Hz
+Testing pin freq measure with 775 averages...
+Pin freq measured on DIO2: 3999.97132181836Hz
+Testing pin freq measure with 777 averages...
+Pin freq measured on DIO2: 3999.9881495708Hz
+Testing pin freq measure with 779 averages...
+Pin freq measured on DIO2: 3999.97636006073Hz
+Testing pin freq measure with 781 averages...
+Pin freq measured on DIO2: 3999.96869637157Hz
+Testing pin freq measure with 783 averages...
+Pin freq measured on DIO2: 3999.97729182739Hz
+Testing pin freq measure with 785 averages...
+Pin freq measured on DIO2: 3999.98382117545Hz
+Testing pin freq measure with 787 averages...
+Pin freq measured on DIO2: 3999.98224852668Hz
+Testing pin freq measure with 789 averages...
+Pin freq measured on DIO2: 3999.96659927836Hz
+Testing pin freq measure with 791 averages...
+Pin freq measured on DIO2: 3999.99919719178Hz
+Testing pin freq measure with 793 averages...
+Pin freq measured on DIO2: 3999.96957045291Hz
+Testing pin freq measure with 795 averages...
+Pin freq measured on DIO2: 3999.97803397046Hz
+Testing pin freq measure with 797 averages...
+Pin freq measured on DIO2: 3999.99043884696Hz
+Testing pin freq measure with 799 averages...
+Pin freq measured on DIO2: 3999.99284708052Hz
+Testing pin freq measure with 801 averages...
+Pin freq measured on DIO2: 3999.97344185178Hz
+Testing pin freq measure with 803 averages...
+Pin freq measured on DIO2: 3999.99960459441Hz
+Testing pin freq measure with 805 averages...
+Pin freq measured on DIO2: 3999.97041847504Hz
+Testing pin freq measure with 807 averages...
+Pin freq measured on DIO2: 3999.98072125143Hz
+Testing pin freq measure with 809 averages...
+Pin freq measured on DIO2: 3999.96742500023Hz
+Testing pin freq measure with 811 averages...
+Pin freq measured on DIO2: 3999.98747187289Hz
+Testing pin freq measure with 813 averages...
+Pin freq measured on DIO2: 3999.98594053432Hz
+Testing pin freq measure with 815 averages...
+Pin freq measured on DIO2: 4000Hz
+Testing pin freq measure with 817 averages...
+Pin freq measured on DIO2: 3999.98484348714Hz
+Testing pin freq measure with 819 averages...
+Pin freq measured on DIO2: 3999.98526817733Hz
+Testing pin freq measure with 821 averages...
+Pin freq measured on DIO2: 3999.98182346426Hz
+Testing pin freq measure with 823 averages...
+Pin freq measured on DIO2: 3999.96875070829Hz
+Testing pin freq measure with 825 averages...
+Pin freq measured on DIO2: 3999.97498416064Hz
+Testing pin freq measure with 827 averages...
+Pin freq measured on DIO2: 3999.9831071191Hz
+Testing pin freq measure with 829 averages...
+Pin freq measured on DIO2: 3999.9911909163Hz
+Testing pin freq measure with 831 averages...
+Pin freq measured on DIO2: 3999.98013179877Hz
+Testing pin freq measure with 833 averages...
+Pin freq measured on DIO2: 3999.98246647189Hz
+Testing pin freq measure with 835 averages...
+Pin freq measured on DIO2: 3999.97718498886Hz
+Testing pin freq measure with 837 averages...
+Pin freq measured on DIO2: 3999.9889990616Hz
+Testing pin freq measure with 839 averages...
+Pin freq measured on DIO2: 3999.97237410943Hz
+Testing pin freq measure with 841 averages...
+Pin freq measured on DIO2: 3999.98603108744Hz
+Testing pin freq measure with 843 averages...
+Pin freq measured on DIO2: 3999.99962335624Hz
+Testing pin freq measure with 845 averages...
+Pin freq measured on DIO2: 3999.98309121678Hz
+Testing pin freq measure with 847 averages...
+Pin freq measured on DIO2: 3999.96851158183Hz
+Testing pin freq measure with 849 averages...
+Pin freq measured on DIO2: 3999.97830916176Hz
+Testing pin freq measure with 851 averages...
+Pin freq measured on DIO2: 3999.9936572578Hz
+Testing pin freq measure with 853 averages...
+Pin freq measured on DIO2: 3999.98287757278Hz
+Testing pin freq measure with 855 averages...
+Pin freq measured on DIO2: 3999.98143220806Hz
+Testing pin freq measure with 857 averages...
+Pin freq measured on DIO2: 3999.99110823775Hz
+Testing pin freq measure with 859 averages...
+Pin freq measured on DIO2: 3999.98410604594Hz
+Testing pin freq measure with 861 averages...
+Pin freq measured on DIO2: 3999.99926246073Hz
+Testing pin freq measure with 863 averages...
+Pin freq measured on DIO2: 3999.97939686152Hz
+Testing pin freq measure with 865 averages...
+Pin freq measured on DIO2: 3999.9669644758Hz
+Testing pin freq measure with 867 averages...
+Pin freq measured on DIO2: 3999.98571756204Hz
+Testing pin freq measure with 869 averages...
+Pin freq measured on DIO2: 3999.98246208568Hz
+Testing pin freq measure with 871 averages...
+Pin freq measured on DIO2: 3999.98286688894Hz
+Testing pin freq measure with 873 averages...
+Pin freq measured on DIO2: 3999.97417741661Hz
+Testing pin freq measure with 875 averages...
+Pin freq measured on DIO2: 3999.97822795512Hz
+Testing pin freq measure with 877 averages...
+Pin freq measured on DIO2: 3999.98588041709Hz
+Testing pin freq measure with 879 averages...
+Pin freq measured on DIO2: 3999.97001912184Hz
+Testing pin freq measure with 881 averages...
+Pin freq measured on DIO2: 3999.98666531518Hz
+Testing pin freq measure with 883 averages...
+Pin freq measured on DIO2: 3999.97806563141Hz
+Testing pin freq measure with 885 averages...
+Pin freq measured on DIO2: 3999.97668013987Hz
+Testing pin freq measure with 887 averages...
+Pin freq measured on DIO2: 3999.96993156747Hz
+Testing pin freq measure with 889 averages...
+Pin freq measured on DIO2: 3999.99892853555Hz
+Testing pin freq measure with 891 averages...
+Pin freq measured on DIO2: 3999.98681497445Hz
+Testing pin freq measure with 893 averages...
+Pin freq measured on DIO2: 3999.99075558842Hz
+Testing pin freq measure with 895 averages...
+Pin freq measured on DIO2: 4000.00177380367Hz
+Testing pin freq measure with 897 averages...
+Pin freq measured on DIO2: 3999.96849695522Hz
+Testing pin freq measure with 899 averages...
+Pin freq measured on DIO2: 3999.98128143582Hz
+Testing pin freq measure with 901 averages...
+Pin freq measured on DIO2: 3999.99224725615Hz
+Testing pin freq measure with 903 averages...
+Pin freq measured on DIO2: 3999.98909988331Hz
+Testing pin freq measure with 905 averages...
+Pin freq measured on DIO2: 3999.98947481059Hz
+Testing pin freq measure with 907 averages...
+Pin freq measured on DIO2: 3999.99684940001Hz
+Testing pin freq measure with 909 averages...
+Pin freq measured on DIO2: 3999.97974089301Hz
+Testing pin freq measure with 911 averages...
+Pin freq measured on DIO2: 3999.97839126449Hz
+Testing pin freq measure with 913 averages...
+Pin freq measured on DIO2: 3999.99095809424Hz
+Testing pin freq measure with 915 averages...
+Pin freq measured on DIO2: 3999.98264976291Hz
+Testing pin freq measure with 917 averages...
+Pin freq measured on DIO2: 3999.99169003124Hz
+Testing pin freq measure with 919 averages...
+Pin freq measured on DIO2: 3999.9834162664Hz
+Testing pin freq measure with 921 averages...
+Pin freq measured on DIO2: 3999.9837970215Hz
+Testing pin freq measure with 923 averages...
+Pin freq measured on DIO2: 3999.97729622068Hz
+Testing pin freq measure with 925 averages...
+Pin freq measured on DIO2: 3999.98112107356Hz
+Testing pin freq measure with 927 averages...
+Pin freq measured on DIO2: 3999.97636665592Hz
+Testing pin freq measure with 929 averages...
+Pin freq measured on DIO2: 3999.98017703954Hz
+Testing pin freq measure with 931 averages...
+Pin freq measured on DIO2: 3999.99761270281Hz
+Testing pin freq measure with 933 averages...
+Pin freq measured on DIO2: 3999.99455502193Hz
+Testing pin freq measure with 935 averages...
+Pin freq measured on DIO2: 3999.9830208894Hz
+Testing pin freq measure with 937 averages...
+Pin freq measured on DIO2: 3999.99186740481Hz
+Testing pin freq measure with 939 averages...
+Pin freq measured on DIO2: 3999.97700681089Hz
+Testing pin freq measure with 941 averages...
+Pin freq measured on DIO2: 3999.97401895183Hz
+Testing pin freq measure with 943 averages...
+Pin freq measured on DIO2: 3999.98451173236Hz
+Testing pin freq measure with 945 averages...
+Pin freq measured on DIO2: 4000.06887917207Hz
+Testing pin freq measure with 947 averages...
+Pin freq measured on DIO2: 3999.98021854319Hz
+Testing pin freq measure with 949 averages...
+Pin freq measured on DIO2: 3999.99230481305Hz
+Testing pin freq measure with 951 averages...
+Pin freq measured on DIO2: 3999.9809694798Hz
+Testing pin freq measure with 953 averages...
+Pin freq measured on DIO2: 3999.97801092124Hz
+Testing pin freq measure with 955 averages...
+Pin freq measured on DIO2: 3999.97672709863Hz
+Testing pin freq measure with 957 averages...
+Pin freq measured on DIO2: 3999.9887196093Hz
+Testing pin freq measure with 959 averages...
+Pin freq measured on DIO2: 3999.98907421793Hz
+Testing pin freq measure with 961 averages...
+Pin freq measured on DIO2: 3999.99273129755Hz
+Testing pin freq measure with 963 averages...
+Pin freq measured on DIO2: 3999.98813047575Hz
+Testing pin freq measure with 965 averages...
+Pin freq measured on DIO2: 3999.98519385561Hz
+Testing pin freq measure with 967 averages...
+Pin freq measured on DIO2: 3999.97570253334Hz
+Testing pin freq measure with 969 averages...
+Pin freq measured on DIO2: 3999.98591030681Hz
+Testing pin freq measure with 971 averages...
+Pin freq measured on DIO2: 3999.9780915536Hz
+Testing pin freq measure with 973 averages...
+Pin freq measured on DIO2: 3999.98662086761Hz
+Testing pin freq measure with 975 averages...
+Pin freq measured on DIO2: 3999.99185871616Hz
+Testing pin freq measure with 977 averages...
+Pin freq measured on DIO2: 3999.98895052761Hz
+Testing pin freq measure with 979 averages...
+Pin freq measured on DIO2: 3999.98767582223Hz
+Testing pin freq measure with 981 averages...
+Pin freq measured on DIO2: 3999.97831488008Hz
+Testing pin freq measure with 983 averages...
+Pin freq measured on DIO2: 3999.9786819984Hz
+Testing pin freq measure with 985 averages...
+Pin freq measured on DIO2: 3999.98710620538Hz
+Testing pin freq measure with 987 averages...
+Pin freq measured on DIO2: 3999.98262866849Hz
+Testing pin freq measure with 989 averages...
+Pin freq measured on DIO2: 3999.9861952339Hz
+Testing pin freq measure with 991 averages...
+Pin freq measured on DIO2: 3999.98173761031Hz
+Testing pin freq measure with 993 averages...
+Pin freq measured on DIO2: 3999.99808150717Hz
+Testing pin freq measure with 995 averages...
+Pin freq measured on DIO2: 3999.98883131253Hz
+Testing pin freq measure with 997 averages...
+Pin freq measured on DIO2: 3999.99554147937Hz
+Testing pin freq measure with 999 averages...
+Pin freq measured on DIO2: 3999.98474428805Hz
+Starting pin functions timeout functionality test...
+Testing timeout of 100ms...
+Pulse wait time: 103ms
+Measure pin freq time: 100ms
+Measure pin delay time: 102ms
+Measure busy pulse time: 100ms
+Testing timeout of 200ms...
+Pulse wait time: 200ms
+Measure pin freq time: 200ms
+Measure pin delay time: 200ms
+Measure busy pulse time: 200ms
+Testing timeout of 300ms...
+Pulse wait time: 300ms
+Measure pin freq time: 300ms
+Measure pin delay time: 300ms
+Measure busy pulse time: 300ms
+Testing timeout of 400ms...
+Pulse wait time: 400ms
+Measure pin freq time: 400ms
+Measure pin delay time: 400ms
+Measure busy pulse time: 400ms
+Testing timeout of 500ms...
+Pulse wait time: 500ms
+Measure pin freq time: 500ms
+Measure pin delay time: 500ms
+Measure busy pulse time: 500ms
+Testing timeout of 600ms...
+Pulse wait time: 600ms
+Measure pin freq time: 600ms
+Measure pin delay time: 600ms
+Measure busy pulse time: 600ms
+Testing timeout of 700ms...
+Pulse wait time: 700ms
+Measure pin freq time: 700ms
+Measure pin delay time: 700ms
+Measure busy pulse time: 700ms
+Testing timeout of 800ms...
+Pulse wait time: 800ms
+Measure pin freq time: 800ms
+Measure pin delay time: 800ms
+Measure busy pulse time: 800ms
+Starting GPIO resistor configuration test...
+Starting pin read/write test...
+Testing 100 pin set/read trials
+Starting trial 0
+Starting trial 1
+Starting trial 2
+Starting trial 3
+Starting trial 4
+Starting trial 5
+Starting trial 6
+Starting trial 7
+Starting trial 8
+Starting trial 9
+Starting trial 10
+Starting trial 11
+Starting trial 12
+Starting trial 13
+Starting trial 14
+Starting trial 15
+Starting trial 16
+Starting trial 17
+Starting trial 18
+Starting trial 19
+Starting trial 20
+Starting trial 21
+Starting trial 22
+Starting trial 23
+Starting trial 24
+Starting trial 25
+Starting trial 26
+Starting trial 27
+Starting trial 28
+Starting trial 29
+Starting trial 30
+Starting trial 31
+Starting trial 32
+Starting trial 33
+Starting trial 34
+Starting trial 35
+Starting trial 36
+Starting trial 37
+Starting trial 38
+Starting trial 39
+Starting trial 40
+Starting trial 41
+Starting trial 42
+Starting trial 43
+Starting trial 44
+Starting trial 45
+Starting trial 46
+Starting trial 47
+Starting trial 48
+Starting trial 49
+Starting trial 50
+Starting trial 51
+Starting trial 52
+Starting trial 53
+Starting trial 54
+Starting trial 55
+Starting trial 56
+Starting trial 57
+Starting trial 58
+Starting trial 59
+Starting trial 60
+Starting trial 61
+Starting trial 62
+Starting trial 63
+Starting trial 64
+Starting trial 65
+Starting trial 66
+Starting trial 67
+Starting trial 68
+Starting trial 69
+Starting trial 70
+Starting trial 71
+Starting trial 72
+Starting trial 73
+Starting trial 74
+Starting trial 75
+Starting trial 76
+Starting trial 77
+Starting trial 78
+Starting trial 79
+Starting trial 80
+Starting trial 81
+Starting trial 82
+Starting trial 83
+Starting trial 84
+Starting trial 85
+Starting trial 86
+Starting trial 87
+Starting trial 88
+Starting trial 89
+Starting trial 90
+Starting trial 91
+Starting trial 92
+Starting trial 93
+Starting trial 94
+Starting trial 95
+Starting trial 96
+Starting trial 97
+Starting trial 98
+Starting trial 99
+Test fixture tear down complete
+Starting test fixture setup...
+Tests executing from C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\
+FX3 Connected! FX3 API Info: 
+Project Name: FX3Api
+Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
+Version Number: 2.8.1-PUB
+Build Date and Time: Tue 05/19/2020 15:33:30.62 
+
+Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
+Current Branch: master
+
+Most Recent Commit Hash: 0aaa0bf04e8dcd0648ebdf9b12b75a2571f9a198
+
+Link to the commit: https://github.com/juchong/iSensor-FX3-API
+/tree/0aaa0bf04e8dcd0648ebdf9b12b75a2571f9a198
+
+FX3 Board Info: 
+Firmware Version: ADI FX3 REV 2.8.1-PUB
+Board Type: iSensorFX3Board_A
+Build Date and Time: May 19 2020 14:00:07
+Serial Number: 0009091203143026
+Debug Mode: False
+Uptime: 3ms
+Bootloader Version: 1.0.1
+Test fixture setup complete
+Starting SPI configurable parameters test...
+Starting SPI transfer test...
+Test fixture tear down complete

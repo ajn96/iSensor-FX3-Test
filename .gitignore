@@ -2,6 +2,8 @@ iSensor-FX3-API/
 iSensor-FX3-Test/
 Test/bin/
 Test/obj/
+NUnitLogParser/bin/
+NUnitLogParser/obj/
 .vs/
 *.pdb
 Resources/
