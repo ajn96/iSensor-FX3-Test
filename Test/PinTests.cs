@@ -37,6 +37,76 @@ namespace iSensor_FX3_Test
         }
 
         [Test]
+        public void MeasureBusyPulseTest()
+        {
+            double period;
+
+            double pwmPeriod = 1000;
+
+            double measuredPeriodPin, measuredPeriodSpi;
+
+            List<byte> SpiData = new List<byte>();
+            SpiData.Add(0);
+            SpiData.Add(0);
+
+            /* Test small period measurements (0.5us - 500us) */
+            for (period = 0.5; period < 500; period += 0.5) 
+            {
+                FX3.StartPWM(1000, (pwmPeriod - period) / pwmPeriod, FX3.DIO2);
+                measuredPeriodPin = 1000 * FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO1, 0, 100);
+                measuredPeriodSpi = 1000 * FX3.MeasureBusyPulse(SpiData.ToArray(), FX3.DIO1, 0, 100);
+                Console.WriteLine("Negative PWM Period: " + period.ToString() + "us.\t Error: " + (period - measuredPeriodPin).ToString() + "us");
+                /* Assert with 0.2us margin of error */
+                Assert.AreEqual(period, measuredPeriodSpi, 0.2, "ERROR: Invalid period measured");
+                Assert.AreEqual(period, measuredPeriodSpi, 0.2, "ERROR: Invalid period measured");
+
+                /* Measure positive period */
+                FX3.StartPWM(1000,  period / pwmPeriod, FX3.DIO2);
+                measuredPeriodPin = 1000 * FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO1, 1, 100);
+                measuredPeriodSpi = 1000 * FX3.MeasureBusyPulse(SpiData.ToArray(), FX3.DIO1, 1, 100);
+                Console.WriteLine("Positive PWM Period: " + period.ToString() + "us.\t Error: " + (period - measuredPeriodPin).ToString() + "us");
+                /* Assert with 0.2us margin of error */
+                Assert.AreEqual(period, measuredPeriodSpi, 0.2, "ERROR: Invalid period measured");
+                Assert.AreEqual(period, measuredPeriodSpi, 0.2, "ERROR: Invalid period measured");
+            }
+
+            /* Test large period measurements (2ms - 50ms) */
+            pwmPeriod = 100;
+            for (period = 2; period < 50; period += 2)
+            {
+                FX3.StartPWM(10, (pwmPeriod - period) / pwmPeriod, FX3.DIO2);
+                measuredPeriodPin = FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO1, 0, 200);
+                measuredPeriodSpi = FX3.MeasureBusyPulse(SpiData.ToArray(), FX3.DIO1, 0, 200);
+                Console.WriteLine("Negative PWM Period: " + period.ToString() + "ms.\t Error: " + (period - measuredPeriodPin).ToString() + "ms");
+                /* Assert with 1% margin of error */
+                Assert.AreEqual(period, measuredPeriodSpi, period * 0.1, "ERROR: Invalid period measured");
+                Assert.AreEqual(period, measuredPeriodSpi, period * 0.1, "ERROR: Invalid period measured");
+
+                /* Measure positive period */
+                FX3.StartPWM(10, period / pwmPeriod, FX3.DIO2);
+                measuredPeriodPin = FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO1, 1, 200);
+                measuredPeriodSpi = FX3.MeasureBusyPulse(SpiData.ToArray(), FX3.DIO1, 1, 200);
+                Console.WriteLine("Positive PWM Period: " + period.ToString() + "ms.\t Error: " + (period - measuredPeriodPin).ToString() + "ms");
+                /* Assert with 1% margin of error */
+                Assert.AreEqual(period, measuredPeriodSpi, period * 0.1, "ERROR: Invalid period measured");
+                Assert.AreEqual(period, measuredPeriodSpi, period * 0.1, "ERROR: Invalid period measured");
+            }
+
+            /* Test very large period measurements (1 sec) */
+            Console.WriteLine("Testing 1 second period signal measurements...");
+            period = 1000;
+            FX3.StartPWM(0.5, 0.5, FX3.DIO2);
+            measuredPeriodPin = FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO1, 0, 5000);
+            measuredPeriodSpi = FX3.MeasureBusyPulse(SpiData.ToArray(), FX3.DIO1, 0, 5000);
+            Assert.AreEqual(period, measuredPeriodSpi, period * 0.1, "ERROR: Invalid period measured");
+            Assert.AreEqual(period, measuredPeriodSpi, period * 0.1, "ERROR: Invalid period measured");
+            measuredPeriodPin = FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO1, 1, 5000);
+            measuredPeriodSpi = FX3.MeasureBusyPulse(SpiData.ToArray(), FX3.DIO1, 1, 5000);
+            Assert.AreEqual(period, measuredPeriodSpi, period * 0.1, "ERROR: Invalid period measured");
+            Assert.AreEqual(period, measuredPeriodSpi, period * 0.1, "ERROR: Invalid period measured");
+        }
+
+        [Test]
         public void PinFreqMeasurePWMTest()
         {
             InitializeTestCase();
@@ -96,11 +166,10 @@ namespace iSensor_FX3_Test
             /* Timer for measuring elapsed time */
             Stopwatch timer = new Stopwatch();
 
-            FX3.SetPin(FX3.DIO2, 1);
-
-            for(uint timeout = 100; timeout <= 800; timeout = timeout * 2)
+            for(uint timeout = 100; timeout <= 800; timeout += 100)
             {
                 Console.WriteLine("Testing timeout of " + timeout.ToString() + "ms...");
+                FX3.SetPin(FX3.DIO2, 1);
 
                 /* Pulse wait */
                 timer.Restart();
@@ -113,7 +182,7 @@ namespace iSensor_FX3_Test
 
                 /* Measure pin freq */
                 timer.Restart();
-                Assert.AreEqual(double.PositiveInfinity, FX3.MeasurePinFreq(FX3.DIO2, 0, timeout, 1));
+                Assert.AreEqual(double.PositiveInfinity, FX3.MeasurePinFreq(FX3.DIO2, 0, timeout, 1), "ERROR: Invalid pin freq. Expected timeout");
                 timer.Stop();
                 Console.WriteLine("Measure pin freq time: " + timer.ElapsedMilliseconds.ToString() + "ms");
                 Assert.GreaterOrEqual(timer.ElapsedMilliseconds, timeout, "ERROR: Function returned in less than timeout period");
@@ -122,7 +191,7 @@ namespace iSensor_FX3_Test
 
                 /* Measure pin delay */
                 timer.Restart();
-                Assert.AreEqual(double.PositiveInfinity, FX3.MeasurePinDelay(FX3.DIO4, 0, FX3.DIO1, timeout));
+                FX3.MeasurePinDelay(FX3.DIO4, 0, FX3.DIO1, timeout);
                 timer.Stop();
                 Console.WriteLine("Measure pin delay time: " + timer.ElapsedMilliseconds.ToString() + "ms");
                 Assert.GreaterOrEqual(timer.ElapsedMilliseconds, timeout, "ERROR: Function returned in less than timeout period");
@@ -131,7 +200,7 @@ namespace iSensor_FX3_Test
 
                 /* Measure busy pulse */
                 timer.Restart();
-                Assert.AreEqual(double.PositiveInfinity, FX3.MeasureBusyPulse(FX3.DIO4, 1, 1, FX3.DIO1, 0, timeout));
+                Assert.AreEqual(double.PositiveInfinity, FX3.MeasureBusyPulse(FX3.DIO4, 1, 1, FX3.DIO1, 0, timeout), "ERROR: Expected measure busy pulse to return timeout");
                 timer.Stop();
                 Console.WriteLine("Measure busy pulse time: " + timer.ElapsedMilliseconds.ToString() + "ms");
                 Assert.GreaterOrEqual(timer.ElapsedMilliseconds, timeout, "ERROR: Function returned in less than timeout period");
