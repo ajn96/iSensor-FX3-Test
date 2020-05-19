@@ -8,7 +8,7 @@ git pull
 rmdir /S /Q %CD%\iSensor-FX3-API\bin
 rmdir /S /Q %CD%\Resources
 rmdir /S /Q %CD%\Test\bin
-copy /y %CD%\build_failed.png %CD%\test_status.png
+copy /y %CD%\build_failed.png %CD%\Results\test_status.png
 
 @echo Fetching fresh copy of API... >> Results\build_log.txt
 
