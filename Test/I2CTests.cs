@@ -18,6 +18,24 @@ namespace iSensor_FX3_Test
             InitializeTestCase();
             Console.WriteLine("Starting I2C read test...");
 
+            byte[] InitialRead, SecondRead;
+
+            I2CPreamble pre = new I2CPreamble();
+            pre.DeviceAddress = 0xA0;
+            pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0);
+            pre.StartMask = 4;
+
+            for(uint readLen = 2; readLen < 256; readLen+=2)
+            {
+                Console.WriteLine("Testing " + readLen.ToString() + " byte read");
+                InitialRead = FX3.I2CReadBytes(pre, readLen, 1000);
+                SecondRead = FX3.I2CReadBytes(pre, readLen, 1000);
+                for(int i = 0; i < InitialRead.Count(); i++)
+                {
+                    Assert.AreEqual(InitialRead[i], SecondRead[i], "ERROR: Expected flash read data to match");
+                }
+            }
         }
 
         [Test]
