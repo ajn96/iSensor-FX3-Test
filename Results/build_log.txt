@@ -13,31 +13,41 @@ All Rights Reserved.
 
 Runtime Environment - 
    OS Version: Microsoft Windows NT 6.2.9200.0
-  CLR Version: 2.0.50727.9043 ( Net 3.5 )
+  CLR Version: 2.0.50727.9044 ( Net 3.5 )
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-....................
-Tests run: 20, Errors: 0, Failures: 0, Inconclusive: 0, Time: 173.3027255 seconds
+..................F..
+Tests run: 20, Errors: 0, Failures: 1, Inconclusive: 0, Time: 461.1130756 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
+
+Errors and Failures:
+1) Test Failure : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
+     ERROR: SPI data failed to echo back
+  Expected: 1
+  But was:  536870913
+
+at iSensor_FX3_Test.SpiTests.TestSpiFunctionality() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 199
+at iSensor_FX3_Test.SpiTests.SclkFrequencyTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 193
+
 
 Parsing test result... 
 Verbose mode enabled
 Starting log processing
-Source File: C:\Users\anolan3\Documents\iSensor-FX3-Test\Results\test_result.xml
-Destination File: C:\Users\anolan3\Documents\iSensor-FX3-Test\Results\test_status.png
+Source File: C:\Users\User\Desktop\iSensor-FX3-Test\Results\test_result.xml
+Destination File: C:\Users\User\Desktop\iSensor-FX3-Test\Results\test_status.png
 XML document loaded...
 XLM Attributes:
-name : C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
+name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 20
 errors : 0
-failures : 0
+failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-20
-time : 10:24:36
+time : 11:25:25
 Document parsed, starting image generation...
 Program exiting...
