@@ -17,8 +17,8 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-.................
-Tests run: 17, Errors: 0, Failures: 0, Inconclusive: 0, Time: 173.451034 seconds
+....................
+Tests run: 20, Errors: 0, Failures: 0, Inconclusive: 0, Time: 173.3675402 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Parsing test result... 
