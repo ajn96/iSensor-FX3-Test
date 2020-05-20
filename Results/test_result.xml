@@ -1,46 +1,111 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="20" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2020-05-20" time="10:24:36">
-  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.9043" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\anolan3\Documents\iSensor-FX3-Test" machine-name="ANOLAN3-L02" user="anolan3" user-domain="ANALOG" />
+<test-results name="C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="20" errors="0" failures="10" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2020-05-20" time="13:37:49">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.9044" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\User\Desktop\iSensor-FX3-Test" machine-name="DESKTOP-IG61384" user="User" user-domain="DESKTOP-IG61384" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Success" success="True" time="173.303" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Failure" success="False" time="285.919" asserts="0">
     <results>
-      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Success" success="True" time="173.298" asserts="0">
+      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Failure" success="False" time="285.911" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Success" success="True" time="21.398" asserts="1">
+          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Success" success="True" time="208.326" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardInfoTest" executed="True" result="Success" success="True" time="0.006" asserts="0" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.BootStatusTest" executed="True" result="Success" success="True" time="2.644" asserts="3" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest" executed="True" result="Success" success="True" time="11.322" asserts="10" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareVersionTest" executed="True" result="Success" success="True" time="2.853" asserts="0" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.ImagePathsTest" executed="True" result="Success" success="True" time="0.004" asserts="6" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.USBTimingTest" executed="True" result="Success" success="True" time="2.617" asserts="0" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardInfoTest" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.BootStatusTest" executed="True" result="Success" success="True" time="22.769" asserts="3" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest" executed="True" result="Success" success="True" time="94.039" asserts="10" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareVersionTest" executed="True" result="Success" success="True" time="25.087" asserts="0" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.ImagePathsTest" executed="True" result="Success" success="True" time="0.007" asserts="6" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.USBTimingTest" executed="True" result="Success" success="True" time="45.029" asserts="0" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Success" success="True" time="5.773" asserts="1">
+          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Success" success="True" time="26.164" asserts="1">
             <results>
               <test-case name="iSensor_FX3_Test.I2CTests.I2CModeSwitchingTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CReadTest" executed="True" result="Success" success="True" time="3.099" asserts="16256" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CReadTest" executed="True" result="Success" success="True" time="3.432" asserts="16256" />
               <test-case name="iSensor_FX3_Test.I2CTests.I2CStreamTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
               <test-case name="iSensor_FX3_Test.I2CTests.I2CWriteTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="PinTests" executed="True" result="Success" success="True" time="137.830" asserts="1">
+          <test-suite type="TestFixture" name="PinTests" executed="True" result="Error" success="False" time="23.347" asserts="1">
+            <failure>
+              <message><![CDATA[SetUp : FX3Api.FX3ProgrammingException : ERROR: No application firmware found with the correct serial number]]></message>
+              <stack-trace><![CDATA[at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 113
+at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 50
+at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 29
+]]></stack-trace>
+            </failure>
             <results>
-              <test-case name="iSensor_FX3_Test.PinTests.GetTimerValueTest" executed="True" result="Success" success="True" time="8.047" asserts="51" />
-              <test-case name="iSensor_FX3_Test.PinTests.MeasureBusyPulseTest" executed="True" result="Success" success="True" time="24.027" asserts="4096" />
-              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest" executed="True" result="Success" success="True" time="88.292" asserts="908" />
-              <test-case name="iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest" executed="True" result="Success" success="True" time="14.434" asserts="112" />
-              <test-case name="iSensor_FX3_Test.PinTests.ResistorConfigurationTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-              <test-case name="iSensor_FX3_Test.PinTests.SetReadPinTest" executed="True" result="Success" success="True" time="0.137" asserts="400" />
+              <test-case name="iSensor_FX3_Test.PinTests.GetTimerValueTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case name="iSensor_FX3_Test.PinTests.MeasureBusyPulseTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case name="iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case name="iSensor_FX3_Test.PinTests.ResistorConfigurationTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case name="iSensor_FX3_Test.PinTests.SetReadPinTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Success" success="True" time="8.291" asserts="1">
+          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Error" success="False" time="28.063" asserts="1">
+            <failure>
+              <message><![CDATA[SetUp : FX3Api.FX3ProgrammingException : ERROR: No application firmware found with the correct serial number]]></message>
+              <stack-trace><![CDATA[at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 113
+at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 50
+at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 55
+at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 29
+]]></stack-trace>
+            </failure>
             <results>
-              <test-case name="iSensor_FX3_Test.SpiTests.IRegInterfaceTest" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-              <test-case name="iSensor_FX3_Test.SpiTests.SclkFrequencyTest" executed="True" result="Success" success="True" time="1.676" asserts="7998" />
-              <test-case name="iSensor_FX3_Test.SpiTests.SpiParametersTest" executed="True" result="Success" success="True" time="0.009" asserts="39" />
-              <test-case name="iSensor_FX3_Test.SpiTests.SpiTransferTest" executed="True" result="Success" success="True" time="3.224" asserts="92238" />
+              <test-case name="iSensor_FX3_Test.SpiTests.IRegInterfaceTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case name="iSensor_FX3_Test.SpiTests.SclkFrequencyTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case name="iSensor_FX3_Test.SpiTests.SpiParametersTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
+              <test-case name="iSensor_FX3_Test.SpiTests.SpiTransferTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                <failure>
+                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
+                  <stack-trace />
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
