@@ -18,9 +18,26 @@ Runtime Environment -
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
 ....................
-Tests run: 20, Errors: 0, Failures: 0, Inconclusive: 0, Time: 173.3675402 seconds
+Tests run: 20, Errors: 0, Failures: 0, Inconclusive: 0, Time: 173.3027255 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Parsing test result... 
 Verbose mode enabled
-Invalid source file path: C:\Users\anolan3\Documents\iSensor-FX3-Test\test_result.xml
+Starting log processing
+Source File: C:\Users\anolan3\Documents\iSensor-FX3-Test\Results\test_result.xml
+Destination File: C:\Users\anolan3\Documents\iSensor-FX3-Test\Results\test_status.png
+XML document loaded...
+XLM Attributes:
+name : C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
+total : 20
+errors : 0
+failures : 0
+not-run : 0
+inconclusive : 0
+ignored : 0
+skipped : 0
+invalid : 0
+date : 2020-05-20
+time : 10:24:36
+Document parsed, starting image generation...
+Program exiting...
