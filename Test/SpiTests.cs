@@ -13,6 +13,12 @@ namespace iSensor_FX3_Test
     {
 
         [Test]
+        public void IRegInterfaceTest()
+        {
+
+        }
+
+        [Test]
         public void SpiTransferTest()
         {
             InitializeTestCase();

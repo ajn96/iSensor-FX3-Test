@@ -13,6 +13,13 @@ namespace iSensor_FX3_Test
     class FunctionalTests : FX3TestBase
     {
         [Test]
+        public void BoardInfoTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting FX3 board info test...");
+        }
+
+        [Test]
         public void FirmwareLoadTest()
         {
             InitializeTestCase();

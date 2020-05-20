@@ -42,7 +42,7 @@ cd..
 NUnit-2.6.4\bin\nunit-console-x86.exe /framework:net-4.5 /out:%CD%\Results\test_console.txt /xml:%CD%\Results\test_result.xml %CD%\Test\bin\Debug\iSensor-FX3-Test.dll >> Results\build_log.txt
 
 @echo Parsing test result... >> Results\build_log.txt
-NUnitLogParser.exe %CD%\test_result.xml %CD%\test_status.png -verbose  >> Results\build_log.txt
+NUnitLogParser.exe %CD%\Results\test_result.xml %CD%\Results\test_status.png -verbose  >> Results\build_log.txt
 
 @echo Pushing results...
 git add Results\test_result.xml
