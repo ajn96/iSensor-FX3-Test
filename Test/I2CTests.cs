@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using FX3Api;
 using System.IO;
+using System.Diagnostics;
 
 namespace iSensor_FX3_Test
 {
@@ -43,6 +44,101 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting I2C write test...");
+        }
+
+        [Test]
+        public void I2CRetryTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting I2C retry test...");
+
+            Stopwatch timer = new Stopwatch();
+
+            I2CPreamble pre = new I2CPreamble();
+            pre.DeviceAddress = 0x0;
+            pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0);
+            pre.StartMask = 0;
+
+            Console.WriteLine("Setting retry count to 0");
+            FX3.I2CRetryCount = 0;
+            Assert.AreEqual(0, FX3.I2CRetryCount, "ERROR: Setting not applied correctly");
+
+            Console.WriteLine("Attempting to read non-existent device... (address 0)");
+            timer.Start();
+            try
+            {
+                FX3.I2CReadBytes(pre, 128, 1000);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            timer.Stop();
+            Console.WriteLine("Elapsed time: " + timer.ElapsedMilliseconds.ToString() + "ms");
+            CheckFirmwareResponsiveness();
+        }
+
+        [Test]
+        public void I2CBitRateTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting I2C bit rate test...");
+
+            Console.WriteLine("Testing input validation...");
+            uint startingBitRate;
+            int numExpections = 0;
+
+            startingBitRate = FX3.I2CBitRate;
+            Assert.AreEqual(100000, startingBitRate, "ERROR: Invalid default I2C bit rate");
+            try
+            {
+                FX3.I2CBitRate = 99999;
+            }
+            catch(Exception e)
+            {
+                numExpections++;
+                Console.WriteLine(e.Message);
+            }
+            Assert.AreEqual(1, numExpections, "ERROR: Expected exception to be thrown");
+            Assert.AreEqual(startingBitRate, FX3.I2CBitRate, "ERROR: Expected I2C bit rate setting to be rejected");
+
+            try
+            {
+                FX3.I2CBitRate = 1000001;
+            }
+            catch (Exception e)
+            {
+                numExpections++;
+                Console.WriteLine(e.Message);
+            }
+            Assert.AreEqual(2, numExpections, "ERROR: Expected exception to be thrown");
+            Assert.AreEqual(startingBitRate, FX3.I2CBitRate, "ERROR: Expected I2C bit rate setting to be rejected");
+
+            Console.WriteLine("Testing reads across valid bit rate range...");
+
+            I2CPreamble pre = new I2CPreamble();
+            pre.DeviceAddress = 0xA0;
+            pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0);
+            pre.StartMask = 4;
+
+            byte[] InitialRead, SecondRead;
+
+            Console.WriteLine("Performing initial flash read...");
+            const uint READ_LEN = 1024;
+            InitialRead = FX3.I2CReadBytes(pre, READ_LEN, 2000);
+            for (uint bitrate = 100000; bitrate <= 1000000; bitrate += 100000)
+            {
+                Console.WriteLine("Testing " + bitrate.ToString() + "bits/s...");
+                FX3.I2CBitRate = bitrate;
+                Assert.AreEqual(bitrate, FX3.I2CBitRate, "ERROR: Setting bit rate failed");
+                SecondRead = FX3.I2CReadBytes(pre, READ_LEN, 2000);
+                for (int i = 0; i < InitialRead.Count(); i++)
+                {
+                    Assert.AreEqual(InitialRead[i], SecondRead[i], "ERROR: Expected flash read data to match");
+                }
+            }
         }
 
         [Test]

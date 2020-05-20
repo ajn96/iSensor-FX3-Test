@@ -17,6 +17,32 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting FX3 board info test...");
+
+            FX3Board startInfo = FX3.ActiveFX3;
+            Console.WriteLine("Board: " + startInfo.ToString());
+            Assert.IsFalse(startInfo.VerboseMode, "ERROR: FX3 firmware should not be in verbose mode");
+            Console.WriteLine("Disconnecting FX3...");
+            FX3.Disconnect();
+            Assert.IsNull(FX3.ActiveFX3, "ERROR: Expected FX3 object to be null after disconnect");
+            FX3.WaitForBoard(10);
+            Console.WriteLine("Reconnecting...");
+            FX3.Connect(FX3.AvailableFX3s[0]);
+            Console.WriteLine("Board: " + FX3.ActiveFX3.ToString());
+            Assert.AreEqual(startInfo.SerialNumber, FX3.ActiveFX3.SerialNumber, "ERROR: Invalid serial number");
+            Assert.AreEqual(startInfo.FirmwareVersionNumber, FX3.ActiveFX3.FirmwareVersionNumber, "ERROR: Invalid firmware version number");
+            Assert.AreEqual(startInfo.VerboseMode, FX3.ActiveFX3.VerboseMode, "ERROR: Invalid verbose mode setting");
+            Assert.AreEqual(FX3.GetFX3ApiInfo.VersionNumber, FX3.ActiveFX3.FirmwareVersionNumber, "ERROR: FX3 Firmware version does not match API");
+
+            Console.WriteLine("Testing board up-time setting...");
+            Stopwatch timer = new Stopwatch();
+
+            timer.Start();
+            long startTime = FX3.ActiveFX3.Uptime;
+            while (timer.ElapsedMilliseconds < 3000)
+            {
+                Assert.AreEqual(timer.ElapsedMilliseconds + startTime, FX3.ActiveFX3.Uptime, 2, "ERROR: Invalid FX3 Uptime");
+                System.Threading.Thread.Sleep(10);
+            }
         }
 
         [Test]

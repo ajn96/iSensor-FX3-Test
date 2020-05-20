@@ -44,7 +44,7 @@ namespace iSensor_FX3_Test
             /* Return if board already connected */
             if (FX3.ActiveFX3 != null)
                 return;
-            FX3.WaitForBoard(5);
+            FX3.WaitForBoard(15);
             if (FX3.AvailableFX3s.Count > 0)
             {
                 FX3.Connect(FX3.AvailableFX3s[0]);
