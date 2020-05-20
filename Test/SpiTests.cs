@@ -114,6 +114,83 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting SPI configurable parameters test...");
+
+            TestSpiFunctionality();
+
+            Console.WriteLine("Testing setting all SPI parameters");
+            FX3.Cpha = true;
+            Assert.AreEqual(true, FX3.Cpha, "ERROR: Cpha not applied");
+            TestSpiFunctionality();
+            FX3.Cpha = false;
+            Assert.AreEqual(false, FX3.Cpha, "ERROR: Cpha not applied");
+            TestSpiFunctionality();
+            FX3.Cpol = true;
+            Assert.AreEqual(true, FX3.Cpol, "ERROR: Cpol not applied");
+            TestSpiFunctionality();
+            FX3.Cpol = false;
+            Assert.AreEqual(false, FX3.Cpol, "ERROR: Cpol not applied");
+            TestSpiFunctionality();
+            FX3.IsLSBFirst = true;
+            Assert.AreEqual(true, FX3.IsLSBFirst, "ERROR: lsbfirst not applied");
+            TestSpiFunctionality();
+            FX3.IsLSBFirst = false;
+            Assert.AreEqual(false, FX3.IsLSBFirst, "ERROR: lsbfirst not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectPolarity = true;
+            Assert.AreEqual(true, FX3.ChipSelectPolarity, "ERROR: CS Polarity not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectPolarity = false;
+            Assert.AreEqual(false, FX3.ChipSelectPolarity, "ERROR: CS Polarity not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectLagTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK;
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK, FX3.ChipSelectLagTime, "ERROR: CS lag time not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectLagTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK;
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK, FX3.ChipSelectLagTime, "ERROR: CS lag time not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectLagTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_CLK;
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_CLK, FX3.ChipSelectLagTime, "ERROR: CS lag time not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectLagTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_HALF_CLK;
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_HALF_CLK, FX3.ChipSelectLagTime, "ERROR: CS lag time not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK;
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK, FX3.ChipSelectLeadTime, "ERROR: CS lead time not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK;
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK, FX3.ChipSelectLeadTime, "ERROR: CS lead time not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_CLK;
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_CLK, FX3.ChipSelectLeadTime, "ERROR: CS lead time not applied");
+            TestSpiFunctionality();
+            FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_HALF_CLK;
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_HALF_CLK, FX3.ChipSelectLeadTime, "ERROR: CS lead time not applied");
+            TestSpiFunctionality();
+
+            Console.WriteLine("Verifying settings are maintained...");
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_HALF_CLK, FX3.ChipSelectLeadTime, "ERROR: CS lead time not applied");
+            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_HALF_CLK, FX3.ChipSelectLagTime, "ERROR: CS lag time not applied");
+            Assert.AreEqual(false, FX3.ChipSelectPolarity, "ERROR: CS Polarity not applied");
+            Assert.AreEqual(false, FX3.IsLSBFirst, "ERROR: lsbfirst not applied");
+            Assert.AreEqual(false, FX3.Cpol, "ERROR: Cpol not applied");
+            Assert.AreEqual(false, FX3.Cpha, "ERROR: Cpha not applied");
+        }
+
+        [Test]
+        public void SclkFrequencyTest()
+        {
+            for(int freq = 10000; freq < 40000000; freq += 10000)
+            {
+                Console.WriteLine("Setting SCLK frequency to " + freq.ToString() + "Hz");
+                FX3.SclkFrequency = freq;
+                Assert.AreEqual(freq, FX3.SclkFrequency, "ERROR: FX3 frequency set failed");
+                TestSpiFunctionality();
+            }
+        }
+
+        private void TestSpiFunctionality()
+        {
+            Assert.AreEqual(1, FX3.Transfer(1), "ERROR: SPI data failed to echo back");
         }
 
     }
