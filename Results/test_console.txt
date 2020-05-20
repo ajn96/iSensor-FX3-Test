@@ -4,7 +4,7 @@ FX3 Connected! FX3 API Info:
 Project Name: FX3Api
 Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
 Version Number: 2.8.1-PUB
-Build Date and Time: Wed 05/20/2020 13:32:56.35 
+Build Date and Time: Wed 05/20/2020 14:08:06.77 
 
 Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
 Current Branch: master
@@ -20,10 +20,27 @@ Board Type: iSensorFX3Board_A
 Build Date and Time: May 20 2020 13:22:45
 Serial Number: 0009091203152225
 Debug Mode: False
-Uptime: 70ms
+Uptime: 66ms
 Bootloader Version: 1.0.1
 Test fixture setup complete
 Starting FX3 board info test...
+Board: Firmware Version: ADI FX3 REV 2.8.1-PUB
+Board Type: iSensorFX3Board_A
+Build Date and Time: May 20 2020 13:22:45
+Serial Number: 0009091203152225
+Debug Mode: False
+Uptime: 76ms
+Bootloader Version: 1.0.1
+Disconnecting FX3...
+Reconnecting...
+Board: Firmware Version: ADI FX3 REV 2.8.1-PUB
+Board Type: iSensorFX3Board_A
+Build Date and Time: May 20 2020 13:22:45
+Serial Number: 0009091203152225
+Debug Mode: False
+Uptime: 34ms
+Bootloader Version: 1.0.1
+Testing board up-time setting...
 Starting boot status retrieval test...
 Application firmware running on FX3
 Disconnecting FX3...
@@ -42,167 +59,12 @@ Connecting to FX3...
 Starting firmware version test...
 Starting firmware image path validation test...
 Starting USB command execution timing test...
-Average SetPin execution time: 3004us
+Average SetPin execution time: 3001us
 Average ReadPin execution time: 3000us
 Average SPI parameter configuration time: 3000us
 Test fixture tear down complete
 Starting test fixture setup...
 Tests executing from C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\
-FX3 Connected! FX3 API Info: 
-Project Name: FX3Api
-Description: Interfacing Library for the Analog Devices iSensor FX3 Demonstration Platform
-Version Number: 2.8.1-PUB
-Build Date and Time: Wed 05/20/2020 13:32:56.35 
-
-Base Git URL: https://github.com/juchong/iSensor-FX3-API.git
-Current Branch: master
-
-Most Recent Commit Hash: 78bc0afef500f00795825e55653090b90b86f7e3
-
-Link to the commit: https://github.com/juchong/iSensor-FX3-API
-/tree/78bc0afef500f00795825e55653090b90b86f7e3
-
-FX3 Board Info: 
-Firmware Version: ADI FX3 REV 2.8.1-PUB
-Board Type: iSensorFX3Board_A
-Build Date and Time: May 20 2020 13:22:45
-Serial Number: 0009091203152225
-Debug Mode: False
-Uptime: 31ms
-Bootloader Version: 1.0.1
-Test fixture setup complete
-Starting I2C mode switching stress test...
-Starting I2C read test...
-Testing 2 byte read
-Testing 4 byte read
-Testing 6 byte read
-Testing 8 byte read
-Testing 10 byte read
-Testing 12 byte read
-Testing 14 byte read
-Testing 16 byte read
-Testing 18 byte read
-Testing 20 byte read
-Testing 22 byte read
-Testing 24 byte read
-Testing 26 byte read
-Testing 28 byte read
-Testing 30 byte read
-Testing 32 byte read
-Testing 34 byte read
-Testing 36 byte read
-Testing 38 byte read
-Testing 40 byte read
-Testing 42 byte read
-Testing 44 byte read
-Testing 46 byte read
-Testing 48 byte read
-Testing 50 byte read
-Testing 52 byte read
-Testing 54 byte read
-Testing 56 byte read
-Testing 58 byte read
-Testing 60 byte read
-Testing 62 byte read
-Testing 64 byte read
-Testing 66 byte read
-Testing 68 byte read
-Testing 70 byte read
-Testing 72 byte read
-Testing 74 byte read
-Testing 76 byte read
-Testing 78 byte read
-Testing 80 byte read
-Testing 82 byte read
-Testing 84 byte read
-Testing 86 byte read
-Testing 88 byte read
-Testing 90 byte read
-Testing 92 byte read
-Testing 94 byte read
-Testing 96 byte read
-Testing 98 byte read
-Testing 100 byte read
-Testing 102 byte read
-Testing 104 byte read
-Testing 106 byte read
-Testing 108 byte read
-Testing 110 byte read
-Testing 112 byte read
-Testing 114 byte read
-Testing 116 byte read
-Testing 118 byte read
-Testing 120 byte read
-Testing 122 byte read
-Testing 124 byte read
-Testing 126 byte read
-Testing 128 byte read
-Testing 130 byte read
-Testing 132 byte read
-Testing 134 byte read
-Testing 136 byte read
-Testing 138 byte read
-Testing 140 byte read
-Testing 142 byte read
-Testing 144 byte read
-Testing 146 byte read
-Testing 148 byte read
-Testing 150 byte read
-Testing 152 byte read
-Testing 154 byte read
-Testing 156 byte read
-Testing 158 byte read
-Testing 160 byte read
-Testing 162 byte read
-Testing 164 byte read
-Testing 166 byte read
-Testing 168 byte read
-Testing 170 byte read
-Testing 172 byte read
-Testing 174 byte read
-Testing 176 byte read
-Testing 178 byte read
-Testing 180 byte read
-Testing 182 byte read
-Testing 184 byte read
-Testing 186 byte read
-Testing 188 byte read
-Testing 190 byte read
-Testing 192 byte read
-Testing 194 byte read
-Testing 196 byte read
-Testing 198 byte read
-Testing 200 byte read
-Testing 202 byte read
-Testing 204 byte read
-Testing 206 byte read
-Testing 208 byte read
-Testing 210 byte read
-Testing 212 byte read
-Testing 214 byte read
-Testing 216 byte read
-Testing 218 byte read
-Testing 220 byte read
-Testing 222 byte read
-Testing 224 byte read
-Testing 226 byte read
-Testing 228 byte read
-Testing 230 byte read
-Testing 232 byte read
-Testing 234 byte read
-Testing 236 byte read
-Testing 238 byte read
-Testing 240 byte read
-Testing 242 byte read
-Testing 244 byte read
-Testing 246 byte read
-Testing 248 byte read
-Testing 250 byte read
-Testing 252 byte read
-Testing 254 byte read
-Starting I2C data stream test...
-Starting I2C write test...
-Test fixture tear down complete
 Starting test fixture setup...
 Tests executing from C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\
 Starting test fixture setup...

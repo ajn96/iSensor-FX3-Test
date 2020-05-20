@@ -17,43 +17,67 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-...........F.F.F.F.F.F.F.F.F.F
-Tests run: 20, Errors: 0, Failures: 10, Inconclusive: 0, Time: 285.9185544 seconds
+...F....F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F
+Tests run: 22, Errors: 1, Failures: 16, Inconclusive: 0, Time: 346.7901059 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
-1) SetUp Error : iSensor_FX3_Test.PinTests
+1) Test Error : iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest
+   FX3Api.FX3ProgrammingException : ERROR: No application firmware found with the correct serial number
+   at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 113
+   at iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FunctionalTests.cs:line 68
+
+2) SetUp Error : iSensor_FX3_Test.I2CTests
    SetUp : FX3Api.FX3ProgrammingException : ERROR: No application firmware found with the correct serial number
    at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 113
    at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 50
    at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 29
 
-2) Parent Failure : iSensor_FX3_Test.PinTests.GetTimerValueTest
-   TestFixtureSetUp failed in PinTests
-3) Parent Failure : iSensor_FX3_Test.PinTests.MeasureBusyPulseTest
-   TestFixtureSetUp failed in PinTests
-4) Parent Failure : iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest
-   TestFixtureSetUp failed in PinTests
-5) Parent Failure : iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest
-   TestFixtureSetUp failed in PinTests
-6) Parent Failure : iSensor_FX3_Test.PinTests.ResistorConfigurationTest
-   TestFixtureSetUp failed in PinTests
-7) Parent Failure : iSensor_FX3_Test.PinTests.SetReadPinTest
-   TestFixtureSetUp failed in PinTests
-8) SetUp Error : iSensor_FX3_Test.SpiTests
+3) Parent Failure : iSensor_FX3_Test.I2CTests.I2CBitRateTest
+   TestFixtureSetUp failed in I2CTests
+4) Parent Failure : iSensor_FX3_Test.I2CTests.I2CModeSwitchingTest
+   TestFixtureSetUp failed in I2CTests
+5) Parent Failure : iSensor_FX3_Test.I2CTests.I2CReadTest
+   TestFixtureSetUp failed in I2CTests
+6) Parent Failure : iSensor_FX3_Test.I2CTests.I2CRetryTest
+   TestFixtureSetUp failed in I2CTests
+7) Parent Failure : iSensor_FX3_Test.I2CTests.I2CStreamTest
+   TestFixtureSetUp failed in I2CTests
+8) Parent Failure : iSensor_FX3_Test.I2CTests.I2CWriteTest
+   TestFixtureSetUp failed in I2CTests
+9) SetUp Error : iSensor_FX3_Test.PinTests
    SetUp : FX3Api.FX3ProgrammingException : ERROR: No application firmware found with the correct serial number
    at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 113
    at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 50
    at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 55
    at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 29
 
-9) Parent Failure : iSensor_FX3_Test.SpiTests.IRegInterfaceTest
+10) Parent Failure : iSensor_FX3_Test.PinTests.GetTimerValueTest
+   TestFixtureSetUp failed in PinTests
+11) Parent Failure : iSensor_FX3_Test.PinTests.MeasureBusyPulseTest
+   TestFixtureSetUp failed in PinTests
+12) Parent Failure : iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest
+   TestFixtureSetUp failed in PinTests
+13) Parent Failure : iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest
+   TestFixtureSetUp failed in PinTests
+14) Parent Failure : iSensor_FX3_Test.PinTests.ResistorConfigurationTest
+   TestFixtureSetUp failed in PinTests
+15) Parent Failure : iSensor_FX3_Test.PinTests.SetReadPinTest
+   TestFixtureSetUp failed in PinTests
+16) SetUp Error : iSensor_FX3_Test.SpiTests
+   SetUp : FX3Api.FX3ProgrammingException : ERROR: No application firmware found with the correct serial number
+   at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 113
+   at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 50
+   at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 55
+   at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 29
+
+17) Parent Failure : iSensor_FX3_Test.SpiTests.IRegInterfaceTest
    TestFixtureSetUp failed in SpiTests
-10) Parent Failure : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
+18) Parent Failure : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
    TestFixtureSetUp failed in SpiTests
-11) Parent Failure : iSensor_FX3_Test.SpiTests.SpiParametersTest
+19) Parent Failure : iSensor_FX3_Test.SpiTests.SpiParametersTest
    TestFixtureSetUp failed in SpiTests
-12) Parent Failure : iSensor_FX3_Test.SpiTests.SpiTransferTest
+20) Parent Failure : iSensor_FX3_Test.SpiTests.SpiTransferTest
    TestFixtureSetUp failed in SpiTests
 
 Parsing test result... 
@@ -64,15 +88,15 @@ Destination File: C:\Users\User\Desktop\iSensor-FX3-Test\Results\test_status.png
 XML document loaded...
 XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
-total : 20
-errors : 0
-failures : 10
+total : 22
+errors : 1
+failures : 16
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-20
-time : 13:37:49
+time : 14:14:00
 Document parsed, starting image generation...
 Program exiting...
