@@ -17,19 +17,44 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-..................F..
-Tests run: 20, Errors: 0, Failures: 1, Inconclusive: 0, Time: 461.1130756 seconds
+...........F.F.F.F.F.F.F.F.F.F
+Tests run: 20, Errors: 0, Failures: 10, Inconclusive: 0, Time: 285.9185544 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
-     ERROR: SPI data failed to echo back
-  Expected: 1
-  But was:  536870913
+1) SetUp Error : iSensor_FX3_Test.PinTests
+   SetUp : FX3Api.FX3ProgrammingException : ERROR: No application firmware found with the correct serial number
+   at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 113
+   at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 50
+   at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 29
 
-at iSensor_FX3_Test.SpiTests.TestSpiFunctionality() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 199
-at iSensor_FX3_Test.SpiTests.SclkFrequencyTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 193
+2) Parent Failure : iSensor_FX3_Test.PinTests.GetTimerValueTest
+   TestFixtureSetUp failed in PinTests
+3) Parent Failure : iSensor_FX3_Test.PinTests.MeasureBusyPulseTest
+   TestFixtureSetUp failed in PinTests
+4) Parent Failure : iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest
+   TestFixtureSetUp failed in PinTests
+5) Parent Failure : iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest
+   TestFixtureSetUp failed in PinTests
+6) Parent Failure : iSensor_FX3_Test.PinTests.ResistorConfigurationTest
+   TestFixtureSetUp failed in PinTests
+7) Parent Failure : iSensor_FX3_Test.PinTests.SetReadPinTest
+   TestFixtureSetUp failed in PinTests
+8) SetUp Error : iSensor_FX3_Test.SpiTests
+   SetUp : FX3Api.FX3ProgrammingException : ERROR: No application firmware found with the correct serial number
+   at FX3Api.FX3Connection.Connect(String FX3SerialNumber) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Programming.vb:line 113
+   at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 50
+   at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 55
+   at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 29
 
+9) Parent Failure : iSensor_FX3_Test.SpiTests.IRegInterfaceTest
+   TestFixtureSetUp failed in SpiTests
+10) Parent Failure : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
+   TestFixtureSetUp failed in SpiTests
+11) Parent Failure : iSensor_FX3_Test.SpiTests.SpiParametersTest
+   TestFixtureSetUp failed in SpiTests
+12) Parent Failure : iSensor_FX3_Test.SpiTests.SpiTransferTest
+   TestFixtureSetUp failed in SpiTests
 
 Parsing test result... 
 Verbose mode enabled
@@ -41,13 +66,13 @@ XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 20
 errors : 0
-failures : 1
+failures : 10
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-20
-time : 11:25:25
+time : 13:37:49
 Document parsed, starting image generation...
 Program exiting...
