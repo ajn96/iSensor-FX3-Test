@@ -17,26 +17,9 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-.....................F..F
-Tests run: 23, Errors: 0, Failures: 2, Inconclusive: 0, Time: 227.979563 seconds
+.......................
+Tests run: 23, Errors: 0, Failures: 0, Inconclusive: 0, Time: 233.4143197 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
-
-Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
-     ERROR: SPI data failed to echo back
-  Expected: 1
-  But was:  536870913
-
-at iSensor_FX3_Test.SpiTests.TestSpiFunctionality() in C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 367
-at iSensor_FX3_Test.SpiTests.SclkFrequencyTest() in C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 361
-
-2) Test Failure : iSensor_FX3_Test.SpiTests.SpiTransferTest
-     ERROR: Invalid data size received
-  Expected: 2
-  But was:  0
-
-at iSensor_FX3_Test.SpiTests.SpiTransferTest() in C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 270
-
 
 Parsing test result... 
 Verbose mode enabled
@@ -48,13 +31,13 @@ XLM Attributes:
 name : C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 23
 errors : 0
-failures : 2
+failures : 0
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-21
-time : 14:55:34
+time : 15:55:38
 Document parsed, starting image generation...
 Program exiting...
