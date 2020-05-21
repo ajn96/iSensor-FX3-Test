@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using FX3Api;
 using System.IO;
+using System.Diagnostics;
 
 namespace iSensor_FX3_Test
 {
@@ -16,6 +17,166 @@ namespace iSensor_FX3_Test
         public void IRegInterfaceTest()
         {
 
+        }
+
+        [Test]
+        public void BurstSpiTest()
+        {
+            List<byte> BurstTxData = new List<byte>();
+            ushort[] BurstData;
+            int index;
+            RegMapClasses.RegClass triggerReg = new RegMapClasses.RegClass();
+            triggerReg.NumBytes = 2;
+            triggerReg.Address = 0x12;
+
+            FX3.DrActive = false;
+
+            for(int byteCount = 4; byteCount<400; byteCount+= 2)
+            {
+                Console.WriteLine("Testing burst read of " + byteCount.ToString() + " bytes...");
+                FX3.BurstByteCount = byteCount;
+                Assert.AreEqual(byteCount, FX3.BurstByteCount, "ERROR; Byte count not applied correctly");
+                Assert.AreEqual((byteCount - 2) / 2, FX3.WordCount, "ERROR: FX3 burst word count not set correctly");
+
+                /* Burst trigger reg */
+                FX3.TriggerReg = triggerReg;
+
+                /* strip header */
+                Console.WriteLine("Testing burst read with trigger reg and header stripped...");
+                FX3.StripBurstTriggerWord = true;
+                FX3.SetupBurstMode();
+                FX3.StartBurstStream(1, FX3.BurstMOSIData);
+                FX3.WaitForStreamCompletion(50);
+                BurstData = FX3.GetBuffer();
+                Assert.AreEqual((byteCount / 2) - 1, BurstData.Count(), "ERROR: Invalid burst data count");
+                for (int i = 0; i < BurstData.Count(); i++)
+                {
+                    Assert.AreEqual(0, BurstData[i], "ERROR: Expected all burst data to be 0");
+                }
+
+                /* No strip header */
+                Console.WriteLine("Testing burst read with trigger reg and header not stripped...");
+                FX3.StripBurstTriggerWord = false;
+                FX3.SetupBurstMode();
+                FX3.StartBurstStream(1, FX3.BurstMOSIData);
+                FX3.WaitForStreamCompletion(50);
+                BurstData = FX3.GetBuffer();
+                Assert.AreEqual((byteCount / 2), BurstData.Count(), "ERROR: Invalid burst data count");
+                Assert.AreEqual(0x1200, BurstData[0], "ERROR: Invalid burst data echoed");
+                for(int i = 1; i < BurstData.Count(); i++)
+                {
+                    Assert.AreEqual(0, BurstData[i], "ERROR: Expected remainder of burst data to be 0");
+                }
+
+                /* Burst transmit data */
+                BurstTxData.Clear();
+                for(int i = 0; i<byteCount; i++)
+                {
+                    BurstTxData.Add((byte) (i & 0xFFU));
+                }
+                FX3.BurstMOSIData = BurstTxData.ToArray();
+                for(int i = 0; i<BurstTxData.Count; i++)
+                {
+                    Assert.AreEqual(BurstTxData[i], FX3.BurstMOSIData[i], "ERROR: Burst MOSI data not applied correctly");
+                }
+
+                /* strip header */
+                Console.WriteLine("Testing burst read with MOSI byte array and header stripped...");
+                FX3.StripBurstTriggerWord = true;
+                FX3.SetupBurstMode();
+                FX3.StartBurstStream(1, FX3.BurstMOSIData);
+                FX3.WaitForStreamCompletion(50);
+                BurstData = FX3.GetBuffer();
+                Assert.AreEqual((byteCount / 2) - 1, BurstData.Count(), "ERROR: Invalid burst data count");
+                index = 2;
+                for (int i = 0; i < BurstData.Count(); i++)
+                {
+                    Assert.AreEqual(BurstTxData[index], BurstData[i] >> 8, "ERROR: Invalid burst data echoed");
+                    Assert.AreEqual(BurstTxData[index + 1], BurstData[i] & 0xFF, "ERROR: Invalid burst data echoed");
+                    index += 2;
+                }
+
+                /* No strip header */
+                Console.WriteLine("Testing burst read with MOSI byte array and header not stripped...");
+                FX3.StripBurstTriggerWord = false;
+                FX3.SetupBurstMode();
+                FX3.StartBurstStream(1, FX3.BurstMOSIData);
+                FX3.WaitForStreamCompletion(50);
+                BurstData = FX3.GetBuffer();
+                Assert.AreEqual((byteCount / 2), BurstData.Count(), "ERROR: Invalid burst data count");
+                index = 0;
+                for (int i = 0; i < BurstData.Count(); i++)
+                {
+                    Assert.AreEqual(BurstTxData[index], BurstData[i] >> 8, "ERROR: Invalid burst data echoed");
+                    Assert.AreEqual(BurstTxData[index + 1], BurstData[i] & 0xFF, "ERROR: Invalid burst data echoed");
+                    index += 2;
+                }
+            }
+
+            Console.WriteLine("Testing Dr Active triggering for burst...");
+            FX3.DrPin = FX3.DIO1;
+            FX3.StartPWM(100, 0.5, FX3.DIO2);
+
+            FX3.BurstByteCount = 64;
+            BurstTxData.Clear();
+            for (int i = 0; i < 64; i++)
+            {
+                BurstTxData.Add((byte)(i & 0xFFU));
+            }
+            FX3.BurstMOSIData = BurstTxData.ToArray();
+            FX3.StripBurstTriggerWord = false;
+            FX3.SetupBurstMode();
+            FX3.DrActive = true;
+
+            double expectedTime;
+            long drActiveTime, baseTime;
+            Stopwatch timer = new Stopwatch();
+
+            for(uint numBuffers = 20; numBuffers <= 200; numBuffers+= 20)
+            {
+                Console.WriteLine("Capturing " + numBuffers.ToString() + " buffers with DrActive set to false...");
+                FX3.DrActive = false;
+                FX3.StartBurstStream(numBuffers, FX3.BurstMOSIData);
+                timer.Restart();
+                FX3.WaitForStreamCompletion(2000);
+                baseTime = timer.ElapsedMilliseconds;
+                Console.WriteLine("Stream time: " + baseTime.ToString() + "ms");
+                CheckBurstBuffers(BurstTxData.ToArray(), numBuffers);
+
+                Console.WriteLine("Capturing " + numBuffers.ToString() + " buffers with DrActive set to true...");
+                expectedTime = 10 * numBuffers; //100Hz DR
+                FX3.DrActive = true;
+                FX3.StartBurstStream(numBuffers, FX3.BurstMOSIData);
+                timer.Restart();
+                FX3.WaitForStreamCompletion((int) (2 * expectedTime));
+                drActiveTime = timer.ElapsedMilliseconds;
+                Console.WriteLine("Stream time: " + drActiveTime.ToString() + "ms");
+                Assert.AreEqual(expectedTime, drActiveTime, 0.25 * expectedTime, "ERROR: Invalid stream time");
+                CheckBurstBuffers(BurstTxData.ToArray(), numBuffers);
+
+                Assert.Less(baseTime, drActiveTime, "ERROR: Base stream time greater than DrActive stream time");
+            }
+        }
+
+        void CheckBurstBuffers(byte[] data, uint numBuffers)
+        {
+            Assert.AreEqual(numBuffers, FX3.GetNumBuffersRead, "ERROR: Number of buffers read parameter is incorrect");
+
+            ushort[] buf;
+
+            buf = FX3.GetBuffer();
+            while(buf != null)
+            {
+                Assert.AreEqual(data.Count(), buf.Count() * 2, 1, "ERROR: Invalid buffer size");
+                int index = 0;
+                for (int i = 0; i < buf.Count(); i++)
+                {
+                    Assert.AreEqual(data[index], buf[i] >> 8, "ERROR: Invalid burst data echoed");
+                    Assert.AreEqual(data[index + 1], buf[i] & 0xFF, "ERROR: Invalid burst data echoed");
+                    index += 2;
+                }
+                buf = FX3.GetBuffer();
+            }
         }
 
         [Test]
