@@ -250,6 +250,73 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting GPIO resistor configuration test...");
+
+            /* Read all pins to force them to act as inputs */
+            FX3.ReadPin(FX3.DIO1);
+            FX3.ReadPin(FX3.DIO2);
+            FX3.ReadPin(FX3.DIO3);
+            FX3.ReadPin(FX3.DIO4);
+            FX3.ReadPin(FX3.FX3_GPIO1);
+            FX3.ReadPin(FX3.FX3_GPIO2);
+            FX3.ReadPin(FX3.FX3_GPIO3);
+            FX3.ReadPin(FX3.FX3_GPIO4);
+
+            for(int trial = 0; trial < 10; trial++)
+            {
+                Console.WriteLine("Enabling internal pull up on all user accessible GPIO...");
+                FX3.SetPinResistorSetting(FX3.DIO1, FX3PinResistorSetting.PullUp);
+                FX3.SetPinResistorSetting(FX3.DIO2, FX3PinResistorSetting.PullUp);
+                FX3.SetPinResistorSetting(FX3.DIO3, FX3PinResistorSetting.PullUp);
+                FX3.SetPinResistorSetting(FX3.DIO4, FX3PinResistorSetting.PullUp);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO1, FX3PinResistorSetting.PullUp);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO2, FX3PinResistorSetting.PullUp);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO3, FX3PinResistorSetting.PullUp);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO4, FX3PinResistorSetting.PullUp);
+                System.Threading.Thread.Sleep(10);
+
+                Console.WriteLine("Checking input stage values...");
+                Assert.AreEqual(1, FX3.ReadPin(FX3.DIO1), "ERROR: Expected pin to be high");
+                Assert.AreEqual(1, FX3.ReadPin(FX3.DIO2), "ERROR: Expected pin to be high");
+                Assert.AreEqual(1, FX3.ReadPin(FX3.DIO3), "ERROR: Expected pin to be high");
+                Assert.AreEqual(1, FX3.ReadPin(FX3.DIO4), "ERROR: Expected pin to be high");
+                Assert.AreEqual(1, FX3.ReadPin(FX3.FX3_GPIO1), "ERROR: Expected pin to be high");
+                Assert.AreEqual(1, FX3.ReadPin(FX3.FX3_GPIO2), "ERROR: Expected pin to be high");
+                //Assert.AreEqual(1, FX3.ReadPin(FX3.FX3_GPIO3), "ERROR: Expected pin to be high");
+                Assert.AreEqual(1, FX3.ReadPin(FX3.FX3_GPIO4), "ERROR: Expected pin to be high");
+
+                Console.WriteLine("Enabling internal pull down on all user accessible GPIO...");
+                FX3.SetPinResistorSetting(FX3.DIO1, FX3PinResistorSetting.PullDown);
+                FX3.SetPinResistorSetting(FX3.DIO2, FX3PinResistorSetting.PullDown);
+                FX3.SetPinResistorSetting(FX3.DIO3, FX3PinResistorSetting.PullDown);
+                FX3.SetPinResistorSetting(FX3.DIO4, FX3PinResistorSetting.PullDown);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO1, FX3PinResistorSetting.PullDown);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO2, FX3PinResistorSetting.PullDown);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO3, FX3PinResistorSetting.PullDown);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO4, FX3PinResistorSetting.PullDown);
+                System.Threading.Thread.Sleep(10);
+
+                Console.WriteLine("Checking input stage values...");
+                Assert.AreEqual(0, FX3.ReadPin(FX3.DIO1), "ERROR: Expected pin to be low");
+                Assert.AreEqual(0, FX3.ReadPin(FX3.DIO2), "ERROR: Expected pin to be low");
+                Assert.AreEqual(0, FX3.ReadPin(FX3.DIO3), "ERROR: Expected pin to be low");
+                Assert.AreEqual(0, FX3.ReadPin(FX3.DIO4), "ERROR: Expected pin to be low");
+                Assert.AreEqual(0, FX3.ReadPin(FX3.FX3_GPIO1), "ERROR: Expected pin to be low");
+                Assert.AreEqual(0, FX3.ReadPin(FX3.FX3_GPIO2), "ERROR: Expected pin to be low");
+                Assert.AreEqual(0, FX3.ReadPin(FX3.FX3_GPIO3), "ERROR: Expected pin to be low");
+                Assert.AreEqual(0, FX3.ReadPin(FX3.FX3_GPIO4), "ERROR: Expected pin to be low");
+
+                Console.WriteLine("Disabling resistors...");
+                FX3.SetPinResistorSetting(FX3.DIO1, FX3PinResistorSetting.None);
+                FX3.SetPinResistorSetting(FX3.DIO2, FX3PinResistorSetting.None);
+                FX3.SetPinResistorSetting(FX3.DIO3, FX3PinResistorSetting.None);
+                FX3.SetPinResistorSetting(FX3.DIO4, FX3PinResistorSetting.None);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO1, FX3PinResistorSetting.None);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO2, FX3PinResistorSetting.None);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO3, FX3PinResistorSetting.None);
+                FX3.SetPinResistorSetting(FX3.FX3_GPIO4, FX3PinResistorSetting.None);
+                System.Threading.Thread.Sleep(10);
+            }
+
         }
     }
 }

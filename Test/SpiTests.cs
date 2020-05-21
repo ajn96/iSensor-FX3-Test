@@ -16,12 +16,16 @@ namespace iSensor_FX3_Test
         [Test]
         public void IRegInterfaceTest()
         {
-
+            InitializeTestCase();
+            Console.WriteLine("Starting IRegInterface test...");
         }
 
         [Test]
         public void BurstSpiTest()
         {
+            InitializeTestCase();
+            Console.WriteLine("Starting SPI burst read test...");
+
             List<byte> BurstTxData = new List<byte>();
             ushort[] BurstData;
             int index;
@@ -346,7 +350,10 @@ namespace iSensor_FX3_Test
         [Test]
         public void SclkFrequencyTest()
         {
-            for(int freq = 10000; freq < 40000000; freq += 10000)
+            InitializeTestCase();
+            Console.WriteLine("Starting SPI clock frequency test...");
+
+            for (int freq = 10000; freq < 40000000; freq += 10000)
             {
                 Console.WriteLine("Setting SCLK frequency to " + freq.ToString() + "Hz");
                 FX3.SclkFrequency = freq;

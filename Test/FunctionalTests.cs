@@ -102,6 +102,8 @@ namespace iSensor_FX3_Test
             }
             catch(Exception e)
             {
+                Console.WriteLine(e.Message);
+                Assert.True(e is FX3ConfigurationException, "ERROR: Expected FX3 configuration exception to be thrown");
                 exCount = 1;
             }
             Assert.AreEqual(1, exCount, "ERROR: Expected exception to be thrown for bad firmware image path");
@@ -113,6 +115,8 @@ namespace iSensor_FX3_Test
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
+                Assert.True(e is FX3ConfigurationException, "ERROR: Expected FX3 configuration exception to be thrown");
                 exCount = 1;
             }
             Assert.AreEqual(1, exCount, "ERROR: Expected exception to be thrown for bad bootloader image path");
@@ -124,6 +128,8 @@ namespace iSensor_FX3_Test
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
+                Assert.True(e is FX3ConfigurationException, "ERROR: Expected FX3 configuration exception to be thrown");
                 exCount = 1;
             }
             Assert.AreEqual(1, exCount, "ERROR: Expected exception to be thrown for bad flash programmer image path");
@@ -161,6 +167,8 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting firmware version test...");
+
+            Assert.AreEqual(FX3.GetFirmwareVersion, FX3.ActiveFX3.FirmwareVersion, "ERROR: Invalid firmware version");
         }
 
         [Test]
