@@ -281,7 +281,7 @@ namespace iSensor_FX3_Test
                 Assert.AreEqual(1, FX3.ReadPin(FX3.DIO4), "ERROR: Expected pin to be high");
                 Assert.AreEqual(1, FX3.ReadPin(FX3.FX3_GPIO1), "ERROR: Expected pin to be high");
                 Assert.AreEqual(1, FX3.ReadPin(FX3.FX3_GPIO2), "ERROR: Expected pin to be high");
-                //Assert.AreEqual(1, FX3.ReadPin(FX3.FX3_GPIO3), "ERROR: Expected pin to be high");
+                Assert.AreEqual(1, FX3.ReadPin(FX3.FX3_GPIO3), "ERROR: Expected pin to be high");
                 Assert.AreEqual(1, FX3.ReadPin(FX3.FX3_GPIO4), "ERROR: Expected pin to be high");
 
                 Console.WriteLine("Enabling internal pull down on all user accessible GPIO...");
