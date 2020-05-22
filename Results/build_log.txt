@@ -13,22 +13,22 @@ All Rights Reserved.
 
 Runtime Environment - 
    OS Version: Microsoft Windows NT 6.2.9200.0
-  CLR Version: 2.0.50727.9043 ( Net 3.5 )
+  CLR Version: 2.0.50727.9044 ( Net 3.5 )
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
 .......................
-Tests run: 23, Errors: 0, Failures: 0, Inconclusive: 0, Time: 224.8528142 seconds
+Tests run: 23, Errors: 0, Failures: 0, Inconclusive: 0, Time: 254.6071492 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Parsing test result... 
 Verbose mode enabled
 Starting log processing
-Source File: C:\Users\anolan3\Documents\iSensor-FX3-Test\Results\test_result.xml
-Destination File: C:\Users\anolan3\Documents\iSensor-FX3-Test\Results\test_status.png
+Source File: C:\Users\User\Desktop\iSensor-FX3-Test\Results\test_result.xml
+Destination File: C:\Users\User\Desktop\iSensor-FX3-Test\Results\test_status.png
 XML document loaded...
 XLM Attributes:
-name : C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
+name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 23
 errors : 0
 failures : 0
@@ -38,6 +38,6 @@ ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-22
-time : 11:16:22
+time : 17:47:12
 Document parsed, starting image generation...
 Program exiting...
