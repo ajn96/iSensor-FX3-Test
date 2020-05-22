@@ -17,18 +17,9 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-...............F........
-Tests run: 23, Errors: 0, Failures: 1, Inconclusive: 0, Time: 166.2016149 seconds
+.......................
+Tests run: 23, Errors: 0, Failures: 0, Inconclusive: 0, Time: 224.8528142 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
-
-Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest
-     ERROR: Invalid freq read back on DIO2
-  Expected: 9164.7803565591639d +/- 183.29560713118329d
-  But was:  9357.8458681522752d
-
-at iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest() in C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\PinTests.cs:line 139
-
 
 Parsing test result... 
 Verbose mode enabled
@@ -40,13 +31,13 @@ XLM Attributes:
 name : C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 23
 errors : 0
-failures : 1
+failures : 0
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-22
-time : 11:07:56
+time : 11:16:22
 Document parsed, starting image generation...
 Program exiting...
