@@ -353,7 +353,7 @@ namespace iSensor_FX3_Test
             InitializeTestCase();
             Console.WriteLine("Starting SPI clock frequency test...");
 
-            for (int freq = 10000; freq < 40000000; freq += 10000)
+            for (int freq = 100000; freq < 30000000; freq += 100000)
             {
                 Console.WriteLine("Setting SCLK frequency to " + freq.ToString() + "Hz");
                 FX3.SclkFrequency = freq;

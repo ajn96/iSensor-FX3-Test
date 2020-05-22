@@ -130,16 +130,16 @@ namespace iSensor_FX3_Test
             FX3.StopPWM(FX3.DIO1);
 
             Console.WriteLine("Sweeping freq range...");
-            for (expectedFreq = MIN_FREQ; expectedFreq < MAX_FREQ; expectedFreq = expectedFreq * 1.05)
+            for (expectedFreq = MIN_FREQ; expectedFreq < MAX_FREQ; expectedFreq = expectedFreq * 1.08)
             {
                 Console.WriteLine("Testing PWM freq of " + expectedFreq.ToString() + "Hz");
                 FX3.StartPWM(expectedFreq, 0.5, FX3.DIO1);
-                measuredFreq = FX3.MeasurePinFreq(FX3.DIO2, 1, 2000, 2);
+                measuredFreq = FX3.MeasurePinFreq(FX3.DIO2, 1, 2000, 3);
                 Console.WriteLine("Pin freq measured on DIO2: " + measuredFreq.ToString() + "Hz");
                 Assert.AreEqual(expectedFreq, measuredFreq, 0.02 * expectedFreq, "ERROR: Invalid freq read back on DIO2");
                 FX3.StopPWM(FX3.DIO1);
                 FX3.StartPWM(expectedFreq, 0.5, FX3.DIO2);
-                measuredFreq = FX3.MeasurePinFreq(FX3.DIO1, 1, 2000, 2);
+                measuredFreq = FX3.MeasurePinFreq(FX3.DIO1, 1, 2000, 3);
                 Console.WriteLine("Pin freq measured on DIO1: " + measuredFreq.ToString() + "Hz");
                 Assert.AreEqual(expectedFreq, measuredFreq, 0.02 * expectedFreq, "ERROR: Invalid freq read back on DIO1");
                 FX3.StopPWM(FX3.DIO2);
