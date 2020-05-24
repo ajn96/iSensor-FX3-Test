@@ -56,6 +56,7 @@ namespace iSensor_FX3_Test
                 measuredPeriodPin = 1000 * FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO1, 0, 100);
                 measuredPeriodSpi = 1000 * FX3.MeasureBusyPulse(SpiData.ToArray(), FX3.DIO1, 0, 100);
                 Console.WriteLine("Negative PWM Period: " + period.ToString() + "us.\t Error: " + (period - measuredPeriodPin).ToString() + "us");
+                Console.WriteLine("Measured period: " + measuredPeriodPin.ToString() + "us");
                 /* Assert with 0.2us margin of error */
                 Assert.AreEqual(period, measuredPeriodSpi, 0.2, "ERROR: Invalid period measured");
                 Assert.AreEqual(period, measuredPeriodSpi, 0.2, "ERROR: Invalid period measured");
@@ -65,6 +66,7 @@ namespace iSensor_FX3_Test
                 measuredPeriodPin = 1000 * FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO1, 1, 100);
                 measuredPeriodSpi = 1000 * FX3.MeasureBusyPulse(SpiData.ToArray(), FX3.DIO1, 1, 100);
                 Console.WriteLine("Positive PWM Period: " + period.ToString() + "us.\t Error: " + (period - measuredPeriodPin).ToString() + "us");
+                Console.WriteLine("Measured period: " + measuredPeriodPin.ToString() + "us");
                 /* Assert with 0.2us margin of error */
                 Assert.AreEqual(period, measuredPeriodSpi, 0.2, "ERROR: Invalid period measured");
                 Assert.AreEqual(period, measuredPeriodSpi, 0.2, "ERROR: Invalid period measured");

@@ -51,7 +51,8 @@ namespace iSensor_FX3_Test
             }
             else if (FX3.BusyFX3s.Count > 0)
             {
-                FX3.Connect(FX3.BusyFX3s[0]);
+                FX3.ResetAllFX3s();
+                Connect();
             }
             else
             {
