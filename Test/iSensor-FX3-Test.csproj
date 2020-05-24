@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorLogTests.cs" />
     <Compile Include="FunctionalTests.cs" />
     <Compile Include="FX3TestBase.cs" />
     <Compile Include="I2CTests.cs" />
