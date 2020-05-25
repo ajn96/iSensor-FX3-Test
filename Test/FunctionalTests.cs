@@ -40,7 +40,7 @@ namespace iSensor_FX3_Test
             timer.Start();
             while (timer.ElapsedMilliseconds < 3000)
             {
-                Assert.AreEqual(timer.ElapsedMilliseconds + startTime, FX3.ActiveFX3.Uptime, Math.Max(2, 0.01 * timer.ElapsedMilliseconds), "ERROR: Invalid FX3 Uptime");
+                Assert.AreEqual(timer.ElapsedMilliseconds + startTime, FX3.ActiveFX3.Uptime, 50, "ERROR: Invalid FX3 Uptime");
                 System.Threading.Thread.Sleep(10);
             }
         }

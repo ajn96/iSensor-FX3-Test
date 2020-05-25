@@ -39,7 +39,7 @@
     <Reference Include="CyUSB">
       <HintPath>..\Resources\CyUSB.dll</HintPath>
     </Reference>
-    <Reference Include="FX3Api, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="FX3Api, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Resources\FX3Api.dll</HintPath>
     </Reference>
