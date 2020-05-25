@@ -17,24 +17,17 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-...F..................F....
-Tests run: 25, Errors: 0, Failures: 2, Inconclusive: 0, Time: 273.59808 seconds
+...F......................
+Tests run: 25, Errors: 0, Failures: 1, Inconclusive: 0, Time: 276.4073435 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
 1) Test Failure : iSensor_FX3_Test.FunctionalTests.BoardInfoTest
      ERROR: Invalid FX3 Uptime
-  Expected: 22.0d +/- 2.0d
+  Expected: 19.0d +/- 2.0d
   But was:  31.0d
 
 at iSensor_FX3_Test.FunctionalTests.BoardInfoTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FunctionalTests.cs:line 43
-
-2) Test Failure : iSensor_FX3_Test.SpiTests.BurstSpiTest
-     ERROR: Base stream time greater than DrActive stream time
-  Expected: less than 193
-  But was:  2021
-
-at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 161
 
 
 Parsing test result... 
@@ -47,13 +40,13 @@ XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 25
 errors : 0
-failures : 2
+failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-24
-time : 15:55:40
+time : 20:51:43
 Document parsed, starting image generation...
 Program exiting...
