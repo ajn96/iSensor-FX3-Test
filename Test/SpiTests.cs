@@ -136,7 +136,7 @@ namespace iSensor_FX3_Test
             long drActiveTime, baseTime;
             Stopwatch timer = new Stopwatch();
 
-            for(uint numBuffers = 20; numBuffers <= 200; numBuffers+= 20)
+            for(uint numBuffers = 100; numBuffers <= 300; numBuffers+= 100)
             {
                 Console.WriteLine("Capturing " + numBuffers.ToString() + " buffers with DrActive set to false...");
                 FX3.DrActive = false;

@@ -36,11 +36,11 @@ namespace iSensor_FX3_Test
             Console.WriteLine("Testing board up-time setting...");
             Stopwatch timer = new Stopwatch();
 
-            timer.Start();
             long startTime = FX3.ActiveFX3.Uptime;
+            timer.Start();
             while (timer.ElapsedMilliseconds < 3000)
             {
-                Assert.AreEqual(timer.ElapsedMilliseconds + startTime, FX3.ActiveFX3.Uptime, 2, "ERROR: Invalid FX3 Uptime");
+                Assert.AreEqual(timer.ElapsedMilliseconds + startTime, FX3.ActiveFX3.Uptime, Math.Max(2, 0.01 * timer.ElapsedMilliseconds), "ERROR: Invalid FX3 Uptime");
                 System.Threading.Thread.Sleep(10);
             }
         }
