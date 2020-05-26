@@ -98,7 +98,7 @@ namespace iSensor_FX3_Test
             baseTime /= 4.0;
             Console.WriteLine("Base bitbang SPI time: " + baseTime.ToString() + "ms");
 
-            for (double stallTime = 75; stallTime > 5; stallTime--)
+            for (double stallTime = 100; stallTime > 5; stallTime -= 2)
             {
                 Console.WriteLine("Testing stall time of " + stallTime.ToString() + "us");
                 FX3.SetBitBangStallTime(stallTime);
@@ -115,8 +115,9 @@ namespace iSensor_FX3_Test
                 Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, real time: " + timer.ElapsedMilliseconds.ToString() + "ms");
                 Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, 0.1 * expectedTime, "ERROR: Invalid transfer time");
             }
-
-            FX3.Disconnect();
+            Console.WriteLine("Testing restore hardware SPI functionality...");
+            FX3.RestoreHardwareSpi();
+            TestSpiFunctionality();
         }
 
         [Test]
