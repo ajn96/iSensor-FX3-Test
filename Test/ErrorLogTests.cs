@@ -31,6 +31,14 @@ namespace iSensor_FX3_Test
                 Assert.AreEqual(firstCount, count, "ERROR: Invalid error log count");
             }
 
+            if(firstCount > 1500)
+            {
+                Console.WriteLine("ERROR: Error log full. Clearing...");
+                FX3.ClearErrorLog();
+                Assert.AreEqual(0, FX3.GetErrorLogCount(), "ERROR: Error log count clear failed");
+                firstCount = 0;
+            }
+
             log = FX3.GetErrorLog();
             Assert.AreEqual(firstCount, log.Count(), "ERROR: Invalid error log size");
 
@@ -55,7 +63,15 @@ namespace iSensor_FX3_Test
 
             List<FX3ErrorLog> initialLog, log;
 
-            int count;
+            uint count;
+
+            count = FX3.GetErrorLogCount();
+            if (count > 1500)
+            {
+                Console.WriteLine("Error log count of " + count.ToString() + " exceeds log capacity. Clearing log...");
+                FX3.ClearErrorLog();
+                Assert.AreEqual(0, FX3.GetErrorLogCount(), "ERROR: Error log count clear failed");
+            }
 
             initialLog = FX3.GetErrorLog();
             Console.WriteLine("Initial error log count: " + initialLog.Count.ToString());
@@ -82,7 +98,7 @@ namespace iSensor_FX3_Test
             log = FX3.GetErrorLog();
             Console.WriteLine(log[log.Count - 1].ToString());
             Assert.AreEqual(initialLog.Count + 1, log.Count, "ERROR: Error log count not incremented correctly");
-            count = log.Count;
+            count = (uint) log.Count;
             for(int i = 0; i < initialLog.Count; i++)
             {
                 Assert.AreEqual(initialLog[i], log[i], "ERROR: Invalid older log entries");

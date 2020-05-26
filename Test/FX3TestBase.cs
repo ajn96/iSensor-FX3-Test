@@ -66,7 +66,7 @@ namespace iSensor_FX3_Test
             FX3.StopPWM(FX3.DIO1);
             FX3.StopPWM(FX3.DIO2);
             FX3.RestoreHardwareSpi();
-            FX3.SclkFrequency = 4000000;
+            FX3.SclkFrequency = 15000000;
             FX3.DrActive = false;
             FX3.SetPinResistorSetting(FX3.DIO1, FX3PinResistorSetting.None);
             FX3.SetPinResistorSetting(FX3.DIO2, FX3PinResistorSetting.None);
@@ -76,14 +76,6 @@ namespace iSensor_FX3_Test
             FX3.SetPinResistorSetting(FX3.FX3_GPIO2, FX3PinResistorSetting.None);
             FX3.SetPinResistorSetting(FX3.FX3_GPIO3, FX3PinResistorSetting.None);
             FX3.SetPinResistorSetting(FX3.FX3_GPIO4, FX3PinResistorSetting.None);
-
-            uint count = FX3.GetErrorLogCount();
-            if(count > 1500)
-            {
-                Console.WriteLine("Error log count of " + count.ToString() + " exceeds log capacity. Clearing log...");
-                FX3.ClearErrorLog();
-                Assert.AreEqual(0, FX3.GetErrorLogCount(), "ERROR: Error log count clear failed");
-            }
         }
 
         public void CheckFirmwareResponsiveness()
