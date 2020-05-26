@@ -79,27 +79,42 @@ namespace iSensor_FX3_Test
 
             FX3.SetBitBangSpiFreq(500000);
 
-            for(double stallTime = 100; stallTime > 10; stallTime--)
+            double baseTime = 0;
+            int numReads = 5;
+
+            /* Get base time (with half microsecond stall) */
+            FX3.SetBitBangStallTime(0.5);
+            for(int i = 0; i < 4; i++)
+            {
+                timer.Restart();
+                for (int trial = 0; trial < numReads; trial++)
+                {
+                    FX3.BitBangSpi(8, 1001, MOSI.ToArray(), 2000);
+                }
+                timer.Stop();
+                baseTime += timer.ElapsedMilliseconds;
+            }
+            /* Average base time */
+            baseTime /= 4.0;
+            Console.WriteLine("Base bitbang SPI time: " + baseTime.ToString() + "ms");
+
+            for (double stallTime = 75; stallTime > 5; stallTime--)
             {
                 Console.WriteLine("Testing stall time of " + stallTime.ToString() + "us");
                 FX3.SetBitBangStallTime(stallTime);
-                /* Perform 4 sets of 1001 8-bit transfers (1000 stalls). Expected time is in ms */
-                expectedTime = 1000 * (8 * 1001) / 500000.0;
-                expectedTime += stallTime;
-                expectedTime = expectedTime * 4;
-                /* Static ~15ms overhead */
-                expectedTime += 15;
+                /* Perform sets of 1001 8-bit transfers (1000 stalls). Expected time is in ms */
+                expectedTime = stallTime * numReads;
+                /* Add base time overhead */
+                expectedTime += baseTime;
                 timer.Restart();
-                for(int trial = 0; trial < 4; trial++)
+                for(int trial = 0; trial < numReads; trial++)
                 {
                     FX3.BitBangSpi(8, 1001, MOSI.ToArray(), 2000);
                 }
                 timer.Stop();
                 Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, real time: " + timer.ElapsedMilliseconds.ToString() + "ms");
-                Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, Math.Max(10, 0.15 * expectedTime), "ERROR: Invalid transfer time");
+                Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, 0.1 * expectedTime, "ERROR: Invalid transfer time");
             }
-
-            FX3.Disconnect();
         }
 
         [Test]
@@ -107,6 +122,9 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting SPI burst read test...");
+
+            FX3.Disconnect();
+            Connect();
 
             List<byte> BurstTxData = new List<byte>();
             ushort[] BurstData;
