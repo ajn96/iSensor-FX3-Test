@@ -124,6 +124,7 @@ namespace iSensor_FX3_Test
             Console.WriteLine("Starting SPI burst read test...");
 
             FX3.Disconnect();
+            System.Threading.Thread.Sleep(1000);
             Connect();
 
             List<byte> BurstTxData = new List<byte>();
