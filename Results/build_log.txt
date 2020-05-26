@@ -18,29 +18,27 @@ Runtime Environment -
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
 ......................F.F.....F
-Tests run: 28, Errors: 1, Failures: 2, Inconclusive: 0, Time: 277.0808979 seconds
+Tests run: 28, Errors: 2, Failures: 1, Inconclusive: 0, Time: 270.1770312 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
 1) Test Failure : iSensor_FX3_Test.SpiTests.BitBangSpiTest
      ERROR: Invalid transfer time
-  Expected: 119.01599999999999d +/- 11.9016d
-  But was:  149.0d
+  Expected: 479.06399999999996d +/- 71.859599999999986d
+  But was:  600.0d
 
-at iSensor_FX3_Test.SpiTests.BitBangSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 95
+at iSensor_FX3_Test.SpiTests.BitBangSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 99
 
 2) Test Error : iSensor_FX3_Test.SpiTests.BurstSpiTest
-   System.ArgumentNullException : Value cannot be null.
-Parameter name: source
-   at System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
-   at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 132
+   FX3Api.FX3CommunicationException : ERROR: Timeout occurred while starting burst stream
+   at FX3Api.FX3Connection.StartBurstStream(UInt32 numBuffers, IEnumerable`1 burstTrigger) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3DataStreaming.vb:line 176
+   at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 134
 
-3) Test Failure : iSensor_FX3_Test.SpiTests.SpiTransferTest
-     ERROR: Invalid data size received
-  Expected: 1
-  But was:  0
-
-at iSensor_FX3_Test.SpiTests.SpiTransferTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 347
+3) Test Error : iSensor_FX3_Test.SpiTests.SpiTransferTest
+   FX3Api.FX3CommunicationException : ERROR: Timeout occurred during control endpoint transfer for SPI transfer stream
+   at FX3Api.FX3Connection.ISpi32TransferStreamSetup(IEnumerable`1 WriteData, UInt32 numCaptures, UInt32 numBuffers) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Spi32.vb:line 317
+   at FX3Api.FX3Connection.TransferArray(IEnumerable`1 WriteData, UInt32 numCaptures, UInt32 numBuffers) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Spi32.vb:line 101
+   at iSensor_FX3_Test.SpiTests.SpiTransferTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 349
 
 
 Parsing test result... 
@@ -52,14 +50,14 @@ XML document loaded...
 XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 28
-errors : 1
-failures : 2
+errors : 2
+failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-26
-time : 13:34:35
+time : 14:22:00
 Document parsed, starting image generation...
 Program exiting...
