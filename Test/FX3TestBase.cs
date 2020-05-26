@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using FX3Api;
 using System.IO;
+using System.Reflection;
 
 namespace iSensor_FX3_Test
 {
@@ -44,7 +45,7 @@ namespace iSensor_FX3_Test
             /* Return if board already connected */
             if (FX3.ActiveFX3 != null)
                 return;
-            FX3.WaitForBoard(10);
+            FX3.WaitForBoard(5);
             if (FX3.AvailableFX3s.Count > 0)
             {
                 FX3.Connect(FX3.AvailableFX3s[0]);
@@ -52,6 +53,7 @@ namespace iSensor_FX3_Test
             else if (FX3.BusyFX3s.Count > 0)
             {
                 FX3.ResetAllFX3s();
+                FX3.WaitForBoard(5);
                 Connect();
             }
             else
@@ -63,20 +65,22 @@ namespace iSensor_FX3_Test
         public void InitializeTestCase()
         {
             Connect();
-            FX3.StopPWM(FX3.DIO1);
-            FX3.StopPWM(FX3.DIO2);
+            foreach (PropertyInfo prop in FX3.GetType().GetProperties())
+            {
+                if(prop.PropertyType is AdisApi.IPinObject)
+                {
+                    /* Disable PWM if running */
+                    if (FX3.isPWMPin((AdisApi.IPinObject)prop.GetValue(FX3)))
+                        FX3.StopPWM((AdisApi.IPinObject)prop.GetValue(FX3));
+                    /* Disable resistor */
+                    FX3.SetPinResistorSetting((AdisApi.IPinObject)prop.GetValue(FX3), FX3PinResistorSetting.None);
+                }
+            }
             FX3.RestoreHardwareSpi();
             FX3.SclkFrequency = 15000000;
             FX3.StallTime = 5;
             FX3.DrActive = false;
-            FX3.SetPinResistorSetting(FX3.DIO1, FX3PinResistorSetting.None);
-            FX3.SetPinResistorSetting(FX3.DIO2, FX3PinResistorSetting.None);
-            FX3.SetPinResistorSetting(FX3.DIO3, FX3PinResistorSetting.None);
-            FX3.SetPinResistorSetting(FX3.DIO4, FX3PinResistorSetting.None);
-            FX3.SetPinResistorSetting(FX3.FX3_GPIO1, FX3PinResistorSetting.None);
-            FX3.SetPinResistorSetting(FX3.FX3_GPIO2, FX3PinResistorSetting.None);
-            FX3.SetPinResistorSetting(FX3.FX3_GPIO3, FX3PinResistorSetting.None);
-            FX3.SetPinResistorSetting(FX3.FX3_GPIO4, FX3PinResistorSetting.None);
+            FX3.DrPin = FX3.DIO1;
         }
 
         public void CheckFirmwareResponsiveness()
