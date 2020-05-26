@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace NUnitLogParser
 {
@@ -112,6 +113,7 @@ namespace NUnitLogParser
 
             int runs = -1;
             int fails = -1;
+            int errors = -1;
             string date = "";
             string time = "";
             try
@@ -125,6 +127,10 @@ namespace NUnitLogParser
                     if (at.LocalName == "date")
                     {
                         date = at.Value;
+                    }
+                    if (at.LocalName == "errors")
+                    {
+                        errors = Convert.ToInt32(at.Value);
                     }
                     if (at.LocalName == "total")
                     {
@@ -141,6 +147,7 @@ namespace NUnitLogParser
                 Console.WriteLine("Parsing XLM failed! " + e.Message);
                 return;
             }
+
             if(time == "")
             {
                 Console.WriteLine("Test time attribute not found! ");
@@ -161,6 +168,14 @@ namespace NUnitLogParser
                 Console.WriteLine("Test fails attribute not found! ");
                 return;
             }
+            if (errors == -1)
+            {
+                Console.WriteLine("Test errors attribute not found! ");
+                return;
+            }
+
+            /* Count errors as test failures */
+            fails += errors;
 
             if (verbose)
                 Console.WriteLine("Document parsed, starting image generation...");
@@ -183,19 +198,19 @@ namespace NUnitLogParser
 
             Font imgFont = new Font("microsoft sans serif", 14.0f, FontStyle.Regular, GraphicsUnit.Pixel);
 
-            //measure the string to see how big the image needs to be
+            /* Get image size required to store text */
             SizeF textSize = drawing.MeasureString(result, imgFont);
 
-            //free up the dummy image and old graphics object
+            /* Dispose of old images */
             img.Dispose();
             drawing.Dispose();
 
-            //create a new image of the right size
-            img = new Bitmap((int)textSize.Width, (int)textSize.Height);
+            /* create a new image */
+            img = new Bitmap((int)textSize.Width + 4, (int)textSize.Height + 4);
 
             drawing = Graphics.FromImage(img);
 
-            //paint the background
+            /* paint the background (color depends on if tests pass/fail) */
             if(testFails == 0)
             {
                 if(testsRun == 0)
@@ -212,16 +227,25 @@ namespace NUnitLogParser
                 drawing.Clear(Color.Red);
             }
             
-            //create a brush for the text
+            /* create a brush for the text */
             Brush textBrush = new SolidBrush(Color.Black);
 
-            drawing.DrawString(result, imgFont, textBrush, 0, 0);
+            /* Draw text */
+            drawing.DrawString(result, imgFont, textBrush, 2, 2);
 
+            /* Draw border */
+            Pen pen = new Pen(Color.Black, 2);
+            pen.Alignment = PenAlignment.Inset;
+            drawing.DrawRectangle(pen, 0, 0, img.Width, img.Height);
+
+            /* Save image */
             drawing.Save();
 
+            /* Free resources */
             textBrush.Dispose();
             drawing.Dispose();
 
+            /* Save image */
             try
             {
                 img.Save(ImagePath, System.Drawing.Imaging.ImageFormat.Png);
