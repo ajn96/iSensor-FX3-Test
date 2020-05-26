@@ -1,6 +1,5 @@
 Build started 
 Updating test repository... 
-Updating test repository... 
 Removing existing build artifacts 
 Fetching fresh copy of API... 
 Building FX3-API... 
@@ -19,7 +18,7 @@ Runtime Environment -
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
 .......................F.....
-Tests run: 28, Errors: 0, Failures: 1, Inconclusive: 0, Time: 313.1361723 seconds
+Tests run: 28, Errors: 0, Failures: 1, Inconclusive: 0, Time: 312.4281494 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
@@ -29,7 +28,8 @@ Errors and Failures:
   But was:  False
 
 at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 59
-at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 128
+at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 65
+at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 125
 
 
 Parsing test result... 
@@ -49,6 +49,6 @@ ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-26
-time : 17:44:09
+time : 18:01:03
 Document parsed, starting image generation...
 Program exiting...
