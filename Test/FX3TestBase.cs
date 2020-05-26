@@ -67,6 +67,7 @@ namespace iSensor_FX3_Test
             FX3.StopPWM(FX3.DIO2);
             FX3.RestoreHardwareSpi();
             FX3.SclkFrequency = 15000000;
+            FX3.StallTime = 5;
             FX3.DrActive = false;
             FX3.SetPinResistorSetting(FX3.DIO1, FX3PinResistorSetting.None);
             FX3.SetPinResistorSetting(FX3.DIO2, FX3PinResistorSetting.None);

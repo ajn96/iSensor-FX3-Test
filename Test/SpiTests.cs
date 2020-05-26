@@ -115,6 +115,8 @@ namespace iSensor_FX3_Test
                 Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, real time: " + timer.ElapsedMilliseconds.ToString() + "ms");
                 Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, 0.1 * expectedTime, "ERROR: Invalid transfer time");
             }
+
+            FX3.Disconnect();
         }
 
         [Test]
@@ -122,10 +124,6 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting SPI burst read test...");
-
-            FX3.Disconnect();
-            FX3.WaitForBoard(5);
-            Connect();
 
             List<byte> BurstTxData = new List<byte>();
             ushort[] BurstData;
