@@ -17,4 +17,49 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-...................
+......................F.F.....F
+Tests run: 28, Errors: 1, Failures: 2, Inconclusive: 0, Time: 277.0808979 seconds
+  Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
+
+Errors and Failures:
+1) Test Failure : iSensor_FX3_Test.SpiTests.BitBangSpiTest
+     ERROR: Invalid transfer time
+  Expected: 119.01599999999999d +/- 11.9016d
+  But was:  149.0d
+
+at iSensor_FX3_Test.SpiTests.BitBangSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 95
+
+2) Test Error : iSensor_FX3_Test.SpiTests.BurstSpiTest
+   System.ArgumentNullException : Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 132
+
+3) Test Failure : iSensor_FX3_Test.SpiTests.SpiTransferTest
+     ERROR: Invalid data size received
+  Expected: 1
+  But was:  0
+
+at iSensor_FX3_Test.SpiTests.SpiTransferTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 347
+
+
+Parsing test result... 
+Verbose mode enabled
+Starting log processing
+Source File: C:\Users\User\Desktop\iSensor-FX3-Test\Results\test_result.xml
+Destination File: C:\Users\User\Desktop\iSensor-FX3-Test\Results\test_status.png
+XML document loaded...
+XLM Attributes:
+name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
+total : 28
+errors : 1
+failures : 2
+not-run : 0
+inconclusive : 0
+ignored : 0
+skipped : 0
+invalid : 0
+date : 2020-05-26
+time : 13:34:35
+Document parsed, starting image generation...
+Program exiting...
