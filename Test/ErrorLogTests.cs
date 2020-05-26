@@ -59,6 +59,10 @@ namespace iSensor_FX3_Test
 
             initialLog = FX3.GetErrorLog();
             Console.WriteLine("Initial error log count: " + initialLog.Count.ToString());
+            foreach(FX3ErrorLog logEntry in initialLog)
+            {
+                Console.WriteLine(logEntry.ToString());
+            }
 
             for(int trial = 0; trial < 5; trial++)
             {
@@ -76,6 +80,7 @@ namespace iSensor_FX3_Test
             long uptime = FX3.ActiveFX3.Uptime;
             GenerateErrorLog();
             log = FX3.GetErrorLog();
+            Console.WriteLine(log[log.Count - 1].ToString());
             Assert.AreEqual(initialLog.Count + 1, log.Count, "ERROR: Error log count not incremented correctly");
             count = log.Count;
             for(int i = 0; i < initialLog.Count; i++)
@@ -110,6 +115,7 @@ namespace iSensor_FX3_Test
             }
         }
 
+        [Test]
         public void ErrorLogRobustnessTest()
         {
             InitializeTestCase();
@@ -117,25 +123,32 @@ namespace iSensor_FX3_Test
 
             List<FX3ErrorLog> initialLog, log;
 
-            I2CPreamble pre = new I2CPreamble();
-            pre.DeviceAddress = 0xA0;
-            pre.PreambleData.Add(0);
-            pre.PreambleData.Add(0);
-            pre.PreambleData.Add(0);
-            pre.StartMask = 0;
+            I2CPreamble preRead = new I2CPreamble();
+            preRead.DeviceAddress = 0xA0;
+            preRead.PreambleData.Add(0);
+            preRead.PreambleData.Add(0);
+            preRead.PreambleData.Add(0xA1);
+            preRead.StartMask = 4;
+
+            I2CPreamble preWrite = new I2CPreamble();
+            preWrite.DeviceAddress = 0;
+            preWrite.PreambleData.Add(0);
+            preWrite.StartMask = 0;
 
             Console.WriteLine("Rebooting FX3...");
             FX3.Disconnect();
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(500);
             Connect();
 
             Console.WriteLine("Getting initial error log...");
             initialLog = FX3.GetErrorLog();
+            foreach (FX3ErrorLog entry in initialLog)
+                Console.WriteLine(entry.ToString());
 
             Console.WriteLine("Starting I2C Read...");
             try
             {
-                FX3.I2CReadBytes(pre, 32, 1000);
+                FX3.I2CReadBytes(preRead, 32, 1000);
             }
             catch(Exception e)
             {
@@ -144,12 +157,12 @@ namespace iSensor_FX3_Test
 
             Console.WriteLine("Getting error log...");
             log = FX3.GetErrorLog();
-            CheckLogEquality(initialLog, log);
+            CheckLogEquality(initialLog, log, false);
 
-            Console.WriteLine("Starting I2C write...");
+            Console.WriteLine("Starting invalid I2C write...");
             try
             {
-                FX3.I2CWriteBytes(pre, new byte[] { 1, 2, 3, 4 }, 1000);
+                FX3.I2CWriteBytes(preWrite, new byte[] { 1, 2, 3, 4 }, 1000);
             }
             catch(Exception e)
             {
@@ -158,13 +171,58 @@ namespace iSensor_FX3_Test
             
             Console.WriteLine("Getting error log...");
             log = FX3.GetErrorLog();
-            CheckLogEquality(initialLog, log);
+            CheckLogEquality(initialLog, log, true);
+
+            initialLog.Clear();
+            foreach(FX3ErrorLog entry in log)
+            {
+                initialLog.Add(entry);
+            }
+
+            Console.WriteLine("Starting I2C stream...");
+            FX3.StartI2CStream(preRead, 64, 10);
+            System.Threading.Thread.Sleep(2000);
+
+            Console.WriteLine("Getting error log...");
+            log = FX3.GetErrorLog();
+            CheckLogEquality(initialLog, log, false);
+
+            Console.WriteLine("Rebooting FX3...");
+            FX3.Disconnect();
+            System.Threading.Thread.Sleep(500);
+            Connect();
+
+            Console.WriteLine("Getting error log...");
+            log = FX3.GetErrorLog();
+            CheckLogEquality(initialLog, log, false);
+
+            Console.WriteLine("Starting I2C Read...");
+            try
+            {
+                FX3.I2CReadBytes(preRead, 32, 1000);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            Console.WriteLine("Generating new error log...");
+            GenerateErrorLog();
+
+            Console.WriteLine("Getting error log...");
+            log = FX3.GetErrorLog();
+            Assert.AreEqual(initialLog.Count + 1, log.Count, "ERROR: Invalid log count");
+            CheckLogEquality(initialLog, log, true);
         }
 
-        private void CheckLogEquality(List<FX3ErrorLog> log0, List<FX3ErrorLog> log1)
+        private void CheckLogEquality(List<FX3ErrorLog> log0, List<FX3ErrorLog> log1, bool isExtraEntryAllowed)
         {
-            Assert.AreEqual(log0.Count, log1.Count, "ERROR: Invalid log count");
-            for(int i = 0; i < log0.Count; i++)
+            if(isExtraEntryAllowed)
+                Assert.GreaterOrEqual(log1.Count, log0.Count, "ERROR: Invalid log count");
+            else
+                Assert.AreEqual(log1.Count, log0.Count, "ERROR: Invalid log count");
+
+            for (int i = 0; i < log0.Count; i++)
             {
                 Assert.AreEqual(log0[i], log1[i], "ERROR: Mis-matching log entry");
             }

@@ -21,6 +21,83 @@ namespace iSensor_FX3_Test
         }
 
         [Test]
+        public void SpiStallTimeTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting SPI stall time test...");
+
+            /* Stall time for transfer reads (32 bits) */
+            Console.WriteLine("Testing stall time for 32-bit reads (transfer stream)...");
+            FX3.WordLength = 32;
+
+            /* Stall time for generic reads */
+            Console.WriteLine("Testing stall time for 32-bit reads (generic stream)...");
+            FX3.WordLength = 16;
+        }
+
+        [Test]
+        public void BitBangSpiTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting bit bang SPI test...");
+
+            double expectedTime;
+            byte[] MISO;
+
+            List<byte> MOSI = new List<byte>();
+            for(int i = 0; i < 1024; i++)
+            {
+                MOSI.Add((byte)(i & 0x7F));
+            }
+
+            Console.WriteLine("Testing bit bang SPI word length...");
+            for(uint wordLen = 8; wordLen <= 512; wordLen+= 8)
+            {
+                Console.WriteLine("Testing bit length of " + wordLen.ToString());
+                /* Override SPI pins */
+                FX3.BitBangSpiConfig = new BitBangSpiConfig(true);
+                MISO = FX3.BitBangSpi(wordLen, 1, MOSI.ToArray(), 1000);
+                Assert.AreEqual(Math.Ceiling(wordLen / 8.0), MISO.Count(), "ERROR: Invalid data count");
+                for(int i = 0; i < MISO.Count(); i++)
+                {
+                    Assert.AreEqual(MOSI[i], MISO[i], "ERROR: Invalid echo data");
+                }
+
+                /* Override DIO1/2 pins */
+                FX3.BitBangSpiConfig.MOSI = (FX3PinObject) FX3.DIO1;
+                FX3.BitBangSpiConfig.MISO = (FX3PinObject) FX3.DIO2;
+                MISO = FX3.BitBangSpi(wordLen, 1, MOSI.ToArray(), 1000);
+                Assert.AreEqual(Math.Ceiling(wordLen / 8.0), MISO.Count(), "ERROR: Invalid data count");
+                for (int i = 0; i < MISO.Count(); i++)
+                {
+                   Assert.AreEqual(MOSI[i], MISO[i], "ERROR: Invalid echo data");
+                }
+            }
+
+            Console.WriteLine("Testing bit bang SPI stall time...");
+            Stopwatch timer = new Stopwatch();
+
+            FX3.SetBitBangSpiFreq(500000);
+
+            for(double stallTime = 100; stallTime > 1; stallTime--)
+            {
+                Console.WriteLine("Testing stall time of " + stallTime.ToString() + "us");
+                FX3.SetBitBangStallTime(stallTime);
+                /* Perform 1001 8-bit transfers (1000 stalls). Expected time is in ms */
+                expectedTime = 1000 * (8 * 1001) / 500000.0;
+                expectedTime += stallTime;
+                /* Static ~3ms overhead */
+                expectedTime += 3;
+                timer.Restart();
+                FX3.BitBangSpi(8, 1001, MOSI.ToArray(), 2000);
+                timer.Stop();
+                Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, real time: " + timer.ElapsedMilliseconds.ToString() + "ms");
+                Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, Math.Max(5, 0.1 * expectedTime), "ERROR: Invalid transfer time");
+            }
+
+        }
+
+        [Test]
         public void BurstSpiTest()
         {
             InitializeTestCase();
