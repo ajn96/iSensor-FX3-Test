@@ -1,5 +1,8 @@
 @echo Build started > Results\build_log.txt
 
+@echo Killing NUnit executable
+taskkill /f /fi "imagename eq nunit-agent-x86.exe"
+
 @echo Updating test repository... >> Results\build_log.txt
 git pull
 
