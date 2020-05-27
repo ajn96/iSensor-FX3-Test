@@ -17,17 +17,18 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-.......................F.....
-Tests run: 28, Errors: 0, Failures: 1, Inconclusive: 0, Time: 311.4007383 seconds
+.........................F...
+Tests run: 28, Errors: 0, Failures: 1, Inconclusive: 0, Time: 325.9132995 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.SpiTests.BurstSpiTest
-     ERROR: Base stream time greater than DrActive stream time
-  Expected: less than 990
-  But was:  2012
+1) Test Failure : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
+     ERROR: SPI data failed to echo back
+  Expected: 1
+  But was:  536870913
 
-at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 261
+at iSensor_FX3_Test.SpiTests.TestSpiFunctionality() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 473
+at iSensor_FX3_Test.SpiTests.SclkFrequencyTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 467
 
 
 Parsing test result... 
@@ -47,6 +48,6 @@ ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-05-27
-time : 10:45:20
+time : 11:00:41
 Document parsed, starting image generation...
 Program exiting...
