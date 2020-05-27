@@ -459,7 +459,7 @@ namespace iSensor_FX3_Test
             InitializeTestCase();
             Console.WriteLine("Starting SPI clock frequency test...");
 
-            for (int freq = 100000; freq < 30000000; freq += 100000)
+            for (int freq = 100000; freq <= 20000000; freq += 10000)
             {
                 Console.WriteLine("Setting SCLK frequency to " + freq.ToString() + "Hz");
                 FX3.SclkFrequency = freq;
@@ -470,7 +470,8 @@ namespace iSensor_FX3_Test
 
         private void TestSpiFunctionality()
         {
-            Assert.AreEqual(1, FX3.Transfer(1), "ERROR: SPI data failed to echo back");
+            Assert.AreEqual(1, FX3.Transfer(1), "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
+            Assert.AreEqual(0, FX3.Transfer(0), "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
         }
 
     }
