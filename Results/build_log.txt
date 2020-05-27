@@ -17,19 +17,43 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-.......................F.....
-Tests run: 28, Errors: 0, Failures: 1, Inconclusive: 0, Time: 312.4281494 seconds
+..................F.F.F.F..F.....F
+Tests run: 28, Errors: 5, Failures: 1, Inconclusive: 0, Time: 200.808516 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.SpiTests.BurstSpiTest
-     ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
+1) Test Failure : iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest
+     ERROR: Invalid freq read back on DIO2
+  Expected: 4000.0d +/- 80.0d
+  But was:  Infinity
 
-at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 59
-at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\FX3TestBase.cs:line 65
-at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 125
+at iSensor_FX3_Test.PinTests.PinFreqMeasurePWMTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\PinTests.cs:line 130
+
+2) Test Error : iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest
+   FX3Api.FX3ConfigurationException : ERROR: The selected pin is currently configured to drive a PWM signal. Please call StopPWM(pin) before interfacing with the pin further
+   at FX3Api.FX3Connection.SetPin(IPinObject pin, UInt32 value) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3IPinFcns.vb:line 340
+   at iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\PinTests.cs:line 174
+
+3) Test Error : iSensor_FX3_Test.PinTests.ResistorConfigurationTest
+   FX3Api.FX3ConfigurationException : ERROR: The selected pin is currently configured to drive a PWM signal. Please call StopPWM(pin) before interfacing with the pin further
+   at FX3Api.FX3Connection.ReadPin(IPinObject pin) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3IPinFcns.vb:line 242
+   at iSensor_FX3_Test.PinTests.ResistorConfigurationTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\PinTests.cs:line 257
+
+4) Test Error : iSensor_FX3_Test.PinTests.SetReadPinTest
+   FX3Api.FX3ConfigurationException : ERROR: The selected pin is currently configured to drive a PWM signal. Please call StopPWM(pin) before interfacing with the pin further
+   at FX3Api.FX3Connection.SetPin(IPinObject pin, UInt32 value) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3IPinFcns.vb:line 340
+   at iSensor_FX3_Test.PinTests.SetReadPinTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\PinTests.cs:line 27
+
+5) Test Error : iSensor_FX3_Test.SpiTests.BurstSpiTest
+   FX3Api.FX3CommunicationException : ERROR: Timeout occurred while starting burst stream
+   at FX3Api.FX3Connection.StartBurstStream(UInt32 numBuffers, IEnumerable`1 burstTrigger) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3DataStreaming.vb:line 176
+   at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 152
+
+6) Test Error : iSensor_FX3_Test.SpiTests.SpiTransferTest
+   FX3Api.FX3CommunicationException : ERROR: Timeout occurred during control endpoint transfer for SPI transfer stream
+   at FX3Api.FX3Connection.ISpi32TransferStreamSetup(IEnumerable`1 WriteData, UInt32 numCaptures, UInt32 numBuffers) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Spi32.vb:line 317
+   at FX3Api.FX3Connection.TransferArray(IEnumerable`1 WriteData, UInt32 numCaptures, UInt32 numBuffers) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3Spi32.vb:line 101
+   at iSensor_FX3_Test.SpiTests.SpiTransferTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 367
 
 
 Parsing test result... 
@@ -41,14 +65,14 @@ XML document loaded...
 XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 28
-errors : 0
+errors : 5
 failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
-date : 2020-05-26
-time : 18:01:03
+date : 2020-05-27
+time : 01:03:28
 Document parsed, starting image generation...
 Program exiting...
