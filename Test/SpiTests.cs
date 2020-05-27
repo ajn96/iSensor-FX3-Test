@@ -242,7 +242,10 @@ namespace iSensor_FX3_Test
                 FX3.DrActive = false;
                 FX3.StartBurstStream(numBuffers, FX3.BurstMOSIData);
                 timer.Restart();
-                FX3.WaitForStreamCompletion(2000);
+                while(FX3.GetNumBuffersRead < numBuffers)
+                {
+                    System.Threading.Thread.Sleep(1);
+                }
                 baseTime = timer.ElapsedMilliseconds;
                 Console.WriteLine("Stream time: " + baseTime.ToString() + "ms");
                 CheckBurstBuffers(BurstTxData.ToArray(), numBuffers);
@@ -252,7 +255,10 @@ namespace iSensor_FX3_Test
                 FX3.DrActive = true;
                 FX3.StartBurstStream(numBuffers, FX3.BurstMOSIData);
                 timer.Restart();
-                FX3.WaitForStreamCompletion((int) (2 * expectedTime));
+                while (FX3.GetNumBuffersRead < numBuffers)
+                {
+                    System.Threading.Thread.Sleep(1);
+                }
                 drActiveTime = timer.ElapsedMilliseconds;
                 Console.WriteLine("Stream time: " + drActiveTime.ToString() + "ms");
                 Assert.AreEqual(expectedTime, drActiveTime, 0.25 * expectedTime, "ERROR: Invalid stream time");
