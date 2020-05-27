@@ -67,7 +67,7 @@ namespace iSensor_FX3_Test
             Connect();
             foreach (PropertyInfo prop in FX3.GetType().GetProperties())
             {
-                if(prop.PropertyType is AdisApi.IPinObject)
+                if(prop.PropertyType == typeof(AdisApi.IPinObject))
                 {
                     /* Disable PWM if running */
                     if (FX3.isPWMPin((AdisApi.IPinObject)prop.GetValue(FX3)))

@@ -84,12 +84,12 @@ namespace iSensor_FX3_Test
 
             /* Get base time (with half microsecond stall) */
             FX3.SetBitBangStallTime(0.5);
-            for(int i = 0; i < 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 timer.Restart();
                 for (int trial = 0; trial < numReads; trial++)
                 {
-                    FX3.BitBangSpi(8, 1001, MOSI.ToArray(), 2000);
+                    FX3.BitBangSpi(4, 1001, MOSI.ToArray(), 2000);
                 }
                 timer.Stop();
                 baseTime += timer.ElapsedMilliseconds;
@@ -98,18 +98,18 @@ namespace iSensor_FX3_Test
             baseTime /= 4.0;
             Console.WriteLine("Base bitbang SPI time: " + baseTime.ToString() + "ms");
 
-            for (double stallTime = 100; stallTime > 5; stallTime -= 2)
+            for (double stallTime = 50; stallTime >= 5; stallTime--)
             {
                 Console.WriteLine("Testing stall time of " + stallTime.ToString() + "us");
                 FX3.SetBitBangStallTime(stallTime);
-                /* Perform sets of 1001 8-bit transfers (1000 stalls). Expected time is in ms */
+                /* Perform sets of 1001 4-bit transfers (1000 stalls). Expected time is in ms */
                 expectedTime = stallTime * numReads;
                 /* Add base time overhead */
                 expectedTime += baseTime;
                 timer.Restart();
-                for(int trial = 0; trial < numReads; trial++)
+                for (int trial = 0; trial < numReads; trial++)
                 {
-                    FX3.BitBangSpi(8, 1001, MOSI.ToArray(), 2000);
+                    FX3.BitBangSpi(4, 1001, MOSI.ToArray(), 2000);
                 }
                 timer.Stop();
                 Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, real time: " + timer.ElapsedMilliseconds.ToString() + "ms");
