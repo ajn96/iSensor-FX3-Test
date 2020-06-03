@@ -7,6 +7,7 @@ using NUnit.Framework;
 using FX3Api;
 using System.IO;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace iSensor_FX3_Test
 {
@@ -164,16 +165,91 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting pin PWM info test...");
+
+            int exCount;
+            PinPWMInfo info;
+
+            Console.WriteLine("Testing default PWM pin info for each pin...");
+            foreach (PropertyInfo prop in FX3.GetType().GetProperties())
+            {
+                if (prop.PropertyType == typeof(AdisApi.IPinObject))
+                {
+                    Assert.AreEqual(0, FX3.GetPinPWMInfo((AdisApi.IPinObject)prop.GetValue(FX3)).IdealFrequency, "ERROR: Expected PWM pins to be disabled for all pins initially");
+                }
+            }
+            Console.WriteLine("Testing PWM pin info for each pin...");
+            foreach (PropertyInfo prop in FX3.GetType().GetProperties())
+            {
+                if (prop.PropertyType == typeof(AdisApi.IPinObject))
+                {
+                    if(((AdisApi.IPinObject)prop.GetValue(FX3)).pinConfig % 8 != 0)
+                    {
+                        FX3.StartPWM(2000, 0.5, (AdisApi.IPinObject)prop.GetValue(FX3));
+                        info = FX3.GetPinPWMInfo((AdisApi.IPinObject)prop.GetValue(FX3));
+                        Assert.AreEqual(((AdisApi.IPinObject)prop.GetValue(FX3)).pinConfig, info.FX3GPIONumber, "ERROR: Invalid GPIO Number");
+                        Assert.AreEqual(info.FX3GPIONumber % 8, info.FX3TimerBlock, "ERROR: Invalid FX3 timer block");
+                        Assert.AreEqual(2000, info.IdealFrequency, "ERROR: Invalid frequency");
+                        Assert.AreEqual(0.5, info.IdealDutyCycle, "ERROR: Invalid duty cycle");
+                        FX3.StopPWM((AdisApi.IPinObject)prop.GetValue(FX3));
+                    }
+                    else
+                    {
+                        exCount = 0;
+                        try
+                        {
+                            FX3.StartPWM(2000, 0.5, (AdisApi.IPinObject)prop.GetValue(FX3));
+                        }
+                        catch(Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                            exCount = 1;
+                        }
+                        Assert.AreEqual(1, exCount, "ERROR: Expected exception to be thrown for pins which cannot run PWM");
+                    }
+                }
+            }
+            Console.WriteLine("Sweeping PWM freq...");
+            {
+                for(double freq = 0.5; freq < 100000; freq = freq * 1.1)
+                {
+                    FX3.StartPWM(freq, 0.5, FX3.DIO1);
+                    Assert.AreEqual(freq, FX3.GetPinPWMInfo(FX3.DIO1).IdealFrequency, "ERROR: Invalid IdealFrequency");
+                    Assert.AreEqual(freq, FX3.GetPinPWMInfo(FX3.DIO1).RealFrequency, 0.001 * freq, "ERROR: Invalid RealFrequency");
+                }
+            }
+
+            Console.WriteLine("Sweeping PWM duty cycle at 1KHz...");
+            for(double dutyCycle = 0.01; dutyCycle < 1.0; dutyCycle += 0.01)
+            {
+                FX3.StartPWM(1000, dutyCycle, FX3.DIO1);
+                Assert.AreEqual(dutyCycle, FX3.GetPinPWMInfo(FX3.DIO1).IdealDutyCycle, "ERROR: Invalid ideal duty cycle");
+                Assert.AreEqual(dutyCycle, FX3.GetPinPWMInfo(FX3.DIO1).RealDutyCycle, 0.001 * dutyCycle, "ERROR: Invalid real duty cycle");
+            }
         }
 
         [Test]
-        public void PWMTest()
+        public void PWMGenerationTest()
         {
             InitializeTestCase();
             Console.WriteLine("Starting PWM generation test...");
+            double posWidth, negWidth;
+            double measuredFreq, measuredDutyCycle;
 
-
-
+            for(double freq = 20; freq < 40000; freq *= 1.2)
+            {
+                for(double dutyCycle = 0.02; dutyCycle <= 0.98; dutyCycle += 0.02)
+                {
+                    Console.WriteLine("Starting PWM with freq " + freq.ToString("f2") + "Hz, " + dutyCycle.ToString("f2") + " duty cycle...");
+                    FX3.StartPWM(freq, dutyCycle, FX3.DIO1);
+                    posWidth = FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO2, 1, 1000);
+                    negWidth = FX3.MeasureBusyPulse(FX3.DIO4, 1, 0, FX3.DIO2, 0, 1000);
+                    measuredFreq = 1000 / (posWidth + negWidth);
+                    measuredDutyCycle = posWidth / (posWidth + negWidth);
+                    Console.WriteLine("Measured freq: " + measuredFreq.ToString("f2") + "Hz, measured duty cycle: " + measuredDutyCycle.ToString("f2"));
+                    Assert.AreEqual(freq, measuredFreq, 0.01 * freq, "ERROR: Invalid freq measured");
+                    Assert.AreEqual(dutyCycle, measuredDutyCycle, 0.01, "ERROR: Invalid duty cycle measured");
+                }
+            }
         }
 
         [Test]
