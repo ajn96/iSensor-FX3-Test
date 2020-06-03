@@ -17,16 +17,9 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-.................F..............
-Tests run: 31, Errors: 1, Failures: 0, Inconclusive: 0, Time: 380.3617295 seconds
+...............................
+Tests run: 31, Errors: 0, Failures: 0, Inconclusive: 0, Time: 407.9069916 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
-
-Errors and Failures:
-1) Test Error : iSensor_FX3_Test.PinTests.MeasureBusyPulseTest
-   FX3Api.FX3ConfigurationException : ERROR: SPI trigger data must be a multiple of the SPI word length.
-   at FX3Api.FX3Connection.MeasureBusyPulse(Byte[] SpiTriggerData, IPinObject BusyPin, UInt32 BusyPolarity, UInt32 Timeout) in C:\Users\User\Desktop\iSensor-FX3-Test\iSensor-FX3-API\FX3IPinFcns.vb:line 777
-   at iSensor_FX3_Test.PinTests.MeasureBusyPulseTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\PinTests.cs:line 58
-
 
 Parsing test result... 
 Verbose mode enabled
@@ -37,7 +30,7 @@ XML document loaded...
 XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 31
-errors : 1
+errors : 0
 failures : 0
 not-run : 0
 inconclusive : 0
@@ -45,6 +38,6 @@ ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-06-03
-time : 19:12:11
+time : 19:24:54
 Document parsed, starting image generation...
 Program exiting...
