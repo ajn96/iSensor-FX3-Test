@@ -109,7 +109,7 @@ namespace iSensor_FX3_Test
         }
 
         [Test]
-        public void PinFreqMeasurePWMTest()
+        public void PinFreqMeasureTest()
         {
             InitializeTestCase();
             Console.WriteLine("Starting pin frequency measure test...");
@@ -157,6 +157,23 @@ namespace iSensor_FX3_Test
                 Console.WriteLine("Pin freq measured on DIO2: " + measuredFreq.ToString() + "Hz");
                 Assert.AreEqual(expectedFreq, measuredFreq, 0.02 * expectedFreq, "ERROR: Invalid freq read back on DIO2");
             }
+        }
+
+        [Test]
+        public void PWMPinInfoTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting pin PWM info test...");
+        }
+
+        [Test]
+        public void PWMTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting PWM generation test...");
+
+
+
         }
 
         [Test]
