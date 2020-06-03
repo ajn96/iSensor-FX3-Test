@@ -37,8 +37,8 @@ namespace iSensor_FX3_Test
             Console.WriteLine("Testing stall time for 32-bit reads (transfer stream)...");
             FX3.WordLength = 32;
             FX3.SclkFrequency = 15000000;
-            FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK;
-            FX3.ChipSelectLagTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK;
+            FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK;
+            FX3.ChipSelectLagTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK;
 
             /* Get base stall time (5us stall) */
             for (int i = 0; i < 8; i++)
@@ -112,7 +112,7 @@ namespace iSensor_FX3_Test
                 Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, 0.5 * baseTime, "ERROR: Invalid transfer time");
                 System.Threading.Thread.Sleep(100);
             }
-
+            FX3.StallTime = 5;
         }
 
         [Test]
@@ -202,7 +202,7 @@ namespace iSensor_FX3_Test
                 }
                 timer.Stop();
                 Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, real time: " + timer.ElapsedMilliseconds.ToString() + "ms");
-                Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, 0.1 * expectedTime, "ERROR: Invalid transfer time");
+                Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, 0.5 * baseTime, "ERROR: Invalid transfer time");
             }
         }
 
@@ -517,8 +517,18 @@ namespace iSensor_FX3_Test
             FX3.ChipSelectLagTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_HALF_CLK;
             Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_HALF_CLK, FX3.ChipSelectLagTime, "ERROR: CS lag time not applied");
             TestSpiFunctionality();
-            FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK;
-            Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK, FX3.ChipSelectLeadTime, "ERROR: CS lead time not applied");
+            int exCount = 0;
+            try
+            {
+                FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                exCount = 1;
+            }
+            Assert.AreEqual(1, exCount, "ERROR: Exception not thrown for invalid setting");
+            Assert.AreNotEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_ZERO_CLK, FX3.ChipSelectLeadTime, "ERROR: Invalid CS lead time applied");
             TestSpiFunctionality();
             FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK;
             Assert.AreEqual(SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK, FX3.ChipSelectLeadTime, "ERROR: CS lead time not applied");
