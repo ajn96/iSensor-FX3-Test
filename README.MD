@@ -28,4 +28,8 @@ Running "build_script.bat" will start the build and test sequence:
 * Compile iSensor-FX3-Test program
 * Run test program using NUnit 2.6.4, with the output piped to "test_result.txt". These tests are run on target hardware.
 * The NUnit test results are parsed and used to generate a test status image using NUnitLogParser.exe
-* Test results are pushed to remote 
+* Test results (ouput XML, build log, test console, result image) are pushed to remote
+
+## Test Execution
+
+Tests are executed by iSensorTestBot every night at 1am on a Windows 10 VM. Tests can also be triggered on-demand
