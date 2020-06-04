@@ -554,11 +554,11 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting SPI clock frequency test...");
-            FX3.WordLength = 32;
+            FX3.WordLength = 8;
             FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK;
             FX3.ChipSelectLagTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK;
 
-            for (int freq = 100000; freq <= 15000000; freq += 10000)
+            for (int freq = 100000; freq <= 20000000; freq += 10000)
             {
                 Console.WriteLine("Setting SCLK frequency to " + freq.ToString() + "Hz");
                 FX3.SclkFrequency = freq;
