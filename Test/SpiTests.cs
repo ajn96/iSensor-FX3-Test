@@ -569,8 +569,22 @@ namespace iSensor_FX3_Test
 
         private void TestSpiFunctionality()
         {
-            Assert.AreEqual(1, FX3.Transfer(1), "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
-            Assert.AreEqual(0, FX3.Transfer(0), "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
+            switch(FX3.WordLength)
+            {
+                case 8:
+                    Assert.AreEqual(0x55, FX3.Transfer(0x55) & 0xFF, "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
+                    Assert.AreEqual(0xAA, FX3.Transfer(0xAA) & 0xFF, "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
+                    break;
+                case 16:
+                    Assert.AreEqual(0x5555, FX3.Transfer(0x5555) & 0xFFFF, "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
+                    Assert.AreEqual(0xAAAA, FX3.Transfer(0xAAAA) & 0xFFFF, "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
+                    break;
+                case 32:
+                default:
+                    Assert.AreEqual(0x55555555, FX3.Transfer(0x55555555), "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
+                    Assert.AreEqual(0xAAAAAAAA, FX3.Transfer(0xAAAAAAAA), "ERROR: SPI data failed to echo back. SCLK Freq " + FX3.SclkFrequency.ToString() + "Hz");
+                    break;
+            }
         }
 
     }
