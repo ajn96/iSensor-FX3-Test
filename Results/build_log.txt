@@ -17,19 +17,9 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-............................F...
-Tests run: 31, Errors: 0, Failures: 1, Inconclusive: 0, Time: 405.7038927 seconds
+...............................
+Tests run: 31, Errors: 0, Failures: 0, Inconclusive: 0, Time: 410.8696782 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
-
-Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
-     ERROR: SPI data failed to echo back. SCLK Freq 11200000Hz
-  Expected: 0
-  But was:  1610612736
-
-at iSensor_FX3_Test.SpiTests.TestSpiFunctionality() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 573
-at iSensor_FX3_Test.SpiTests.SclkFrequencyTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 566
-
 
 Parsing test result... 
 Verbose mode enabled
@@ -41,13 +31,13 @@ XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 31
 errors : 0
-failures : 1
+failures : 0
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-06-04
-time : 09:25:32
+time : 09:43:24
 Document parsed, starting image generation...
 Program exiting...
