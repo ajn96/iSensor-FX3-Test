@@ -13,6 +13,29 @@ namespace iSensor_FX3_Test
     class FunctionalTests : FX3TestBase
     {
         [Test]
+        public void SerialNumberTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting FX3 serial number test...");
+
+            string sn = FX3.ActiveFX3SerialNumber;
+            Assert.AreEqual(sn, FX3.GetTargetSerialNumber, "ERROR: Invalid target serial number");
+            Assert.AreEqual(sn, FX3.ActiveFX3.SerialNumber, "ERRRO: Invalid active FX3 serial number");
+
+            FX3.Disconnect();
+            Assert.AreEqual(null, FX3.ActiveFX3SerialNumber, "ERROR: Expected null SN when board disconnected");
+            Assert.AreEqual(null, FX3.GetTargetSerialNumber, "ERROR: Expected null SN when board disconnected");
+            Assert.AreEqual(null, FX3.ActiveFX3, "ERROR: Expected null SN when board disconnected");
+
+            FX3.WaitForBoard(5);
+
+            FX3.Connect(sn);
+            Assert.AreEqual(sn, FX3.ActiveFX3SerialNumber, "ERROR: serial number");
+            Assert.AreEqual(sn, FX3.GetTargetSerialNumber, "ERROR: Invalid target serial number");
+            Assert.AreEqual(sn, FX3.ActiveFX3.SerialNumber, "ERRRO: Invalid active FX3 serial number");
+        }
+
+        [Test]
         public void BoardInfoTest()
         {
             InitializeTestCase();
@@ -147,9 +170,11 @@ namespace iSensor_FX3_Test
             status = FX3.GetBootStatus;
             Console.WriteLine(status);
             Assert.False(status.Contains("Not"), "ERROR: Expected firmware to be running");
+            Assert.True(FX3.FX3BoardAttached, "ERROR: Expected FX3 board to be attached");
 
             Console.WriteLine("Disconnecting FX3...");
             FX3.Disconnect();
+            Assert.IsFalse(FX3.FX3BoardAttached, "ERROR: Expected FX3 board not to be attached");
             status = FX3.GetBootStatus;
             Console.WriteLine(status);
             Assert.True(status.Contains("Not"), "ERROR: Expected firmware to not be running");
@@ -169,6 +194,9 @@ namespace iSensor_FX3_Test
             Console.WriteLine("Starting firmware version test...");
 
             Assert.AreEqual(FX3.GetFirmwareVersion, FX3.ActiveFX3.FirmwareVersion, "ERROR: Invalid firmware version");
+            Assert.True(FX3.GetFirmwareVersion.Contains(FX3.ActiveFX3.FirmwareVersionNumber), "ERROR: Expected firmware version to contain version number");
+            Assert.True(FX3.GetFirmwareVersion.Contains("PUB"), "ERROR: Expected firmware version to contain PUB");
+            Assert.AreEqual(FX3.GetFX3ApiInfo.VersionNumber, FX3.ActiveFX3.FirmwareVersionNumber, "ERROR: Firmware version must match API");
         }
 
         [Test]
