@@ -158,6 +158,55 @@ namespace iSensor_FX3_Test
         }
 
         [Test]
+        public void BitBangSpiFreqTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Testing bit bang SPI SCLK freq...");
+
+            byte[] MOSI = new byte[1024];
+            double expectedTime;
+            Stopwatch timer = new Stopwatch();
+            double baseTime = 0;
+            int numReads = 5;
+
+            FX3.SetBitBangSpiFreq(1000000);
+
+            /* Get base time (max SCLK with 0.5 microsecond stall) */
+            FX3.SetBitBangStallTime(0.5);
+            for (int i = 0; i < 4; i++)
+            {
+                timer.Restart();
+                for (int trial = 0; trial < numReads; trial++)
+                {
+                    FX3.BitBangSpi(2, 1, MOSI, 2000);
+                }
+                timer.Stop();
+                baseTime += timer.ElapsedMilliseconds;
+            }
+            /* Average base time */
+            baseTime /= 4.0;
+            Console.WriteLine("Base bitbang SPI time: " + baseTime.ToString() + "ms");
+
+            for (uint freq = 75000; freq <= 850000; freq += 25000)
+            {
+                Console.WriteLine("Testing freq of " + freq.ToString() + "Hz");
+                FX3.SetBitBangSpiFreq(freq);
+                /* Perform sets of 1 4000-bit transfer. Expected time is in ms */
+                expectedTime = (4000000.0 / freq) * numReads;
+                /* Add base time overhead */
+                expectedTime += baseTime;
+                timer.Restart();
+                for (int trial = 0; trial < numReads; trial++)
+                {
+                    FX3.BitBangSpi(4000, 1, MOSI, 2000);
+                }
+                timer.Stop();
+                Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, real time: " + timer.ElapsedMilliseconds.ToString() + "ms");
+                Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, Math.Max(15, 0.1 * expectedTime), "ERROR: Invalid transfer time");
+            }
+        }
+
+        [Test]
         public void BitBangSpiStallTimeTest()
         {
             InitializeTestCase();
