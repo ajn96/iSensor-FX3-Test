@@ -18,13 +18,26 @@ namespace iSensor_FX3_Test
             InitializeTestCase();
             Console.WriteLine("Starting FX3 serial number test...");
 
+            int exCount = 0;
+
             string sn = FX3.ActiveFX3SerialNumber;
             Assert.AreEqual(sn, FX3.GetTargetSerialNumber, "ERROR: Invalid target serial number");
             Assert.AreEqual(sn, FX3.ActiveFX3.SerialNumber, "ERRRO: Invalid active FX3 serial number");
 
             FX3.Disconnect();
             Assert.AreEqual(null, FX3.ActiveFX3SerialNumber, "ERROR: Expected null SN when board disconnected");
-            Assert.AreEqual(null, FX3.GetTargetSerialNumber, "ERROR: Expected null SN when board disconnected");
+            try
+            {
+                /* This one communicates to board, should throw exception if board not connected */
+                Console.WriteLine(FX3.GetTargetSerialNumber);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                exCount = 1;
+            }
+            Assert.AreEqual(1, exCount, "ERROR: Expected exception to be thrown");
+            
             Assert.AreEqual(null, FX3.ActiveFX3, "ERROR: Expected null SN when board disconnected");
 
             FX3.WaitForBoard(5);
