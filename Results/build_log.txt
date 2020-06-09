@@ -18,13 +18,13 @@ Runtime Environment -
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
 .........................F........
-Tests run: 33, Errors: 0, Failures: 1, Inconclusive: 0, Time: 421.3460467 seconds
+Tests run: 33, Errors: 0, Failures: 1, Inconclusive: 0, Time: 422.2001351 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
 1) Test Failure : iSensor_FX3_Test.SpiTests.BitBangSpiFreqTest
      ERROR: Invalid transfer time
-  Expected: 270.91666666666669d +/- 27.091666666666669d
+  Expected: 270.16666666666669d +/- 27.016666666666669d
   But was:  352.0d
 
 at iSensor_FX3_Test.SpiTests.BitBangSpiFreqTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 205
@@ -46,7 +46,7 @@ inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
-date : 2020-06-08
-time : 19:41:54
+date : 2020-06-09
+time : 01:07:09
 Document parsed, starting image generation...
 Program exiting...
