@@ -167,9 +167,10 @@ namespace iSensor_FX3_Test
             double expectedTime;
             Stopwatch timer = new Stopwatch();
             double baseTime = 0;
-            int numReads = 5;
+            int numReads = 8;
 
-            FX3.SetBitBangSpiFreq(1000000);
+            /* 900KHz SCLK */
+            FX3.SetBitBangSpiFreq(900000);
 
             /* Get base time (max SCLK with 0.5 microsecond stall) */
             FX3.SetBitBangStallTime(0.5);
@@ -178,13 +179,15 @@ namespace iSensor_FX3_Test
                 timer.Restart();
                 for (int trial = 0; trial < numReads; trial++)
                 {
-                    FX3.BitBangSpi(2, 1, MOSI, 2000);
+                    FX3.BitBangSpi(4000, 1, MOSI, 2000);
                 }
                 timer.Stop();
                 baseTime += timer.ElapsedMilliseconds;
             }
             /* Average base time */
             baseTime /= 4.0;
+            /* Subtract time for clocks in basetime */
+            baseTime -= (4000000.0 / 900000) * numReads;
             Console.WriteLine("Base bitbang SPI time: " + baseTime.ToString() + "ms");
 
             for (uint freq = 75000; freq <= 850000; freq += 25000)
@@ -202,7 +205,7 @@ namespace iSensor_FX3_Test
                 }
                 timer.Stop();
                 Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, real time: " + timer.ElapsedMilliseconds.ToString() + "ms");
-                Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, Math.Max(15, 0.1 * expectedTime), "ERROR: Invalid transfer time");
+                Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, Math.Max(25, 0.1 * expectedTime), "ERROR: Invalid transfer time");
             }
         }
 
