@@ -231,6 +231,39 @@ namespace iSensor_FX3_Test
             CheckLogEquality(initialLog, log, true);
         }
 
+        [Test]
+        public void ErrorLogClearTest()
+        {
+            Console.WriteLine("Starting error log clear test...");
+
+            List<FX3ErrorLog> initialLog, log;
+            initialLog = FX3.GetErrorLog();
+            Console.WriteLine("Initial error log count: " + initialLog.Count.ToString());
+            foreach (FX3ErrorLog logEntry in initialLog)
+            {
+                Console.WriteLine(logEntry.ToString());
+            }
+            Console.WriteLine("Clearing error log...");
+            FX3.ClearErrorLog();
+            log = FX3.GetErrorLog();
+            Console.WriteLine("Error log count: " + log.Count.ToString());
+            foreach (FX3ErrorLog logEntry in log)
+            {
+                Console.WriteLine(logEntry.ToString());
+            }
+            Assert.AreEqual(0, log.Count, "ERROR: Error log failed to clear");
+            Assert.AreEqual(0, FX3.GetErrorLogCount(), "ERROR: Error log failed to clear");
+
+            Console.WriteLine("Rebooting FX3...");
+            FX3.Disconnect();
+            System.Threading.Thread.Sleep(1000);
+            FX3.WaitForBoard(5);
+            FX3.Connect(FX3.AvailableFX3s[0]);
+
+            Assert.AreEqual(0, log.Count, "ERROR: Error log failed to clear");
+            Assert.AreEqual(0, FX3.GetErrorLogCount(), "ERROR: Error log failed to clear");
+        }
+
         private void CheckLogEquality(List<FX3ErrorLog> log0, List<FX3ErrorLog> log1, bool isExtraEntryAllowed)
         {
             if(isExtraEntryAllowed)
