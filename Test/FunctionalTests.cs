@@ -13,6 +13,54 @@ namespace iSensor_FX3_Test
     class FunctionalTests : FX3TestBase
     {
         [Test]
+        public void CompileDateTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting build date/time test...");
+
+            DateTime fwDate, apiDate;
+
+            double secondsDiff;
+
+            Console.WriteLine("FX3 API build date: " + FX3.GetFX3ApiInfo.BuildDateTime);
+            Console.WriteLine("FX3 firmware build date: " + FX3.ActiveFX3.BuildDateTime);
+
+            apiDate = DateTime.Parse(FX3.GetFX3ApiInfo.BuildDateTime);
+            fwDate = DateTime.Parse(FX3.ActiveFX3.BuildDateTime);
+
+            Console.WriteLine("Parsed API Date: " + apiDate.ToString());
+            Console.WriteLine("Parsed firmware Date: " + fwDate.ToString());
+
+            secondsDiff = Math.Abs((apiDate - fwDate).TotalSeconds);
+            /* Just assert compiled within 90 days of each other. Probably will always be the case */
+            Assert.LessOrEqual(secondsDiff, 90 * 24 * 60 * 60, "ERROR: Expected firmware and API to be compiled within 90 days of each other");
+        }
+
+        [Test]
+        public void BoardDetectionTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting FX3 board detection test...");
+
+            string sn = FX3.ActiveFX3SerialNumber;
+            Assert.AreEqual(0, FX3.AvailableFX3s.Count(), "ERROR: Expected no available FX3s");
+            Assert.AreEqual(1, FX3.BusyFX3s.Count(), "ERROR: Expected 1 busy FX3");
+            Assert.AreEqual(sn, FX3.BusyFX3s[0], "Invalid busy FX3 SN");
+
+            Console.WriteLine("Rebooting FX3...");
+            FX3.Disconnect();
+            FX3.WaitForBoard(10);
+            Assert.AreEqual(1, FX3.AvailableFX3s.Count(), "ERROR: Expected 1 available FX3");
+            Assert.AreEqual(sn, FX3.AvailableFX3s[0], "Invalid available FX3 SN");
+            Assert.AreEqual(0, FX3.BusyFX3s.Count(), "ERROR: Expected 0 busy FX3s");
+
+            FX3.Connect(sn);
+            Assert.AreEqual(0, FX3.AvailableFX3s.Count(), "ERROR: Expected no available FX3s");
+            Assert.AreEqual(1, FX3.BusyFX3s.Count(), "ERROR: Expected 1 busy FX3");
+            Assert.AreEqual(sn, FX3.BusyFX3s[0], "Invalid busy FX3 SN");
+        }
+
+        [Test]
         public void SerialNumberTest()
         {
             InitializeTestCase();
