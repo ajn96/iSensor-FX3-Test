@@ -8,11 +8,42 @@ using FX3Api;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection;
+using AdisApi;
 
 namespace iSensor_FX3_Test
 {
     class PinTests : FX3TestBase
     {
+        [Test]
+        public void DrPinTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting data ready pin test...");
+
+            Assert.AreEqual(FX3.DIO1.pinConfig, FX3.DrPin.pinConfig, "ERROR: Expected default DR pin to be DIO1");
+
+            IPinObject drPin = FX3.DrPin;
+            Assert.AreEqual(drPin.pinConfig, FX3.ReadyPin.pinConfig);
+
+            FX3.ReadyPin = new FX3Api.FX3PinObject(20);
+            Assert.AreEqual(20, FX3.ReadyPin.pinConfig);
+            Assert.AreEqual(20, FX3.DrPin.pinConfig);
+
+            FX3.DrPin = drPin;
+            Assert.AreEqual(drPin.pinConfig, FX3.ReadyPin.pinConfig);
+            Assert.AreEqual(drPin.pinConfig, FX3.DrPin.pinConfig);
+
+            FX3.SensorType = DeviceType.ADcmXL;
+            FX3.PartType = DUTType.ADcmXL3021;
+
+            Assert.AreEqual(FX3.DIO2.pinConfig, FX3.DrPin.pinConfig, "ERROR: Expected default DR pin to be DIO2 for ADcmXL");
+
+            FX3.SensorType = DeviceType.IMU;
+            FX3.PartType = DUTType.IMU;
+
+            Assert.AreEqual(FX3.DIO1.pinConfig, FX3.DrPin.pinConfig, "ERROR: Expected default DR pin to be DIO1 for IMU");
+        }
+
         [Test]
         public void SetReadPinTest()
         {
