@@ -714,8 +714,6 @@ namespace iSensor_FX3_Test
 
             long firstCount;
 
-            Assert.AreEqual(0, FX3.GetNumBuffersRead, "ERROR: Expected no buffers read initially");
-
             FX3.SensorType = DeviceType.IMU;
             FX3.PartType = DUTType.IMU;
 
@@ -758,8 +756,6 @@ namespace iSensor_FX3_Test
             Console.WriteLine("Starting ADcmXL stream cancel test...");
 
             long firstCount;
-
-            Assert.AreEqual(0, FX3.GetNumBuffersRead, "ERROR: Expected no buffers read initially");
 
             FX3.DrActive = true;
             FX3.SensorType = DeviceType.ADcmXL;
