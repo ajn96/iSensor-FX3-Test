@@ -149,10 +149,74 @@ namespace iSensor_FX3_Test
         }
 
         [Test]
+        public void I2CStreamCancelTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting I2C stream cancel test...");
+
+            long firstCount;
+
+            I2CPreamble pre = new I2CPreamble();
+            pre.DeviceAddress = 0xA0;
+            pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0);
+            pre.StartMask = 4;
+
+            for (int trial = 0; trial < 5; trial++)
+            {
+                Console.WriteLine("Starting trial " + trial.ToString());
+
+                /* Start stream */
+                FX3.StartI2CStream(pre, 64, 1000000);
+                firstCount = FX3.GetNumBuffersRead;
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (stop stream) */
+                FX3.StopStream();
+                System.Threading.Thread.Sleep(20);
+
+                /* Test read functionality */
+                TestI2CFunctionality();
+
+                /* Start stream */
+                FX3.StartI2CStream(pre, 64, 1000000);
+                firstCount = FX3.GetNumBuffersRead;
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (cancel stream) */
+                FX3.CancelStreamAsync();
+                System.Threading.Thread.Sleep(20);
+
+                /* Test read functionality */
+                TestI2CFunctionality();
+            }
+        }
+
+        [Test]
         public void I2CModeSwitchingTest()
         {
             InitializeTestCase();
             Console.WriteLine("Starting I2C mode switching stress test...");
+        }
+
+        private void TestI2CFunctionality()
+        {
+            byte[] InitialRead, SecondRead;
+
+            I2CPreamble pre = new I2CPreamble();
+            pre.DeviceAddress = 0xA0;
+            pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0);
+            pre.StartMask = 4;
+
+            InitialRead = FX3.I2CReadBytes(pre, 64, 1000);
+            SecondRead = FX3.I2CReadBytes(pre, 64, 1000);
+            for (int i = 0; i < InitialRead.Count(); i++)
+            {
+                Assert.AreEqual(InitialRead[i], SecondRead[i], "ERROR: Expected flash read data to match");
+            }
         }
     }
 }
