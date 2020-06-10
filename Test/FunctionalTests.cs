@@ -12,6 +12,37 @@ namespace iSensor_FX3_Test
 {
     class FunctionalTests : FX3TestBase
     {
+
+        [Test]
+        public void DutSupplyModeTest()
+        {
+            InitializeTestCase();
+
+            if(FX3.ActiveFX3.BoardType == FX3BoardType.CypressFX3Board)
+            {
+                /* Cypress board has fixed 3.3V supply */
+                Assert.AreEqual(DutVoltage.On3_3Volts, FX3.DutSupplyMode);
+                FX3.DutSupplyMode = DutVoltage.Off;
+                Assert.AreEqual(DutVoltage.On3_3Volts, FX3.DutSupplyMode);
+                FX3.DutSupplyMode = DutVoltage.On5_0Volts;
+                Assert.AreEqual(DutVoltage.On3_3Volts, FX3.DutSupplyMode);
+                FX3.DutSupplyMode = DutVoltage.On3_3Volts;
+                Assert.AreEqual(DutVoltage.On3_3Volts, FX3.DutSupplyMode);
+            }
+            else
+            {
+                /*Don't have a really good test for this. Just cycle through modes */
+                FX3.DutSupplyMode = DutVoltage.Off;
+                Assert.AreEqual(DutVoltage.Off, FX3.DutSupplyMode);
+                FX3.DutSupplyMode = DutVoltage.On3_3Volts;
+                Assert.AreEqual(DutVoltage.On3_3Volts, FX3.DutSupplyMode);
+                FX3.DutSupplyMode = DutVoltage.On5_0Volts;
+                Assert.AreEqual(DutVoltage.On5_0Volts, FX3.DutSupplyMode);
+                FX3.DutSupplyMode = DutVoltage.Off;
+                Assert.AreEqual(DutVoltage.Off, FX3.DutSupplyMode);
+            }
+        }
+
         [Test]
         public void CompileDateTest()
         {
