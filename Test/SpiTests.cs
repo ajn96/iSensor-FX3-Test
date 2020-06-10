@@ -626,6 +626,8 @@ namespace iSensor_FX3_Test
             InitializeTestCase();
             Console.WriteLine("Starting burst stream cancel test...");
 
+            long firstCount;
+
             FX3.BurstByteCount = 16;
             FX3.TriggerReg = new RegClass() { Address = 0, NumBytes = 2, Page = 0 };
             FX3.SetupBurstMode();
@@ -636,22 +638,26 @@ namespace iSensor_FX3_Test
                 Console.WriteLine("Starting trial " + trial.ToString());
                 /* Start stream */
                 FX3.StartBurstStream(1000000, FX3.BurstMOSIData);
+                firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (stop stream) */
                 FX3.StopStream();
+                System.Threading.Thread.Sleep(20);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
 
                 /* Start stream */
                 FX3.StartBurstStream(1000000, FX3.BurstMOSIData);
+                firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (cancel stream) */
                 FX3.CancelStreamAsync();
+                System.Threading.Thread.Sleep(20);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
@@ -664,6 +670,8 @@ namespace iSensor_FX3_Test
             InitializeTestCase();
             Console.WriteLine("Starting transfer stream cancel test...");
 
+            long firstCount;
+
             FX3.SensorType = DeviceType.AutomotiveSpi;
             FX3.PartType = DUTType.IMU;
 
@@ -672,22 +680,26 @@ namespace iSensor_FX3_Test
                 Console.WriteLine("Starting trial " + trial.ToString());
                 /* Start stream */
                 FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (stop stream) */
                 FX3.StopStream();
+                System.Threading.Thread.Sleep(20);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
 
                 /* Start stream */
                 FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (cancel stream) */
                 FX3.CancelStreamAsync();
+                System.Threading.Thread.Sleep(20);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
@@ -700,6 +712,10 @@ namespace iSensor_FX3_Test
             InitializeTestCase();
             Console.WriteLine("Starting generic stream cancel test...");
 
+            long firstCount;
+
+            Assert.AreEqual(0, FX3.GetNumBuffersRead, "ERROR: Expected no buffers read initially");
+
             FX3.SensorType = DeviceType.IMU;
             FX3.PartType = DUTType.IMU;
 
@@ -708,24 +724,26 @@ namespace iSensor_FX3_Test
                 Console.WriteLine("Starting trial " + trial.ToString());
                 /* Start stream */
                 FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (stop stream) */
                 FX3.StopStream();
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(20);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
 
                 /* Start stream */
                 FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (cancel stream) */
                 FX3.CancelStreamAsync();
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(20);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
@@ -739,6 +757,10 @@ namespace iSensor_FX3_Test
             InitializeTestCase();
             Console.WriteLine("Starting ADcmXL stream cancel test...");
 
+            long firstCount;
+
+            Assert.AreEqual(0, FX3.GetNumBuffersRead, "ERROR: Expected no buffers read initially");
+
             FX3.DrActive = true;
             FX3.SensorType = DeviceType.ADcmXL;
             FX3.PartType = DUTType.ADcmXL3021;
@@ -750,22 +772,26 @@ namespace iSensor_FX3_Test
                 Console.WriteLine("Starting trial " + trial.ToString());
                 /* Start stream */
                 FX3.StartRealTimeStreaming(1000000);
+                firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (stop stream) */
                 FX3.StopStream();
+                System.Threading.Thread.Sleep(20);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
 
                 /* Start stream */
                 FX3.StartRealTimeStreaming(1000000);
+                firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (cancel stream) */
                 FX3.CancelStreamAsync();
+                System.Threading.Thread.Sleep(20);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
