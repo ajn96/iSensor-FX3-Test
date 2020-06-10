@@ -7,6 +7,7 @@ using NUnit.Framework;
 using FX3Api;
 using System.IO;
 using System.Diagnostics;
+using RegMapClasses;
 
 namespace iSensor_FX3_Test
 {
@@ -615,6 +616,158 @@ namespace iSensor_FX3_Test
                 Console.WriteLine("Setting SCLK frequency to " + freq.ToString() + "Hz");
                 FX3.SclkFrequency = freq;
                 Assert.AreEqual(freq, FX3.SclkFrequency, "ERROR: FX3 frequency set failed");
+                TestSpiFunctionality();
+            }
+        }
+
+        [Test]
+        public void BurstStreamCancelTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting burst stream cancel test...");
+
+            FX3.BurstByteCount = 16;
+            FX3.TriggerReg = new RegClass() { Address = 0, NumBytes = 2, Page = 0 };
+            FX3.SetupBurstMode();
+            FX3.DrActive = false;
+
+            for (int trial = 0; trial < 5; trial++)
+            {
+                Console.WriteLine("Starting trial " + trial.ToString());
+                /* Start stream */
+                FX3.StartBurstStream(1000000, FX3.BurstMOSIData);
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (stop stream) */
+                FX3.StopStream();
+
+                /* Check SPI functionality */
+                TestSpiFunctionality();
+
+                /* Start stream */
+                FX3.StartBurstStream(1000000, FX3.BurstMOSIData);
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (cancel stream) */
+                FX3.CancelStreamAsync();
+
+                /* Check SPI functionality */
+                TestSpiFunctionality();
+            }
+        }
+
+        [Test]
+        public void TransferStreamCancelTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting transfer stream cancel test...");
+
+            FX3.SensorType = DeviceType.AutomotiveSpi;
+            FX3.PartType = DUTType.IMU;
+
+            for (int trial = 0; trial < 5; trial++)
+            {
+                Console.WriteLine("Starting trial " + trial.ToString());
+                /* Start stream */
+                FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (stop stream) */
+                FX3.StopStream();
+
+                /* Check SPI functionality */
+                TestSpiFunctionality();
+
+                /* Start stream */
+                FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (cancel stream) */
+                FX3.CancelStreamAsync();
+
+                /* Check SPI functionality */
+                TestSpiFunctionality();
+            }
+        }
+
+        [Test]
+        public void GenericStreamCancelTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting generic stream cancel test...");
+
+            FX3.SensorType = DeviceType.IMU;
+            FX3.PartType = DUTType.IMU;
+
+            for (int trial = 0; trial < 5; trial++)
+            {
+                Console.WriteLine("Starting trial " + trial.ToString());
+                /* Start stream */
+                FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (stop stream) */
+                FX3.StopStream();
+                System.Threading.Thread.Sleep(100);
+
+                /* Check SPI functionality */
+                TestSpiFunctionality();
+
+                /* Start stream */
+                FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (cancel stream) */
+                FX3.CancelStreamAsync();
+                System.Threading.Thread.Sleep(100);
+
+                /* Check SPI functionality */
+                TestSpiFunctionality();
+            }
+
+        }
+
+        [Test]
+        public void ADcmXLStreamCancelTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting ADcmXL stream cancel test...");
+
+            FX3.DrActive = true;
+            FX3.SensorType = DeviceType.ADcmXL;
+            FX3.PartType = DUTType.ADcmXL3021;
+            /* Start 6KHz DR signal on DIO1 */
+            FX3.StartPWM(6000, 0.1, FX3.DIO1);
+
+            for (int trial = 0; trial < 5; trial++)
+            {
+                Console.WriteLine("Starting trial " + trial.ToString());
+                /* Start stream */
+                FX3.StartRealTimeStreaming(1000000);
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (stop stream) */
+                FX3.StopStream();
+
+                /* Check SPI functionality */
+                TestSpiFunctionality();
+
+                /* Start stream */
+                FX3.StartRealTimeStreaming(1000000);
+                System.Threading.Thread.Sleep(100);
+                Assert.Greater(FX3.GetNumBuffersRead, 0, "ERROR: Expected to have read buffers");
+
+                /* Cancel stream (cancel stream) */
+                FX3.CancelStreamAsync();
+
+                /* Check SPI functionality */
                 TestSpiFunctionality();
             }
         }
