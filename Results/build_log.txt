@@ -17,9 +17,18 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-.....................................
-Tests run: 37, Errors: 0, Failures: 0, Inconclusive: 0, Time: 422.4894631 seconds
+.....................................F......
+Tests run: 43, Errors: 0, Failures: 1, Inconclusive: 0, Time: 465.5040937 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
+
+Errors and Failures:
+1) Test Failure : iSensor_FX3_Test.SpiTests.GenericStreamCancelTest
+     ERROR: Expected no buffers read initially
+  Expected: 0
+  But was:  1908
+
+at iSensor_FX3_Test.SpiTests.GenericStreamCancelTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 717
+
 
 Parsing test result... 
 Verbose mode enabled
@@ -29,15 +38,15 @@ Destination File: C:\Users\User\Desktop\iSensor-FX3-Test\Results\test_status.png
 XML document loaded...
 XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
-total : 37
+total : 43
 errors : 0
-failures : 0
+failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-06-10
-time : 01:07:09
+time : 19:49:33
 Document parsed, starting image generation...
 Program exiting...
