@@ -8,6 +8,7 @@ using FX3Api;
 using System.IO;
 using System.Diagnostics;
 using RegMapClasses;
+using AdisApi;
 
 namespace iSensor_FX3_Test
 {
@@ -19,6 +20,9 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting IRegInterface test...");
+
+            FX3.WordLength = 16;
+            FX3.WriteRegByte(new AddrDataPair() { addr = 0, data = 0 });
         }
 
         [Test]

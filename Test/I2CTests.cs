@@ -25,9 +25,10 @@ namespace iSensor_FX3_Test
             pre.DeviceAddress = 0xA0;
             pre.PreambleData.Add(0);
             pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0xA1);
             pre.StartMask = 4;
 
-            for(uint readLen = 2; readLen < 256; readLen+=2)
+            for (uint readLen = 2; readLen < 256; readLen+=2)
             {
                 Console.WriteLine("Testing " + readLen.ToString() + " byte read");
                 InitialRead = FX3.I2CReadBytes(pre, readLen, 1000);
@@ -121,6 +122,7 @@ namespace iSensor_FX3_Test
             pre.DeviceAddress = 0xA0;
             pre.PreambleData.Add(0);
             pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0xA1);
             pre.StartMask = 4;
 
             byte[] InitialRead, SecondRead;
@@ -146,6 +148,35 @@ namespace iSensor_FX3_Test
         {
             InitializeTestCase();
             Console.WriteLine("Starting I2C data stream test...");
+
+            I2CPreamble pre = new I2CPreamble();
+            pre.DeviceAddress = 0xA0;
+            pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0xA1);
+            pre.StartMask = 4;
+
+            TestI2CFunctionality();
+
+            byte[] StreamData, InitialRead;
+
+            for(int trial = 0; trial < 5; trial++)
+            {
+                Console.WriteLine("Starting stream...");
+                FX3.StartI2CStream(pre, 64, 1000);
+                FX3.WaitForStreamCompletion(10000);
+                Console.WriteLine("Stream complete. Checking data...");
+                InitialRead = FX3.GetI2CBuffer();
+                for (int i = 1; i<1000; i++)
+                {
+                    StreamData = FX3.GetI2CBuffer();
+                    for(int j = 0; j < StreamData.Count(); j++)
+                    {
+                        Assert.AreEqual(InitialRead[j], StreamData[j], "ERROR: Invalid I2C read back data on buffer " + i.ToString());
+                    }
+                }
+                TestI2CFunctionality();
+            }
         }
 
         [Test]
@@ -209,6 +240,7 @@ namespace iSensor_FX3_Test
             pre.DeviceAddress = 0xA0;
             pre.PreambleData.Add(0);
             pre.PreambleData.Add(0);
+            pre.PreambleData.Add(0xA1);
             pre.StartMask = 4;
 
             InitialRead = FX3.I2CReadBytes(pre, 64, 1000);
