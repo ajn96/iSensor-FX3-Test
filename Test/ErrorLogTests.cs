@@ -108,8 +108,8 @@ namespace iSensor_FX3_Test
             /*Check boot time stamp */
             uint expectedTimestamp = (uint)((DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds - (uptime / 1000));
             Assert.AreEqual(log[log.Count - 1].BootTimeStamp, expectedTimestamp, 120, "ERROR: Invalid boot time stamp");
-            /* Check file (should have originated in main) */
-            Assert.AreEqual(log[log.Count - 1].FileIdentifier, 1, "ERROR: Invalid file identifier");
+            /* Check file (should have originated in HelperFunctions (10)) */
+            Assert.AreEqual(10, log[log.Count - 1].FileIdentifier, "ERROR: Invalid file identifier. Expected error to have originated in HelperFunctions.c");
 
             initialLog = FX3.GetErrorLog();
             Assert.AreEqual(count, log.Count, "ERROR: Invalid log count");
