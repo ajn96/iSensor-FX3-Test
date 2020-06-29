@@ -17,9 +17,18 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-...........................................
-Tests run: 43, Errors: 0, Failures: 0, Inconclusive: 0, Time: 466.7339038 seconds
+.........................F..................
+Tests run: 43, Errors: 0, Failures: 1, Inconclusive: 0, Time: 404.9262987 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
+
+Errors and Failures:
+1) Test Failure : iSensor_FX3_Test.PinTests.PinFreqMeasureTest
+     ERROR: Invalid freq read back on DIO1
+  Expected: 7485.6027427587351d +/- 149.7120548551747d
+  But was:  7652.5436598329543d
+
+at iSensor_FX3_Test.PinTests.PinFreqMeasureTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\PinTests.cs:line 178
+
 
 Parsing test result... 
 Verbose mode enabled
@@ -31,13 +40,13 @@ XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 43
 errors : 0
-failures : 0
+failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
-date : 2020-06-28
-time : 01:07:54
+date : 2020-06-29
+time : 01:06:53
 Document parsed, starting image generation...
 Program exiting...
