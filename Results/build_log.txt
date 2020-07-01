@@ -17,9 +17,18 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-...........................................
-Tests run: 43, Errors: 0, Failures: 0, Inconclusive: 0, Time: 466.6374509 seconds
+.........................................F..
+Tests run: 43, Errors: 0, Failures: 1, Inconclusive: 0, Time: 463.1026418 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
+
+Errors and Failures:
+1) Test Failure : iSensor_FX3_Test.SpiTests.SpiStallTimeTest
+     ERROR: Invalid transfer time
+  Expected: 181.125d +/- 30.5625d
+  But was:  302.0d
+
+at iSensor_FX3_Test.SpiTests.SpiStallTimeTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 117
+
 
 Parsing test result... 
 Verbose mode enabled
@@ -31,13 +40,13 @@ XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 43
 errors : 0
-failures : 0
+failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
-date : 2020-06-30
-time : 01:07:53
+date : 2020-07-01
+time : 01:07:50
 Document parsed, starting image generation...
 Program exiting...
