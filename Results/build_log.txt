@@ -18,10 +18,9 @@ Runtime Environment -
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
 ...........................................
-Tests run: 43, Errors: 0, Failures: 0, Inconclusive: 0, Time: 465.3938494 seconds
+Tests run: 43, Errors: 0, Failures: 0, Inconclusive: 0, Time: 468.7071189 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
-Parsing test result... 
 Verbose mode enabled
 Starting log processing
 Source File: C:\Users\User\Desktop\iSensor-FX3-Test\Results\test_result.xml
@@ -37,7 +36,7 @@ inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
-date : 2020-07-21
-time : 01:07:53
+date : 2020-07-22
+time : 01:07:59
 Document parsed, starting image generation...
 Program exiting...
