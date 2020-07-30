@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="43" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2020-07-29" time="01:07:55">
+<test-results name="C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="43" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2020-07-30" time="01:07:57">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.9044" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\User\Desktop\iSensor-FX3-Test" machine-name="DESKTOP-IG61384" user="User" user-domain="DESKTOP-IG61384" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Success" success="True" time="467.074" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Success" success="True" time="469.253" asserts="0">
     <results>
-      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Success" success="True" time="467.066" asserts="0">
+      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Success" success="True" time="469.247" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="ErrorLogTests" executed="True" result="Success" success="True" time="38.451" asserts="1">
+          <test-suite type="TestFixture" name="ErrorLogTests" executed="True" result="Success" success="True" time="39.017" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogClearTest" executed="True" result="Success" success="True" time="5.979" asserts="4" />
-              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogContentsTest" executed="True" result="Success" success="True" time="6.611" asserts="20" />
-              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogCountTest" executed="True" result="Success" success="True" time="6.133" asserts="8" />
-              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogRobustnessTest" executed="True" result="Success" success="True" time="14.515" asserts="14" />
+              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogClearTest" executed="True" result="Success" success="True" time="5.942" asserts="4" />
+              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogContentsTest" executed="True" result="Success" success="True" time="6.572" asserts="20" />
+              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogCountTest" executed="True" result="Success" success="True" time="6.300" asserts="8" />
+              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogRobustnessTest" executed="True" result="Success" success="True" time="15.012" asserts="14" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Success" success="True" time="74.136" asserts="1">
+          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Success" success="True" time="74.947" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardDetectionTest" executed="True" result="Success" success="True" time="6.518" asserts="9" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardInfoTest" executed="True" result="Success" success="True" time="9.629" asserts="198" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.BootStatusTest" executed="True" result="Success" success="True" time="7.197" asserts="5" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardDetectionTest" executed="True" result="Success" success="True" time="6.865" asserts="9" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardInfoTest" executed="True" result="Success" success="True" time="9.426" asserts="199" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.BootStatusTest" executed="True" result="Success" success="True" time="6.060" asserts="5" />
               <test-case name="iSensor_FX3_Test.FunctionalTests.CompileDateTest" executed="True" result="Success" success="True" time="0.011" asserts="1" />
               <test-case name="iSensor_FX3_Test.FunctionalTests.DutSupplyModeTest" executed="True" result="Success" success="True" time="0.010" asserts="4" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest" executed="True" result="Success" success="True" time="25.802" asserts="10" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareVersionTest" executed="True" result="Success" success="True" time="6.383" asserts="4" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest" executed="True" result="Success" success="True" time="25.610" asserts="10" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareVersionTest" executed="True" result="Success" success="True" time="7.495" asserts="4" />
               <test-case name="iSensor_FX3_Test.FunctionalTests.ImagePathsTest" executed="True" result="Success" success="True" time="0.010" asserts="9" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.SerialNumberTest" executed="True" result="Success" success="True" time="6.209" asserts="8" />
-              <test-case name="iSensor_FX3_Test.FunctionalTests.USBTimingTest" executed="True" result="Success" success="True" time="5.862" asserts="0" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.SerialNumberTest" executed="True" result="Success" success="True" time="7.360" asserts="8" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.USBTimingTest" executed="True" result="Success" success="True" time="5.845" asserts="0" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Success" success="True" time="12.433" asserts="1">
+          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Success" success="True" time="13.452" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CBitRateTest" executed="True" result="Success" success="True" time="0.388" asserts="10255" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CBitRateTest" executed="True" result="Success" success="True" time="0.393" asserts="10255" />
               <test-case name="iSensor_FX3_Test.I2CTests.I2CModeSwitchingTest" executed="True" result="Success" success="True" time="0.008" asserts="0" />
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CReadTest" executed="True" result="Success" success="True" time="0.417" asserts="16256" />
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CRetryTest" executed="True" result="Success" success="True" time="0.016" asserts="2" />
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CStreamCancelTest" executed="True" result="Success" success="True" time="1.486" asserts="650" />
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CStreamTest" executed="True" result="Success" success="True" time="3.374" asserts="320064" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CReadTest" executed="True" result="Success" success="True" time="0.408" asserts="16256" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CRetryTest" executed="True" result="Success" success="True" time="0.014" asserts="2" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CStreamCancelTest" executed="True" result="Success" success="True" time="1.506" asserts="650" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CStreamTest" executed="True" result="Success" success="True" time="3.362" asserts="320064" />
               <test-case name="iSensor_FX3_Test.I2CTests.I2CWriteTest" executed="True" result="Success" success="True" time="0.008" asserts="0" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="PinTests" executed="True" result="Success" success="True" time="185.162" asserts="1">
+          <test-suite type="TestFixture" name="PinTests" executed="True" result="Success" success="True" time="185.121" asserts="1">
             <results>
               <test-case name="iSensor_FX3_Test.PinTests.DrPinTest" executed="True" result="Success" success="True" time="0.014" asserts="8" />
-              <test-case name="iSensor_FX3_Test.PinTests.GetTimerValueTest" executed="True" result="Success" success="True" time="8.047" asserts="47" />
-              <test-case name="iSensor_FX3_Test.PinTests.MeasureBusyPulseTest" executed="True" result="Success" success="True" time="24.250" asserts="4096" />
-              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasureTest" executed="True" result="Success" success="True" time="84.845" asserts="794" />
-              <test-case name="iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest" executed="True" result="Success" success="True" time="14.460" asserts="112" />
-              <test-case name="iSensor_FX3_Test.PinTests.PWMGenerationTest" executed="True" result="Success" success="True" time="44.568" asserts="4032" />
+              <test-case name="iSensor_FX3_Test.PinTests.GetTimerValueTest" executed="True" result="Success" success="True" time="8.054" asserts="47" />
+              <test-case name="iSensor_FX3_Test.PinTests.MeasureBusyPulseTest" executed="True" result="Success" success="True" time="24.236" asserts="4096" />
+              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasureTest" executed="True" result="Success" success="True" time="84.821" asserts="794" />
+              <test-case name="iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest" executed="True" result="Success" success="True" time="14.458" asserts="112" />
+              <test-case name="iSensor_FX3_Test.PinTests.PWMGenerationTest" executed="True" result="Success" success="True" time="44.567" asserts="4032" />
               <test-case name="iSensor_FX3_Test.PinTests.PWMPinInfoTest" executed="True" result="Success" success="True" time="0.108" asserts="518" />
-              <test-case name="iSensor_FX3_Test.PinTests.ResistorConfigurationTest" executed="True" result="Success" success="True" time="0.800" asserts="160" />
-              <test-case name="iSensor_FX3_Test.PinTests.SetReadPinTest" executed="True" result="Success" success="True" time="0.321" asserts="400" />
+              <test-case name="iSensor_FX3_Test.PinTests.ResistorConfigurationTest" executed="True" result="Success" success="True" time="0.795" asserts="160" />
+              <test-case name="iSensor_FX3_Test.PinTests.SetReadPinTest" executed="True" result="Success" success="True" time="0.319" asserts="400" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Success" success="True" time="156.873" asserts="1">
+          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Success" success="True" time="156.699" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.SpiTests.ADcmXLStreamCancelTest" executed="True" result="Success" success="True" time="1.499" asserts="30" />
-              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiFreqTest" executed="True" result="Success" success="True" time="26.738" asserts="32" />
-              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiStallTimeTest" executed="True" result="Success" success="True" time="28.642" asserts="46" />
-              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiTest" executed="True" result="Success" success="True" time="0.305" asserts="4290" />
-              <test-case name="iSensor_FX3_Test.SpiTests.BurstSpiTest" executed="True" result="Success" success="True" time="55.591" asserts="237798" />
-              <test-case name="iSensor_FX3_Test.SpiTests.BurstStreamCancelTest" executed="True" result="Success" success="True" time="1.501" asserts="30" />
-              <test-case name="iSensor_FX3_Test.SpiTests.GenericStreamCancelTest" executed="True" result="Success" success="True" time="1.592" asserts="30" />
-              <test-case name="iSensor_FX3_Test.SpiTests.IRegInterfaceTest" executed="True" result="Success" success="True" time="0.011" asserts="0" />
-              <test-case name="iSensor_FX3_Test.SpiTests.SclkFrequencyTest" executed="True" result="Success" success="True" time="2.348" asserts="5973" />
+              <test-case name="iSensor_FX3_Test.SpiTests.ADcmXLStreamCancelTest" executed="True" result="Success" success="True" time="1.492" asserts="30" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiFreqTest" executed="True" result="Success" success="True" time="26.735" asserts="32" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiStallTimeTest" executed="True" result="Success" success="True" time="28.626" asserts="46" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiTest" executed="True" result="Success" success="True" time="0.312" asserts="4290" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BurstSpiTest" executed="True" result="Success" success="True" time="55.617" asserts="237798" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BurstStreamCancelTest" executed="True" result="Success" success="True" time="1.504" asserts="30" />
+              <test-case name="iSensor_FX3_Test.SpiTests.GenericStreamCancelTest" executed="True" result="Success" success="True" time="1.593" asserts="30" />
+              <test-case name="iSensor_FX3_Test.SpiTests.IRegInterfaceTest" executed="True" result="Success" success="True" time="0.010" asserts="0" />
+              <test-case name="iSensor_FX3_Test.SpiTests.SclkFrequencyTest" executed="True" result="Success" success="True" time="2.372" asserts="5973" />
               <test-case name="iSensor_FX3_Test.SpiTests.SpiParametersTest" executed="True" result="Success" success="True" time="0.030" asserts="57" />
-              <test-case name="iSensor_FX3_Test.SpiTests.SpiStallTimeTest" executed="True" result="Success" success="True" time="25.888" asserts="88" />
-              <test-case name="iSensor_FX3_Test.SpiTests.SpiTransferTest" executed="True" result="Success" success="True" time="2.714" asserts="92238" />
-              <test-case name="iSensor_FX3_Test.SpiTests.TransferStreamCancelTest" executed="True" result="Success" success="True" time="1.550" asserts="30" />
+              <test-case name="iSensor_FX3_Test.SpiTests.SpiStallTimeTest" executed="True" result="Success" success="True" time="25.866" asserts="88" />
+              <test-case name="iSensor_FX3_Test.SpiTests.SpiTransferTest" executed="True" result="Success" success="True" time="2.681" asserts="92238" />
+              <test-case name="iSensor_FX3_Test.SpiTests.TransferStreamCancelTest" executed="True" result="Success" success="True" time="1.536" asserts="30" />
             </results>
           </test-suite>
         </results>
