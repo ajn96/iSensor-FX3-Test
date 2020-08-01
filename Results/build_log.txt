@@ -17,18 +17,9 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-..........................................F.
-Tests run: 43, Errors: 0, Failures: 1, Inconclusive: 0, Time: 464.7224456 seconds
+...........................................
+Tests run: 43, Errors: 0, Failures: 0, Inconclusive: 0, Time: 468.151338 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
-
-Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.SpiTests.SpiTransferTest
-     ERROR: SPI loop back failed
-  Expected: 128
-  But was:  536871040
-
-at iSensor_FX3_Test.SpiTests.SpiTransferTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 478
-
 
 Parsing test result... 
 Verbose mode enabled
@@ -40,13 +31,13 @@ XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 43
 errors : 0
-failures : 1
+failures : 0
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
-date : 2020-07-31
-time : 01:07:52
+date : 2020-08-01
+time : 01:07:55
 Document parsed, starting image generation...
 Program exiting...
