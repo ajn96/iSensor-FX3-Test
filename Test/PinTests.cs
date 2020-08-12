@@ -45,6 +45,45 @@ namespace iSensor_FX3_Test
         }
 
         [Test]
+        public void LoopPinTest()
+        {
+            Stopwatch timer = new Stopwatch();
+            long expectedTime;
+
+            InitializeTestCase();
+
+            if(FX3.ActiveFX3.BoardType < FX3BoardType.iSensorFX3Board_C)
+            {
+                Console.WriteLine("The connected boards do not have loop back pins");
+                return;
+            }
+
+            for(double freq = 100; freq < 2000; freq+= 100)
+            {
+                Console.WriteLine("Setting " + freq.ToString() + "Hz PWM on loop pin 1");
+                FX3.StartPWM(freq, 0.5, FX3.FX3_LOOPBACK1);
+                Assert.AreEqual(freq, FX3.MeasurePinFreq(FX3.FX3_LOOPBACK2, 1, 1000, 100), 0.02 * freq, "ERROR: Invalid value measured on loop pin 2");
+                FX3.StopPWM(FX3.FX3_LOOPBACK1);
+                Console.WriteLine("Setting " + freq.ToString() + "Hz PWM on loop pin 2");
+                FX3.StartPWM(freq, 0.5, FX3.FX3_LOOPBACK2);
+                Assert.AreEqual(freq, FX3.MeasurePinFreq(FX3.FX3_LOOPBACK1, 1, 1000, 100), 0.02 * freq, "ERROR: Invalid value measured on loop pin 1");
+                FX3.StopPWM(FX3.FX3_LOOPBACK2);
+            }
+
+            Console.WriteLine("Testing SPI triggering with loop back pins...");
+            FX3.StartPWM(100, 0.5, FX3.FX3_LOOPBACK1);
+            FX3.DrPin = FX3.FX3_LOOPBACK2;
+            FX3.DrActive = true;
+            expectedTime = 1000 * 1000 / 100;
+
+            timer.Start();
+            FX3.TransferArray(new uint[1], 1, 1000);
+            timer.Stop();
+            Console.WriteLine("Elapsed stream time " + timer.ElapsedMilliseconds.ToString() + "ms");
+            Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, 0.05 * expectedTime, "ERROR: Invalid stream time");
+        }
+
+        [Test]
         public void SetReadPinTest()
         {
             InitializeTestCase();
