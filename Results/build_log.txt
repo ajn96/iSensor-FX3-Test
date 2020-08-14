@@ -17,18 +17,9 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-............................................F
-Tests run: 44, Errors: 0, Failures: 1, Inconclusive: 0, Time: 544.6152017 seconds
+............................................
+Tests run: 44, Errors: 0, Failures: 0, Inconclusive: 0, Time: 466.4934714 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
-
-Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.SpiTests.TransferStreamCancelTest
-     ERROR: Expected to have read buffers
-  Expected: greater than 1000000
-  But was:  1000000
-
-at iSensor_FX3_Test.SpiTests.TransferStreamCancelTest() in C:\Users\User\Desktop\iSensor-FX3-Test\Test\SpiTests.cs:line 689
-
 
 Parsing test result... 
 Verbose mode enabled
@@ -40,13 +31,13 @@ XLM Attributes:
 name : C:\Users\User\Desktop\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 44
 errors : 0
-failures : 1
+failures : 0
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
-date : 2020-08-13
-time : 01:09:15
+date : 2020-08-14
+time : 01:07:54
 Document parsed, starting image generation...
 Program exiting...
