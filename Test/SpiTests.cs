@@ -447,13 +447,16 @@ namespace iSensor_FX3_Test
             /* Set word length of 8 */
             Console.WriteLine("Testing word length of 8 bits...");
             FX3.WordLength = 8;
+            TestSpiFunctionality();
             for(int bit = 0; bit < 8; bit++)
             {
+                Console.WriteLine("Testing bit " + bit.ToString());
                 Assert.AreEqual(1U << bit, FX3.Transfer(1U << bit), "ERROR: SPI loop back failed");
             }
             /* Bits outside of word length should not be echo'd */
             for (int bit = 8; bit < 32; bit++)
             {
+                Console.WriteLine("Testing bit " + bit.ToString());
                 Assert.AreEqual(0, FX3.Transfer(1U << bit), "ERROR: SPI loop back failed");
             }
 
@@ -462,11 +465,13 @@ namespace iSensor_FX3_Test
             FX3.WordLength = 16;
             for (int bit = 0; bit < 16; bit++)
             {
+                Console.WriteLine("Testing bit " + bit.ToString());
                 Assert.AreEqual(1U << bit, FX3.Transfer(1U << bit), "ERROR: SPI loop back failed");
             }
             /* Bits outside of word length should not be echo'd */
             for (int bit = 16; bit < 32; bit++)
             {
+                Console.WriteLine("Testing bit " + bit.ToString());
                 Assert.AreEqual(0, FX3.Transfer(1U << bit), "ERROR: SPI loop back failed");
             }
 
@@ -475,11 +480,13 @@ namespace iSensor_FX3_Test
             FX3.WordLength = 24;
             for (int bit = 0; bit < 24; bit++)
             {
+                Console.WriteLine("Testing bit " + bit.ToString());
                 Assert.AreEqual(1U << bit, FX3.Transfer(1U << bit), "ERROR: SPI loop back failed");
             }
             /* Bits outside of word length should not be echo'd */
             for (int bit = 24; bit < 32; bit++)
             {
+                Console.WriteLine("Testing bit " + bit.ToString());
                 Assert.AreEqual(0, FX3.Transfer(1U << bit), "ERROR: SPI loop back failed");
             }
 
@@ -488,6 +495,7 @@ namespace iSensor_FX3_Test
             FX3.WordLength = 32;
             for (int bit = 0; bit < 32; bit++)
             {
+                Console.WriteLine("Testing bit " + bit.ToString());
                 Assert.AreEqual(1U << bit, FX3.Transfer(1U << bit), "ERROR: SPI loop back failed");
             }
 

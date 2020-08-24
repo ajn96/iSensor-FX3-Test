@@ -77,7 +77,7 @@ namespace iSensor_FX3_Test
                 }
             }
             FX3.RestoreHardwareSpi();
-            FX3.SclkFrequency = 10000000;
+            FX3.SclkFrequency = 1000000;
             FX3.StallTime = 5;
             FX3.WordLength = 16;
             FX3.DrActive = false;
