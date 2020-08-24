@@ -17,9 +17,18 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-.............................................
-Tests run: 45, Errors: 0, Failures: 0, Inconclusive: 0, Time: 349.7690569 seconds
+....................................F.........
+Tests run: 45, Errors: 0, Failures: 1, Inconclusive: 0, Time: 354.2128755 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
+
+Errors and Failures:
+1) Test Failure : iSensor_FX3_Test.SpiTests.BitBangSpiTest
+     ERROR: Expected SCLK to be idle high
+  Expected: 1
+  But was:  0
+
+at iSensor_FX3_Test.SpiTests.BitBangSpiTest() in C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 185
+
 
 Parsing test result... 
 Verbose mode enabled
@@ -31,13 +40,13 @@ XLM Attributes:
 name : C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 45
 errors : 0
-failures : 0
+failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-08-24
-time : 14:45:12
+time : 19:03:23
 Document parsed, starting image generation...
 Program exiting...
