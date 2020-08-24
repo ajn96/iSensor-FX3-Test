@@ -128,6 +128,8 @@ namespace iSensor_FX3_Test
 
             byte[] MISO;
 
+            uint mode;
+
             List<byte> MOSI = new List<byte>();
             for(int i = 0; i < 1024; i++)
             {
@@ -157,6 +159,36 @@ namespace iSensor_FX3_Test
                    Assert.AreEqual(MOSI[i], MISO[i], "ERROR: Invalid echo data");
                 }
             }
+
+            FX3.BitBangSpiConfig = new BitBangSpiConfig(true);
+            FX3.BitBangSpiConfig.SCLK = (FX3PinObject) FX3.DIO1;
+            FX3.ReadPin(FX3.DIO2);
+            Random rnd = new Random();
+            for (int trial = 0; trial < 64; trial++)
+            {
+                mode = (uint)(rnd.NextDouble() * 4);
+                Console.WriteLine("Testing bitbang SPI mode " + mode.ToString());
+                FX3.BitBangSpiConfig.CPHA = ((mode & 0x1) != 0);
+                FX3.BitBangSpiConfig.CPOL = ((mode & 0x2) != 0);
+
+                MISO = FX3.BitBangSpi(16, 1, MOSI.ToArray(), 1000);
+                Assert.AreEqual(2, MISO.Count(), "ERROR: Invalid data count");
+                for (int i = 0; i < MISO.Count(); i++)
+                {
+                    Assert.AreEqual(MOSI[i], MISO[i], "ERROR: Invalid echo data");
+                }
+            }
+
+            /* Check SCLK pin level after transfer */
+            if(FX3.Cpol)
+            {
+                Assert.AreEqual(1, FX3.ReadPin(FX3.DIO2), "ERROR: Expected SCLK to be idle high");
+            }
+            else
+            {
+                Assert.AreEqual(0, FX3.ReadPin(FX3.DIO2), "ERROR: Expected SCLK to be idle low");
+            }
+            
             Console.WriteLine("Testing restore hardware SPI functionality...");
             FX3.RestoreHardwareSpi();
             TestSpiFunctionality();
@@ -174,8 +206,8 @@ namespace iSensor_FX3_Test
             double baseTime = 0;
             int numReads = 8;
 
-            /* 900KHz SCLK */
-            FX3.SetBitBangSpiFreq(900000);
+            /* 1MHz SCLK */
+            FX3.SetBitBangSpiFreq(1000000);
 
             /* Get base time (max SCLK with 0.5 microsecond stall) */
             FX3.SetBitBangStallTime(0.5);
@@ -192,10 +224,10 @@ namespace iSensor_FX3_Test
             /* Average base time */
             baseTime /= 4.0;
             /* Subtract time for clocks in basetime */
-            baseTime -= (4000000.0 / 900000) * numReads;
+            baseTime -= (4000000.0 / 1000000) * numReads;
             Console.WriteLine("Base bitbang SPI time: " + baseTime.ToString() + "ms");
 
-            for (uint freq = 75000; freq <= 850000; freq += 25000)
+            for (uint freq = 75000; freq <= 900000; freq += 25000)
             {
                 Console.WriteLine("Testing freq of " + freq.ToString() + "Hz");
                 FX3.SetBitBangSpiFreq(freq);
