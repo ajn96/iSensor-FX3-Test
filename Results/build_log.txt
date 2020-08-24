@@ -17,12 +17,19 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-....................................F.........
-Tests run: 45, Errors: 0, Failures: 1, Inconclusive: 0, Time: 355.4144464 seconds
+..F..................................F.........
+Tests run: 45, Errors: 0, Failures: 2, Inconclusive: 0, Time: 378.6312455 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.SpiTests.BitBangSpiTest
+1) Test Failure : iSensor_FX3_Test.ErrorLogTests.ErrorLogContentsTest
+     ERROR: Invalid error log uptime
+  Expected: 263.0d +/- 1000.0d
+  But was:  3589.0d
+
+at iSensor_FX3_Test.ErrorLogTests.ErrorLogContentsTest() in C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\ErrorLogTests.cs:line 107
+
+2) Test Failure : iSensor_FX3_Test.SpiTests.BitBangSpiTest
      ERROR: Expected SCLK to be idle high
   Expected: 1
   But was:  0
@@ -40,13 +47,13 @@ XLM Attributes:
 name : C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 45
 errors : 0
-failures : 1
+failures : 2
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2020-08-24
-time : 19:12:10
+time : 19:52:11
 Document parsed, starting image generation...
 Program exiting...
