@@ -120,6 +120,57 @@ namespace iSensor_FX3_Test
             FX3.StallTime = 5;
         }
 
+
+        [Test]
+        public void BitBangSpiModeTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting bit bang SPI mode test...");
+
+            byte[] MISO;
+
+            uint mode;
+
+            List<byte> MOSI = new List<byte>();
+            for (int i = 0; i < 1024; i++)
+            {
+                MOSI.Add((byte)(i & 0x7F));
+            }
+
+            FX3.BitBangSpiConfig = new BitBangSpiConfig(true);
+            FX3.BitBangSpiConfig.SCLK = (FX3PinObject)FX3.DIO1;
+            FX3.ReadPin(FX3.DIO2);
+            FX3.ReadPin(FX3.DIO1);
+            Random rnd = new Random();
+            for (int trial = 0; trial < 64; trial++)
+            {
+                mode = (uint)(rnd.NextDouble() * 4);
+                Console.WriteLine("Testing bit-bang SPI mode " + mode.ToString());
+                FX3.BitBangSpiConfig.CPHA = ((mode & 0x1) != 0);
+                FX3.BitBangSpiConfig.CPOL = ((mode & 0x2) != 0);
+
+                for(uint len = 8; len < 64; len += 8)
+                {
+                    MISO = FX3.BitBangSpi(len, 1, MOSI.ToArray(), 1000);
+                    Assert.AreEqual(len >> 3, MISO.Count(), "ERROR: Invalid data count");
+                    for (int i = 0; i < MISO.Count(); i++)
+                    {
+                        Assert.AreEqual(MOSI[i], MISO[i], "ERROR: Invalid echo data");
+                    }
+                }
+
+                /* Check SCLK pin level after transfer */
+                if (FX3.BitBangSpiConfig.CPOL)
+                {
+                    Assert.AreEqual(1, FX3.ReadPin(FX3.DIO2), "ERROR: Expected SCLK to be idle high");
+                }
+                else
+                {
+                    Assert.AreEqual(0, FX3.ReadPin(FX3.DIO2), "ERROR: Expected SCLK to be idle low");
+                }
+            }
+        }
+
         [Test]
         public void BitBangSpiTest()
         {
@@ -127,8 +178,6 @@ namespace iSensor_FX3_Test
             Console.WriteLine("Starting bit bang SPI functionality test...");
 
             byte[] MISO;
-
-            uint mode;
 
             List<byte> MOSI = new List<byte>();
             for(int i = 0; i < 1024; i++)
@@ -158,35 +207,6 @@ namespace iSensor_FX3_Test
                 {
                    Assert.AreEqual(MOSI[i], MISO[i], "ERROR: Invalid echo data");
                 }
-            }
-
-            FX3.BitBangSpiConfig = new BitBangSpiConfig(true);
-            FX3.BitBangSpiConfig.SCLK = (FX3PinObject) FX3.DIO1;
-            FX3.ReadPin(FX3.DIO2);
-            Random rnd = new Random();
-            for (int trial = 0; trial < 64; trial++)
-            {
-                mode = (uint)(rnd.NextDouble() * 4);
-                Console.WriteLine("Testing bitbang SPI mode " + mode.ToString());
-                FX3.BitBangSpiConfig.CPHA = ((mode & 0x1) != 0);
-                FX3.BitBangSpiConfig.CPOL = ((mode & 0x2) != 0);
-
-                MISO = FX3.BitBangSpi(16, 1, MOSI.ToArray(), 1000);
-                Assert.AreEqual(2, MISO.Count(), "ERROR: Invalid data count");
-                for (int i = 0; i < MISO.Count(); i++)
-                {
-                    Assert.AreEqual(MOSI[i], MISO[i], "ERROR: Invalid echo data");
-                }
-            }
-
-            /* Check SCLK pin level after transfer */
-            if(FX3.Cpol)
-            {
-                Assert.AreEqual(1, FX3.ReadPin(FX3.DIO2), "ERROR: Expected SCLK to be idle high");
-            }
-            else
-            {
-                Assert.AreEqual(0, FX3.ReadPin(FX3.DIO2), "ERROR: Expected SCLK to be idle low");
             }
             
             Console.WriteLine("Testing restore hardware SPI functionality...");
