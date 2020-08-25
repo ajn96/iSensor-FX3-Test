@@ -47,10 +47,10 @@ namespace iSensor_FX3_Test
         [Test]
         public void LoopPinTest()
         {
+            InitializeTestCase();
+
             Stopwatch timer = new Stopwatch();
             long expectedTime;
-
-            InitializeTestCase();
 
             if(FX3.ActiveFX3.BoardType < FX3BoardType.iSensorFX3Board_C)
             {
@@ -81,6 +81,109 @@ namespace iSensor_FX3_Test
             timer.Stop();
             Console.WriteLine("Elapsed stream time " + timer.ElapsedMilliseconds.ToString() + "ms");
             Assert.AreEqual(expectedTime, timer.ElapsedMilliseconds, 0.05 * expectedTime, "ERROR: Invalid stream time");
+        }
+
+
+        [Test]
+        public void LEDSpinnerTest()
+        {
+            InitializeTestCase();
+
+            long spinPeriod;
+            int num, lastNum;
+            bool rising = false;
+            Stopwatch timer = new Stopwatch();
+
+            if (FX3.ActiveFX3.BoardType < FX3BoardType.iSensorFX3Board_C)
+            {
+                Console.WriteLine("The connected boards do not have loop back pins");
+                return;
+            }
+
+            //DQ13, CS, DIO4/3/2/1, 5V, 3.3V
+            num = 0;
+            lastNum = 0;
+            spinPeriod = 1000;
+            while(true)
+            {
+                DeactivateLED(lastNum);
+                ActivateLED(num);
+                System.Threading.Thread.Sleep((int) spinPeriod / 8);
+                lastNum = num;
+                num++;
+                if (num > 7) num = 0;
+                if(rising)
+                {
+                    spinPeriod += 1;
+                    if (spinPeriod >= 400) rising = false;
+                }
+                else
+                {
+                    spinPeriod -= 1;
+                    if (spinPeriod <= 200) rising = true;
+                }
+            }
+
+        }
+
+        private void ActivateLED(int index)
+        {
+            switch(index)
+            {
+                case 0:
+                    FX3.SetPin(new FX3Api.FX3PinObject(13), 0);
+                    break;
+                case 1:
+                    FX3.SetPin(new FX3Api.BitBangSpiConfig(true).CS, 0);
+                    break;
+                case 2:
+                    FX3.SetPin(FX3.DIO4, 0);
+                    break;
+                case 3:
+                    FX3.SetPin(FX3.DIO3, 0);
+                    break;
+                case 4:
+                    FX3.SetPin(FX3.DIO2, 0);
+                    break;
+                case 5:
+                    FX3.SetPin(FX3.DIO1, 0);
+                    break;
+                case 6:
+                    FX3.DutSupplyMode = DutVoltage.On5_0Volts;
+                    break;
+                case 7:
+                    FX3.DutSupplyMode = DutVoltage.On3_3Volts;
+                    break;
+            }
+        }
+
+        private void DeactivateLED(int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    FX3.SetPin(new FX3Api.FX3PinObject(13), 1);
+                    break;
+                case 1:
+                    FX3.SetPin(new FX3Api.BitBangSpiConfig(true).CS, 1);
+                    break;
+                case 2:
+                    FX3.SetPin(FX3.DIO4, 1);
+                    break;
+                case 3:
+                    FX3.SetPin(FX3.DIO3, 1);
+                    break;
+                case 4:
+                    FX3.SetPin(FX3.DIO2, 1);
+                    break;
+                case 5:
+                    FX3.SetPin(FX3.DIO1, 1);
+                    break;
+                case 6:
+                case 7:
+                    FX3.DutSupplyMode = DutVoltage.Off;
+                    break;
+            }
         }
 
         [Test]
