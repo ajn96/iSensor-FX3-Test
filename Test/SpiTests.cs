@@ -138,9 +138,9 @@ namespace iSensor_FX3_Test
             }
 
             FX3.BitBangSpiConfig = new BitBangSpiConfig(true);
-            FX3.BitBangSpiConfig.SCLK = (FX3PinObject)FX3.DIO1;
-            FX3.ReadPin(FX3.DIO2);
-            FX3.ReadPin(FX3.DIO1);
+            FX3.BitBangSpiConfig.SCLK = (FX3PinObject)FX3.DIO3;
+            FX3.ReadPin(FX3.DIO3);
+            FX3.ReadPin(FX3.DIO3);
             Random rnd = new Random();
             for (int trial = 0; trial < 64; trial++)
             {
@@ -162,11 +162,11 @@ namespace iSensor_FX3_Test
                 /* Check SCLK pin level after transfer */
                 if (FX3.BitBangSpiConfig.CPOL)
                 {
-                    Assert.AreEqual(1, FX3.ReadPin(FX3.DIO2), "ERROR: Expected SCLK to be idle high");
+                    Assert.AreEqual(1, FX3.ReadPin(FX3.DIO4), "ERROR: Expected SCLK to be idle high");
                 }
                 else
                 {
-                    Assert.AreEqual(0, FX3.ReadPin(FX3.DIO2), "ERROR: Expected SCLK to be idle low");
+                    Assert.AreEqual(0, FX3.ReadPin(FX3.DIO4), "ERROR: Expected SCLK to be idle low");
                 }
             }
         }
@@ -198,9 +198,9 @@ namespace iSensor_FX3_Test
                     Assert.AreEqual(MOSI[i], MISO[i], "ERROR: Invalid echo data");
                 }
 
-                /* Override DIO1/2 pins */
-                FX3.BitBangSpiConfig.MOSI = (FX3PinObject) FX3.DIO1;
-                FX3.BitBangSpiConfig.MISO = (FX3PinObject) FX3.DIO2;
+                /* Override DIO3/4 pins */
+                FX3.BitBangSpiConfig.MOSI = (FX3PinObject) FX3.DIO3;
+                FX3.BitBangSpiConfig.MISO = (FX3PinObject) FX3.DIO4;
                 MISO = FX3.BitBangSpi(wordLen, 1, MOSI.ToArray(), 1000);
                 Assert.AreEqual(Math.Ceiling(wordLen / 8.0), MISO.Count(), "ERROR: Invalid data count");
                 for (int i = 0; i < MISO.Count(); i++)
@@ -413,8 +413,8 @@ namespace iSensor_FX3_Test
             }
 
             Console.WriteLine("Testing Dr Active triggering for burst...");
-            FX3.DrPin = FX3.DIO1;
-            FX3.StartPWM(100, 0.5, FX3.DIO2);
+            FX3.DrPin = FX3.DIO3;
+            FX3.StartPWM(100, 0.5, FX3.DIO4);
 
             FX3.BurstByteCount = 64;
             BurstTxData.Clear();
@@ -814,6 +814,66 @@ namespace iSensor_FX3_Test
         }
 
         [Test]
+        public void ADcmXLStreamRateTest()
+        {
+            InitializeTestCase();
+            Console.WriteLine("Starting ADcmXL data stream test...");
+
+            double expectedTime;
+
+            double realTime;
+
+            double baseTime;
+
+            uint numBuffers = 34000;
+
+            Stopwatch timer = new Stopwatch();
+
+            FX3.DrActive = true;
+            FX3.SensorType = DeviceType.ADcmXL;
+            FX3.PartType = DUTType.ADcmXL3021;
+            FX3.DrPin = FX3.DIO3;
+            /* Start 6.8KHz, 80% duty cycle DR signal on DIO4 */
+            FX3.StartPWM(6800, 0.8, FX3.DIO4);
+
+            Console.WriteLine("Measuring base stream time...");
+            baseTime = 0;
+            for(int trial = 0; trial < 5; trial++)
+            {
+                timer.Restart();
+                FX3.StartRealTimeStreaming(1000);
+                System.Threading.Thread.Sleep(5);
+                FX3.WaitForStreamCompletion(1000);
+                baseTime += (timer.ElapsedMilliseconds - (1000.0 / 6.8));
+            }
+            baseTime /= 5;
+            Console.WriteLine("Base stream overhead time: " + baseTime.ToString() + "ms");
+
+            for (int trial = 0; trial < 5; trial++)
+            {
+                Console.WriteLine("Starting trial " + trial.ToString());
+                /* Start stream */
+                timer.Restart();
+                FX3.StartRealTimeStreaming(numBuffers);
+                System.Threading.Thread.Sleep(100);
+                FX3.WaitForStreamCompletion((int) (numBuffers / 6.0) + 1000);
+                timer.Stop();
+                Assert.AreEqual(FX3.GetNumBuffersRead, numBuffers, "ERROR: Invalid number of buffers read");
+                realTime = timer.ElapsedMilliseconds;
+                /* Take off a base time */
+                realTime -= baseTime;
+
+                expectedTime = 34000.0 / 6.8;
+                Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, Real time: " + realTime.ToString() + "ms");
+                Assert.AreEqual(expectedTime, realTime, 0.01 * expectedTime, "ERROR: Invalid stream time");
+
+                /* Check SPI functionality */
+                TestSpiFunctionality();
+            }
+
+        }
+
+        [Test]
         public void ADcmXLStreamCancelTest()
         {
             InitializeTestCase();
@@ -824,8 +884,9 @@ namespace iSensor_FX3_Test
             FX3.DrActive = true;
             FX3.SensorType = DeviceType.ADcmXL;
             FX3.PartType = DUTType.ADcmXL3021;
-            /* Start 6KHz DR signal on DIO1 */
-            FX3.StartPWM(6000, 0.1, FX3.DIO1);
+            FX3.DrPin = FX3.DIO3;
+            /* Start 6KHz DR signal on DIO4 */
+            FX3.StartPWM(6000, 0.1, FX3.DIO4);
 
             for (int trial = 0; trial < 5; trial++)
             {
