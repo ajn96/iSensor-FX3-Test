@@ -863,7 +863,7 @@ namespace iSensor_FX3_Test
                 /* Take off a base time */
                 realTime -= baseTime;
 
-                expectedTime = 34000.0 / 6.8;
+                expectedTime = numBuffers / 6.8;
                 Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, Real time: " + realTime.ToString() + "ms");
                 Assert.AreEqual(expectedTime, realTime, 0.01 * expectedTime, "ERROR: Invalid stream time");
 
@@ -871,6 +871,22 @@ namespace iSensor_FX3_Test
                 TestSpiFunctionality();
             }
 
+            Console.WriteLine("Verifying that when the DR edge is missed the stream waits until the following edge to start...");
+            FX3.SclkFrequency = 8000000;
+            timer.Restart();
+            FX3.StartRealTimeStreaming(numBuffers);
+            System.Threading.Thread.Sleep(100);
+            FX3.WaitForStreamCompletion((int)(2 * numBuffers / 6.0) + 1000);
+            timer.Stop();
+            Assert.AreEqual(FX3.GetNumBuffersRead, numBuffers, "ERROR: Invalid number of buffers read");
+            realTime = timer.ElapsedMilliseconds;
+            /* Take off a base time */
+            realTime -= baseTime;
+
+            /* Twice the time because we read every other data ready */
+            expectedTime = 2 * numBuffers / 6.8;
+            Console.WriteLine("Expected time: " + expectedTime.ToString() + "ms, Real time: " + realTime.ToString() + "ms");
+            Assert.AreEqual(expectedTime, realTime, 0.01 * expectedTime, "ERROR: Invalid stream time");
         }
 
         [Test]
