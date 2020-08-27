@@ -814,7 +814,7 @@ namespace iSensor_FX3_Test
         }
 
         [Test]
-        public void ADcmXLStreamRateTest()
+        public void ADcmXLRealTimeStreamTest()
         {
             InitializeTestCase();
             Console.WriteLine("Starting ADcmXL data stream test...");
@@ -825,7 +825,7 @@ namespace iSensor_FX3_Test
 
             double baseTime;
 
-            uint numBuffers = 34000;
+            uint numBuffers = 13600;
 
             Stopwatch timer = new Stopwatch();
 
@@ -868,6 +868,7 @@ namespace iSensor_FX3_Test
                 Assert.AreEqual(expectedTime, realTime, 0.01 * expectedTime, "ERROR: Invalid stream time");
 
                 /* Check SPI functionality */
+                FX3.WordLength = 16;
                 TestSpiFunctionality();
             }
 
@@ -904,18 +905,18 @@ namespace iSensor_FX3_Test
             /* Start 6KHz DR signal on DIO4 */
             FX3.StartPWM(6000, 0.1, FX3.DIO4);
 
-            for (int trial = 0; trial < 5; trial++)
+            for (int trial = 0; trial < 4; trial++)
             {
                 Console.WriteLine("Starting trial " + trial.ToString());
                 /* Start stream */
                 FX3.StartRealTimeStreaming(1000000);
                 firstCount = FX3.GetNumBuffersRead;
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(50);
                 Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (stop stream) */
                 FX3.StopStream();
-                System.Threading.Thread.Sleep(20);
+                System.Threading.Thread.Sleep(50);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
@@ -923,12 +924,12 @@ namespace iSensor_FX3_Test
                 /* Start stream */
                 FX3.StartRealTimeStreaming(1000000);
                 firstCount = FX3.GetNumBuffersRead;
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(50);
                 Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (cancel stream) */
                 FX3.CancelStreamAsync();
-                System.Threading.Thread.Sleep(20);
+                System.Threading.Thread.Sleep(50);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
