@@ -849,7 +849,7 @@ namespace iSensor_FX3_Test
             baseTime /= 5;
             Console.WriteLine("Base stream overhead time: " + baseTime.ToString() + "ms");
 
-            for (int trial = 0; trial < 5; trial++)
+            for (int trial = 0; trial < 4; trial++)
             {
                 Console.WriteLine("Starting trial " + trial.ToString());
                 /* Start stream */
