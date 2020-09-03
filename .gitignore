@@ -2,6 +2,8 @@ iSensor-FX3-API/
 iSensor-FX3-Test/
 Test/bin/
 Test/obj/
+EVAL-ADIS-FX3-Prod-Test/bin/
+EVAL-ADIS-FX3-Prod-Test/obj/
 NUnitLogParser/bin/
 NUnitLogParser/obj/
 .vs/
