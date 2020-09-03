@@ -110,6 +110,7 @@ Public Class FX3Test
                        testStatus.BackColor = Color.Red
                    End Sub)
             TestFailed = True
+            Exit Sub
         End Try
         Invoke(Sub() WriteLine("Connected! " + FX3.ActiveFX3.ToString()))
     End Sub
@@ -207,6 +208,8 @@ Public Class FX3Test
             TestFailed = True
             Exit Sub
         End Try
+        'no errors
+        Invoke(Sub() WriteLine("Pin connections validated..."))
 
     End Sub
 
