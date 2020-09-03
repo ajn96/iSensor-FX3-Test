@@ -99,6 +99,8 @@ Public Class FX3Test
                        testStatus.Text = "FAILED"
                        testStatus.BackColor = Color.Red
                    End Sub)
+            TestFailed = True
+            Exit Sub
         End If
         Invoke(Sub() WriteLine("Connecting to FX3 SN" + FX3.AvailableFX3s(0) + "..."))
         Try
