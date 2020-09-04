@@ -61,7 +61,7 @@ Partial Class FX3Test
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(549, 21)
+        Me.Label1.Location = New System.Drawing.Point(549, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(64, 13)
         Me.Label1.TabIndex = 5

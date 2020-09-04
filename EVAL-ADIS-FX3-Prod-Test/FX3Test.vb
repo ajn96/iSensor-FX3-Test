@@ -8,13 +8,12 @@ Public Class FX3Test
     Private ResourcePath As String
     Private TestRunner As Thread
     Private TestFailed As Boolean
+    Dim SN As String
 
     Private Sub FX3Test_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'get executing path and resource path
         Try
-            ResourcePath = System.AppDomain.CurrentDomain.BaseDirectory
-            ResourcePath = Path.GetFullPath(Path.Combine(ResourcePath, "..\..\..\"))
-            ResourcePath = Path.Combine(ResourcePath, "Resources")
+            ResourcePath = GetPathToFile("..\..\..\Resources")
             FX3 = New FX3Connection(ResourcePath, ResourcePath, ResourcePath)
         Catch ex As Exception
             MsgBox("Error loading test software! " + ex.Message)
@@ -25,6 +24,12 @@ Public Class FX3Test
         testStatus.BackColor = Color.LightGoldenrodYellow
     End Sub
 
+    Private Function GetPathToFile(Name As String) As String
+        Dim pathStr As String = System.AppDomain.CurrentDomain.BaseDirectory
+        pathStr = Path.Combine(pathStr, Name)
+        Return pathStr
+    End Function
+
     Private Sub WriteLine(line As String)
         testConsole.AppendText(line + Environment.NewLine)
     End Sub
@@ -34,6 +39,17 @@ Public Class FX3Test
     End Sub
 
     Private Sub TestFinished()
+        Dim fileName As String
+        Dim filePath As String
+        Dim writer As StreamWriter
+        Dim testPassedStr As String
+
+        If TestFailed Then
+            testPassedStr = "FAILED"
+        Else
+            testPassedStr = "PASSED"
+        End If
+
         btn_StartTest.Enabled = True
         btn_StopTest.Enabled = False
         Invoke(Sub() WriteLine("Test Run Finish Time: " + DateTime.Now.ToString()))
@@ -43,6 +59,17 @@ Public Class FX3Test
             FX3.Disconnect()
         End If
         'save log file to CSV
+        fileName = "ADIS_FX3_TEST_SN" + SN + "_" + testPassedStr.ToString() + "_" + Now.ToString("s") + ".txt"
+        fileName = fileName.Replace(":", "-")
+        Try
+            If Not Directory.Exists(GetPathToFile("log")) Then Directory.CreateDirectory(GetPathToFile("log"))
+            filePath = GetPathToFile("log\" + fileName)
+            writer = New StreamWriter(filePath, FileMode.Create)
+            writer.WriteLine(testConsole.Text)
+            writer.Close()
+        Catch ex As Exception
+            MsgBox("Log write error! " + ex.Message)
+        End Try
     End Sub
 
     Private Sub btn_StartTest_Click(sender As Object, e As EventArgs) Handles btn_StartTest.Click
@@ -51,6 +78,7 @@ Public Class FX3Test
         ClearLog()
         testStatus.Text = "Running"
         TestFailed = False
+        SN = "NONE"
         testStatus.BackColor = Color.LightGreen
         TestRunner = New Thread(AddressOf TestRunWork)
         TestRunner.Start()
@@ -107,6 +135,7 @@ Public Class FX3Test
         Invoke(Sub() WriteLine("Connecting to FX3 SN" + FX3.AvailableFX3s(0) + "..."))
         Try
             FX3.Connect(FX3.AvailableFX3s(0))
+            SN = FX3.ActiveFX3SerialNumber
         Catch ex As Exception
             Invoke(Sub()
                        WriteLine("ERROR: " + ex.Message)
