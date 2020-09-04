@@ -24,6 +24,10 @@ Public Class FX3Test
         testStatus.BackColor = Color.LightGoldenrodYellow
     End Sub
 
+    Private Sub Shutdown() Handles Me.Closed
+
+    End Sub
+
     Private Function GetPathToFile(Name As String) As String
         Dim pathStr As String = System.AppDomain.CurrentDomain.BaseDirectory
         pathStr = Path.Combine(pathStr, Name)
@@ -87,7 +91,9 @@ Public Class FX3Test
     Private Sub btn_StopTest_Click(sender As Object, e As EventArgs) Handles btn_StopTest.Click
         testStatus.Text = "Canceled"
         testStatus.BackColor = Color.LightGoldenrodYellow
-        TestFinished()
+        'set test failed flag to stop test execution process in thread
+        WriteLine("Test canceled!")
+        TestFailed = True
     End Sub
 
     Private Sub TestRunWork()
@@ -102,6 +108,8 @@ Public Class FX3Test
     End Sub
 
     Private Sub WaitForBoard()
+        If TestFailed Then Exit Sub
+
         Invoke(Sub() WriteLine("Scanning for FX3 boards..."))
 
         'bootloader already available
@@ -121,6 +129,8 @@ Public Class FX3Test
     End Sub
 
     Private Sub LoadFirmware()
+        If TestFailed Then Exit Sub
+
         If FX3.AvailableFX3s.Count > 0 Then
             Invoke(Sub() WriteLine("FX3 bootloader device found..."))
         Else
@@ -152,6 +162,7 @@ Public Class FX3Test
         'skip if failure occurred earlier
         If TestFailed Then Exit Sub
 
+        'error log count
         Dim logCount As UInteger
 
         Invoke(Sub() WriteLine("Initializing FX3 NVM Error Log..."))
@@ -256,11 +267,24 @@ Public Class FX3Test
     End Sub
 
     Private Sub TestPins(pin1 As FX3PinObject, pin2 As FX3PinObject)
+        Const NUM_PIN_TRIALS As Integer = 8
+
+        Dim pinLowTime, pinHighTime As Double
+
+        'check if we can do PWM test (timer hardware mux lines up correctly)
+        Dim pwmTest As Boolean = True
+        'timer 0 used as FX3 general purpose timer, will except if you try to use
+        If (pin1.PinNumber Mod 8) = 0 Then pwmTest = False
+        If (pin2.PinNumber Mod 8) = 0 Then pwmTest = False
+
+        'share the same timer
+        If (pin1.PinNumber Mod 8) = (pin2.PinNumber Mod 8) Then pwmTest = False
 
         Try
+            Invoke(Sub() WriteLine("Starting pin read/write test..."))
             'pin1 drives, pin2 reads
             FX3.ReadPin(pin2)
-            For trial As Integer = 0 To 7
+            For trial As Integer = 1 To NUM_PIN_TRIALS
                 FX3.SetPin(pin1, 0)
                 System.Threading.Thread.Sleep(10)
                 If FX3.ReadPin(pin2) <> 0 Then
@@ -275,7 +299,7 @@ Public Class FX3Test
 
             'pin2 drives, pin1 reads
             FX3.ReadPin(pin1)
-            For trial As Integer = 0 To 7
+            For trial As Integer = 1 To NUM_PIN_TRIALS
                 FX3.SetPin(pin2, 0)
                 System.Threading.Thread.Sleep(10)
                 If FX3.ReadPin(pin1) <> 0 Then
@@ -288,12 +312,29 @@ Public Class FX3Test
                 End If
             Next
 
+            If pwmTest Then
+                Invoke(Sub() WriteLine("Starting pin clock generation test..."))
+                FX3.ReadPin(pin1)
+                FX3.ReadPin(pin2)
+                'pin measure works on 10MHz timebase. 0.7 duty cycle @1MHz -> 0.7us high, 0.3us low
+                FX3.StartPWM(1000000, 0.7, pin1)
+                System.Threading.Thread.Sleep(1)
+                For trial As Integer = 1 To NUM_PIN_TRIALS
+                    pinLowTime = 1000 * FX3.MeasureBusyPulse({0, 0}, pin2, 0, 100)
+                    pinHighTime = 1000 * FX3.MeasureBusyPulse({0, 0}, pin2, 1, 100)
+                    'off by more than 0.15us
+                    If Math.Abs(0.3 - pinLowTime) > 0.15 Then Throw New Exception("Invalid pin low time, " + pinLowTime.ToString("f2") + "us")
+                    If Math.Abs(0.7 - pinHighTime) > 0.15 Then Throw New Exception("Invalid pin high time, " + pinHighTime.ToString("f2") + "us")
+                Next
+            End If
+
         Catch ex As Exception
             Invoke(Sub()
                        WriteLine("ERROR: FX3 GPIO[" + pin1.PinNumber.ToString() + "] <-> FX3 GPIO[" + pin2.PinNumber.ToString() + "] loop back failed! " + ex.Message)
                        testStatus.Text = "FAILED"
                        testStatus.BackColor = Color.Red
                    End Sub)
+            FX3.StopPWM(pin1)
             TestFailed = True
             Exit Sub
         End Try
