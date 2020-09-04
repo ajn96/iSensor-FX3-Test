@@ -46,7 +46,7 @@ Partial Class FX3Test
         Me.testConsole.Multiline = True
         Me.testConsole.Name = "testConsole"
         Me.testConsole.ReadOnly = True
-        Me.testConsole.Size = New System.Drawing.Size(687, 517)
+        Me.testConsole.Size = New System.Drawing.Size(601, 517)
         Me.testConsole.TabIndex = 3
         '
         'btn_StopTest
@@ -61,7 +61,7 @@ Partial Class FX3Test
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(549, 18)
+        Me.Label1.Location = New System.Drawing.Point(463, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(64, 13)
         Me.Label1.TabIndex = 5
@@ -69,7 +69,7 @@ Partial Class FX3Test
         '
         'testStatus
         '
-        Me.testStatus.Location = New System.Drawing.Point(619, 9)
+        Me.testStatus.Location = New System.Drawing.Point(533, 12)
         Me.testStatus.Name = "testStatus"
         Me.testStatus.Size = New System.Drawing.Size(80, 30)
         Me.testStatus.TabIndex = 6
@@ -80,7 +80,7 @@ Partial Class FX3Test
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(711, 578)
+        Me.ClientSize = New System.Drawing.Size(626, 578)
         Me.Controls.Add(Me.testStatus)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_StopTest)

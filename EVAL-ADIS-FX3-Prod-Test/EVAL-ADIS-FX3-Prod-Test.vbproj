@@ -140,6 +140,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>copy /Y "$(ProjectDir)..\Resources\FX3_Firmware.img" "$(TargetDir)FX3_Firmware.img"
+copy /Y "$(ProjectDir)..\Resources\boot_fw.img" "$(TargetDir)boot_fw.img"
+copy /Y "$(ProjectDir)..\Resources\USBFlashProg.img" "$(TargetDir)USBFlashProg.img"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

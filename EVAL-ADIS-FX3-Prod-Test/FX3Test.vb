@@ -14,7 +14,7 @@ Public Class FX3Test
         'get executing path and resource path
         Me.Text += " v" + Me.ProductVersion
         Try
-            ResourcePath = GetPathToFile("..\..\..\Resources")
+            ResourcePath = GetPathToFile("")
             FX3 = New FX3Connection(ResourcePath, ResourcePath, ResourcePath)
         Catch ex As Exception
             MsgBox("Error loading test software! " + ex.Message)
