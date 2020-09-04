@@ -25,7 +25,7 @@ Public Class FX3Test
     End Sub
 
     Private Sub Shutdown() Handles Me.Closed
-
+        FX3.Disconnect()
     End Sub
 
     Private Function GetPathToFile(Name As String) As String
