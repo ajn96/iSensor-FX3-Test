@@ -67,6 +67,8 @@ Public Class FX3Test
         Invoke(Sub() WriteLine("FX3 Resource Path: " + ResourcePath))
         WaitForBoard()
         LoadFirmware()
+        InitErrorLog()
+        RebootTest()
         PinTest()
         Invoke(Sub() TestFinished())
     End Sub
@@ -115,6 +117,62 @@ Public Class FX3Test
             Exit Sub
         End Try
         Invoke(Sub() WriteLine("Connected! " + FX3.ActiveFX3.ToString()))
+    End Sub
+
+    Private Sub InitErrorLog()
+        'skip if failure occurred earlier
+        If TestFailed Then Exit Sub
+
+        Dim logCount As UInteger
+
+        Invoke(Sub() WriteLine("Initializing FX3 NVM Error Log..."))
+        Try
+            FX3.ClearErrorLog()
+            logCount = FX3.GetErrorLogCount()
+            If logCount <> 0 Then
+                Throw New Exception("Error log failed to clear. Count " + logCount.ToString())
+            End If
+        Catch ex As Exception
+            Invoke(Sub()
+                       WriteLine("ERROR: Log init failed! " + ex.Message)
+                       testStatus.Text = "FAILED"
+                       testStatus.BackColor = Color.Red
+                   End Sub)
+            TestFailed = True
+            Exit Sub
+        End Try
+
+        Invoke(Sub() WriteLine("Log successfully initialized..."))
+    End Sub
+
+    Private Sub RebootTest()
+        'skip if failure occurred earlier
+        If TestFailed Then Exit Sub
+
+        Dim sn As String = FX3.ActiveFX3.SerialNumber
+        Dim logCount As UInteger
+
+        Invoke(Sub() WriteLine("Rebooting FX3..."))
+        Try
+            FX3.Disconnect()
+            FX3.WaitForBoard(20)
+            FX3.Connect(sn)
+            logCount = FX3.GetErrorLogCount()
+            If logCount <> 0 Then
+                Throw New Exception("Non-zero error log. Count " + logCount.ToString())
+            End If
+        Catch ex As Exception
+            Invoke(Sub()
+                       WriteLine("ERROR: FX3 reboot failed: " + ex.Message)
+                       testStatus.Text = "FAILED"
+                       testStatus.BackColor = Color.Red
+                   End Sub)
+            TestFailed = True
+            Exit Sub
+        End Try
+
+        Invoke(Sub() WriteLine("FX3 successfully rebooted..."))
+
     End Sub
 
     Private Sub PinTest()
