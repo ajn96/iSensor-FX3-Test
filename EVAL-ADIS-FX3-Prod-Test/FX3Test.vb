@@ -12,6 +12,7 @@ Public Class FX3Test
 
     Private Sub FX3Test_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'get executing path and resource path
+        Me.Text += " v" + Me.ProductVersion
         Try
             ResourcePath = GetPathToFile("..\..\..\Resources")
             FX3 = New FX3Connection(ResourcePath, ResourcePath, ResourcePath)

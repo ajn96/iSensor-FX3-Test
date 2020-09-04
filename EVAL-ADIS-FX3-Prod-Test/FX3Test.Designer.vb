@@ -89,7 +89,7 @@ Partial Class FX3Test
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FX3Test"
-        Me.Text = "EVAL-ADIS-FX3 Test"
+        Me.Text = "EVAL-ADIS-FX3 Production Test"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
