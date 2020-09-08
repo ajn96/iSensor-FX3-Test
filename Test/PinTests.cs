@@ -85,6 +85,7 @@ namespace iSensor_FX3_Test
 
 
         [Test]
+        [Explicit]
         public void LEDSpinnerTest()
         {
             InitializeTestCase();
