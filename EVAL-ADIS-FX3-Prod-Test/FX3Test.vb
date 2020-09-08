@@ -8,7 +8,9 @@ Public Class FX3Test
     Private ResourcePath As String
     Private TestRunner As Thread
     Private TestFailed As Boolean
+    Private Pins As List(Of FX3PinObject)
     Dim SN As String
+    Private CS, MOSI, MISO, SCLK, UART As FX3PinObject
 
     Private Sub FX3Test_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'get executing path and resource path
@@ -23,6 +25,7 @@ Public Class FX3Test
         btn_StopTest.Enabled = False
         testStatus.Text = "Waiting"
         testStatus.BackColor = Color.LightGoldenrodYellow
+        testConsole.ScrollBars = ScrollBars.Vertical
     End Sub
 
     Private Sub Shutdown() Handles Me.Closed
@@ -104,6 +107,7 @@ Public Class FX3Test
         LoadFirmware()
         InitErrorLog()
         RebootTest()
+        TestForShorts()
         PinTest()
         Invoke(Sub() TestFinished())
     End Sub
@@ -157,6 +161,29 @@ Public Class FX3Test
             Exit Sub
         End Try
         Invoke(Sub() WriteLine("Connected! " + FX3.ActiveFX3.ToString()))
+        'build pin list
+        FX3.BitBangSpiConfig = New BitBangSpiConfig(True)
+        Pins = New List(Of FX3PinObject)
+        Pins.Add(FX3.DIO1)
+        Pins.Add(FX3.DIO2)
+        Pins.Add(FX3.DIO3)
+        Pins.Add(FX3.DIO4)
+        Pins.Add(FX3.FX3_GPIO1)
+        Pins.Add(FX3.FX3_GPIO2)
+        Pins.Add(FX3.FX3_GPIO3)
+        Pins.Add(FX3.FX3_GPIO4)
+        Pins.Add(FX3.BitBangSpiConfig.CS)
+        CS = FX3.BitBangSpiConfig.CS
+        Pins.Add(FX3.BitBangSpiConfig.SCLK)
+        SCLK = FX3.BitBangSpiConfig.SCLK
+        Pins.Add(FX3.BitBangSpiConfig.MISO)
+        MISO = FX3.BitBangSpiConfig.MISO
+        Pins.Add(FX3.BitBangSpiConfig.MOSI)
+        MOSI = FX3.BitBangSpiConfig.MOSI
+        Pins.Add(FX3.ResetPin)
+        'uart
+        Pins.Add(New FX3PinObject(48))
+        UART = New FX3PinObject(48)
     End Sub
 
     Private Sub InitErrorLog()
@@ -213,7 +240,58 @@ Public Class FX3Test
         End Try
 
         Invoke(Sub() WriteLine("FX3 successfully rebooted..."))
+        FX3.BitBangSpiConfig = New BitBangSpiConfig(True)
 
+    End Sub
+
+    Private Sub TestForShorts()
+        'skip if failure occurred earlier
+        If TestFailed Then Exit Sub
+
+        TristateGPIO()
+        'check for stuck high/low
+        SetAllPinResistors(FX3PinResistorSetting.PullUp)
+        Invoke(Sub() WriteLine("Checking all pins are logic high..."))
+        System.Threading.Thread.Sleep(10)
+        CheckAllPinLevels(1, New FX3PinObject(63), New FX3PinObject(63))
+        SetAllPinResistors(FX3PinResistorSetting.PullDown)
+        System.Threading.Thread.Sleep(10)
+        Invoke(Sub() WriteLine("Checking all pins are logic low..."))
+        CheckAllPinLevels(0, New FX3PinObject(63), New FX3PinObject(63))
+
+        'check pin independence
+        Invoke(Sub() WriteLine("Testing DIO1 <-> SCLK independence from other GPIO..."))
+        TestPinIndependence(FX3.DIO1, SCLK)
+
+        Invoke(Sub() WriteLine("Testing MOSI <-> MISO independence from other GPIO..."))
+        TestPinIndependence(MOSI, MISO)
+
+        Invoke(Sub() WriteLine("Testing DIO2 <-> CS independence from other GPIO..."))
+        TestPinIndependence(FX3.DIO1, CS)
+
+        Invoke(Sub() WriteLine("Testing DIO3 <-> DIO4 independence from other GPIO..."))
+        TestPinIndependence(FX3.DIO3, FX3.DIO4)
+
+        Invoke(Sub() WriteLine("Testing FX3_GPIO1 <-> FX3_GPIO2 independence from other GPIO..."))
+        TestPinIndependence(FX3.FX3_GPIO1, FX3.FX3_GPIO2)
+
+        Invoke(Sub() WriteLine("Testing FX3_GPIO3 <-> FX3_GPIO4 independence from other GPIO..."))
+        TestPinIndependence(FX3.FX3_GPIO3, FX3.FX3_GPIO4)
+
+        Invoke(Sub() WriteLine("Testing Reset <-> Debug Tx independence from other GPIO..."))
+        TestPinIndependence(FX3.ResetPin, UART)
+
+    End Sub
+
+    Private Sub TestPinIndependence(pin1 As FX3PinObject, pin2 As FX3PinObject)
+        FX3.SetPinResistorSetting(pin1, FX3PinResistorSetting.PullUp)
+        FX3.SetPinResistorSetting(pin2, FX3PinResistorSetting.PullUp)
+        CheckPinLevel(pin1, 1)
+        CheckPinLevel(pin2, 1)
+        CheckAllPinLevels(0, pin1, pin2)
+        SetAllPinResistors(FX3PinResistorSetting.PullDown)
+        Invoke(Sub() WriteLine("Checking all pins are logic low..."))
+        CheckAllPinLevels(0, New FX3PinObject(63), New FX3PinObject(63))
     End Sub
 
     Private Sub PinTest()
@@ -224,23 +302,56 @@ Public Class FX3Test
         FX3.BitBangSpiConfig = New BitBangSpiConfig(True)
 
         'read all pins to tri-state
+        TristateGPIO()
+        SetAllPinResistors(FX3PinResistorSetting.None)
+        If TestFailed Then Exit Sub
+
+        Invoke(Sub() WriteLine("Testing DIO1 <-> SCLK..."))
+        TestPins(FX3.DIO1, SCLK)
+
+        Invoke(Sub() WriteLine("Testing MOSI <-> MISO..."))
+        TestPins(MOSI, MISO)
+
+        Invoke(Sub() WriteLine("Testing DIO2 <-> CS..."))
+        TestPins(FX3.DIO1, CS)
+
+        Invoke(Sub() WriteLine("Testing DIO3 <-> DIO4..."))
+        TestPins(FX3.DIO3, FX3.DIO4)
+
+        Invoke(Sub() WriteLine("Testing FX3_GPIO1 <-> FX3_GPIO2..."))
+        TestPins(FX3.FX3_GPIO1, FX3.FX3_GPIO2)
+
+        Invoke(Sub() WriteLine("Testing FX3_GPIO3 <-> FX3_GPIO4..."))
+        TestPins(FX3.FX3_GPIO3, FX3.FX3_GPIO4)
+
+        Invoke(Sub() WriteLine("Testing Reset <-> Debug Tx..."))
+        TestPins(FX3.ResetPin, UART)
+    End Sub
+
+    Private Sub CheckPinLevel(pin As FX3PinObject, level As UInteger)
+        Dim val As UInteger
+
+        Try
+            val = FX3.ReadPin(pin)
+            If val <> level Then Throw New Exception("Invalid read value of GPIO[" + pin.pinConfig.ToString() + "]. Expected " + level.ToString() + " was " + val.ToString())
+        Catch ex As Exception
+            Invoke(Sub()
+                       WriteLine("ERROR: " + ex.Message)
+                       testStatus.Text = "FAILED"
+                       testStatus.BackColor = Color.Red
+                   End Sub)
+            TestFailed = True
+        End Try
+
+    End Sub
+
+    Private Sub TristateGPIO()
+        'read all pins to tri-state
         Invoke(Sub() WriteLine("Tri-stating all FX3 GPIO..."))
         Try
-            FX3.ReadPin(FX3.DIO1)
-            FX3.ReadPin(FX3.DIO2)
-            FX3.ReadPin(FX3.DIO3)
-            FX3.ReadPin(FX3.DIO4)
-            FX3.ReadPin(FX3.FX3_GPIO1)
-            FX3.ReadPin(FX3.FX3_GPIO2)
-            FX3.ReadPin(FX3.FX3_GPIO3)
-            FX3.ReadPin(FX3.FX3_GPIO4)
-            FX3.ReadPin(FX3.BitBangSpiConfig.CS)
-            FX3.ReadPin(FX3.BitBangSpiConfig.SCLK)
-            FX3.ReadPin(FX3.BitBangSpiConfig.MISO)
-            FX3.ReadPin(FX3.BitBangSpiConfig.MOSI)
-            FX3.ReadPin(FX3.ResetPin)
-            'uart
-            FX3.ReadPin(New FX3PinObject(48))
+            For Each pin In Pins
+                FX3.ReadPin(pin)
+            Next
         Catch ex As Exception
             Invoke(Sub()
                        WriteLine("ERROR: Unexpected exception during pin read")
@@ -248,23 +359,49 @@ Public Class FX3Test
                        testStatus.BackColor = Color.Red
                    End Sub)
             TestFailed = True
-            Exit Sub
+        End Try
+    End Sub
+
+    Private Sub CheckAllPinLevels(level As UInteger, exPin1 As FX3PinObject, exPin2 As FX3PinObject)
+        Dim expectedVal As UInteger
+        Try
+            For Each pin In Pins
+                'if excluded pin
+                If (pin.pinConfig = exPin1.pinConfig) Or (pin.pinConfig = exPin2.pinConfig) Then
+                    expectedVal = FX3.ReadPin(pin)
+                ElseIf pin.pinConfig = CS.pinConfig Then
+                    'CS pull up
+                    expectedVal = 1
+                Else
+                    expectedVal = level
+                End If
+                CheckPinLevel(pin, expectedVal)
+            Next
+        Catch ex As Exception
+            Invoke(Sub()
+                       WriteLine("ERROR: Unexpected exception during pin read " + ex.Message)
+                       testStatus.Text = "FAILED"
+                       testStatus.BackColor = Color.Red
+                   End Sub)
+            TestFailed = True
         End Try
 
-        Invoke(Sub() WriteLine("Testing DIO1 <-> SCLK..."))
-        TestPins(FX3.DIO1, FX3.BitBangSpiConfig.SCLK)
-        Invoke(Sub() WriteLine("Testing MOSI <-> MISO..."))
-        TestPins(FX3.BitBangSpiConfig.MOSI, FX3.BitBangSpiConfig.MISO)
-        Invoke(Sub() WriteLine("Testing DIO2 <-> CS..."))
-        TestPins(FX3.DIO1, FX3.BitBangSpiConfig.CS)
-        Invoke(Sub() WriteLine("Testing DIO3 <-> DIO4..."))
-        TestPins(FX3.DIO3, FX3.DIO4)
-        Invoke(Sub() WriteLine("Testing FX3_GPIO1 <-> FX3_GPIO2..."))
-        TestPins(FX3.FX3_GPIO1, FX3.FX3_GPIO2)
-        Invoke(Sub() WriteLine("Testing FX3_GPIO3 <-> FX3_GPIO4..."))
-        TestPins(FX3.FX3_GPIO3, FX3.FX3_GPIO4)
-        Invoke(Sub() WriteLine("Testing Reset <-> Debug Tx..."))
-        TestPins(FX3.ResetPin, New FX3PinObject(48))
+    End Sub
+
+    Private Sub SetAllPinResistors(setting As FX3PinResistorSetting)
+        Invoke(Sub() WriteLine("Setting all FX3 GPIO resistors to " + [Enum].GetName(GetType(FX3PinResistorSetting), setting) + "..."))
+        Try
+            For Each pin In Pins
+                FX3.SetPinResistorSetting(pin, setting)
+            Next
+        Catch ex As Exception
+            Invoke(Sub()
+                       WriteLine("ERROR: Unexpected exception during pin resistor configuration " + ex.Message)
+                       testStatus.Text = "FAILED"
+                       testStatus.BackColor = Color.Red
+                   End Sub)
+            TestFailed = True
+        End Try
     End Sub
 
     Private Sub TestPins(pin1 As FX3PinObject, pin2 As FX3PinObject)
