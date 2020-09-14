@@ -369,9 +369,6 @@ Public Class FX3Test
                 'if excluded pin
                 If (pin.pinConfig = exPin1.pinConfig) Or (pin.pinConfig = exPin2.pinConfig) Then
                     expectedVal = FX3.ReadPin(pin)
-                ElseIf pin.pinConfig = CS.pinConfig Then
-                    'CS pull up
-                    expectedVal = 1
                 Else
                     expectedVal = level
                 End If
