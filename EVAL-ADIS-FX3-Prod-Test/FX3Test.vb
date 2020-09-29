@@ -182,8 +182,8 @@ Public Class FX3Test
         MOSI = FX3.BitBangSpiConfig.MOSI
         Pins.Add(FX3.ResetPin)
         'uart
-        Pins.Add(New FX3PinObject(48))
         UART = New FX3PinObject(48)
+        Pins.Add(New FX3PinObject(48))
     End Sub
 
     Private Sub InitErrorLog()
@@ -267,7 +267,7 @@ Public Class FX3Test
         TestPinIndependence(MOSI, MISO)
 
         Invoke(Sub() WriteLine("Testing DIO2 <-> CS independence from other GPIO..."))
-        TestPinIndependence(FX3.DIO1, CS)
+        TestPinIndependence(FX3.DIO2, CS)
 
         Invoke(Sub() WriteLine("Testing DIO3 <-> DIO4 independence from other GPIO..."))
         TestPinIndependence(FX3.DIO3, FX3.DIO4)
@@ -313,7 +313,7 @@ Public Class FX3Test
         TestPins(MOSI, MISO)
 
         Invoke(Sub() WriteLine("Testing DIO2 <-> CS..."))
-        TestPins(FX3.DIO1, CS)
+        TestPins(FX3.DIO2, CS)
 
         Invoke(Sub() WriteLine("Testing DIO3 <-> DIO4..."))
         TestPins(FX3.DIO3, FX3.DIO4)
