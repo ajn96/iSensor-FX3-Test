@@ -3,6 +3,8 @@ Updating test repository...
 Removing existing build artifacts 
 Fetching fresh copy of API... 
 Building FX3-API... 
+Copying output... 
+Building tests... 
 NUnit-Console version 2.6.4.14350
 Copyright (C) 2002-2012 Charlie Poole.
 Copyright (C) 2002-2004 James W. Newkirk, Michael C. Two, Alexei A. Vorontsov.
@@ -15,42 +17,103 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-Unhandled Exception:
-System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug'.
+..............................F...F.F.F.F.F.F.F.F.F.F.F.F.F.F
+Tests run: 46, Errors: 14, Failures: 1, Inconclusive: 0, Time: 373.7716232 seconds
+  Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
-Server stack trace: 
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.Directory.SetCurrentDirectory(String path)
-   at NUnit.Core.DirectorySwapper..ctor(String directoryName)
-   at NUnit.Core.Builders.TestAssemblyBuilder.Build(String assemblyName, Boolean autoSuites)
-   at NUnit.Core.Builders.TestAssemblyBuilder.Build(String assemblyName, String testName, Boolean autoSuites)
-   at NUnit.Core.TestSuiteBuilder.BuildSingleAssembly(TestPackage package)
-   at NUnit.Core.TestSuiteBuilder.Build(TestPackage package)
-   at NUnit.Core.SimpleTestRunner.Load(TestPackage package)
-   at NUnit.Core.ProxyTestRunner.Load(TestPackage package)
-   at NUnit.Core.ProxyTestRunner.Load(TestPackage package)
-   at NUnit.Core.RemoteTestRunner.Load(TestPackage package)
-   at System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
-   at System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+Errors and Failures:
+1) Test Failure : iSensor_FX3_Test.PinTests.ResistorConfigurationTest
+     ERROR: Expected pin to be low
+  Expected: 0
+  But was:  1
 
-Exception rethrown at [0]: 
-   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
-   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
-   at NUnit.Core.TestRunner.Load(TestPackage package)
-   at NUnit.Util.TestDomain.Load(TestPackage package)
-   at NUnit.Core.ProxyTestRunner.Load(TestPackage package)
-   at NUnit.Util.RemoteTestAgent.AgentRunner.Load(TestPackage package)
-   at System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
-   at System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+at iSensor_FX3_Test.PinTests.ResistorConfigurationTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\PinTests.cs:line 568
 
-Exception rethrown at [1]: 
-   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
-   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
-   at NUnit.Core.TestRunner.Load(TestPackage package)
-   at NUnit.Core.ProxyTestRunner.Load(TestPackage package)
-   at NUnit.Util.ProcessRunner.Load(TestPackage package)
-   at NUnit.ConsoleRunner.ConsoleUi.Execute(ConsoleOptions options)
-   at NUnit.ConsoleRunner.Runner.Main(String[] args)
+2) Test Error : iSensor_FX3_Test.SpiTests.ADcmXLStreamCancelTest
+   FX3Api.FX3CommunicationException : ERROR: Timeout during control endpoint transfer for SPI byte transfer
+   at FX3Api.FX3Connection.Transfer(UInt32 WriteData) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Spi32.vb:line 37
+   at iSensor_FX3_Test.SpiTests.TestSpiFunctionality() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 948
+   at iSensor_FX3_Test.SpiTests.ADcmXLStreamCancelTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 922
+
+3) Test Error : iSensor_FX3_Test.SpiTests.BitBangSpiFreqTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.BitBangSpiFreqTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 220
+
+4) Test Error : iSensor_FX3_Test.SpiTests.BitBangSpiModeTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.BitBangSpiModeTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 127
+
+5) Test Error : iSensor_FX3_Test.SpiTests.BitBangSpiStallTimeTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.BitBangSpiStallTimeTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 272
+
+6) Test Error : iSensor_FX3_Test.SpiTests.BitBangSpiTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.BitBangSpiTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 177
+
+7) Test Error : iSensor_FX3_Test.SpiTests.BurstSpiTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.BurstSpiTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 321
+
+8) Test Error : iSensor_FX3_Test.SpiTests.BurstStreamCancelTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.BurstStreamCancelTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 690
+
+9) Test Error : iSensor_FX3_Test.SpiTests.GenericStreamCancelTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.GenericStreamCancelTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 776
+
+10) Test Error : iSensor_FX3_Test.SpiTests.IRegInterfaceTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.IRegInterfaceTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 21
+
+11) Test Error : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.SclkFrequencyTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 672
+
+12) Test Error : iSensor_FX3_Test.SpiTests.SpiParametersTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.SpiParametersTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 595
+
+13) Test Error : iSensor_FX3_Test.SpiTests.SpiStallTimeTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.SpiStallTimeTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 31
+
+14) Test Error : iSensor_FX3_Test.SpiTests.SpiTransferTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.SpiTransferTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 490
+
+15) Test Error : iSensor_FX3_Test.SpiTests.TransferStreamCancelTest
+   FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!
+   at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+   at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+   at iSensor_FX3_Test.SpiTests.TransferStreamCancelTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 734
+
+
 Parsing test result... 
 Verbose mode enabled
 Starting log processing
@@ -58,16 +121,16 @@ Source File: C:\Users\jchong\Documents\iSensor-FX3-Test\Results\test_result.xml
 Destination File: C:\Users\jchong\Documents\iSensor-FX3-Test\Results\test_status.png
 XML document loaded...
 XLM Attributes:
-name : C:\Users\anolan3\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
-total : 47
-errors : 0
-failures : 0
+name : C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
+total : 46
+errors : 14
+failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
-date : 2020-08-27
-time : 17:12:55
+date : 2021-01-20
+time : 23:38:18
 Document parsed, starting image generation...
 Program exiting...
