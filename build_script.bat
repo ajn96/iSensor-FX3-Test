@@ -25,20 +25,20 @@ git clone https://github.com/juchong/iSensor-FX3-API.git
 )
 
 @echo Building FX3-API... >> Results\build_log.txt
-cd iSensor-FX3-API\
-msbuild FX3Api.vbproj /p:configuration=debug
-cd..
+cd iSensor-FX3-API\src_api\
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\msbuild" FX3Api.vbproj /p:configuration=debug
+cd..\..
 
 @echo Copying output... >> Results\build_log.txt
 mkdir %CD%\Resources
-xcopy /s /Y %CD%\iSensor-FX3-API\bin\Debug %CD%\Resources
+xcopy /s /Y %CD%\iSensor-FX3-API\src_api\bin\Debug %CD%\Resources
 xcopy /s /Y /i %CD%\iSensor-FX3-API\Resources\boot_fw.img %CD%\Resources
 xcopy /s /Y /i %CD%\iSensor-FX3-API\Resources\FX3_Firmware.img %CD%\Resources
 xcopy /s /Y /i %CD%\iSensor-FX3-API\Resources\USBFlashProg.img %CD%\Resources
 
 @echo Building tests... >> Results\build_log.txt
 cd Test\
-msbuild iSensor-FX3-Test.csproj /p:configuration=debug
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\msbuild" iSensor-FX3-Test.csproj /p:configuration=debug
 cd..
 
 @echo Running tests...
