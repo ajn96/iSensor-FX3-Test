@@ -1,349 +1,139 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="46" errors="0" failures="46" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2021-01-22" time="13:49:52">
+<test-results name="C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="46" errors="7" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2021-01-22" time="14:37:59">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.9035" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\jchong\Documents\iSensor-FX3-Test" machine-name="ADGBO-LAB177-L0" user="jchong" user-domain="ANALOG" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Failure" success="False" time="625.868" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Failure" success="False" time="344.936" asserts="0">
     <results>
-      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Failure" success="False" time="625.863" asserts="0">
+      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Failure" success="False" time="344.932" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="ErrorLogTests" executed="True" result="Failure" success="False" time="125.665" asserts="2">
-            <failure>
-              <message><![CDATA[  ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
-]]></message>
-              <stack-trace><![CDATA[at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
-]]></stack-trace>
-            </failure>
+          <test-suite type="TestFixture" name="ErrorLogTests" executed="True" result="Success" success="True" time="17.355" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogClearTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in ErrorLogTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogContentsTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in ErrorLogTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogCountTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in ErrorLogTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogRobustnessTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in ErrorLogTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
+              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogClearTest" executed="True" result="Success" success="True" time="2.538" asserts="4" />
+              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogContentsTest" executed="True" result="Success" success="True" time="3.063" asserts="20" />
+              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogCountTest" executed="True" result="Success" success="True" time="2.725" asserts="8" />
+              <test-case name="iSensor_FX3_Test.ErrorLogTests.ErrorLogRobustnessTest" executed="True" result="Success" success="True" time="7.646" asserts="14" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Failure" success="False" time="125.047" asserts="2">
-            <failure>
-              <message><![CDATA[  ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
-]]></message>
-              <stack-trace><![CDATA[at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
-]]></stack-trace>
-            </failure>
+          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Success" success="True" time="32.592" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardDetectionTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardInfoTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.BootStatusTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.CompileDateTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.DutSupplyModeTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareVersionTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.ImagePathsTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.SerialNumberTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.FunctionalTests.USBTimingTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in FunctionalTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
+              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardDetectionTest" executed="True" result="Success" success="True" time="2.546" asserts="9" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.BoardInfoTest" executed="True" result="Success" success="True" time="5.582" asserts="208" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.BootStatusTest" executed="True" result="Success" success="True" time="2.634" asserts="5" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.CompileDateTest" executed="True" result="Success" success="True" time="0.007" asserts="1" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.DutSupplyModeTest" executed="True" result="Success" success="True" time="0.005" asserts="4" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest" executed="True" result="Success" success="True" time="11.157" asserts="10" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.FirmwareVersionTest" executed="True" result="Success" success="True" time="2.975" asserts="4" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.ImagePathsTest" executed="True" result="Success" success="True" time="0.006" asserts="9" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.SerialNumberTest" executed="True" result="Success" success="True" time="2.994" asserts="8" />
+              <test-case name="iSensor_FX3_Test.FunctionalTests.USBTimingTest" executed="True" result="Success" success="True" time="2.290" asserts="0" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Failure" success="False" time="125.043" asserts="2">
-            <failure>
-              <message><![CDATA[  ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
-]]></message>
-              <stack-trace><![CDATA[at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
-]]></stack-trace>
-            </failure>
+          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Success" success="True" time="7.731" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CBitRateTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in I2CTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CModeSwitchingTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in I2CTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CReadTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in I2CTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CRetryTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in I2CTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CStreamCancelTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in I2CTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CStreamTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in I2CTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.I2CTests.I2CWriteTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in I2CTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CBitRateTest" executed="True" result="Success" success="True" time="0.378" asserts="10255" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CModeSwitchingTest" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CReadTest" executed="True" result="Success" success="True" time="0.357" asserts="16256" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CRetryTest" executed="True" result="Success" success="True" time="0.007" asserts="2" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CStreamCancelTest" executed="True" result="Success" success="True" time="1.293" asserts="650" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CStreamTest" executed="True" result="Success" success="True" time="3.302" asserts="320064" />
+              <test-case name="iSensor_FX3_Test.I2CTests.I2CWriteTest" executed="True" result="Success" success="True" time="0.003" asserts="0" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="PinTests" executed="True" result="Failure" success="False" time="125.048" asserts="2">
-            <failure>
-              <message><![CDATA[  ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
-]]></message>
-              <stack-trace><![CDATA[at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
-]]></stack-trace>
-            </failure>
+          <test-suite type="TestFixture" name="PinTests" executed="True" result="Failure" success="False" time="177.881" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.PinTests.DrPinTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+              <test-case name="iSensor_FX3_Test.PinTests.DrPinTest" executed="True" result="Success" success="True" time="0.006" asserts="8" />
+              <test-case name="iSensor_FX3_Test.PinTests.GetTimerValueTest" executed="True" result="Success" success="True" time="8.092" asserts="51" />
+              <test-case name="iSensor_FX3_Test.PinTests.LoopPinTest" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+              <test-case name="iSensor_FX3_Test.PinTests.MeasureBusyPulseTest" executed="True" result="Success" success="True" time="23.889" asserts="4096" />
+              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasureTest" executed="True" result="Success" success="True" time="84.520" asserts="794" />
+              <test-case name="iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest" executed="True" result="Success" success="True" time="14.423" asserts="112" />
+              <test-case name="iSensor_FX3_Test.PinTests.PWMGenerationTest" executed="True" result="Success" success="True" time="43.744" asserts="4032" />
+              <test-case name="iSensor_FX3_Test.PinTests.PWMPinInfoTest" executed="True" result="Success" success="True" time="0.050" asserts="518" />
+              <test-case name="iSensor_FX3_Test.PinTests.ResistorConfigurationTest" executed="True" result="Failure" success="False" time="0.069" asserts="9">
                 <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
+                  <message><![CDATA[  ERROR: Expected pin to be low
+  Expected: 0
+  But was:  1
+]]></message>
+                  <stack-trace><![CDATA[at iSensor_FX3_Test.PinTests.ResistorConfigurationTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\PinTests.cs:line 568
+]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.GetTimerValueTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.LoopPinTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.MeasureBusyPulseTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.PinFreqMeasureTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.PWMGenerationTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.PWMPinInfoTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.ResistorConfigurationTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.PinTests.SetReadPinTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in PinTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
+              <test-case name="iSensor_FX3_Test.PinTests.SetReadPinTest" executed="True" result="Success" success="True" time="0.121" asserts="400" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Failure" success="False" time="125.055" asserts="2">
-            <failure>
-              <message><![CDATA[  ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
-]]></message>
-              <stack-trace><![CDATA[at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
-]]></stack-trace>
-            </failure>
+          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Failure" success="False" time="109.367" asserts="1">
             <results>
-              <test-case name="iSensor_FX3_Test.SpiTests.ADcmXLRealTimeStreamTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+              <test-case name="iSensor_FX3_Test.SpiTests.ADcmXLRealTimeStreamTest" executed="True" result="Success" success="True" time="12.756" asserts="18" />
+              <test-case name="iSensor_FX3_Test.SpiTests.ADcmXLStreamCancelTest" executed="True" result="Success" success="True" time="1.120" asserts="24" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiFreqTest" executed="True" result="Success" success="True" time="4.276" asserts="34" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiModeTest" executed="True" result="Success" success="True" time="0.160" asserts="2304" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiStallTimeTest" executed="True" result="Success" success="True" time="8.917" asserts="46" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiTest" executed="True" result="Success" success="True" time="0.100" asserts="4290" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BurstSpiTest" executed="True" result="Success" success="True" time="26.395" asserts="237798" />
+              <test-case name="iSensor_FX3_Test.SpiTests.BurstStreamCancelTest" executed="True" result="Success" success="True" time="1.508" asserts="30" />
+              <test-case name="iSensor_FX3_Test.SpiTests.GenericStreamCancelTest" executed="True" result="Error" success="False" time="11.147" asserts="22">
                 <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
+                  <message><![CDATA[FX3Api.FX3CommunicationException : ERROR: Timeout during control endpoint transfer for SPI byte transfer]]></message>
+                  <stack-trace><![CDATA[at FX3Api.FX3Connection.Transfer(UInt32 WriteData) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Spi32.vb:line 37
+at iSensor_FX3_Test.SpiTests.TestSpiFunctionality() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 948
+at iSensor_FX3_Test.SpiTests.GenericStreamCancelTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 811
+]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.ADcmXLStreamCancelTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+              <test-case name="iSensor_FX3_Test.SpiTests.IRegInterfaceTest" executed="True" result="Error" success="False" time="2.016" asserts="0">
                 <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
+                  <message><![CDATA[FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!]]></message>
+                  <stack-trace><![CDATA[at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+at iSensor_FX3_Test.SpiTests.IRegInterfaceTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 21
+]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiFreqTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+              <test-case name="iSensor_FX3_Test.SpiTests.SclkFrequencyTest" executed="True" result="Error" success="False" time="2.012" asserts="0">
                 <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
+                  <message><![CDATA[FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!]]></message>
+                  <stack-trace><![CDATA[at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+at iSensor_FX3_Test.SpiTests.SclkFrequencyTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 672
+]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiModeTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+              <test-case name="iSensor_FX3_Test.SpiTests.SpiParametersTest" executed="True" result="Error" success="False" time="2.004" asserts="0">
                 <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
+                  <message><![CDATA[FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!]]></message>
+                  <stack-trace><![CDATA[at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+at iSensor_FX3_Test.SpiTests.SpiParametersTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 595
+]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiStallTimeTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+              <test-case name="iSensor_FX3_Test.SpiTests.SpiStallTimeTest" executed="True" result="Error" success="False" time="2.007" asserts="0">
                 <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
+                  <message><![CDATA[FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!]]></message>
+                  <stack-trace><![CDATA[at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+at iSensor_FX3_Test.SpiTests.SpiStallTimeTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 31
+]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.BitBangSpiTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+              <test-case name="iSensor_FX3_Test.SpiTests.SpiTransferTest" executed="True" result="Error" success="False" time="11.941" asserts="0">
                 <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
+                  <message><![CDATA[FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!]]></message>
+                  <stack-trace><![CDATA[at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+at iSensor_FX3_Test.SpiTests.SpiTransferTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 490
+]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.BurstSpiTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+              <test-case name="iSensor_FX3_Test.SpiTests.TransferStreamCancelTest" executed="True" result="Error" success="False" time="10.015" asserts="0">
                 <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.BurstStreamCancelTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.GenericStreamCancelTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.IRegInterfaceTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.SclkFrequencyTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.SpiParametersTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.SpiStallTimeTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.SpiTransferTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
-                </failure>
-              </test-case>
-              <test-case name="iSensor_FX3_Test.SpiTests.TransferStreamCancelTest" executed="True" result="Failure" success="False" time="0.000" asserts="0">
-                <failure>
-                  <message><![CDATA[TestFixtureSetUp failed in SpiTests]]></message>
-                  <stack-trace />
+                  <message><![CDATA[FX3Api.FX3CommunicationException : ERROR: Control endpoint transfer to set pin resistor configuration failed!]]></message>
+                  <stack-trace><![CDATA[at FX3Api.FX3Connection.SetPinResistorSetting(IPinObject Pin, FX3PinResistorSetting Setting) in C:\Users\jchong\Documents\iSensor-FX3-Test\iSensor-FX3-API\src_api\FX3Api.vb:line 909
+at iSensor_FX3_Test.FX3TestBase.InitializeTestCase() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 76
+at iSensor_FX3_Test.SpiTests.TransferStreamCancelTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\SpiTests.cs:line 734
+]]></stack-trace>
                 </failure>
               </test-case>
             </results>
