@@ -18,7 +18,7 @@ Runtime Environment -
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
 .F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F
-Tests run: 46, Errors: 0, Failures: 46, Inconclusive: 0, Time: 628.5241079 seconds
+Tests run: 46, Errors: 0, Failures: 46, Inconclusive: 0, Time: 26.9543326 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
@@ -172,6 +172,6 @@ ignored : 0
 skipped : 0
 invalid : 0
 date : 2021-01-29
-time : 15:29:35
+time : 22:00:36
 Document parsed, starting image generation...
 Program exiting...
