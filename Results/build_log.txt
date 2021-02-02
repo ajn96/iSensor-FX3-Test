@@ -17,143 +17,18 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F.F
-Tests run: 46, Errors: 0, Failures: 46, Inconclusive: 0, Time: 27.4345249 seconds
+..............................F................
+Tests run: 46, Errors: 0, Failures: 1, Inconclusive: 0, Time: 346.6425158 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Errors and Failures:
-1) SetUp Failure : iSensor_FX3_Test.ErrorLogTests
-     ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
+1) Test Failure : iSensor_FX3_Test.PinTests.ResistorConfigurationTest
+     ERROR: Expected pin to be low
+  Expected: 0
+  But was:  1
 
-at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
+at iSensor_FX3_Test.PinTests.ResistorConfigurationTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\PinTests.cs:line 568
 
-2) Parent Failure : iSensor_FX3_Test.ErrorLogTests.ErrorLogClearTest
-   TestFixtureSetUp failed in ErrorLogTests
-3) Parent Failure : iSensor_FX3_Test.ErrorLogTests.ErrorLogContentsTest
-   TestFixtureSetUp failed in ErrorLogTests
-4) Parent Failure : iSensor_FX3_Test.ErrorLogTests.ErrorLogCountTest
-   TestFixtureSetUp failed in ErrorLogTests
-5) Parent Failure : iSensor_FX3_Test.ErrorLogTests.ErrorLogRobustnessTest
-   TestFixtureSetUp failed in ErrorLogTests
-6) SetUp Failure : iSensor_FX3_Test.FunctionalTests
-     ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
-
-at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
-
-7) Parent Failure : iSensor_FX3_Test.FunctionalTests.BoardDetectionTest
-   TestFixtureSetUp failed in FunctionalTests
-8) Parent Failure : iSensor_FX3_Test.FunctionalTests.BoardInfoTest
-   TestFixtureSetUp failed in FunctionalTests
-9) Parent Failure : iSensor_FX3_Test.FunctionalTests.BootStatusTest
-   TestFixtureSetUp failed in FunctionalTests
-10) Parent Failure : iSensor_FX3_Test.FunctionalTests.CompileDateTest
-   TestFixtureSetUp failed in FunctionalTests
-11) Parent Failure : iSensor_FX3_Test.FunctionalTests.DutSupplyModeTest
-   TestFixtureSetUp failed in FunctionalTests
-12) Parent Failure : iSensor_FX3_Test.FunctionalTests.FirmwareLoadTest
-   TestFixtureSetUp failed in FunctionalTests
-13) Parent Failure : iSensor_FX3_Test.FunctionalTests.FirmwareVersionTest
-   TestFixtureSetUp failed in FunctionalTests
-14) Parent Failure : iSensor_FX3_Test.FunctionalTests.ImagePathsTest
-   TestFixtureSetUp failed in FunctionalTests
-15) Parent Failure : iSensor_FX3_Test.FunctionalTests.SerialNumberTest
-   TestFixtureSetUp failed in FunctionalTests
-16) Parent Failure : iSensor_FX3_Test.FunctionalTests.USBTimingTest
-   TestFixtureSetUp failed in FunctionalTests
-17) SetUp Failure : iSensor_FX3_Test.I2CTests
-     ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
-
-at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
-
-18) Parent Failure : iSensor_FX3_Test.I2CTests.I2CBitRateTest
-   TestFixtureSetUp failed in I2CTests
-19) Parent Failure : iSensor_FX3_Test.I2CTests.I2CModeSwitchingTest
-   TestFixtureSetUp failed in I2CTests
-20) Parent Failure : iSensor_FX3_Test.I2CTests.I2CReadTest
-   TestFixtureSetUp failed in I2CTests
-21) Parent Failure : iSensor_FX3_Test.I2CTests.I2CRetryTest
-   TestFixtureSetUp failed in I2CTests
-22) Parent Failure : iSensor_FX3_Test.I2CTests.I2CStreamCancelTest
-   TestFixtureSetUp failed in I2CTests
-23) Parent Failure : iSensor_FX3_Test.I2CTests.I2CStreamTest
-   TestFixtureSetUp failed in I2CTests
-24) Parent Failure : iSensor_FX3_Test.I2CTests.I2CWriteTest
-   TestFixtureSetUp failed in I2CTests
-25) SetUp Failure : iSensor_FX3_Test.PinTests
-     ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
-
-at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
-
-26) Parent Failure : iSensor_FX3_Test.PinTests.DrPinTest
-   TestFixtureSetUp failed in PinTests
-27) Parent Failure : iSensor_FX3_Test.PinTests.GetTimerValueTest
-   TestFixtureSetUp failed in PinTests
-28) Parent Failure : iSensor_FX3_Test.PinTests.LoopPinTest
-   TestFixtureSetUp failed in PinTests
-29) Parent Failure : iSensor_FX3_Test.PinTests.MeasureBusyPulseTest
-   TestFixtureSetUp failed in PinTests
-30) Parent Failure : iSensor_FX3_Test.PinTests.PinFreqMeasureTest
-   TestFixtureSetUp failed in PinTests
-31) Parent Failure : iSensor_FX3_Test.PinTests.PinFunctionTimeoutTest
-   TestFixtureSetUp failed in PinTests
-32) Parent Failure : iSensor_FX3_Test.PinTests.PWMGenerationTest
-   TestFixtureSetUp failed in PinTests
-33) Parent Failure : iSensor_FX3_Test.PinTests.PWMPinInfoTest
-   TestFixtureSetUp failed in PinTests
-34) Parent Failure : iSensor_FX3_Test.PinTests.ResistorConfigurationTest
-   TestFixtureSetUp failed in PinTests
-35) Parent Failure : iSensor_FX3_Test.PinTests.SetReadPinTest
-   TestFixtureSetUp failed in PinTests
-36) SetUp Failure : iSensor_FX3_Test.SpiTests
-     ERROR: No FX3 board connected!
-  Expected: True
-  But was:  False
-
-at iSensor_FX3_Test.FX3TestBase.Connect() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 61
-at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\FX3TestBase.cs:line 30
-
-37) Parent Failure : iSensor_FX3_Test.SpiTests.ADcmXLRealTimeStreamTest
-   TestFixtureSetUp failed in SpiTests
-38) Parent Failure : iSensor_FX3_Test.SpiTests.ADcmXLStreamCancelTest
-   TestFixtureSetUp failed in SpiTests
-39) Parent Failure : iSensor_FX3_Test.SpiTests.BitBangSpiFreqTest
-   TestFixtureSetUp failed in SpiTests
-40) Parent Failure : iSensor_FX3_Test.SpiTests.BitBangSpiModeTest
-   TestFixtureSetUp failed in SpiTests
-41) Parent Failure : iSensor_FX3_Test.SpiTests.BitBangSpiStallTimeTest
-   TestFixtureSetUp failed in SpiTests
-42) Parent Failure : iSensor_FX3_Test.SpiTests.BitBangSpiTest
-   TestFixtureSetUp failed in SpiTests
-43) Parent Failure : iSensor_FX3_Test.SpiTests.BurstSpiTest
-   TestFixtureSetUp failed in SpiTests
-44) Parent Failure : iSensor_FX3_Test.SpiTests.BurstStreamCancelTest
-   TestFixtureSetUp failed in SpiTests
-45) Parent Failure : iSensor_FX3_Test.SpiTests.GenericStreamCancelTest
-   TestFixtureSetUp failed in SpiTests
-46) Parent Failure : iSensor_FX3_Test.SpiTests.IRegInterfaceTest
-   TestFixtureSetUp failed in SpiTests
-47) Parent Failure : iSensor_FX3_Test.SpiTests.SclkFrequencyTest
-   TestFixtureSetUp failed in SpiTests
-48) Parent Failure : iSensor_FX3_Test.SpiTests.SpiParametersTest
-   TestFixtureSetUp failed in SpiTests
-49) Parent Failure : iSensor_FX3_Test.SpiTests.SpiStallTimeTest
-   TestFixtureSetUp failed in SpiTests
-50) Parent Failure : iSensor_FX3_Test.SpiTests.SpiTransferTest
-   TestFixtureSetUp failed in SpiTests
-51) Parent Failure : iSensor_FX3_Test.SpiTests.TransferStreamCancelTest
-   TestFixtureSetUp failed in SpiTests
 
 Parsing test result... 
 Verbose mode enabled
@@ -165,13 +40,13 @@ XLM Attributes:
 name : C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 46
 errors : 0
-failures : 46
+failures : 1
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2021-02-01
-time : 22:00:36
+time : 22:13:01
 Document parsed, starting image generation...
 Program exiting...
