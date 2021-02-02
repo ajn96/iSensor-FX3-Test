@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="46" errors="0" failures="46" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2021-01-31" time="22:00:33">
+<test-results name="C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" total="46" errors="0" failures="46" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2021-02-01" time="22:00:36">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.9035" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\jchong\Documents\iSensor-FX3-Test" machine-name="ADGBO-LAB177-L0" user="jchong" user-domain="ANALOG" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Failure" success="False" time="25.778" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll" executed="True" result="Failure" success="False" time="27.435" asserts="0">
     <results>
-      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Failure" success="False" time="25.773" asserts="0">
+      <test-suite type="Namespace" name="iSensor_FX3_Test" executed="True" result="Failure" success="False" time="27.430" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="ErrorLogTests" executed="True" result="Failure" success="False" time="5.625" asserts="2">
+          <test-suite type="TestFixture" name="ErrorLogTests" executed="True" result="Failure" success="False" time="7.271" asserts="2">
             <failure>
               <message><![CDATA[  ERROR: No FX3 board connected!
   Expected: True
@@ -44,7 +44,7 @@ at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\
               </test-case>
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Failure" success="False" time="5.035" asserts="2">
+          <test-suite type="TestFixture" name="FunctionalTests" executed="True" result="Failure" success="False" time="5.048" asserts="2">
             <failure>
               <message><![CDATA[  ERROR: No FX3 board connected!
   Expected: True
@@ -117,7 +117,7 @@ at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\
               </test-case>
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Failure" success="False" time="5.032" asserts="2">
+          <test-suite type="TestFixture" name="I2CTests" executed="True" result="Failure" success="False" time="5.030" asserts="2">
             <failure>
               <message><![CDATA[  ERROR: No FX3 board connected!
   Expected: True
@@ -172,7 +172,7 @@ at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\
               </test-case>
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="PinTests" executed="True" result="Failure" success="False" time="5.028" asserts="2">
+          <test-suite type="TestFixture" name="PinTests" executed="True" result="Failure" success="False" time="5.036" asserts="2">
             <failure>
               <message><![CDATA[  ERROR: No FX3 board connected!
   Expected: True
@@ -245,7 +245,7 @@ at iSensor_FX3_Test.FX3TestBase.TestFixtureSetup() in C:\Users\jchong\Documents\
               </test-case>
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Failure" success="False" time="5.047" asserts="2">
+          <test-suite type="TestFixture" name="SpiTests" executed="True" result="Failure" success="False" time="5.039" asserts="2">
             <failure>
               <message><![CDATA[  ERROR: No FX3 board connected!
   Expected: True
