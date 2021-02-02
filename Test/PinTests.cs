@@ -541,7 +541,7 @@ namespace iSensor_FX3_Test
                 FX3.SetPinResistorSetting(FX3.FX3_GPIO2, FX3PinResistorSetting.PullUp);
                 FX3.SetPinResistorSetting(FX3.FX3_GPIO3, FX3PinResistorSetting.PullUp);
                 FX3.SetPinResistorSetting(FX3.FX3_GPIO4, FX3PinResistorSetting.PullUp);
-                System.Threading.Thread.Sleep(10);
+                System.Threading.Thread.Sleep(50);
 
                 Console.WriteLine("Checking input stage values...");
                 Assert.AreEqual(1, FX3.ReadPin(FX3.DIO1), "ERROR: Expected pin to be high");
@@ -562,7 +562,7 @@ namespace iSensor_FX3_Test
                 FX3.SetPinResistorSetting(FX3.FX3_GPIO2, FX3PinResistorSetting.PullDown);
                 FX3.SetPinResistorSetting(FX3.FX3_GPIO3, FX3PinResistorSetting.PullDown);
                 FX3.SetPinResistorSetting(FX3.FX3_GPIO4, FX3PinResistorSetting.PullDown);
-                System.Threading.Thread.Sleep(10);
+                System.Threading.Thread.Sleep(50);
 
                 Console.WriteLine("Checking input stage values...");
                 Assert.AreEqual(0, FX3.ReadPin(FX3.DIO1), "ERROR: Expected pin to be low");
@@ -583,7 +583,7 @@ namespace iSensor_FX3_Test
                 FX3.SetPinResistorSetting(FX3.FX3_GPIO2, FX3PinResistorSetting.None);
                 FX3.SetPinResistorSetting(FX3.FX3_GPIO3, FX3PinResistorSetting.None);
                 FX3.SetPinResistorSetting(FX3.FX3_GPIO4, FX3PinResistorSetting.None);
-                System.Threading.Thread.Sleep(10);
+                System.Threading.Thread.Sleep(50);
             }
 
         }
