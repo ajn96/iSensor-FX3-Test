@@ -13,28 +13,51 @@ All Rights Reserved.
 
 Runtime Environment - 
    OS Version: Microsoft Windows NT 6.2.9200.0
-  CLR Version: 2.0.50727.9035 ( Net 3.5 )
+  CLR Version: 2.0.50727.9044 ( Net 3.5 )
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-..............................F................
-Tests run: 46, Errors: 0, Failures: 1, Inconclusive: 0, Time: 346.6425158 seconds
-  Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
+Unhandled Exception:
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\anolan3\Documents\FX3\iSensor-FX3-Test\Test\bin\Debug'.
 
-Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.PinTests.ResistorConfigurationTest
-     ERROR: Expected pin to be low
-  Expected: 0
-  But was:  1
+Server stack trace: 
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.SetCurrentDirectory(String path)
+   at NUnit.Core.DirectorySwapper..ctor(String directoryName)
+   at NUnit.Core.Builders.TestAssemblyBuilder.Build(String assemblyName, Boolean autoSuites)
+   at NUnit.Core.Builders.TestAssemblyBuilder.Build(String assemblyName, String testName, Boolean autoSuites)
+   at NUnit.Core.TestSuiteBuilder.BuildSingleAssembly(TestPackage package)
+   at NUnit.Core.TestSuiteBuilder.Build(TestPackage package)
+   at NUnit.Core.SimpleTestRunner.Load(TestPackage package)
+   at NUnit.Core.ProxyTestRunner.Load(TestPackage package)
+   at NUnit.Core.ProxyTestRunner.Load(TestPackage package)
+   at NUnit.Core.RemoteTestRunner.Load(TestPackage package)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
 
-at iSensor_FX3_Test.PinTests.ResistorConfigurationTest() in C:\Users\jchong\Documents\iSensor-FX3-Test\Test\PinTests.cs:line 568
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at NUnit.Core.TestRunner.Load(TestPackage package)
+   at NUnit.Util.TestDomain.Load(TestPackage package)
+   at NUnit.Core.ProxyTestRunner.Load(TestPackage package)
+   at NUnit.Util.RemoteTestAgent.AgentRunner.Load(TestPackage package)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
 
-
+Exception rethrown at [1]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at NUnit.Core.TestRunner.Load(TestPackage package)
+   at NUnit.Core.ProxyTestRunner.Load(TestPackage package)
+   at NUnit.Util.ProcessRunner.Load(TestPackage package)
+   at NUnit.ConsoleRunner.ConsoleUi.Execute(ConsoleOptions options)
+   at NUnit.ConsoleRunner.Runner.Main(String[] args)
 Parsing test result... 
 Verbose mode enabled
 Starting log processing
-Source File: C:\Users\jchong\Documents\iSensor-FX3-Test\Results\test_result.xml
-Destination File: C:\Users\jchong\Documents\iSensor-FX3-Test\Results\test_status.png
+Source File: C:\Users\anolan3\Documents\FX3\iSensor-FX3-Test\Results\test_result.xml
+Destination File: C:\Users\anolan3\Documents\FX3\iSensor-FX3-Test\Results\test_status.png
 XML document loaded...
 XLM Attributes:
 name : C:\Users\jchong\Documents\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
