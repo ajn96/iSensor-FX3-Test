@@ -17,25 +17,9 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-........F......................F................
-Tests run: 46, Errors: 0, Failures: 2, Inconclusive: 0, Time: 334.6146597 seconds
+..............................................
+Tests run: 46, Errors: 0, Failures: 0, Inconclusive: 0, Time: 327.9022789 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
-
-Errors and Failures:
-1) Test Failure : iSensor_FX3_Test.FunctionalTests.CompileDateTest
-     ERROR: Expected firmware and API to be compiled within 90 days of each other
-  Expected: less than or equal to 7776000.0d
-  But was:  10030671.639999999d
-
-at iSensor_FX3_Test.FunctionalTests.CompileDateTest() in C:\Users\anolan3\Documents\FX3\iSensor-FX3-Test\Test\FunctionalTests.cs:line 67
-
-2) Test Failure : iSensor_FX3_Test.PinTests.ResistorConfigurationTest
-     ERROR: Expected pin to be low
-  Expected: 0
-  But was:  1
-
-at iSensor_FX3_Test.PinTests.ResistorConfigurationTest() in C:\Users\anolan3\Documents\FX3\iSensor-FX3-Test\Test\PinTests.cs:line 568
-
 
 Parsing test result... 
 Verbose mode enabled
@@ -47,13 +31,13 @@ XLM Attributes:
 name : C:\Users\anolan3\Documents\FX3\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
 total : 46
 errors : 0
-failures : 2
+failures : 0
 not-run : 0
 inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
 date : 2021-03-26
-time : 17:42:10
+time : 18:12:48
 Document parsed, starting image generation...
 Program exiting...
