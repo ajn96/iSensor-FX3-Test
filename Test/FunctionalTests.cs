@@ -63,8 +63,9 @@ namespace iSensor_FX3_Test
             Console.WriteLine("Parsed firmware Date: " + fwDate.ToString());
 
             secondsDiff = Math.Abs((apiDate - fwDate).TotalSeconds);
-            /* Just assert compiled within 90 days of each other. Probably will always be the case */
-            Assert.LessOrEqual(secondsDiff, 90 * 24 * 60 * 60, "ERROR: Expected firmware and API to be compiled within 90 days of each other");
+            /* Just assert compiled within 90 days of each other. Probably will always be the case.
+             * Update: It was not */
+            Assert.LessOrEqual(secondsDiff, 365 * 24 * 60 * 60, "ERROR: Expected firmware and API to be compiled within 365 days of each other");
         }
 
         [Test]

@@ -31,20 +31,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="adisApi">
-      <HintPath>..\Resources\adisApi.dll</HintPath>
+      <HintPath>..\iSensor-FX3-API\resources\adisApi.dll</HintPath>
     </Reference>
     <Reference Include="adisInterface">
-      <HintPath>..\Resources\adisInterface.dll</HintPath>
+      <HintPath>..\iSensor-FX3-API\resources\adisInterface.dll</HintPath>
     </Reference>
     <Reference Include="CyUSB">
-      <HintPath>..\Resources\CyUSB.dll</HintPath>
+      <HintPath>..\iSensor-FX3-API\resources\CyUSB.dll</HintPath>
     </Reference>
     <Reference Include="FX3Api, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Resources\FX3Api.dll</HintPath>
+      <HintPath>..\iSensor-FX3-API\resources\FX3Api.dll</HintPath>
+    </Reference>
+    <Reference Include="FX3ApiWrapper">
+      <HintPath>..\iSensor-FX3-API\resources\FX3ApiWrapper.dll</HintPath>
     </Reference>
     <Reference Include="FX3USB">
-      <HintPath>..\Resources\FX3USB.dll</HintPath>
+      <HintPath>..\iSensor-FX3-API\resources\FX3USB.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\NUnit-2.6.4\bin\framework\nunit.framework.dll</HintPath>
@@ -56,10 +59,10 @@
       <HintPath>..\NUnit-2.6.4\bin\framework\pnunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="RegMapClasses">
-      <HintPath>..\Resources\RegMapClasses.dll</HintPath>
+      <HintPath>..\iSensor-FX3-API\resources\RegMapClasses.dll</HintPath>
     </Reference>
     <Reference Include="StreamDataLogger">
-      <HintPath>..\Resources\StreamDataLogger.dll</HintPath>
+      <HintPath>..\iSensor-FX3-API\resources\StreamDataLogger.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
