@@ -18,7 +18,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void TransferArrayWithWriteTest()
         {
-            InitializeTestCase();
             uint[] res;
             uint[] initialMOSI = new uint[6];
             uint[] repeatedMOSI = new uint[4];
@@ -110,7 +109,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void IRegInterfaceTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting IRegInterface test...");
 
             FX3.WordLength = 16;
@@ -120,7 +118,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void SpiStallTimeTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting SPI stall time test...");
 
             double expectedTime;
@@ -216,7 +213,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void BitBangSpiModeTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting bit bang SPI mode test...");
 
             byte[] MISO;
@@ -266,7 +262,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void BitBangSpiTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting bit bang SPI functionality test...");
 
             byte[] MISO;
@@ -309,7 +304,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void BitBangSpiFreqTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Testing bit bang SPI SCLK freq...");
 
             byte[] MOSI = new byte[1024];
@@ -361,7 +355,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void BitBangSpiStallTimeTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Testing bit bang SPI stall time...");
 
             byte[] MOSI = new byte[1024];
@@ -410,7 +403,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void BurstSpiTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting SPI burst read test...");
 
             List<byte> BurstTxData = new List<byte>();
@@ -579,7 +571,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void SpiTransferTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting SPI transfer test...");
 
             uint writeVal;
@@ -684,7 +675,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void SpiParametersTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting SPI configurable parameters test...");
 
             TestSpiFunctionality();
@@ -761,7 +751,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void SclkFrequencyTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting SPI clock frequency test...");
             FX3.WordLength = 8;
             FX3.ChipSelectLeadTime = SpiLagLeadTime.SPI_SSN_LAG_LEAD_ONE_HALF_CLK;
@@ -779,7 +768,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void BurstStreamCancelTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting burst stream cancel test...");
 
             long firstCount;
@@ -823,7 +811,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void TransferStreamCancelTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting transfer stream cancel test...");
 
             long firstCount;
@@ -831,7 +818,7 @@ namespace iSensor_FX3_Test
             FX3.SensorType = DeviceType.AutomotiveSpi;
             FX3.PartType = DUTType.IMU;
 
-            for (int trial = 0; trial < 5; trial++)
+            for (int trial = 0; trial < 10; trial++)
             {
                 Console.WriteLine("Starting trial " + trial.ToString());
                 /* Start stream */
@@ -842,7 +829,7 @@ namespace iSensor_FX3_Test
 
                 /* Cancel stream (stop stream) */
                 FX3.StopStream();
-                System.Threading.Thread.Sleep(20);
+                FX3.WaitForStreamCompletion(100);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
@@ -855,7 +842,7 @@ namespace iSensor_FX3_Test
 
                 /* Cancel stream (cancel stream) */
                 FX3.CancelStreamAsync();
-                System.Threading.Thread.Sleep(20);
+                FX3.WaitForStreamCompletion(100);
 
                 /* Check SPI functionality */
                 TestSpiFunctionality();
@@ -865,7 +852,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void GenericStreamCancelTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting generic stream cancel test...");
 
             long firstCount;
@@ -873,7 +859,7 @@ namespace iSensor_FX3_Test
             FX3.SensorType = DeviceType.IMU;
             FX3.PartType = DUTType.IMU;
 
-            for (int trial = 0; trial < 5; trial++)
+            for (int trial = 0; trial < 10; trial++)
             {
                 Console.WriteLine("Starting trial " + trial.ToString());
                 /* Start stream */
@@ -908,7 +894,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void ADcmXLRealTimeStreamTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting ADcmXL data stream test...");
 
             double expectedTime;
@@ -985,7 +970,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void ADcmXLStreamCancelTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting ADcmXL stream cancel test...");
 
             long firstCount;

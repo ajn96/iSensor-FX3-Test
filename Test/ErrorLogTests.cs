@@ -16,7 +16,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void ErrorLogCountTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting error log count test...");
 
             uint count, firstCount;
@@ -58,7 +57,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void ErrorLogContentsTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting error contents test...");
 
             List<FX3ErrorLog> initialLog, log;
@@ -134,7 +132,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void ErrorLogRobustnessTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting error log robustness test...");
 
             List<FX3ErrorLog> initialLog, log;

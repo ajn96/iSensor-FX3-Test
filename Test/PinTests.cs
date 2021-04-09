@@ -45,7 +45,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void DrPinTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting data ready pin test...");
 
             Assert.AreEqual(FX3.DIO1.pinConfig, FX3.DrPin.pinConfig, "ERROR: Expected default DR pin to be DIO1");
@@ -75,8 +74,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void LoopPinTest()
         {
-            InitializeTestCase();
-
             Stopwatch timer = new Stopwatch();
             long expectedTime;
 
@@ -116,8 +113,6 @@ namespace iSensor_FX3_Test
         [Explicit]
         public void LEDSpinnerTest()
         {
-            InitializeTestCase();
-
             long spinPeriod;
             int num, lastNum;
             bool rising = false;
@@ -218,7 +213,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void SetReadPinTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting pin read/write test...");
 
             const int NUM_TRIALS = 100;
@@ -314,7 +308,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void PinFreqMeasureTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting pin frequency measure test...");
 
             const double MIN_FREQ = 5;
@@ -365,7 +358,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void PWMPinInfoTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting pin PWM info test...");
 
             int exCount;
@@ -432,7 +424,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void PWMGenerationTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting PWM generation test...");
             double posWidth, negWidth;
             double measuredFreq, measuredDutyCycle;
@@ -457,7 +448,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void PinFunctionTimeoutTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting pin functions timeout functionality test...");
 
             /* Timer for measuring elapsed time */
@@ -509,7 +499,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void GetTimerValueTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting timer value test...");
 
             uint time0, time1;
@@ -545,7 +534,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void ResistorConfigurationTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting GPIO resistor configuration test...");
 
             for(int trial = 0; trial < 10; trial++)

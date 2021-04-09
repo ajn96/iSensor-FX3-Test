@@ -62,6 +62,7 @@ namespace iSensor_FX3_Test
             }
         }
 
+        [SetUp()]
         public void InitializeTestCase()
         {
             Connect();

@@ -16,7 +16,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void I2CReadTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting I2C read test...");
 
             byte[] InitialRead, SecondRead;
@@ -43,14 +42,12 @@ namespace iSensor_FX3_Test
         [Test]
         public void I2CWriteTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting I2C write test...");
         }
 
         [Test]
         public void I2CRetryTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting I2C retry test...");
 
             Stopwatch timer = new Stopwatch();
@@ -83,7 +80,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void I2CBitRateTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting I2C bit rate test...");
 
             Console.WriteLine("Testing input validation...");
@@ -146,7 +142,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void I2CStreamTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting I2C data stream test...");
 
             I2CPreamble pre = new I2CPreamble();
@@ -182,7 +177,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void I2CStreamCancelTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting I2C stream cancel test...");
 
             long firstCount;
@@ -228,7 +222,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void I2CModeSwitchingTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting I2C mode switching stress test...");
         }
 

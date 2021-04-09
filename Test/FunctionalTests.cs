@@ -16,8 +16,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void DutSupplyModeTest()
         {
-            InitializeTestCase();
-
             if(FX3.ActiveFX3.BoardType == FX3BoardType.CypressFX3Board)
             {
                 /* Cypress board has fixed 3.3V supply */
@@ -46,7 +44,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void CompileDateTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting build date/time test...");
 
             DateTime fwDate, apiDate;
@@ -71,7 +68,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void BoardDetectionTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting FX3 board detection test...");
 
             string sn = FX3.ActiveFX3SerialNumber;
@@ -95,7 +91,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void SerialNumberTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting FX3 serial number test...");
 
             int exCount = 0;
@@ -131,7 +126,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void BoardInfoTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting FX3 board info test...");
 
             FX3Board startInfo = FX3.ActiveFX3;
@@ -164,7 +158,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void FirmwareLoadTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting firmware load test...");
 
             const int RESET_TRIALS = 4;
@@ -201,8 +194,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void ImagePathsTest()
         {
-            InitializeTestCase();
-
             int exCount;
 
             Console.WriteLine("Starting firmware image path validation test...");
@@ -254,7 +245,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void BootStatusTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting boot status retrieval test...");
 
             string sn = FX3.ActiveFX3.SerialNumber;
@@ -283,7 +273,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void FirmwareVersionTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting firmware version test...");
 
             Assert.AreEqual(FX3.GetFirmwareVersion, FX3.ActiveFX3.FirmwareVersion, "ERROR: Invalid firmware version");
@@ -295,7 +284,6 @@ namespace iSensor_FX3_Test
         [Test]
         public void USBTimingTest()
         {
-            InitializeTestCase();
             Console.WriteLine("Starting USB command execution timing test...");
 
             const int NUM_TRIALS = 5000;
