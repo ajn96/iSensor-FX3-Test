@@ -16,6 +16,98 @@ namespace iSensor_FX3_Test
     {
 
         [Test]
+        public void TransferArrayWithWriteTest()
+        {
+            InitializeTestCase();
+            uint[] res;
+            uint[] initialMOSI = new uint[6];
+            uint[] repeatedMOSI = new uint[4];
+
+            Stopwatch timer = new Stopwatch();
+            double time;
+
+            Console.WriteLine("Starting SPI write then read stream test...");
+
+            FX3.WordLength = 32;
+            FX3.StallTime = 3;
+            FX3.SclkFrequency = 4000000;
+            FX3.DrActive = false;
+            FX3.DrPin = FX3.DIO3;
+
+            for(uint i = 0; i < 4; i++)
+            {
+                repeatedMOSI[i] = i;
+            }
+            initialMOSI[0] = 0xAAAAAAAA;
+            initialMOSI[5] = 0x55555555;
+
+            /* Both false */
+            Console.WriteLine("Testing both DR inactive...");
+            FX3.DrActive = false;
+            System.Threading.Thread.Sleep(10);
+            FX3.StartPWM(10, 0.5, FX3.DIO4);
+            timer.Restart();
+            res = FX3.WriteReadTransferArray(initialMOSI, false, repeatedMOSI, 10);
+            time = timer.ElapsedMilliseconds;
+            Assert.LessOrEqual(time, 10, "Expected time of less than 10ms");
+            Assert.AreEqual(repeatedMOSI.Count() * 10, res.Count(), "Invalid data size");
+            CheckRxData(res);
+
+            /* dr active */
+            Console.WriteLine("Testing DR active read...");
+            FX3.DrActive = true;
+            System.Threading.Thread.Sleep(10);
+            FX3.StartPWM(10, 0.5, FX3.DIO4);
+            timer.Restart();
+            res = FX3.WriteReadTransferArray(initialMOSI, false, repeatedMOSI, 10);
+            time = timer.ElapsedMilliseconds;
+            //10 reads at 10Hz -> approx 1 sec. Give range 1000 - 1200
+            Assert.AreEqual(time, 1100, 100, "Expected time of between 1000ms and 1200ms");
+            Assert.AreEqual(repeatedMOSI.Count() * 10, res.Count(), "Invalid data size");
+            CheckRxData(res);
+
+            /* initial dr active */
+            Console.WriteLine("Testing DR active write...");
+            FX3.DrActive = false;
+            System.Threading.Thread.Sleep(10);
+            FX3.StartPWM(10, 0.5, FX3.DIO4);
+            timer.Restart();
+            res = FX3.WriteReadTransferArray(initialMOSI, true, repeatedMOSI, 10);
+            time = timer.ElapsedMilliseconds;
+            //Should be between 50ms and 150ms
+            Assert.AreEqual(time, 100, 50, "Expected time of between 50ms and 150ms");
+            Assert.AreEqual(repeatedMOSI.Count() * 10, res.Count(), "Invalid data size");
+            CheckRxData(res);
+
+            /* Both true */
+            Console.WriteLine("Testing both DR active...");
+            FX3.DrActive = true;
+            System.Threading.Thread.Sleep(10);
+            FX3.StartPWM(10, 0.5, FX3.DIO4);
+            timer.Restart();
+            res = FX3.WriteReadTransferArray(initialMOSI, true, repeatedMOSI, 10);
+            time = timer.ElapsedMilliseconds;
+            //10 reads at 10Hz -> approx 1 sec. Give range 1000 - 1200
+            Assert.AreEqual(time, 1100, 100, "Expected time of between 1000ms and 1200ms");
+            Assert.AreEqual(repeatedMOSI.Count() * 10, res.Count(), "Invalid data size");
+            CheckRxData(res);
+        }
+
+        private void CheckRxData(uint[] data)
+        {
+            //check data
+            int index = 0;
+            for (int i = 0; i < data.Count(); i += 4)
+            {
+                for (uint j = 0; j < 4; j++)
+                {
+                    Assert.AreEqual(j, data[index], "Expected SPI data to be echoed");
+                    index += 1;
+                }
+            }
+        }
+
+        [Test]
         public void IRegInterfaceTest()
         {
             InitializeTestCase();
