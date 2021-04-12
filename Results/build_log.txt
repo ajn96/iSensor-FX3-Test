@@ -17,8 +17,8 @@ Runtime Environment -
 
 ProcessModel: Default    DomainUsage: Single
 Execution Runtime: net-4.5
-..............................................
-Tests run: 46, Errors: 0, Failures: 0, Inconclusive: 0, Time: 327.9022789 seconds
+...............................................
+Tests run: 47, Errors: 0, Failures: 0, Inconclusive: 0, Time: 357.1687122 seconds
   Not run: 0, Invalid: 0, Ignored: 0, Skipped: 0
 
 Parsing test result... 
@@ -29,7 +29,7 @@ Destination File: C:\Users\anolan3\Documents\FX3\iSensor-FX3-Test\Results\test_s
 XML document loaded...
 XLM Attributes:
 name : C:\Users\anolan3\Documents\FX3\iSensor-FX3-Test\Test\bin\Debug\iSensor-FX3-Test.dll
-total : 46
+total : 47
 errors : 0
 failures : 0
 not-run : 0
@@ -37,7 +37,7 @@ inconclusive : 0
 ignored : 0
 skipped : 0
 invalid : 0
-date : 2021-03-26
-time : 18:12:48
+date : 2021-04-12
+time : 14:03:52
 Document parsed, starting image generation...
 Program exiting...
