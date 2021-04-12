@@ -813,40 +813,60 @@ namespace iSensor_FX3_Test
         {
             Console.WriteLine("Starting transfer stream cancel test...");
 
-            long firstCount;
+            long firstCount, secondCount;
+            uint[] mosi1 = new[] { 0u, 1u, 2u, 3u };
+            uint[] mosi2 = new[] { 4u, 5u, 6u, 7u };
 
             FX3.SensorType = DeviceType.AutomotiveSpi;
             FX3.PartType = DUTType.IMU;
 
-            for (int trial = 0; trial < 10; trial++)
+            for (int trial = 0; trial < 5; trial++)
             {
                 Console.WriteLine("Starting trial " + trial.ToString());
                 /* Start stream */
-                FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                Console.WriteLine("Starting first stream");
+                ((ISpi32Interface)FX3).StartBufferedStream(mosi1, 1, 1000000, 10, null);
                 firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
+                secondCount = FX3.GetNumBuffersRead;
+                Assert.Greater(secondCount, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (stop stream) */
                 FX3.StopStream();
-                FX3.WaitForStreamCompletion(100);
-
-                /* Check SPI functionality */
-                TestSpiFunctionality();
+                System.Threading.Thread.Sleep(40);
+                TestTransferStreamData(mosi1);
 
                 /* Start stream */
-                FX3.StartBufferedStream(new[] { 0U, 1U, 2U }, 1, 1000000, 10, null);
+                Console.WriteLine("Starting second stream");
+                ((ISpi32Interface)FX3).StartBufferedStream(mosi2, 1, 1000000, 10, null);
                 firstCount = FX3.GetNumBuffersRead;
                 System.Threading.Thread.Sleep(100);
-                Assert.Greater(FX3.GetNumBuffersRead, firstCount, "ERROR: Expected to have read buffers");
+                secondCount = FX3.GetNumBuffersRead;
+                Assert.Greater(secondCount, firstCount, "ERROR: Expected to have read buffers");
 
                 /* Cancel stream (cancel stream) */
                 FX3.CancelStreamAsync();
-                FX3.WaitForStreamCompletion(100);
+                System.Threading.Thread.Sleep(40);
+                TestTransferStreamData(mosi2);
 
-                /* Check SPI functionality */
+                /* Check device functionality */
+                CheckFirmwareResponsiveness();
                 TestSpiFunctionality();
             }
+        }
+
+        private void TestTransferStreamData(uint[] mosi)
+        {
+            uint[] buf;
+            for(int i = 0; i < FX3.GetNumBuffersRead; i++)
+            {
+                buf = ((ISpi32Interface)FX3).GetBufferedStreamDataPacket();
+                for(int index = 0; index < buf.Length; index++)
+                {
+                    Assert.AreEqual(mosi[index], buf[index], "Invalid SPI data echo");
+                }
+            }
+            Console.WriteLine("Validated " + FX3.GetNumBuffersRead.ToString() + " buffers");
         }
 
         [Test]
