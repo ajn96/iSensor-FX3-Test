@@ -9,6 +9,7 @@ using System.IO;
 using System.Diagnostics;
 using RegMapClasses;
 using AdisApi;
+using System.ComponentModel;
 
 namespace iSensor_FX3_Test
 {
@@ -110,9 +111,38 @@ namespace iSensor_FX3_Test
         public void IRegInterfaceTest()
         {
             Console.WriteLine("Starting IRegInterface test...");
+            Stopwatch timer = new Stopwatch();
+            double time0, time1;
+            BackgroundWorker worker = new BackgroundWorker();
 
             FX3.WordLength = 16;
             FX3.WriteRegByte(new AddrDataPair() { addr = 0, data = 0 });
+
+            /* Verifying that startbuffered stream blocks until stream completion */
+
+            FX3.DrActive = true;
+            FX3.SensorType = DeviceType.ADcmXL;
+            FX3.PartType = DUTType.ADcmXL3021;
+            FX3.DrPin = FX3.DIO3;
+            /* Start 6.8KHz, 80% duty cycle DR signal on DIO4 */
+            FX3.StartPWM(6800, 0.8, FX3.DIO4);
+
+            timer.Restart();
+            FX3.StartRealTimeStreaming(13600);
+            System.Threading.Thread.Sleep(100);
+            FX3.WaitForStreamCompletion((int)(13600 / 6.0) + 1000);
+            timer.Stop();
+            time0 = timer.ElapsedMilliseconds;
+            Console.WriteLine("First stream took " + time0.ToString() + "ms");
+            System.Threading.Thread.Sleep(100);
+
+            timer.Restart();
+            FX3.StartBufferedStream(new uint[] { 0, 1 }, 1, 13600, 10, worker);
+            timer.Stop();
+            time1 = timer.ElapsedMilliseconds;
+            Console.WriteLine("Second stream took " + time1.ToString() + "ms");
+            /* Check that they are roughly equal */
+            Assert.AreEqual(time0, time1, 100, "Invalid stream time");
         }
 
         [Test]
